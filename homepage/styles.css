@@ -1,10 +1,10 @@
 :root {
-  --bg: #f6efe6;
-  --text: #2f271f;
-  --muted: #66584a;
-  --brand: #2f8a6c;
-  --brand-dark: #1f5e49;
-  --card: #fffdf9;
+  --bg: #e8dccd;
+  --text: #241c16;
+  --muted: #514438;
+  --brand: #1f6f58;
+  --brand-dark: #154a3b;
+  --card: #fffaf2;
 }
 
 * { box-sizing: border-box; }
@@ -22,8 +22,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(rgba(194, 169, 143, 0.84), rgba(187, 213, 199, 0.80)),
-    linear-gradient(130deg, #cdb297 0%, #b8d7c7 100%);
+    linear-gradient(rgba(170, 138, 104, 0.88), rgba(154, 186, 169, 0.84)),
+    linear-gradient(130deg, #b08962 0%, #8fb7a3 100%);
   background-attachment: fixed, fixed;
 }
 body::after {
@@ -39,10 +39,10 @@ body::after {
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
 .hero {
-  background: rgba(255, 250, 243, 0.58);
+  background: rgba(248, 239, 227, 0.54);
   backdrop-filter: blur(1.5px);
   padding: 5rem 0 4rem;
-  border-bottom: 1px solid rgba(72, 106, 90, 0.16);
+  border-bottom: 1px solid rgba(41, 74, 61, 0.22);
 }
 .kicker { color: var(--brand-dark); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 h1 {
@@ -67,9 +67,9 @@ h1 {
 
 .section {
   padding: 3.2rem 0;
-  background: rgba(255, 253, 249, 0.62);
+  background: rgba(255, 250, 242, 0.58);
 }
-.section.alt { background: rgba(240, 248, 244, 0.72); }
+.section.alt { background: rgba(226, 239, 232, 0.70); }
 h2 {
   margin-top: 0;
   font-family: "Georgia", "Times New Roman", serif;
