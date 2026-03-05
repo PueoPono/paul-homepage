@@ -18,18 +18,17 @@ body {
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
 .hero {
-  background: linear-gradient(120deg, #e6f4ed 0%, #f8fcfa 100%);
+  background:
+    linear-gradient(120deg, #e6f4ed 0%, #f8fcfa 100%),
+    url('assets/mh-white-heart.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, 92% 18%;
+  background-size: cover, 50%;
   padding: 5rem 0 4rem;
 }
 .kicker { color: var(--brand-dark); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin: .4rem 0 1rem; }
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 760px; }
-.hero-image {
-  margin-top: 1rem;
-  width: min(760px, 100%);
-  border-radius: 12px;
-  display: block;
-}
 
 .cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.25rem; }
 .btn {
