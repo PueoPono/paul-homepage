@@ -22,9 +22,9 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(rgba(232, 220, 205, 0.72), rgba(225, 236, 229, 0.68)),
-    url('assets/mh-white-heart.png') center 18% / 44% no-repeat,
-    linear-gradient(130deg, #e6d9ca 0%, #dcebe2 100%);
+    linear-gradient(rgba(219, 202, 184, 0.78), rgba(212, 228, 218, 0.74)),
+    url('assets/mh-white-heart.png') center 18% / 46% no-repeat,
+    linear-gradient(130deg, #d9c8b5 0%, #cee3d7 100%);
   background-attachment: fixed, fixed, fixed;
 }
 .container { width: min(960px, 92vw); margin: 0 auto; }
