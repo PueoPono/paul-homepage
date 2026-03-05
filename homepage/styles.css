@@ -23,7 +23,7 @@ body::before {
   z-index: -2;
   background:
     linear-gradient(rgba(12, 9, 7, 0.68), rgba(12, 10, 8, 0.72)),
-    url('assets/pc-gold-bg.webp') center center / cover no-repeat;
+    url('assets/background-custom.jpg') center center / cover no-repeat;
   background-attachment: fixed, fixed;
 }
 
