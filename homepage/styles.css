@@ -26,16 +26,6 @@ body::before {
     url('assets/pc-gold-bg.webp') center center / cover no-repeat;
   background-attachment: fixed, fixed;
 }
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url('assets/mh-white-heart.png') center 26% / 34% no-repeat;
-  opacity: 0.95;
-  filter: brightness(1.22) contrast(1.2);
-  pointer-events: none;
-}
 
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
