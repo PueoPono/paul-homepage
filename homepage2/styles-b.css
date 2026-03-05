@@ -1,0 +1,127 @@
+:root {
+  --bg: #d8c5ae;
+  --text: #1a1410;
+  --muted: #3f3329;
+  --brand: #0f5d4a;
+  --brand-dark: #0a3f33;
+  --card: #fff8ee;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(rgba(132, 95, 60, 0.9), rgba(102, 139, 124, 0.88)),
+    linear-gradient(130deg, #8e6440 0%, #5f8f7a 100%);
+  background-attachment: fixed, fixed;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('assets/mh-white-heart.png') center 25% / 39% no-repeat;
+  opacity: 1;
+  filter: brightness(1.24) contrast(1.22);
+  pointer-events: none;
+}
+.container { width: min(960px, 92vw); margin: 0 auto; }
+
+.hero {
+  background: rgba(250, 241, 230, 0.42);
+  backdrop-filter: blur(1px);
+  padding: 5rem 0 4rem;
+  border-bottom: 2px solid rgba(20, 45, 36, 0.35);
+}
+.kicker { color: var(--brand-dark); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  line-height: 1.15;
+  margin: .4rem 0 1rem;
+  color: #14100c;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}
+.lead { font-size: 1.12rem; color: #2f251d; max-width: 760px; font-weight: 500; }
+
+.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.25rem; }
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: .75rem 1.1rem;
+  font-weight: 600;
+}
+.btn.primary {
+  background: linear-gradient(180deg, #1e7a61 0%, #0f5d4a 100%);
+  color: white;
+  border: 1px solid rgba(8, 34, 27, 0.5);
+  box-shadow: 0 4px 14px rgba(11, 49, 39, 0.22);
+}
+.btn.primary:hover { background: linear-gradient(180deg, #166851 0%, #0a4638 100%); }
+.btn.ghost { border: 1px solid #7e8f86; color: #1e1813; background: rgba(255,255,255,.72); }
+
+.section {
+  padding: 3.2rem 0;
+  background: rgba(255, 247, 236, 0.46);
+}
+.section.alt { background: rgba(210, 228, 218, 0.62); }
+h2 {
+  margin-top: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+ul, ol { padding-left: 1.2rem; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1.2rem;
+  align-items: center;
+}
+.portrait {
+  width: 100%;
+  border-radius: 12px;
+}
+.testimonial-wrap {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 999px;
+}
+blockquote {
+  margin: 0;
+  background: var(--card);
+  border-left: 4px solid var(--brand);
+  padding: 1rem 1rem 1rem 1.2rem;
+  border-radius: 8px;
+}
+cite { display: block; margin-top: .5rem; color: var(--muted); font-style: normal; }
+@media (max-width: 760px) {
+  .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
+  .testimonial-photo { width: 84px; height: 84px; }
+}
+
+.footer {
+  border-top: 1px solid #dbe7df;
+  padding: 1.2rem 0 2rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
