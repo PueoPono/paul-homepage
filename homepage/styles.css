@@ -22,18 +22,18 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(rgba(250, 245, 238, 0.92), rgba(250, 245, 238, 0.88)),
-    url('assets/mh-white-heart.png') center 18% / 38% no-repeat,
-    linear-gradient(130deg, #f7f0e7 0%, #f2f7f3 100%);
+    linear-gradient(rgba(232, 220, 205, 0.72), rgba(225, 236, 229, 0.68)),
+    url('assets/mh-white-heart.png') center 18% / 44% no-repeat,
+    linear-gradient(130deg, #e6d9ca 0%, #dcebe2 100%);
   background-attachment: fixed, fixed, fixed;
 }
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
 .hero {
-  background: rgba(255, 252, 247, 0.72);
-  backdrop-filter: blur(2px);
+  background: rgba(255, 250, 243, 0.58);
+  backdrop-filter: blur(1.5px);
   padding: 5rem 0 4rem;
-  border-bottom: 1px solid rgba(72, 106, 90, 0.14);
+  border-bottom: 1px solid rgba(72, 106, 90, 0.16);
 }
 .kicker { color: var(--brand-dark); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 h1 {
