@@ -23,9 +23,18 @@ body::before {
   z-index: -2;
   background:
     linear-gradient(rgba(194, 169, 143, 0.84), rgba(187, 213, 199, 0.80)),
-    url('assets/mh-white-heart.png') center 18% / 48% no-repeat,
     linear-gradient(130deg, #cdb297 0%, #b8d7c7 100%);
-  background-attachment: fixed, fixed, fixed;
+  background-attachment: fixed, fixed;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('assets/mh-white-heart.png') center 24% / 42% no-repeat;
+  opacity: 0.98;
+  filter: brightness(1.18) contrast(1.1);
+  pointer-events: none;
 }
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
