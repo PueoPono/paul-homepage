@@ -1,10 +1,10 @@
 :root {
-  --bg: #181511;
-  --text: #f7f5ef;
-  --muted: #e2dbcf;
-  --brand: #d4a15b;
-  --brand-dark: #9e7338;
-  --card: rgba(23, 19, 14, 0.72);
+  --bg: #d8c5ae;
+  --text: #1a1410;
+  --muted: #3f3329;
+  --brand: #0f5d4a;
+  --brand-dark: #0a3f33;
+  --card: #fff8ee;
 }
 
 * { box-sizing: border-box; }
@@ -22,8 +22,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(rgba(12, 9, 7, 0.68), rgba(12, 10, 8, 0.72)),
-    url('assets/pc-gold-bg.webp') center center / cover no-repeat;
+    linear-gradient(rgba(132, 95, 60, 0.9), rgba(102, 139, 124, 0.88)),
+    linear-gradient(130deg, #8e6440 0%, #5f8f7a 100%);
   background-attachment: fixed, fixed;
 }
 body::after {
@@ -31,40 +31,29 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: url('assets/mh-white-heart.png') center 26% / 34% no-repeat;
-  opacity: 0.95;
-  filter: brightness(1.22) contrast(1.2);
+  background: url('assets/mh-white-heart.png') center 25% / 39% no-repeat;
+  opacity: 1;
+  filter: brightness(1.24) contrast(1.22);
   pointer-events: none;
 }
-
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
 .hero {
-  background: rgba(15, 12, 9, 0.38);
+  background: rgba(250, 241, 230, 0.42);
   backdrop-filter: blur(1px);
   padding: 5rem 0 4rem;
-  border-bottom: 1px solid rgba(216, 164, 90, 0.45);
+  border-bottom: 2px solid rgba(20, 45, 36, 0.35);
 }
-.kicker {
-  color: #ffd59f;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
+.kicker { color: var(--brand-dark); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 h1 {
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: clamp(2.2rem, 4.4vw, 3.5rem);
-  line-height: 1.12;
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  line-height: 1.15;
   margin: .4rem 0 1rem;
-  color: #fff;
-  text-shadow: 0 3px 16px rgba(0,0,0,.5);
+  color: #14100c;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
-.lead {
-  font-size: 1.12rem;
-  color: var(--muted);
-  max-width: 760px;
-  font-weight: 500;
-}
+.lead { font-size: 1.12rem; color: #2f251d; max-width: 760px; font-weight: 500; }
 
 .cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.25rem; }
 .btn {
@@ -72,27 +61,26 @@ h1 {
   text-decoration: none;
   border-radius: 10px;
   padding: .75rem 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .btn.primary {
-  background: linear-gradient(180deg, #e0b06f 0%, #bc8948 100%);
-  color: #1f1710;
-  border: 1px solid rgba(59, 38, 17, 0.55);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, #1e7a61 0%, #0f5d4a 100%);
+  color: white;
+  border: 1px solid rgba(8, 34, 27, 0.5);
+  box-shadow: 0 4px 14px rgba(11, 49, 39, 0.22);
 }
-.btn.primary:hover { background: linear-gradient(180deg, #e8bb7f 0%, #c49352 100%); }
-.btn.ghost { border: 1px solid #d1b489; color: #fff5e6; background: rgba(28, 21, 13, .38); }
+.btn.primary:hover { background: linear-gradient(180deg, #166851 0%, #0a4638 100%); }
+.btn.ghost { border: 1px solid #7e8f86; color: #1e1813; background: rgba(255,255,255,.72); }
 
 .section {
   padding: 3.2rem 0;
-  background: rgba(18, 14, 10, 0.42);
+  background: rgba(255, 247, 236, 0.46);
 }
-.section.alt { background: rgba(28, 21, 14, 0.52); }
+.section.alt { background: rgba(210, 228, 218, 0.62); }
 h2 {
   margin-top: 0;
   font-family: "Georgia", "Times New Roman", serif;
   font-size: clamp(1.4rem, 2.4vw, 2rem);
-  color: #fff;
 }
 ul, ol { padding-left: 1.2rem; }
 
@@ -105,7 +93,6 @@ ul, ol { padding-left: 1.2rem; }
 .portrait {
   width: 100%;
   border-radius: 12px;
-  border: 1px solid rgba(255, 215, 158, 0.35);
 }
 .testimonial-wrap {
   display: grid;
@@ -118,7 +105,6 @@ ul, ol { padding-left: 1.2rem; }
   height: 100px;
   object-fit: cover;
   border-radius: 999px;
-  border: 2px solid rgba(255, 214, 151, 0.65);
 }
 blockquote {
   margin: 0;
@@ -127,18 +113,15 @@ blockquote {
   padding: 1rem 1rem 1rem 1.2rem;
   border-radius: 8px;
 }
-cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
-
+cite { display: block; margin-top: .5rem; color: var(--muted); font-style: normal; }
 @media (max-width: 760px) {
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
   .testimonial-photo { width: 84px; height: 84px; }
-  body::after { background-size: 52%; background-position: center 20%; }
 }
 
 .footer {
-  border-top: 1px solid rgba(211, 170, 104, 0.35);
+  border-top: 1px solid #dbe7df;
   padding: 1.2rem 0 2rem;
-  color: #e6dac7;
+  color: var(--muted);
   font-size: .95rem;
-  background: rgba(14, 11, 8, 0.45);
 }
