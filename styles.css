@@ -37,7 +37,8 @@ body {
   margin-bottom: 1.1rem;
   background:
     linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
-    url('assets/pc-gold-bg.webp') center 10% / cover no-repeat;
+    url('assets/pc-gold-bg.webp') center 10% / 100% auto no-repeat;
+  background-attachment: scroll;
   border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
 .kicker {
