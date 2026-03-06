@@ -129,7 +129,7 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
   body::before {
     background:
       linear-gradient(rgba(12, 9, 7, 0.72), rgba(12, 10, 8, 0.78)),
-      url('assets/background-custom.jpg') center top / cover no-repeat;
+      url('assets/background-custom.jpg') center top / contain no-repeat;
   }
 }
 
