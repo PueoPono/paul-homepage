@@ -29,19 +29,6 @@ body {
   border-bottom: 1px solid rgba(216, 164, 90, 0.45);
 }
 
-@media (min-width: 761px) {
-  .hero {
-    background: #000;
-  }
-
-  .hero-top-image {
-    width: 50%;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /* Hard-disable any legacy pseudo-image header */
 .hero::before {
   content: none !important;
@@ -140,6 +127,19 @@ blockquote {
   border-radius: 8px;
 }
 cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
+
+@media (min-width: 761px) {
+  .hero {
+    background: #000;
+  }
+
+  .hero-top-image {
+    width: 50%;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 @media (max-width: 760px) {
   .hero {
