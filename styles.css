@@ -14,10 +14,20 @@ body {
   color: var(--text);
   line-height: 1.65;
   position: relative;
-  background:
+  background-image:
     linear-gradient(rgba(12, 9, 7, 0.68), rgba(12, 10, 8, 0.72)),
-    url('assets/pc-gold-bg.webp') center center / cover no-repeat fixed;
+    url('assets/pc-gold-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-color: var(--bg);
+}
+
+@media (min-width: 761px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 .container { width: min(960px, 92vw); margin: 0 auto; }
@@ -116,7 +126,7 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
   body {
     background-attachment: scroll;
     background-position: center top;
-    background-size: 100% auto;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
