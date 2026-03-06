@@ -14,18 +14,9 @@ body {
   color: var(--text);
   line-height: 1.65;
   position: relative;
-  background-color: var(--bg);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
   background:
-    linear-gradient(rgba(12, 9, 7, 0.68), rgba(12, 10, 8, 0.72)),
-    url('assets/pc-gold-bg.webp') center top / auto 100% no-repeat;
+    linear-gradient(rgba(12, 9, 7, 0.88), rgba(12, 10, 8, 0.9));
+  background-color: var(--bg);
 }
 
 .container { width: min(960px, 92vw); margin: 0 auto; }
@@ -33,8 +24,21 @@ body::before {
 .hero {
   background: rgba(15, 12, 9, 0.38);
   backdrop-filter: blur(1px);
-  padding: 5rem 0 4rem;
+  padding: 0 0 4rem;
   border-bottom: 1px solid rgba(216, 164, 90, 0.45);
+}
+
+.hero::before {
+  content: "";
+  display: block;
+  height: 46vh;
+  min-height: 220px;
+  max-height: 420px;
+  margin-bottom: 1.1rem;
+  background:
+    linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
+    url('assets/pc-gold-bg.webp') center top / cover no-repeat;
+  border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
 .kicker {
   color: #ffd59f;
@@ -121,31 +125,14 @@ blockquote {
 cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
 
 @media (max-width: 760px) {
-  body::before {
-    content: none;
-  }
-
-  body {
-    background:
-      linear-gradient(rgba(12, 9, 7, 0.88), rgba(12, 10, 8, 0.9));
-  }
-
   .hero {
     background: rgba(15, 12, 9, 0.5);
-    padding-top: 0;
   }
 
   .hero::before {
-    content: "";
-    display: block;
     height: 42vh;
     min-height: 180px;
     max-height: 320px;
-    margin-bottom: 1.1rem;
-    background:
-      linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
-      url('assets/pc-gold-bg.webp') center top / cover no-repeat;
-    border-bottom: 1px solid rgba(216, 164, 90, 0.35);
   }
 
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
