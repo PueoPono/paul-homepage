@@ -31,13 +31,12 @@ body {
 .hero::before {
   content: "";
   display: block;
-  height: 30vh;
-  min-height: 160px;
-  max-height: 260px;
+  height: clamp(260px, 52vw, 620px);
   margin-bottom: 1.1rem;
   background:
     linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
-    url('assets/pc-gold-bg.webp') center 10% / 100% auto no-repeat;
+    url('assets/pc-gold-bg.webp') center top / contain no-repeat;
+  background-color: rgba(12, 9, 7, 0.78);
   background-attachment: scroll;
   border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
@@ -135,6 +134,7 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
     height: 42vh;
     min-height: 180px;
     max-height: 320px;
+    background-size: cover;
   }
 
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
