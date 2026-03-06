@@ -37,8 +37,9 @@ body {
 
 .hero-top-image {
   display: block;
-  width: 50%;
-  max-width: 50%;
+  width: 35%;
+  max-width: 35%;
+  max-height: 220px;
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -136,8 +137,9 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
   }
 
   .hero-top-image {
-    width: 50% !important;
-    max-width: 50% !important;
+    width: 35% !important;
+    max-width: 35% !important;
+    max-height: 220px;
     margin-left: auto;
     margin-right: auto;
   }
