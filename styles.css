@@ -31,7 +31,7 @@ body {
 .hero::before {
   content: "";
   display: block;
-  height: clamp(260px, 52vw, 620px);
+  height: clamp(180px, 32vw, 360px);
   margin-bottom: 1.1rem;
   background:
     linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
