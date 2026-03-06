@@ -132,9 +132,21 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
   }
 
   .hero {
+    background: rgba(15, 12, 9, 0.5);
+    padding-top: 0;
+  }
+
+  .hero::before {
+    content: "";
+    display: block;
+    height: 42vh;
+    min-height: 180px;
+    max-height: 320px;
+    margin-bottom: 1.1rem;
     background:
-      linear-gradient(rgba(12, 9, 7, 0.62), rgba(12, 10, 8, 0.72)),
+      linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
       url('assets/pc-gold-bg.webp') center top / cover no-repeat;
+    border-bottom: 1px solid rgba(216, 164, 90, 0.35);
   }
 
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
