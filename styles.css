@@ -14,6 +14,7 @@ body {
   color: var(--text);
   line-height: 1.65;
   position: relative;
+  overflow-x: hidden;
   background:
     linear-gradient(rgba(12, 9, 7, 0.88), rgba(12, 10, 8, 0.9));
   background-color: var(--bg);
@@ -28,10 +29,18 @@ body {
   border-bottom: 1px solid rgba(216, 164, 90, 0.45);
 }
 
+/* Hard-disable any legacy pseudo-image header */
+.hero::before {
+  content: none !important;
+  display: none !important;
+}
+
 .hero-top-image {
   display: block;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   height: auto;
+  object-fit: contain;
   border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
 .kicker {
