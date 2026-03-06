@@ -31,9 +31,9 @@ body {
 .hero::before {
   content: "";
   display: block;
-  height: 46vh;
-  min-height: 220px;
-  max-height: 420px;
+  height: 30vh;
+  min-height: 160px;
+  max-height: 260px;
   margin-bottom: 1.1rem;
   background:
     linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
