@@ -12,19 +12,12 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
-  background: var(--bg);
   line-height: 1.65;
   position: relative;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
   background:
     linear-gradient(rgba(12, 9, 7, 0.68), rgba(12, 10, 8, 0.72)),
-    url('assets/pc-gold-bg.webp') center center / cover no-repeat;
-  background-attachment: fixed, fixed;
+    url('assets/pc-gold-bg.webp') center center / cover no-repeat fixed;
+  background-color: var(--bg);
 }
 
 .container { width: min(960px, 92vw); margin: 0 auto; }
@@ -122,7 +115,6 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
 @media (max-width: 760px) {
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
   .testimonial-photo { width: 84px; height: 84px; }
-  body::after { background-size: 52%; background-position: center 20%; }
 }
 
 .footer {
