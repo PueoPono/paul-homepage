@@ -124,10 +124,17 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
 
 @media (max-width: 760px) {
   body {
+    background-image: linear-gradient(rgba(12, 9, 7, 0.88), rgba(12, 10, 8, 0.9));
     background-attachment: scroll;
     background-position: center top;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
+  }
+
+  .hero {
+    background:
+      linear-gradient(rgba(12, 9, 7, 0.62), rgba(12, 10, 8, 0.72)),
+      url('assets/pc-gold-bg.webp') center top / cover no-repeat;
   }
 
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
