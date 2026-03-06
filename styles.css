@@ -31,12 +31,13 @@ body {
 .hero::before {
   content: "";
   display: block;
-  height: clamp(180px, 32vw, 360px);
+  height: 46vh;
+  min-height: 220px;
+  max-height: 420px;
   margin-bottom: 1.1rem;
   background:
     linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
-    url('assets/pc-gold-bg.webp') center top / contain no-repeat;
-  background-color: rgba(12, 9, 7, 0.78);
+    url('assets/pc-gold-bg.webp') center 10% / 100% auto no-repeat;
   background-attachment: scroll;
   border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
