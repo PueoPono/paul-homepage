@@ -105,6 +105,7 @@ ul, ol { padding-left: 1.2rem; }
   gap: 1rem;
   align-items: center;
 }
+.testimonial-wrap + .testimonial-wrap { margin-top: 1.35rem; }
 .testimonial-photo {
   width: 100px;
   height: 100px;
