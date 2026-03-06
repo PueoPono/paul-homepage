@@ -125,11 +125,11 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
   .testimonial-photo { width: 84px; height: 84px; }
 
-  /* Mobile fallback: many browsers ignore fixed backgrounds */
+  /* Phone-optimized portrait crop */
   body::before {
     background:
       linear-gradient(rgba(12, 9, 7, 0.72), rgba(12, 10, 8, 0.78)),
-      url('assets/pc-gold-bg.webp') center top / cover no-repeat;
+      url('assets/background-custom.jpg') center top / cover no-repeat;
   }
 }
 
