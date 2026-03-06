@@ -28,17 +28,10 @@ body {
   border-bottom: 1px solid rgba(216, 164, 90, 0.45);
 }
 
-.hero::before {
-  content: "";
+.hero-top-image {
   display: block;
-  height: 46vh;
-  min-height: 220px;
-  max-height: 420px;
-  margin-bottom: 1.1rem;
-  background:
-    linear-gradient(rgba(12, 9, 7, 0.4), rgba(12, 10, 8, 0.62)),
-    url('assets/pc-gold-bg.webp') center 10% / 100% auto no-repeat;
-  background-attachment: scroll;
+  width: 100%;
+  height: auto;
   border-bottom: 1px solid rgba(216, 164, 90, 0.35);
 }
 .kicker {
@@ -131,11 +124,9 @@ cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
     background: rgba(15, 12, 9, 0.5);
   }
 
-  .hero::before {
-    height: 42vh;
-    min-height: 180px;
+  .hero-top-image {
     max-height: 320px;
-    background-size: cover;
+    object-fit: cover;
   }
 
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
