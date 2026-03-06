@@ -113,6 +113,13 @@ blockquote {
 cite { display: block; margin-top: .5rem; color: #e4d9c8; font-style: normal; }
 
 @media (max-width: 760px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
   .two-col, .testimonial-wrap { grid-template-columns: 1fr; }
   .testimonial-photo { width: 84px; height: 84px; }
 }
