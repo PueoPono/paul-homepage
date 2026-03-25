@@ -26,11 +26,11 @@ Global-footer-copyright: © 2026 Paul Cropper
 ## Homepage
 Homepage-hero-eyebrow: Integrated Heart & Vitality Coaching
 Homepage-hero-title: Align the Heart. Train the Body. Calm the Mind.
-Homepage-hero-subtitle: Filler copy — coaching for men and humans ready to become more whole, more grounded, and more alive.
+Homepage-hero-subtitle: Integrated Heart & Vitality Coaching for people ready to become more whole, more grounded, and more alive.
 Homepage-hero-primary-cta: Work With Paul
 Homepage-hero-secondary-cta: About Paul
-Homepage-initial-invite-header: Cut the crap, get to the heart, and back to enjoying life.
-Homepage-initial-invite-body: Filler copy — this space introduces the central problem, the felt struggle, and the promise of a more integrated path.
+Homepage-initial-invite-header: Your heart is real.
+Homepage-initial-invite-body: From Paul's work and research, healing with the heart is key to health in the mind and body. This site exists to support a more whole path — one that honors the heart, trains the body, and steadies the mind.
 Homepage-pillars-title: Integrated Heart and Vitality Coaching
 Homepage-pillar-1-title: Heart Alignment
 Homepage-pillar-1-body: Filler copy — learn how to reconnect with honesty, emotional clarity, and mature masculine heart.
@@ -42,9 +42,9 @@ Homepage-pillar-4-title: Emotional Alchemy
 Homepage-pillar-4-body: Filler copy — transform emotional weight into usable wisdom and energy.
 Homepage-pillar-5-title: Wholeness
 Homepage-pillar-5-body: Filler copy — bring heart, body, mind, spirit, and daily life back into relationship.
-Homepage-bridge-line: This is not one-size-fits-all advice. This is support for your actual life.
+Homepage-bridge-line: This is not one-size-fits-all advice. This is support for your actual life, your body, your heart, and your path.
 Homepage-program-invite-title: Continue Your Wholeness Journey Together
-Homepage-program-invite-body: Filler copy — a short invitation into coaching, guidance, or next-step support.
+Homepage-program-invite-body: Broken hearts don't work. So what do we do? We fix them — with honesty, awareness, support, and practical work that helps life come back into alignment.
 Homepage-testimonial-1-quote: Speak to Paul, he will absolutely change your life.
 Homepage-testimonial-1-name: Scott Anthony
 Homepage-testimonial-1-location: Australia
@@ -55,12 +55,12 @@ Homepage-final-cta-button: Contact Paul
 ## About Page
 About-page-hero-eyebrow: About Paul
 About-page-hero-title: Meet Paul Cropper
-About-page-hero-subtitle: Filler copy — guide, coach, and researcher of heart, health, and wholeness.
-About-page-paul-description: Hey, I'm Paul. Maybe like every other human I inherited a belief that worth and happiness and acceptance isn't automatic...
+About-page-hero-subtitle: Guide, coach, and researcher of heart, health, and wholeness.
+About-page-paul-description: Aloha from the Big Island of Hawaii. My name is Paul, or Pauko on the Island. I bring Emotional Alchemy, Heart Science, and both ancient and modern tools for health and wellness so people can live more fully.
 About-page-background-title: My Story
-About-page-background-body: Filler copy — personal story, turning points, healing path, and what led Paul into this work.
+About-page-background-body: Filler copy — expand this with Paul's real path, turning points, healing journey, and what led him into this work.
 About-page-philosophy-title: Philosophy
-About-page-philosophy-body: Filler copy — why heart, body, and mind must be approached together.
+About-page-philosophy-body: Healing with the heart is key to health in the mind and body. Part of this work is supporting people in going within; part of it is supporting physical and exterior health as well.
 About-page-nature-section-title: Rooted in Nature
 About-page-nature-section-body: Filler copy — this section should evoke land, embodiment, rhythm, and groundedness.
 About-page-credentials-title: Credentials and Experience
@@ -92,15 +92,15 @@ Coaching-page-cta-button: Apply or Contact
 ## Method / Approach Page
 Method-page-hero-eyebrow: The Method
 Method-page-hero-title: Integrated Heart & Vitality Method
-Method-page-hero-subtitle: Filler copy — the philosophy and practical framework behind the work.
+Method-page-hero-subtitle: The philosophy and practical framework behind the work.
 Method-page-section-1-title: Align the Heart
-Method-page-section-1-body: Filler copy — heart honesty, emotional awareness, masculine maturity.
+Method-page-section-1-body: The masculine heart calls for honesty, awareness, and the courage to feel what is true.
 Method-page-section-2-title: Train the Body
-Method-page-section-2-body: Filler copy — vitality, movement, nourishment, recovery.
+Method-page-section-2-body: Use grounded practices to support vitality, movement, nourishment, recovery, and real physical health.
 Method-page-section-3-title: Calm the Mind
-Method-page-section-3-body: Filler copy — mental steadiness, nervous system support, perspective.
+Method-page-section-3-body: Build steadiness, reduce inner noise, and develop a more trustworthy relationship with thought and emotion.
 Method-page-section-4-title: Live Whole
-Method-page-section-4-body: Filler copy — integration into work, relationship, family, and everyday life.
+Method-page-section-4-body: Bring heart, body, spirit, and soul back into relationship so change becomes lived rather than theoretical.
 Method-page-cta-title: Experience the work directly.
 Method-page-cta-body: Filler copy — short invitation into coaching.
 Method-page-cta-button: Work With Paul
