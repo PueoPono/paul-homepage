@@ -39,6 +39,10 @@ White hand-drawn masculine heart with arrow on transparent background.
 **Visual mood**
 Warm gold, ember red, textured glow, canvas, premium masculine calm.
 
+**Messaging emphasis**
+Integrated vitality, heart wellness, and health in body, heart, and mind.
+The new site should improve on the current webpage language by making it clearer, more premium, and more integrated without losing the emotional truth of the original message.
+
 **Specific art direction**
 - Header/logo treatment inspired by Jeff Siegel Wellness layout
 - Replace circular mark with the Masculine Heart symbol
