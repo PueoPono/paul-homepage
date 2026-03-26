@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" viewBox="0 0 360 150" fill="none">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.6" flood-color="#4A2B1B" flood-opacity="0.95"/>
+    </filter>
+    <style>
+      .line1 {
+        font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+        font-size: 40px;
+        font-weight: 400;
+        fill: #F5F2EA;
+        stroke: #5A341F;
+        stroke-width: 2.8px;
+        paint-order: stroke fill;
+      }
+      .line2 {
+        font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+        font-size: 29px;
+        font-weight: 400;
+        fill: #F5F2EA;
+        stroke: #5A341F;
+        stroke-width: 2.4px;
+        paint-order: stroke fill;
+      }
+    </style>
+  </defs>
+  <g filter="url(#softShadow)">
+    <text x="108" y="56" class="line1">Vital Life</text>
+    <text x="158" y="94" class="line2">w/ Paul</text>
+  </g>
+</svg>

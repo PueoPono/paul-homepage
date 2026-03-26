@@ -92,15 +92,6 @@ img { max-width: 100%; display: block; }
   position: absolute;
   color: var(--color-cream);
   text-align: right;
-  text-shadow:
-    1px 0 0 rgba(166, 118, 38, 0.9),
-    -1px 0 0 rgba(166, 118, 38, 0.9),
-    0 1px 0 rgba(166, 118, 38, 0.9),
-    0 -1px 0 rgba(166, 118, 38, 0.9),
-    1px 1px 0 rgba(166, 118, 38, 0.68),
-    -1px 1px 0 rgba(166, 118, 38, 0.68),
-    1px -1px 0 rgba(166, 118, 38, 0.68),
-    -1px -1px 0 rgba(166, 118, 38, 0.68);
   white-space: nowrap;
 }
 .brand-overlay-text--script {
@@ -129,6 +120,14 @@ img { max-width: 100%; display: block; }
 }
 .brand-overlay-sub--tight {
   top: 46px;
+}
+.brand-logo-svg {
+  position: absolute;
+  left: 52px;
+  top: 16px;
+  width: 140px;
+  height: auto;
+  pointer-events: none;
 }
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
@@ -563,29 +562,12 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text,
   .brand-overlay-sub {
-    text-shadow:
-      1px 0 0 rgba(72, 41, 22, 0.98),
-      -1px 0 0 rgba(72, 41, 22, 0.98),
-      0 1px 0 rgba(72, 41, 22, 0.98),
-      0 -1px 0 rgba(72, 41, 22, 0.98),
-      1px 1px 0 rgba(72, 41, 22, 0.88),
-      -1px 1px 0 rgba(72, 41, 22, 0.88),
-      1px -1px 0 rgba(72, 41, 22, 0.88),
-      -1px -1px 0 rgba(72, 41, 22, 0.88),
-      2px 0 0 rgba(72, 41, 22, 0.58),
-      -2px 0 0 rgba(72, 41, 22, 0.58),
-      0 2px 0 rgba(72, 41, 22, 0.58),
-      0 -2px 0 rgba(72, 41, 22, 0.58);
+    text-shadow: none;
   }
-  .brand-overlay-text--script {
+  .brand-logo-svg {
     left: 46px;
-    top: 29px;
-    font-size: 0.98rem;
-  }
-  .brand-overlay-sub--small {
-    left: 62px;
-    top: 44px;
-    font-size: 0.74rem;
+    top: 22px;
+    width: 118px;
   }
   .reference-hero--tall,
   .reference-hero-inner--lower {
