@@ -585,8 +585,8 @@ p { margin: 0 0 1rem; }
   }
   .reference-hero-inner--lower {
     align-items: flex-start;
-    padding-top: 8.8rem;
-    padding-bottom: 2.6rem;
+    padding-top: 14.5rem;
+    padding-bottom: 2.2rem;
   }
   .hero-copy-block {
     max-width: 100%;
@@ -604,7 +604,7 @@ p { margin: 0 0 1rem; }
     margin-top: 0.2rem;
   }
   h1 {
-    font-size: clamp(0.84rem, 3.5vw, 1.08rem);
+    font-size: clamp(0.78rem, 3.2vw, 1rem);
     line-height: 1.22;
     max-width: 84%;
   }
