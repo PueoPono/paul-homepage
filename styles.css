@@ -560,11 +560,7 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text,
   .brand-overlay-sub {
-    text-shadow:
-      1px 0 0 rgba(150, 108, 36, 0.95),
-      -1px 0 0 rgba(150, 108, 36, 0.95),
-      0 1px 0 rgba(150, 108, 36, 0.95),
-      0 -1px 0 rgba(150, 108, 36, 0.95);
+    text-shadow: none;
   }
   .brand-overlay-text--script {
     left: 46px;
@@ -585,7 +581,7 @@ p { margin: 0 0 1rem; }
   }
   .reference-hero-inner--lower {
     align-items: flex-start;
-    padding-top: 14.5rem;
+    padding-top: 17.8rem;
     padding-bottom: 2.2rem;
   }
   .hero-copy-block {
@@ -595,7 +591,7 @@ p { margin: 0 0 1rem; }
     margin: 0 0 1.3rem;
   }
   .hero-brand-line--primary {
-    font-size: clamp(2.2rem, 10.8vw, 3.2rem);
+    font-size: clamp(2rem, 9.2vw, 2.8rem);
     line-height: 0.98;
   }
   .hero-brand-line--secondary {
