@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage Tuning Panel</title>
+  <style>
+    :root {
+      --bg: #140c09;
+      --panel: rgba(24,16,12,.94);
+      --line: rgba(242,215,160,.18);
+      --text: #f5f2ea;
+      --muted: rgba(245,242,234,.68);
+      --gold: #f2d7a0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .app {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) 360px;
+      min-height: 100vh;
+    }
+    .preview-wrap {
+      position: relative;
+      overflow: auto;
+      background: #0f0907;
+    }
+    .phone-note {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      padding: .6rem .9rem;
+      font-size: .88rem;
+      color: var(--muted);
+      background: rgba(10,8,7,.75);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .preview {
+      position: relative;
+      width: 100%;
+      min-height: 1100px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(10,6,5,.08) 0%, rgba(10,6,5,.24) 42%, rgba(10,6,5,.54) 72%, rgba(10,6,5,.82) 100%),
+        url('../assets/branding/canvas-sunset-background.svg') center/cover no-repeat;
+    }
+    .header {
+      position: absolute;
+      left: 0; right: 0; top: 0;
+      height: var(--header-height, 110px);
+      border-bottom: 1px dashed rgba(255,255,255,.12);
+      background: rgba(255,255,255,.02);
+    }
+    .logo-box {
+      position: absolute;
+      left: var(--logo-left, 24px);
+      top: var(--logo-top, 14px);
+      width: var(--logo-width, 170px);
+      height: var(--logo-height, 88px);
+      touch-action: none;
+      cursor: grab;
+    }
+    .logo-heart {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--heart-size, 104px);
+      height: var(--heart-size, 104px);
+      background: url('../assets/branding/white-MH-heart-arrow-transparent.png') center/contain no-repeat;
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.32));
+    }
+    .logo-line-1,
+    .logo-line-2 {
+      position: absolute;
+      font-family: "Snell Roundhand", "Brush Script MT", "Segoe Script", cursive;
+      font-weight: 300;
+      color: #f5f2ea;
+      text-shadow: 0 2px 0 rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.72);
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+    }
+    .logo-line-1 {
+      left: var(--text1-left, 58px);
+      top: var(--text1-top, 26px);
+      font-size: var(--text1-size, 30px);
+    }
+    .logo-line-2 {
+      left: var(--text2-left, 84px);
+      top: var(--text2-top, 48px);
+      font-size: var(--text2-size, 22px);
+    }
+    .hero-copy {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: var(--hero-top, 280px);
+      max-width: 760px;
+      touch-action: none;
+      cursor: grab;
+    }
+    .hero-brand-1 {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: var(--brand1-size, 62px);
+      line-height: .94;
+      margin: 0;
+    }
+    .hero-brand-2 {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: var(--brand2-size, 30px);
+      line-height: .94;
+      margin: .35rem 0 2rem;
+    }
+    .hero-question {
+      margin: 0 0 1rem;
+      color: #fff8ef;
+      font-family: Georgia, serif;
+      font-size: var(--question-size, 50px);
+      line-height: 1.04;
+      max-width: 800px;
+    }
+    .hero-sub {
+      margin: 0;
+      color: rgba(255,246,236,.76);
+      font-size: var(--sub-size, 14px);
+      max-width: 520px;
+    }
+    .controls {
+      background: var(--panel);
+      border-left: 1px solid var(--line);
+      padding: 1rem;
+      overflow: auto;
+    }
+    .controls h1 { margin: 0 0 .4rem; font-size: 1.15rem; }
+    .controls p { margin: 0 0 1rem; color: var(--muted); font-size: .92rem; }
+    .group { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+    .field { margin-bottom: .7rem; }
+    .field label { display: block; font-size: .85rem; margin-bottom: .2rem; color: var(--gold); }
+    .field input[type="range"] { width: 100%; }
+    .row { display: flex; gap: .5rem; align-items: center; }
+    .value { font-size: .82rem; color: var(--muted); min-width: 56px; text-align: right; }
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: .8rem;
+      font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: .7rem .9rem;
+      background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%);
+      color: #2b190f;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      .controls { border-left: 0; border-top: 1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="preview-wrap">
+      <div class="phone-note">Drag the logo block or hero text block directly. Use sliders for fine tuning. Works on phone.</div>
+      <div class="preview" id="preview">
+        <div class="header"></div>
+        <div class="logo-box" id="logoBox">
+          <div class="logo-heart"></div>
+          <div class="logo-line-1">Vital Life</div>
+          <div class="logo-line-2">w/ Paul</div>
+        </div>
+        <div class="hero-copy" id="heroCopy">
+          <div class="hero-brand-1">INTEGRATED</div>
+          <div class="hero-brand-2">HEART &amp; VITALITY</div>
+          <h2 class="hero-question">Are you in right relationship with yourself and all life around you?</h2>
+          <p class="hero-sub">Placeholder reflection-supporting introduction copy. Quiet, grounded, invitational.</p>
+        </div>
+      </div>
+    </div>
+    <aside class="controls">
+      <h1>Homepage tuning panel</h1>
+      <p>Adjust visually here, then send me the exported values or a screenshot. I can apply them directly into the real site.</p>
+
+      <div class="group" id="controlFields"></div>
+
+      <div class="group">
+        <button id="copyJson">Copy current values</button>
+      </div>
+
+      <div class="group">
+        <label for="output">Current values</label>
+        <textarea id="output" readonly></textarea>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const defaults = {
+      headerHeight: 110,
+      logoLeft: 24,
+      logoTop: 14,
+      logoWidth: 170,
+      logoHeight: 88,
+      heartSize: 104,
+      text1Left: 58,
+      text1Top: 26,
+      text1Size: 30,
+      text2Left: 84,
+      text2Top: 48,
+      text2Size: 22,
+      heroTop: 280,
+      brand1Size: 62,
+      brand2Size: 30,
+      questionSize: 50,
+      subSize: 14,
+    };
+
+    const state = { ...defaults };
+    const fields = [
+      ['headerHeight', 80, 180],
+      ['logoLeft', 0, 200],
+      ['logoTop', 0, 80],
+      ['logoWidth', 100, 260],
+      ['logoHeight', 60, 160],
+      ['heartSize', 60, 160],
+      ['text1Left', 0, 180],
+      ['text1Top', 0, 100],
+      ['text1Size', 14, 48],
+      ['text2Left', 0, 200],
+      ['text2Top', 0, 120],
+      ['text2Size', 12, 36],
+      ['heroTop', 120, 520],
+      ['brand1Size', 28, 90],
+      ['brand2Size', 16, 54],
+      ['questionSize', 24, 72],
+      ['subSize', 10, 24],
+    ];
+
+    const root = document.documentElement;
+    const output = document.getElementById('output');
+    const controls = document.getElementById('controlFields');
+
+    function apply() {
+      Object.entries(state).forEach(([k, v]) => root.style.setProperty(`--${k.replace(/[A-Z]/g, m => '-' + m.toLowerCase())}`, `${v}px`));
+      output.value = JSON.stringify(state, null, 2);
+      document.querySelectorAll('[data-value]').forEach(el => {
+        el.textContent = state[el.dataset.value] + 'px';
+      });
+    }
+
+    fields.forEach(([key, min, max]) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'field';
+      wrap.innerHTML = `
+        <label>${key}</label>
+        <div class="row">
+          <input type="range" min="${min}" max="${max}" value="${state[key]}" data-key="${key}">
+          <div class="value" data-value="${key}"></div>
+        </div>`;
+      controls.appendChild(wrap);
+    });
+
+    controls.addEventListener('input', (e) => {
+      if (e.target.matches('input[type="range"]')) {
+        state[e.target.dataset.key] = Number(e.target.value);
+        apply();
+      }
+    });
+
+    function makeDraggable(el, keys) {
+      let startX = 0, startY = 0, startVals = null;
+      const onMove = (clientX, clientY) => {
+        if (!startVals) return;
+        state[keys.x] = Math.round(startVals.x + (clientX - startX));
+        state[keys.y] = Math.round(startVals.y + (clientY - startY));
+        document.querySelector(`input[data-key="${keys.x}"]`).value = state[keys.x];
+        document.querySelector(`input[data-key="${keys.y}"]`).value = state[keys.y];
+        apply();
+      };
+      el.addEventListener('pointerdown', (e) => {
+        startX = e.clientX; startY = e.clientY;
+        startVals = { x: state[keys.x], y: state[keys.y] };
+        el.setPointerCapture(e.pointerId);
+      });
+      el.addEventListener('pointermove', (e) => {
+        if (!startVals) return;
+        onMove(e.clientX, e.clientY);
+      });
+      el.addEventListener('pointerup', () => { startVals = null; });
+      el.addEventListener('pointercancel', () => { startVals = null; });
+    }
+
+    makeDraggable(document.getElementById('logoBox'), { x: 'logoLeft', y: 'logoTop' });
+    makeDraggable(document.getElementById('heroCopy'), { x: 'logoLeft', y: 'heroTop' });
+
+    document.getElementById('copyJson').addEventListener('click', async () => {
+      const text = output.value;
+      try {
+        await navigator.clipboard.writeText(text);
+        alert('Copied current values');
+      } catch {
+        output.select();
+        document.execCommand('copy');
+      }
+    });
+
+    apply();
+  </script>
+</body>
+</html>
