@@ -560,7 +560,19 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text,
   .brand-overlay-sub {
-    text-shadow: none;
+    text-shadow:
+      1px 0 0 rgba(72, 41, 22, 0.98),
+      -1px 0 0 rgba(72, 41, 22, 0.98),
+      0 1px 0 rgba(72, 41, 22, 0.98),
+      0 -1px 0 rgba(72, 41, 22, 0.98),
+      1px 1px 0 rgba(72, 41, 22, 0.88),
+      -1px 1px 0 rgba(72, 41, 22, 0.88),
+      1px -1px 0 rgba(72, 41, 22, 0.88),
+      -1px -1px 0 rgba(72, 41, 22, 0.88),
+      2px 0 0 rgba(72, 41, 22, 0.58),
+      -2px 0 0 rgba(72, 41, 22, 0.58),
+      0 2px 0 rgba(72, 41, 22, 0.58),
+      0 -2px 0 rgba(72, 41, 22, 0.58);
   }
   .brand-overlay-text--script {
     left: 46px;
@@ -595,18 +607,18 @@ p { margin: 0 0 1rem; }
     line-height: 0.98;
   }
   .hero-brand-line--secondary {
-    font-size: clamp(0.96rem, 4.2vw, 1.25rem);
+    font-size: clamp(1.22rem, 5.7vw, 1.72rem);
     line-height: 1.02;
     margin-top: 0.2rem;
   }
   h1 {
-    font-size: clamp(0.78rem, 3.2vw, 1rem);
+    font-size: clamp(0.82rem, 3.4vw, 1.06rem);
     line-height: 1.22;
-    max-width: 84%;
+    max-width: 88%;
   }
   .hero-subtitle--smaller {
-    font-size: 0.72rem;
-    max-width: 92%;
+    font-size: 0.78rem;
+    max-width: 94%;
   }
   .btn,
   .nav-cta {
