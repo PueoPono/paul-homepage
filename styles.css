@@ -234,6 +234,16 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 14px 32px rgba(0,0,0,0.14);
   margin-bottom: 1.35rem;
 }
+.work-hero-text {
+  color: #5a341f !important;
+  text-shadow: 0 1px 0 rgba(245, 242, 234, 0.12);
+}
+.work-hero .hero-brand-line--primary,
+.work-hero .hero-brand-line--secondary,
+.work-hero h1,
+.work-hero .hero-subtitle {
+  color: #5a341f;
+}
 .eyebrow {
   margin: 0 0 0.95rem;
   text-transform: uppercase;
@@ -576,6 +586,9 @@ p { margin: 0 0 1rem; }
     padding: 0.9rem 1rem 0.72rem;
     border-radius: 16px;
     margin-bottom: 1rem;
+  }
+  .work-hero-text {
+    color: #4b2c1c !important;
   }
   .brand-mark-stack--large,
   .brand-mark-stack--tight {
