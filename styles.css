@@ -107,11 +107,11 @@ img { max-width: 100%; display: block; }
   top: 23px;
   left: 56px;
   transform: none;
-  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.42rem;
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
 }
 .brand-overlay-text--tight {
   top: 22px;
@@ -121,11 +121,11 @@ img { max-width: 100%; display: block; }
   left: 83px;
   bottom: auto;
   transform: none;
-  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.06rem;
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
 }
 .brand-overlay-sub--tight {
   top: 45px;
@@ -226,7 +226,7 @@ img { max-width: 100%; display: block; }
   margin-top: 1.8rem;
 }
 .hero-bottom-mark-image {
-  width: clamp(72px, 10vw, 126px);
+  width: clamp(220px, 32vw, 460px);
   height: auto;
   opacity: 0.98;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.3));
@@ -617,7 +617,7 @@ p { margin: 0 0 1rem; }
     margin-top: 1.25rem;
   }
   .hero-bottom-mark-image {
-    width: clamp(64px, 18vw, 96px);
+    width: clamp(168px, 42vw, 260px);
   }
   .hero-copy-block {
     max-width: 100%;
