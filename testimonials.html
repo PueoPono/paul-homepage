@@ -5,15 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonials | Integrated Heart &amp; Vitality</title>
   <meta name="description" content="Testimonials and lived outcomes from Integrated Heart & Vitality coaching with Paul Cropper." />
-  <link rel="stylesheet" href="styles.css?v=coaching-site-skeleton-1" />
+  <link rel="stylesheet" href="styles.css?v=sitewide-header-pass-1" />
 </head>
 <body>
-  <header class="site-header"><div class="container site-header-inner"><a class="brand" href="index.html"><img class="brand-mark" src="assets/branding/white-MH-heart-arrow-transparent.png" alt="Masculine heart with arrow logo" /><span class="brand-text"><span class="brand-name">Paul Cropper</span><span class="brand-tag">Integrated Heart &amp; Vitality Coaching</span></span></a><nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work-with-paul.html">Work With Paul</a><a href="mission.html">Mission</a><a href="my-story.html">My Story</a><a href="faq.html">FAQ</a><a href="testimonials.html">Testimonials</a><a href="resources.html">Resources</a><a class="nav-cta" href="contact.html">Contact Paul</a></nav></div></header>
+  <header class="site-header site-header--transparent" id="siteHeader"><div class="container site-header-inner"><a class="brand brand-overlay" href="index.html" aria-label="Vital Life with Paul home"><span class="brand-mark-stack brand-mark-stack--large brand-mark-stack--tight"><img class="brand-mark brand-mark--large brand-mark--zoom" src="assets/branding/white-MH-heart-arrow-transparent.png" alt="Heart arrow logo" /><span class="brand-overlay-text brand-overlay-text--script brand-overlay-text--tight">Vital Life</span><span class="brand-overlay-sub brand-overlay-sub--small brand-overlay-sub--tight">w/ Paul</span></span></a><button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span></span></button><nav class="site-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work-with-paul.html">Work With Me</a><a href="mission.html">About</a><a href="my-story.html">My Story</a><a href="faq.html">FAQ</a><a href="testimonials.html">Testimonials</a><a href="resources.html">Resources</a><a class="nav-cta" href="contact.html">Schedule A Call</a></nav></div></header>
   <main>
     <section class="page-hero"><div class="container page-hero-inner"><div class="page-hero-grid"><div><p class="eyebrow">Testimonials</p><h1>Proof, reflection, and lived experience.</h1><p class="hero-subtitle">The work is not just about improvement on paper. It is about integrated vitality, heart wellness, and real change people can feel in life.</p></div><aside class="hero-card"><p class="hero-card-title">Social proof</p><p>Testimonials here should reinforce health in body, heart, and mind — not just performance outcomes.</p></aside></div></div></section>
     <section class="page-section"><div class="container"><div class="card quote-card"><blockquote>“Speak to Paul, he will absolutely change your life, I guarantee it.”<cite>Scott Anthony · Australia</cite></blockquote></div></div></section>
     <section class="page-section alt"><div class="container"><div class="grid-2"><article class="card testimonial-item"><img class="testimonial-photo" src="assets/scott-testimonial.webp" alt="Scott testimonial photo" /><div><h3>Scott</h3><p>Paul's work reaches beyond surface motivation. The testimonial direction here should emphasize genuine life change, more wholeness, and a deeper sense of vitality.</p></div></article><article class="card testimonial-item"><img class="testimonial-photo" src="assets/jon-testimonial.jpg" alt="Jon testimonial photo" /><div><h3>Jon</h3><p>This slot can highlight clarity, self-understanding, and the way integrated work improves progress in real life.</p></div></article><article class="card testimonial-item"><img class="testimonial-photo" src="assets/dave-testimonial.jpg" alt="Dave testimonial photo" /><div><h3>Dave</h3><p>This slot can emphasize possibility, joy, and the lived feeling of becoming more whole in body, heart, and mind.</p></div></article><article class="card"><h3>Add more stories</h3><p>Additional testimonials can deepen the case for heart wellness, vitality, and integrated transformation.</p></article></div></div></section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="site-footer-top"><div><div class="brand-name">Paul Cropper</div><div class="brand-tag">Integrated Heart &amp; Vitality Coaching</div></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="work-with-paul.html">Work With Paul</a><a href="mission.html">Mission</a><a href="my-story.html">My Story</a><a href="faq.html">FAQ</a><a href="testimonials.html">Testimonials</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a></nav></div><div class="site-footer-bottom"><p>HEALTH IN THE BODY, HEART, AND MIND</p><p>© 2026 Paul Cropper</p></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="site-footer-top"><div><div class="brand-name">Paul Cropper</div><div class="brand-tag">Integrated Heart &amp; Vitality</div></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="work-with-paul.html">Work With Me</a><a href="mission.html">About</a><a href="my-story.html">My Story</a><a href="faq.html">FAQ</a><a href="testimonials.html">Testimonials</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a></nav></div><div class="site-footer-bottom"><p>HEALTH IN THE BODY, HEART, AND MIND</p><p>© 2026 Paul Cropper</p></div></div></footer>
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    const header = document.querySelector('#siteHeader');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    const updateHeader = () => {
+      if (!header) return;
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrolled > 24) {
+        header.classList.remove('site-header--transparent');
+        header.classList.add('site-header--solid');
+      } else {
+        header.classList.add('site-header--transparent');
+        header.classList.remove('site-header--solid');
+      }
+    };
+    window.addEventListener('load', updateHeader);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  </script>
 </body>
 </html>
