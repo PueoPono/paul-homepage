@@ -270,6 +270,9 @@ h1 {
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
+.hero-actions--below {
+  margin: 0 0 1.4rem;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -603,21 +606,21 @@ p { margin: 0 0 1rem; }
     margin: 0 0 1.3rem;
   }
   .hero-brand-line--primary {
-    font-size: clamp(2.16rem, 10vw, 3rem);
+    font-size: clamp(2.42rem, 11.6vw, 3.3rem);
     line-height: 0.98;
   }
   .hero-brand-line--secondary {
-    font-size: clamp(1.34rem, 6.2vw, 1.86rem);
+    font-size: clamp(1.52rem, 7vw, 2.04rem);
     line-height: 1.02;
     margin-top: 0.2rem;
   }
   h1 {
-    font-size: clamp(0.92rem, 3.9vw, 1.18rem);
+    font-size: clamp(1.08rem, 4.6vw, 1.34rem);
     line-height: 1.24;
-    max-width: 90%;
+    max-width: 92%;
   }
   .hero-subtitle--smaller {
-    font-size: 0.88rem;
+    font-size: 1rem;
     max-width: 94%;
   }
   .btn,
