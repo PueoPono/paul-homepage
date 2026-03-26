@@ -225,6 +225,15 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 18px 44px rgba(0,0,0,0.18);
   backdrop-filter: blur(2px);
 }
+.hero-brand-box {
+  display: inline-block;
+  background: rgba(74, 43, 27, 0.2);
+  border: 1px solid rgba(196, 92, 36, 0.14);
+  border-radius: 20px;
+  padding: 1rem 1.15rem 0.8rem;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+  margin-bottom: 1.35rem;
+}
 .eyebrow {
   margin: 0 0 0.95rem;
   text-transform: uppercase;
@@ -562,6 +571,11 @@ p { margin: 0 0 1rem; }
   .hero-copy-box {
     padding: 1.15rem 1rem 1rem;
     border-radius: 18px;
+  }
+  .hero-brand-box {
+    padding: 0.9rem 1rem 0.72rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
   }
   .brand-mark-stack--large,
   .brand-mark-stack--tight {
