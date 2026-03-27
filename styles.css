@@ -84,8 +84,8 @@ img { max-width: 100%; display: block; }
   height: 72px;
 }
 .brand-mark--zoom {
-  width: 98px;
-  height: 98px;
+  width: 103px;
+  height: 103px;
   transform: translate(-32px, 0px) scale(1);
   transform-origin: center center;
 }
@@ -113,12 +113,12 @@ img { max-width: 100%; display: block; }
   left: auto;
   right: 46px;
   transform: none;
-  font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.01rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.08rem;
   line-height: 1;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.01em;
 }
 .brand-overlay-text--tight {
   top: 26px;
@@ -129,12 +129,12 @@ img { max-width: 100%; display: block; }
   right: 54px;
   bottom: auto;
   transform: none;
-  font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.01rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.08rem;
   line-height: 1;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.01em;
 }
 .brand-overlay-sub--tight {
   top: 43px;
@@ -608,14 +608,23 @@ p { margin: 0 0 1rem; }
     transform: none;
     font-size: 1.08rem;
     line-height: 1;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.01em;
   }
   .brand-overlay-sub--small {
+    display: block;
     left: auto;
     right: 0px;
     top: 43px;
     transform: none;
     font-size: 1.08rem;
     line-height: 1;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.01em;
   }
   .reference-hero--tall,
   .reference-hero-inner--lower {
