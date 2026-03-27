@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Header Logo Editor – Prototype</title>
+  <link rel="stylesheet" href="../styles.css?v=layout-ref-pass-3" />
+  <style>
+    /* Frame + editor chrome (intentionally minimal, mobile-first) */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050304;
+      color: #f5f2ea;
+    }
+    .editor-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top, rgba(242, 215, 160, 0.18), transparent 55%),
+                  linear-gradient(180deg, #130b08, #050304 64%);
+    }
+    .editor-header {
+      padding: 0.85rem 1rem 0.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(242,215,160,0.18);
+      background: linear-gradient(180deg, rgba(17,10,7,0.98), rgba(8,4,3,0.96));
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .editor-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .editor-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .editor-subtitle {
+      font-size: 0.78rem;
+      color: rgba(245,242,234,0.72);
+    }
+    .device-toggle-row {
+      display: inline-flex;
+      padding: 2px;
+      border-radius: 999px;
+      background: rgba(15,9,7,0.85);
+      border: 1px solid rgba(242,215,160,0.22);
+    }
+    .device-toggle {
+      border: 0;
+      background: transparent;
+      color: rgba(245,242,234,0.8);
+      font-size: 0.74rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+    .device-toggle.is-active {
+      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%);
+      color: #26160f;
+      font-weight: 600;
+    }
+
+    .editor-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0.6rem 0.75rem 0.9rem;
+      gap: 0.7rem;
+    }
+
+    .phone-frame-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .phone-frame {
+      position: relative;
+      border-radius: 32px;
+      padding: 0.38rem;
+      background: radial-gradient(circle at top, rgba(243, 214, 160, 0.22), rgba(12,6,4,1));
+      box-shadow: 0 18px 35px rgba(0,0,0,0.7);
+      max-width: 420px;
+      width: 100%;
+    }
+    .phone-inner-bezel {
+      border-radius: 26px;
+      border: 1px solid rgba(8,4,3,0.95);
+      background: black;
+      overflow: hidden;
+      position: relative;
+    }
+    .status-notch {
+      position: absolute;
+      top: 0.45rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36%;
+      height: 18px;
+      background: rgba(0,0,0,0.9);
+      border-radius: 999px;
+      z-index: 4;
+      box-shadow: 0 0 0 1px rgba(90, 60, 40, 0.35);
+    }
+    .phone-iframe {
+      width: 100%;
+      height: var(--viewport-height, 640px);
+      border: 0;
+      display: block;
+      border-radius: 24px;
+      background: black;
+      transform-origin: top center;
+    }
+
+    .controls-panel {
+      margin-top: 0.7rem;
+      border-radius: 20px;
+      padding: 0.7rem 0.75rem 0.75rem;
+      background: radial-gradient(circle at top, rgba(242,215,160,0.06), rgba(24,13,9,0.98));
+      border: 1px solid rgba(242,215,160,0.2);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+    }
+    .controls-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.1rem;
+    }
+    .controls-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f1cf93;
+    }
+    .preset-chip-row {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .preset-chip {
+      font-size: 0.72rem;
+      padding: 0.1rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(242,215,160,0.35);
+      background: rgba(15,9,7,0.9);
+      color: rgba(245,242,234,0.9);
+    }
+    .preset-chip.is-active {
+      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%);
+      color: #26160f;
+      font-weight: 600;
+      border-color: transparent;
+    }
+
+    .control-group {
+      margin-top: 0.65rem;
+    }
+    .control-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.76rem;
+      color: rgba(245,242,234,0.9);
+      margin-bottom: 0.15rem;
+    }
+    .control-label-row span:last-child {
+      color: rgba(245,242,234,0.6);
+    }
+    .slider-shell {
+      position: relative;
+      padding: 0.35rem 0.1rem 0.3rem;
+    }
+    input[type="range"] {
+      width: 100%;
+      appearance: none;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(242,215,160,0.34);
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: #f2d59e;
+      border: 1px solid rgba(87,50,29,0.8);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+      margin-top: -7px;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: #f2d59e;
+      border: 1px solid rgba(87,50,29,0.8);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+    }
+    .control-row-inline {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.35rem;
+    }
+    .control-row-inline > button {
+      flex: 1;
+      padding: 0.35rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(242,215,160,0.3);
+      background: rgba(12,7,5,0.96);
+      color: rgba(245,242,234,0.9);
+      font-size: 0.76rem;
+    }
+    .control-row-inline > button.secondary {
+      background: transparent;
+      color: rgba(245,242,234,0.7);
+    }
+
+    .editor-footer-note {
+      margin-top: 0.5rem;
+      font-size: 0.72rem;
+      color: rgba(245,242,234,0.7);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-shell">
+    <header class="editor-header">
+      <div class="editor-title-group">
+        <div class="editor-title">Mobile Header Logo Editor</div>
+        <div class="editor-subtitle">Prototype · works on a test copy of the homepage only</div>
+      </div>
+      <div class="device-toggle-row" role="tablist" aria-label="Viewport preset">
+        <button class="device-toggle is-active" data-width="390" data-height="720" role="tab" aria-selected="true">Phone</button>
+        <button class="device-toggle" data-width="430" data-height="780" role="tab" aria-selected="false">Tall</button>
+      </div>
+    </header>
+
+    <main class="editor-main">
+      <section class="phone-frame-wrap" aria-label="Mobile page preview">
+        <div class="phone-frame">
+          <div class="phone-inner-bezel">
+            <div class="status-notch" aria-hidden="true"></div>
+            <iframe
+              class="phone-iframe"
+              id="previewFrame"
+              src="./mobile-home-preview.html"
+              title="Mobile homepage preview"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls-panel" aria-label="Header logo controls">
+        <div class="controls-header">
+          <div class="controls-title">Header Logo</div>
+          <div class="preset-chip-row">
+            <button class="preset-chip is-active" data-preset="default">Current</button>
+            <button class="preset-chip" data-preset="compact">Compact</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Logo size</span>
+            <span id="logoSizeValue">100%</span>
+          </div>
+          <div class="slider-shell">
+            <input type="range" id="logoSize" min="80" max="120" value="100" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Text vertical offset</span>
+            <span id="textOffsetValue">0 px</span>
+          </div>
+          <div class="slider-shell">
+            <input type="range" id="textOffset" min="-16" max="16" value="0" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Script text size</span>
+            <span id="scriptSizeValue">100%</span>
+          </div>
+          <div class="slider-shell">
+            <input type="range" id="scriptSize" min="80" max="115" value="100" />
+          </div>
+        </div>
+
+        <div class="control-row-inline">
+          <button id="nudgeUp">Nudge up</button>
+          <button id="nudgeDown" class="secondary">Nudge down</button>
+        </div>
+      </section>
+
+      <p class="editor-footer-note">
+        This prototype is sandboxed. It does not change the live homepage. Use it to find logo settings that feel right on your phone.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    // Maintain a single source of truth for header logo parameters
+    const state = {
+      logoScale: 1,
+      textOffset: 0,
+      scriptScale: 1,
+    };
+
+    const frame = document.getElementById('previewFrame');
+    const logoSizeInput = document.getElementById('logoSize');
+    const textOffsetInput = document.getElementById('textOffset');
+    const scriptSizeInput = document.getElementById('scriptSize');
+    const logoSizeValue = document.getElementById('logoSizeValue');
+    const textOffsetValue = document.getElementById('textOffsetValue');
+    const scriptSizeValue = document.getElementById('scriptSizeValue');
+
+    const presetButtons = Array.from(document.querySelectorAll('.preset-chip'));
+    const deviceButtons = Array.from(document.querySelectorAll('.device-toggle'));
+
+    function applyViewportPreset(width, height) {
+      const bezel = document.querySelector('.phone-inner-bezel');
+      if (!bezel) return;
+      // Keep aspect ratio visually consistent while fitting inside available width
+      const maxWidth = bezel.clientWidth || 390;
+      const scale = maxWidth / width;
+      const iframe = frame;
+      iframe.style.setProperty('--viewport-height', height + 'px');
+      iframe.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      iframe.style.height = height + 'px';
+      iframe.style.width = width + 'px';
+    }
+
+    function markActiveButton(buttons, active) {
+      buttons.forEach(btn => {
+        btn.classList.toggle('is-active', btn === active);
+        if (btn.hasAttribute('aria-selected')) {
+          btn.setAttribute('aria-selected', btn === active ? 'true' : 'false');
+        }
+      });
+    }
+
+    function updateSlidersFromState() {
+      logoSizeInput.value = Math.round(state.logoScale * 100);
+      textOffsetInput.value = state.textOffset;
+      scriptSizeInput.value = Math.round(state.scriptScale * 100);
+      logoSizeValue.textContent = logoSizeInput.value + '%';
+      textOffsetValue.textContent = state.textOffset + ' px';
+      scriptSizeValue.textContent = scriptSizeInput.value + '%';
+    }
+
+    function applyStateIntoFrame() {
+      const doc = frame.contentDocument;
+      if (!doc) return;
+      const logoImg = doc.querySelector('.brand-mark.brand-mark--large.brand-mark--zoom');
+      const text = doc.querySelector('.brand-overlay-text');
+      const sub = doc.querySelector('.brand-overlay-sub');
+      if (!logoImg || !text || !sub) return;
+
+      // Scale the logo around its center
+      logoImg.style.transformOrigin = 'center center';
+      logoImg.style.transform = 'scale(' + state.logoScale.toFixed(3) + ')';
+
+      // Apply vertical offset to both overlay texts
+      const baseTextTop = parseFloat(getComputedStyle(text).top) || 20;
+      const baseSubTop = parseFloat(getComputedStyle(sub).top) || 41;
+      const offset = state.textOffset;
+      text.style.top = (baseTextTop + offset) + 'px';
+      sub.style.top = (baseSubTop + offset) + 'px';
+
+      // Adjust script font sizes proportionally
+      const baseScriptSize = 1.08; // matches mobile CSS approx
+      const newScriptSize = baseScriptSize * state.scriptScale;
+      text.style.fontSize = newScriptSize.toFixed(2) + 'rem';
+      sub.style.fontSize = newScriptSize.toFixed(2) + 'rem';
+    }
+
+    function attachFrameListeners() {
+      if (!frame) return;
+      if (frame.dataset._listenersAttached) return;
+      frame.dataset._listenersAttached = 'true';
+      frame.addEventListener('load', () => {
+        applyStateIntoFrame();
+      });
+    }
+
+    // Slider wiring
+    logoSizeInput.addEventListener('input', () => {
+      state.logoScale = parseInt(logoSizeInput.value, 10) / 100;
+      logoSizeValue.textContent = logoSizeInput.value + '%';
+      applyStateIntoFrame();
+    });
+    textOffsetInput.addEventListener('input', () => {
+      state.textOffset = parseInt(textOffsetInput.value, 10) || 0;
+      textOffsetValue.textContent = state.textOffset + ' px';
+      applyStateIntoFrame();
+    });
+    scriptSizeInput.addEventListener('input', () => {
+      state.scriptScale = parseInt(scriptSizeInput.value, 10) / 100;
+      scriptSizeValue.textContent = scriptSizeInput.value + '%';
+      applyStateIntoFrame();
+    });
+
+    document.getElementById('nudgeUp').addEventListener('click', () => {
+      state.textOffset -= 2;
+      updateSlidersFromState();
+      applyStateIntoFrame();
+    });
+    document.getElementById('nudgeDown').addEventListener('click', () => {
+      state.textOffset += 2;
+      updateSlidersFromState();
+      applyStateIntoFrame();
+    });
+
+    // Presets
+    const PRESETS = {
+      default: { logoScale: 1, textOffset: 0, scriptScale: 1 },
+      compact: { logoScale: 0.9, textOffset: -6, scriptScale: 0.95 },
+    };
+
+    presetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.preset || 'default';
+        const preset = PRESETS[key] || PRESETS.default;
+        Object.assign(state, preset);
+        updateSlidersFromState();
+        applyStateIntoFrame();
+        markActiveButton(presetButtons, btn);
+      });
+    });
+
+    // Device / viewport presets
+    deviceButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const w = parseInt(btn.dataset.width, 10) || 390;
+        const h = parseInt(btn.dataset.height, 10) || 720;
+        applyViewportPreset(w, h);
+        markActiveButton(deviceButtons, btn);
+      });
+    });
+
+    // Initial wiring
+    attachFrameListeners();
+    window.addEventListener('load', () => {
+      const activeDevice = deviceButtons.find(b => b.classList.contains('is-active')) || deviceButtons[0];
+      if (activeDevice) {
+        const w = parseInt(activeDevice.dataset.width, 10) || 390;
+        const h = parseInt(activeDevice.dataset.height, 10) || 720;
+        applyViewportPreset(w, h);
+      }
+      updateSlidersFromState();
+      applyStateIntoFrame();
+    });
+
+    // Recompute scale when the window size changes (e.g. rotate phone)
+    window.addEventListener('resize', () => {
+      const activeDevice = deviceButtons.find(b => b.classList.contains('is-active')) || deviceButtons[0];
+      if (!activeDevice) return;
+      const w = parseInt(activeDevice.dataset.width, 10) || 390;
+      const h = parseInt(activeDevice.dataset.height, 10) || 720;
+      applyViewportPreset(w, h);
+    });
+  </script>
+</body>
+</html>

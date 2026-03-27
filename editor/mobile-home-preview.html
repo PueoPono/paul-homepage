@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Home Preview · Sandbox</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../styles.css?v=layout-ref-pass-3" />
+  <style>
+    /* Tighten things slightly for the sandbox so header + hero behave more like a real phone */
+    body {
+      background: #140c09;
+    }
+    .page-hero.reference-hero {
+      min-height: 100svh;
+    }
+  </style>
+</head>
+<body>
+  <!-- This is a sandbox copy of the live homepage header + hero.
+       It is intentionally separate from index.html so we never touch the live page. -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="container site-header-inner">
+      <a class="brand brand-overlay" href="#" aria-label="Vital Life with Paul home (preview)">
+        <span class="brand-mark-stack brand-mark-stack--large brand-mark-stack--tight">
+          <img class="brand-mark brand-mark--large brand-mark--zoom" src="../assets/branding/white-MH-heart-arrow-transparent.png" alt="Heart arrow logo" />
+          <span class="brand-overlay-text brand-overlay-text--script brand-overlay-text--tight">Vital &amp; Strong</span>
+          <span class="brand-overlay-sub brand-overlay-sub--small brand-overlay-sub--tight">w/ Paul</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="#">Home</a>
+        <a href="#">Work With Me</a>
+        <a href="#">About</a>
+        <a href="#">My Story</a>
+        <a href="#">FAQ</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Resources</a>
+        <a class="nav-cta" href="#">Schedule A Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reference-hero reference-hero--tall">
+      <img class="page-hero-media" src="../assets/branding/canvas-sunset-background.svg" alt="Canvas sunset background" />
+      <div class="container page-hero-inner reference-hero-inner reference-hero-inner--lower">
+        <div class="hero-copy-block">
+          <div class="hero-brand-block">
+            <div class="hero-brand-line hero-brand-line--primary">INTEGRATED</div>
+            <div class="hero-brand-line hero-brand-line--secondary">HEART &amp; VITALITY</div>
+          </div>
+          <h1>Align the Heart. Train and Enjoy the Body.<br />Calm the Mind.</h1>
+          <p class="hero-subtitle hero-subtitle--smaller">-w Dr. Paul, PhD</p>
+        </div>
+        <div class="hero-bottom-mark" aria-hidden="true">
+          <img class="hero-bottom-mark-image" src="../assets/branding/white-MH-heart-arrow-transparent.png" alt="" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Copy of the index.html mobile header behaviour, scoped to this sandbox
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    const header = document.querySelector('#siteHeader');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    const updateHeader = () => {
+      if (!header) return;
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrolled > 24) {
+        header.classList.remove('site-header--transparent');
+        header.classList.add('site-header--solid');
+      } else {
+        header.classList.add('site-header--transparent');
+        header.classList.remove('site-header--solid');
+      }
+    };
+
+    window.addEventListener('load', updateHeader);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    document.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  </script>
+</body>
+</html>
