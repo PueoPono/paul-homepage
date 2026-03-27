@@ -102,26 +102,30 @@ img { max-width: 100%; display: block; }
     1px -1px 0 rgba(166, 118, 38, 0.68),
     -1px -1px 0 rgba(166, 118, 38, 0.68);
   white-space: nowrap;
+  width: max-content;
+  right: 0;
 }
 .brand-overlay-text--script {
-  top: 22px;
-  left: 54px;
+  top: 20px;
+  left: auto;
+  right: -18px;
   transform: none;
-  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-family: "Marck Script", "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-text--tight {
-  top: 22px;
+  top: 20px;
 }
 .brand-overlay-sub--small {
   top: 43px;
-  left: 78px;
+  left: auto;
+  right: -18px;
   bottom: auto;
   transform: none;
-  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-family: "Marck Script", "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
@@ -230,7 +234,7 @@ img { max-width: 100%; display: block; }
   width: clamp(340px, 42vw, 620px);
   height: auto;
   opacity: 0.98;
-  filter: brightness(0) saturate(100%) invert(82%) sepia(24%) saturate(741%) hue-rotate(336deg) brightness(99%) contrast(92%) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) saturate(100%) invert(63%) sepia(35%) saturate(671%) hue-rotate(351deg) brightness(89%) contrast(92%) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.3));
 }
 .eyebrow {
   margin: 0 0 0.95rem;
@@ -593,13 +597,15 @@ p { margin: 0 0 1rem; }
       0 -2px 0 rgba(72, 41, 22, 0.58);
   }
   .brand-overlay-text--script {
-    left: 40px;
-    top: 26px;
+    left: auto;
+    right: -10px;
+    top: 24px;
     font-size: 1rem;
   }
   .brand-overlay-sub--small {
-    left: 58px;
-    top: 40px;
+    left: auto;
+    right: -10px;
+    top: 39px;
     font-size: 1rem;
   }
   .reference-hero--tall,
