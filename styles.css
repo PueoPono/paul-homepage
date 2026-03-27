@@ -108,7 +108,7 @@ img { max-width: 100%; display: block; }
 .brand-overlay-text--script {
   top: 20px;
   left: auto;
-  right: 12px;
+  right: 30px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.5rem;
@@ -122,7 +122,7 @@ img { max-width: 100%; display: block; }
 .brand-overlay-sub--small {
   top: 43px;
   left: auto;
-  right: 12px;
+  right: 30px;
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
@@ -598,13 +598,13 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text--script {
     left: auto;
-    right: 8px;
+    right: 18px;
     top: 24px;
     font-size: 1rem;
   }
   .brand-overlay-sub--small {
     left: auto;
-    right: 8px;
+    right: 18px;
     top: 39px;
     font-size: 1rem;
   }
