@@ -109,10 +109,10 @@ img { max-width: 100%; display: block; }
 .brand-overlay-text--script {
   top: 20px;
   left: auto;
-  right: 18px;
+  right: 10px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.58rem;
+  font-size: calc(1.58rem + 1px);
   line-height: 1;
   font-weight: 400;
   font-style: normal;
@@ -128,7 +128,7 @@ img { max-width: 100%; display: block; }
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.58rem;
+  font-size: calc(1.58rem + 1px);
   line-height: 1;
   font-weight: 400;
   font-style: normal;
@@ -601,16 +601,16 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text--script {
     left: auto;
-    right: 6px;
+    right: -2px;
     top: 24px;
-    font-size: 1.08rem;
+    font-size: calc(1.08rem + 1px);
     line-height: 1;
   }
   .brand-overlay-sub--small {
     left: auto;
     right: 6px;
     top: 38px;
-    font-size: 1.08rem;
+    font-size: calc(1.08rem + 1px);
     line-height: 1;
   }
   .reference-hero--tall,
