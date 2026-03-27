@@ -10,6 +10,57 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/branding/canvas-sunset-background.svg" />
   <link rel="stylesheet" href="styles.css?v=layout-ref-pass-3" />
+  <style>
+    .brand-mark--large,
+    .brand-mark--zoom {
+      width: 103px;
+      height: 103px;
+      transform: translate(-32px, 0px) scale(1);
+      transform-origin: center center;
+    }
+    .brand-overlay-text--script {
+      top: 26px;
+      right: 46px;
+      font-size: 1.08rem;
+      font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 0.01em;
+    }
+    .brand-overlay-sub--small {
+      display: none;
+    }
+    .desktop-signature-test {
+      font-style: italic;
+      font-size: 1.68rem;
+      max-width: 100%;
+    }
+    @media (max-width: 760px) {
+      .brand-mark--large.brand-mark--zoom {
+        width: 86px;
+        height: 86px;
+      }
+      .brand-overlay-text--script {
+        right: 2px;
+        top: 28px;
+        font-size: 1.08rem;
+        font-family: "Segoe Script", "Brush Script MT", cursive;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0;
+      }
+      .brand-overlay-sub--small {
+        display: block;
+        right: 0px;
+        top: 43px;
+        font-size: 1.08rem;
+      }
+      .desktop-signature-test {
+        font-style: normal;
+        font-size: 0.92rem;
+      }
+    }
+  </style>
 
 </head>
 <body>
@@ -18,8 +69,8 @@
       <a class="brand brand-overlay" href="index.html" aria-label="Vital Life with Paul home">
         <span class="brand-mark-stack brand-mark-stack--large brand-mark-stack--tight">
           <img class="brand-mark brand-mark--large brand-mark--zoom" src="assets/branding/white-MH-heart-arrow-transparent.png" alt="Heart arrow logo" />
-          <span class="brand-overlay-text brand-overlay-text--script brand-overlay-text--tight">Vital &amp; Strong</span>
-          <span class="brand-overlay-sub brand-overlay-sub--small brand-overlay-sub--tight">w/ Paul</span>
+          <span class="brand-overlay-text brand-overlay-text--script brand-overlay-text--tight">Vitality</span>
+          <span class="brand-overlay-sub brand-overlay-sub--small brand-overlay-sub--tight"></span>
         </span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
@@ -45,10 +96,10 @@
         <div class="hero-copy-block">
           <div class="hero-brand-block">
             <div class="hero-brand-line hero-brand-line--primary">INTEGRATED</div>
-            <div class="hero-brand-line hero-brand-line--secondary">HEART &amp; VITALITY</div>
+            <div class="hero-brand-line hero-brand-line--secondary">HEART &amp; VITALITY COACHING</div>
           </div>
-          <h1>Align the Heart. Train and Enjoy the Body.<br />Calm the Mind.</h1>
-          <p class="hero-subtitle hero-subtitle--smaller">-w Dr. Paul, PhD</p>
+          <h1>Align the Heart.<br />Train and Enjoy the Body.<br />Calm the Mind.</h1>
+          <p class="hero-subtitle hero-subtitle--smaller desktop-signature-test">Dr. Paul, PhD</p>
         </div>
         <div class="hero-bottom-mark" aria-hidden="true">
           <img class="hero-bottom-mark-image" src="assets/branding/white-MH-heart-arrow-transparent.png" alt="" />
