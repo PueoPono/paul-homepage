@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Editor V1</title>
+  <style>
+    :root {
+      --bg: #0f0a08;
+      --panel: #1b120f;
+      --line: rgba(242,215,160,0.18);
+      --text: #f5f2ea;
+      --muted: rgba(245,242,234,0.72);
+      --gold: #f2d7a0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    .app { min-height: 100vh; display: grid; grid-template-columns: 420px minmax(0, 1fr); }
+    .sidebar { padding: 16px; border-right: 1px solid var(--line); background: var(--panel); overflow: auto; }
+    .sidebar h1 { margin: 0 0 8px; font-size: 18px; }
+    .sidebar p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; font-size: 13px; margin-bottom: 4px; color: var(--gold); }
+    .field input, .field textarea {
+      width: 100%; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.04);
+      color: var(--text); padding: 10px 12px; font: inherit;
+    }
+    .field textarea { min-height: 80px; resize: vertical; }
+    .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    button {
+      border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 700; cursor: pointer;
+      background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%); color: #2b190f;
+    }
+    .secondary { background: rgba(255,255,255,0.08); color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
+    .preview-wrap { padding: 16px; }
+    .preview-frame { width: 100%; height: calc(100vh - 32px); border: 1px solid var(--line); border-radius: 16px; background: white; }
+    .summary { margin-top: 16px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); }
+    .summary pre { white-space: pre-wrap; font: 12px/1.45 ui-monospace, monospace; color: var(--muted); margin: 0; }
+    @media (max-width: 980px) {
+      .app { grid-template-columns: 1fr; }
+      .preview-frame { height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>Website Editor V1</h1>
+      <p>First version focused on homepage copy. Edit text here, preview on the right, then save changes back to the structured homepage content file.</p>
+
+      <div class="field"><label>Logo primary</label><input id="logoPrimary" /></div>
+      <div class="field"><label>Logo secondary</label><input id="logoSecondary" /></div>
+      <div class="field"><label>Hero brand primary</label><input id="heroBrandPrimary" /></div>
+      <div class="field"><label>Hero brand secondary</label><input id="heroBrandSecondary" /></div>
+      <div class="field"><label>Hero title line 1</label><input id="heroTitle0" /></div>
+      <div class="field"><label>Hero title line 2</label><input id="heroTitle1" /></div>
+      <div class="field"><label>Hero title line 3</label><input id="heroTitle2" /></div>
+      <div class="field"><label>Hero signature</label><input id="heroSignature" /></div>
+      <div class="field"><label>Intro heading</label><textarea id="introHeading"></textarea></div>
+      <div class="field"><label>Method heading</label><textarea id="methodHeading"></textarea></div>
+      <div class="field"><label>Method body</label><textarea id="methodBody"></textarea></div>
+      <div class="field"><label>Benefits heading</label><textarea id="benefitsHeading"></textarea></div>
+
+      <div class="button-row">
+        <button id="previewBtn">Refresh preview</button>
+        <button id="saveBtn">Save content</button>
+        <button class="secondary" id="copyBtn">Copy JSON</button>
+      </div>
+
+      <div class="summary">
+        <pre id="jsonPreview"></pre>
+      </div>
+    </aside>
+
+    <main class="preview-wrap">
+      <iframe class="preview-frame" id="previewFrame" src="./preview-homepage.html"></iframe>
+    </main>
+  </div>
+
+  <script>
+    const fields = ['logoPrimary','logoSecondary','heroBrandPrimary','heroBrandSecondary','heroSignature','introHeading','methodHeading','methodBody','benefitsHeading'];
+    let data = null;
+
+    async function loadData() {
+      const res = await fetch('./homepage-content.json', { cache: 'no-store' });
+      data = await res.json();
+      for (const key of fields) {
+        document.getElementById(key).value = data[key] || '';
+      }
+      (data.heroTitle || ['', '', '']).forEach((line, idx) => {
+        document.getElementById('heroTitle' + idx).value = line || '';
+      });
+      renderJson();
+    }
+
+    function collectData() {
+      const next = structuredClone(data || {});
+      for (const key of fields) next[key] = document.getElementById(key).value;
+      next.heroTitle = [0,1,2].map(i => document.getElementById('heroTitle' + i).value);
+      return next;
+    }
+
+    function renderJson() {
+      document.getElementById('jsonPreview').textContent = JSON.stringify(collectData(), null, 2);
+    }
+
+    function refreshPreview() {
+      const frame = document.getElementById('previewFrame');
+      frame.contentWindow.location.reload();
+    }
+
+    fields.concat(['heroTitle0','heroTitle1','heroTitle2']).forEach(id => {
+      document.addEventListener('input', (e) => {
+        if (e.target && e.target.id === id) renderJson();
+      });
+    });
+
+    document.getElementById('previewBtn').addEventListener('click', refreshPreview);
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const text = JSON.stringify(collectData(), null, 2);
+      try { await navigator.clipboard.writeText(text); } catch {}
+    });
+
+    document.getElementById('saveBtn').addEventListener('click', async () => {
+      const payload = collectData();
+      localStorage.setItem('editor-v1-homepage-content', JSON.stringify(payload));
+      alert('Saved on this device. Next step is wiring this to write back into repo or export changes.');
+    });
+
+    loadData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage Preview · Editor V1</title>
+  <link rel="stylesheet" href="../styles.css?v=layout-ref-pass-3" />
+  <style>
+    .desktop-signature-test { font-style: italic; font-size: 1.68rem; max-width: 100%; }
+    @media (max-width: 760px) {
+      .desktop-signature-test { font-style: normal; font-size: 0.92rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="container site-header-inner">
+      <a class="brand brand-overlay" href="preview-homepage.html" aria-label="Vitality home">
+        <span class="brand-mark-stack brand-mark-stack--large brand-mark-stack--tight">
+          <img class="brand-mark brand-mark--large brand-mark--zoom" src="../assets/branding/white-MH-heart-arrow-transparent.png" alt="Heart arrow logo" />
+          <span class="brand-overlay-text brand-overlay-text--script brand-overlay-text--tight" data-bind="logoPrimary">Vitality</span>
+          <span class="brand-overlay-sub brand-overlay-sub--small brand-overlay-sub--tight" data-bind="logoSecondary">w/ Paul</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="#">Home</a>
+        <a href="#">Work With Me</a>
+        <a href="#">About</a>
+        <a href="#">My Story</a>
+        <a href="#">FAQ</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Resources</a>
+        <a class="nav-cta" href="#">Schedule A Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reference-hero reference-hero--tall">
+      <img class="page-hero-media" src="../assets/branding/canvas-sunset-background.svg" alt="Canvas sunset background" />
+      <div class="container page-hero-inner reference-hero-inner reference-hero-inner--lower">
+        <div class="hero-copy-block">
+          <div class="hero-brand-block">
+            <div class="hero-brand-line hero-brand-line--primary" data-bind="heroBrandPrimary">INTEGRATED</div>
+            <div class="hero-brand-line hero-brand-line--secondary" data-bind="heroBrandSecondary">HEART &amp; VITALITY COACHING</div>
+          </div>
+          <h1 id="heroTitle"></h1>
+          <p class="hero-subtitle hero-subtitle--smaller desktop-signature-test" data-bind="heroSignature">Dr. Paul, PhD</p>
+        </div>
+        <div class="hero-bottom-mark" aria-hidden="true">
+          <img class="hero-bottom-mark-image" src="../assets/branding/white-MH-heart-arrow-transparent.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section reference-band page-section--dark">
+      <div class="container">
+        <div class="section-header wide">
+          <h2 data-bind="introHeading">If you feel there is more to health than fixing symptoms, this is for you.</h2>
+        </div>
+        <div class="hero-actions hero-actions--below">
+          <a class="btn btn-primary" href="#">Explore the Path</a>
+        </div>
+        <div class="grid-2 uneven-grid">
+          <div class="card list-card card--dark">
+            <ul class="check-list check-list--light" id="introBullets"></ul>
+          </div>
+          <div class="card quote-card review-card card--dark-soft">
+            <blockquote>
+              <span data-bind="testimonialQuote">Placeholder testimonial from current Paul content goes here.</span>
+              <cite data-bind="testimonialCite">Scott Anthony · Australia</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section reference-band page-section--dark-alt">
+      <div class="container">
+        <div class="section-header wide">
+          <h2 data-bind="methodHeading">Integrated Heart &amp; Vitality: a more whole way to live.</h2>
+        </div>
+        <div class="feature-split">
+          <div class="feature-copy">
+            <p class="copy-large copy-large--light" data-bind="methodBody">Placeholder draft copy adapted from Paul’s themes: heart wellness, body vitality, emotional alchemy, and a calmer more integrated mind. Keep this gentle and steady.</p>
+            <a class="text-link text-link--light" href="#">Explore the coaching path</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section reference-band page-section--dark">
+      <div class="container">
+        <div class="section-header wide">
+          <h2 data-bind="benefitsHeading">What this path can begin to restore.</h2>
+        </div>
+        <div class="benefit-stack benefit-stack--light" id="benefitsList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    async function loadContent() {
+      const res = await fetch('./homepage-content.json', { cache: 'no-store' });
+      const data = await res.json();
+
+      document.title = data.siteTitle + ' · Preview';
+      document.querySelectorAll('[data-bind]').forEach(el => {
+        const key = el.dataset.bind;
+        if (data[key] != null) el.textContent = data[key];
+      });
+
+      const heroTitle = document.getElementById('heroTitle');
+      heroTitle.innerHTML = (data.heroTitle || []).map(line => line.replace(/&/g, '&amp;')).join('<br />');
+
+      const introBullets = document.getElementById('introBullets');
+      introBullets.innerHTML = '';
+      (data.introBullets || []).forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        introBullets.appendChild(li);
+      });
+
+      const benefitsList = document.getElementById('benefitsList');
+      benefitsList.innerHTML = '';
+      (data.benefits || []).forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'benefit-line';
+        div.textContent = item;
+        benefitsList.appendChild(div);
+      });
+    }
+
+    loadContent();
+  </script>
+</body>
+</html>
