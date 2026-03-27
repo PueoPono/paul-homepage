@@ -575,13 +575,13 @@ p { margin: 0 0 1rem; }
   }
   .brand-mark-stack--large,
   .brand-mark-stack--tight {
-    width: 265px;
-    height: 135px;
+    width: 132px;
+    height: 74px;
   }
   .brand-mark--large,
   .brand-mark--zoom {
-    width: 152px;
-    height: 152px;
+    width: 86px;
+    height: 86px;
   }
   .brand-overlay-text,
   .brand-overlay-sub {
@@ -602,17 +602,17 @@ p { margin: 0 0 1rem; }
     right: auto;
   }
   .brand-overlay-text--script {
-    left: 219px;
-    top: 77px;
+    left: 123px;
+    top: 42px;
     transform: translate(-100%, -50%);
-    font-size: 33px;
+    font-size: 21px;
     line-height: 1;
   }
   .brand-overlay-sub--small {
-    left: 185px;
-    top: 108px;
+    left: 103px;
+    top: 60px;
     transform: translate(-100%, -50%);
-    font-size: 33px;
+    font-size: 21px;
     line-height: 1;
   }
   .reference-hero--tall,
