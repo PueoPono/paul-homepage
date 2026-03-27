@@ -107,9 +107,9 @@ img { max-width: 100%; display: block; }
   right: 0;
 }
 .brand-overlay-text--script {
-  top: 18px;
+  top: 20px;
   left: auto;
-  right: 26px;
+  right: 18px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
   font-size: 1.58rem;
@@ -119,12 +119,12 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0;
 }
 .brand-overlay-text--tight {
-  top: 18px;
+  top: 20px;
 }
 .brand-overlay-sub--small {
-  top: 39px;
+  top: 41px;
   left: auto;
-  right: 26px;
+  right: 18px;
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
@@ -135,7 +135,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0;
 }
 .brand-overlay-sub--tight {
-  top: 39px;
+  top: 41px;
 }
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
@@ -601,15 +601,15 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text--script {
     left: auto;
-    right: 14px;
-    top: 22px;
+    right: 6px;
+    top: 24px;
     font-size: 1.08rem;
     line-height: 1;
   }
   .brand-overlay-sub--small {
     left: auto;
-    right: 14px;
-    top: 36px;
+    right: 6px;
+    top: 38px;
     font-size: 1.08rem;
     line-height: 1;
   }
