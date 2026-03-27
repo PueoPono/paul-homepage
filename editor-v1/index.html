@@ -36,6 +36,7 @@
     .preview-frame { width: 100%; height: calc(100vh - 32px); border: 1px solid var(--line); border-radius: 16px; background: white; }
     .summary { margin-top: 16px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); }
     .summary pre { white-space: pre-wrap; font: 12px/1.45 ui-monospace, monospace; color: var(--muted); margin: 0; }
+    .status { margin-top: 10px; font-size: 13px; color: var(--muted); }
     @media (max-width: 980px) {
       .app { grid-template-columns: 1fr; }
       .preview-frame { height: 60vh; }
@@ -46,7 +47,7 @@
   <div class="app">
     <aside class="sidebar">
       <h1>Website Editor V1</h1>
-      <p>First version focused on homepage copy. Edit text here, preview on the right, then save changes back to the structured homepage content file.</p>
+      <p>First version focused on homepage copy. Edit text here, preview on the right, then save changes locally on your device. If clipboard fails on phone, you can still long-press and copy from the JSON box.</p>
 
       <div class="field"><label>Logo primary</label><input id="logoPrimary" /></div>
       <div class="field"><label>Logo secondary</label><input id="logoSecondary" /></div>
@@ -63,9 +64,10 @@
 
       <div class="button-row">
         <button id="previewBtn">Refresh preview</button>
-        <button id="saveBtn">Save content</button>
+        <button id="saveBtn">Save locally</button>
         <button class="secondary" id="copyBtn">Copy JSON</button>
       </div>
+      <div class="status" id="status">Ready.</div>
 
       <div class="summary">
         <pre id="jsonPreview"></pre>
@@ -80,13 +82,17 @@
   <script>
     const fields = ['logoPrimary','logoSecondary','heroBrandPrimary','heroBrandSecondary','heroSignature','introHeading','methodHeading','methodBody','benefitsHeading'];
     let data = null;
+    const statusEl = document.getElementById('status');
 
     async function loadData() {
-      const res = await fetch('./homepage-content.json', { cache: 'no-store' });
-      data = await res.json();
-      for (const key of fields) {
-        document.getElementById(key).value = data[key] || '';
+      const raw = localStorage.getItem('editor-v1-homepage-content');
+      if (raw) {
+        data = JSON.parse(raw);
+      } else {
+        const res = await fetch('./homepage-content.json', { cache: 'no-store' });
+        data = await res.json();
       }
+      for (const key of fields) document.getElementById(key).value = data[key] || '';
       (data.heroTitle || ['', '', '']).forEach((line, idx) => {
         document.getElementById('heroTitle' + idx).value = line || '';
       });
@@ -105,26 +111,32 @@
     }
 
     function refreshPreview() {
+      const payload = collectData();
+      localStorage.setItem('editor-v1-homepage-content', JSON.stringify(payload));
       const frame = document.getElementById('previewFrame');
       frame.contentWindow.location.reload();
+      statusEl.textContent = 'Preview refreshed with current edits.';
     }
 
     fields.concat(['heroTitle0','heroTitle1','heroTitle2']).forEach(id => {
-      document.addEventListener('input', (e) => {
-        if (e.target && e.target.id === id) renderJson();
-      });
+      document.getElementById(id).addEventListener('input', renderJson);
     });
 
     document.getElementById('previewBtn').addEventListener('click', refreshPreview);
     document.getElementById('copyBtn').addEventListener('click', async () => {
       const text = JSON.stringify(collectData(), null, 2);
-      try { await navigator.clipboard.writeText(text); } catch {}
+      try {
+        await navigator.clipboard.writeText(text);
+        statusEl.textContent = 'JSON copied.';
+      } catch {
+        statusEl.textContent = 'Clipboard blocked. Long-press in the JSON box to copy manually.';
+      }
     });
 
-    document.getElementById('saveBtn').addEventListener('click', async () => {
+    document.getElementById('saveBtn').addEventListener('click', () => {
       const payload = collectData();
       localStorage.setItem('editor-v1-homepage-content', JSON.stringify(payload));
-      alert('Saved on this device. Next step is wiring this to write back into repo or export changes.');
+      statusEl.textContent = 'Saved locally on this device.';
     });
 
     loadData();

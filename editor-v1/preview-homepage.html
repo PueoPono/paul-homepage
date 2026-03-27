@@ -103,14 +103,35 @@
   </main>
 
   <script>
-    async function loadContent() {
+    async function getContent() {
+      try {
+        const raw = localStorage.getItem('editor-v1-homepage-content');
+        if (raw) return JSON.parse(raw);
+      } catch {}
       const res = await fetch('./homepage-content.json', { cache: 'no-store' });
-      const data = await res.json();
+      return await res.json();
+    }
 
+    function nlToBreaks(text) {
+      return String(text || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br /><br />');
+    }
+
+    async function loadContent() {
+      const data = await getContent();
       document.title = data.siteTitle + ' · Preview';
+
       document.querySelectorAll('[data-bind]').forEach(el => {
         const key = el.dataset.bind;
-        if (data[key] != null) el.textContent = data[key];
+        if (data[key] == null) return;
+        if (key === 'methodBody') {
+          el.innerHTML = nlToBreaks(data[key]);
+        } else {
+          el.textContent = data[key];
+        }
       });
 
       const heroTitle = document.getElementById('heroTitle');
@@ -133,6 +154,10 @@
         benefitsList.appendChild(div);
       });
     }
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'editor-v1-homepage-content') loadContent();
+    });
 
     loadContent();
   </script>
