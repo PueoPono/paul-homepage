@@ -70,8 +70,8 @@ img { max-width: 100%; display: block; }
   height: 76px;
 }
 .brand-mark-stack--tight {
-  width: 265px;
-  height: 135px;
+  width: 146px;
+  height: 82px;
 }
 .brand-mark {
   width: 60px;
@@ -84,8 +84,8 @@ img { max-width: 100%; display: block; }
   height: 72px;
 }
 .brand-mark--zoom {
-  width: 152px;
-  height: 152px;
+  width: 98px;
+  height: 98px;
 }
 .brand-overlay-text,
 .brand-overlay-sub {
@@ -102,36 +102,40 @@ img { max-width: 100%; display: block; }
     1px -1px 0 rgba(166, 118, 38, 0.68),
     -1px -1px 0 rgba(166, 118, 38, 0.68);
   white-space: nowrap;
+  width: 170px;
   display: block;
+  right: 0;
 }
 .brand-overlay-text--script {
-  top: 77px;
-  left: 219px;
-  transform: translate(-100%, -50%);
+  top: 20px;
+  left: auto;
+  right: 22px;
+  transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 33px;
+  font-size: calc(1.58rem + 1px);
   line-height: 1;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-text--tight {
-  top: 77px;
+  top: 20px;
 }
 .brand-overlay-sub--small {
-  top: 108px;
-  left: 185px;
+  top: 41px;
+  left: auto;
+  right: 18px;
   bottom: auto;
-  transform: translate(-100%, -50%);
+  transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 33px;
+  font-size: calc(1.58rem + 1px);
   line-height: 1;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-sub--tight {
-  top: 108px;
+  top: 41px;
 }
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
@@ -571,13 +575,13 @@ p { margin: 0 0 1rem; }
   }
   .brand-mark-stack--large,
   .brand-mark-stack--tight {
-    width: 170px;
-    height: 94px;
+    width: 265px;
+    height: 135px;
   }
   .brand-mark--large,
   .brand-mark--zoom {
-    width: 98px;
-    height: 98px;
+    width: 152px;
+    height: 152px;
   }
   .brand-overlay-text,
   .brand-overlay-sub {
@@ -594,17 +598,21 @@ p { margin: 0 0 1rem; }
       -2px 0 0 rgba(72, 41, 22, 0.58),
       0 2px 0 rgba(72, 41, 22, 0.58),
       0 -2px 0 rgba(72, 41, 22, 0.58);
+    width: auto;
+    right: auto;
   }
   .brand-overlay-text--script {
-    left: 137px;
-    top: 54px;
-    font-size: 21px;
+    left: 219px;
+    top: 77px;
+    transform: translate(-100%, -50%);
+    font-size: 33px;
     line-height: 1;
   }
   .brand-overlay-sub--small {
-    left: 118px;
-    top: 76px;
-    font-size: 21px;
+    left: 185px;
+    top: 108px;
+    transform: translate(-100%, -50%);
+    font-size: 33px;
     line-height: 1;
   }
   .reference-hero--tall,
