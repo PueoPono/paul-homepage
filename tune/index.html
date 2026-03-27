@@ -12,7 +12,6 @@
       --text: #f5f2ea;
       --muted: rgba(245,242,234,.72);
       --gold: #f2d7a0;
-      --accent: #dd9f3f;
     }
     * { box-sizing: border-box; }
     body {
@@ -54,16 +53,25 @@
       box-shadow: 0 24px 80px rgba(0,0,0,.42);
       border: 1px solid rgba(255,255,255,.08);
     }
-    .overlay {
+    .logo-stage {
       position: absolute;
-      inset: 0;
+      left: 14px;
+      top: 9px;
+      width: 160px;
+      height: 94px;
+      border: 1px dashed rgba(255,255,255,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.02);
+      overflow: visible;
     }
-    .text-layer {
+    .heart {
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
+      width: 98px;
+      height: 98px;
+      background: url('../assets/branding/white-MH-heart-arrow-transparent.png') center/contain no-repeat;
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.32));
       pointer-events: none;
     }
     .logo-line {
@@ -83,9 +91,19 @@
         -1px -1px 0 rgba(166, 118, 38, 0.68);
       line-height: 1;
       white-space: nowrap;
-      pointer-events: none;
-      transform: translate(-100%, -50%);
       text-align: right;
+      transform: translate(-100%, -50%);
+      pointer-events: none;
+      user-select: none;
+    }
+    .guide-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(242,215,160,.65);
+      box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+      pointer-events: none;
     }
     .handle {
       position: absolute;
@@ -119,44 +137,14 @@
       padding: 16px;
       overflow: auto;
     }
-    .panel h1 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-    .panel p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.45;
-    }
-    .group {
-      padding-bottom: 14px;
-      margin-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-    }
-    .field {
-      margin-bottom: 10px;
-    }
-    .field label {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--gold);
-      font-size: 13px;
-    }
-    .row {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .row input[type="range"] {
-      flex: 1;
-    }
-    .value {
-      min-width: 58px;
-      text-align: right;
-      color: var(--muted);
-      font-size: 12px;
-    }
+    .panel h1 { margin: 0 0 6px; font-size: 18px; }
+    .panel p { margin: 0 0 14px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .group { padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .field { margin-bottom: 10px; }
+    .field label { display: block; margin-bottom: 4px; color: var(--gold); font-size: 13px; }
+    .row { display: flex; gap: 8px; align-items: center; }
+    .row input[type="range"] { flex: 1; }
+    .value { min-width: 58px; text-align: right; color: var(--muted); font-size: 12px; }
     input[type="text"], textarea {
       width: 100%;
       border-radius: 12px;
@@ -166,10 +154,7 @@
       padding: 10px 12px;
       font: inherit;
     }
-    textarea {
-      min-height: 180px;
-      font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
-    }
+    textarea { min-height: 220px; font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; }
     button {
       border: 0;
       border-radius: 12px;
@@ -194,22 +179,22 @@
 <body>
   <div class="app">
     <div class="stage-wrap">
-      <div class="hint">This starts from your actual screenshot so placement matches what you see. Drag the two gold dots to move the logo text lines independently. Heart stays still for now.</div>
+      <div class="hint">This tuner now models only the logo: fixed heart, independently movable text lines relative to that heart, and values that map back into the shared logo CSS. Keep the heart still. Move the text exactly where you want it.</div>
       <div class="canvas" id="canvas">
-        <div class="overlay">
-          <div class="text-layer">
-            <div class="logo-line" id="line1">Vital &amp; Strong</div>
-            <div class="logo-line" id="line2">w/ Paul</div>
-            <div class="handle" id="handle1" data-label="Top line"></div>
-            <div class="handle" id="handle2" data-label="Bottom line"></div>
-          </div>
+        <div class="logo-stage" id="logoStage">
+          <div class="heart"></div>
+          <div class="guide-right" id="guideRight"></div>
+          <div class="logo-line" id="line1">Vital &amp; Strong</div>
+          <div class="logo-line" id="line2">w/ Paul</div>
+          <div class="handle" id="handle1" data-label="Top line"></div>
+          <div class="handle" id="handle2" data-label="Bottom line"></div>
         </div>
       </div>
     </div>
 
     <aside class="panel">
-      <h1>Screenshot-based logo tuning</h1>
-      <p>Move the text exactly where you want it on top of the screenshot. Then copy the saved values and send them back to me, or tell me to read them from the URL. I’ll apply them to the real homepage code.</p>
+      <h1>Logo-only tuner</h1>
+      <p>Move each line independently relative to the heart. The shared right-edge guide shows whether the two lines are truly right-justified. The exported values are intended to persist across every logo instance.</p>
 
       <div class="group">
         <div class="field">
@@ -242,24 +227,27 @@
     const defaults = {
       text1: 'Vital & Strong',
       text2: 'w/ Paul',
-      line1X: 146,
-      line1Y: 56,
-      line2X: 146,
-      line2Y: 79,
-      fontSize: 26,
-      lineGap: 23,
+      line1AnchorX: 148,
+      line1CenterY: 42,
+      line2AnchorX: 148,
+      line2CenterY: 64,
+      fontSizePx: 26,
+      mobileFontSizePx: 18,
+      stageLeft: 14,
+      stageTop: 9,
+      stageWidth: 160,
+      stageHeight: 94,
+      heartLeft: 0,
+      heartTop: 0,
+      heartSize: 98
     };
 
     const params = new URLSearchParams(location.hash.slice(1));
-    const state = {
-      text1: params.get('text1') || defaults.text1,
-      text2: params.get('text2') || defaults.text2,
-      line1X: Number(params.get('line1X') || defaults.line1X),
-      line1Y: Number(params.get('line1Y') || defaults.line1Y),
-      line2X: Number(params.get('line2X') || defaults.line2X),
-      line2Y: Number(params.get('line2Y') || defaults.line2Y),
-      fontSize: Number(params.get('fontSize') || defaults.fontSize),
-    };
+    const state = {};
+    for (const [k, v] of Object.entries(defaults)) {
+      if (typeof v === 'number') state[k] = Number(params.get(k) || v);
+      else state[k] = params.get(k) || v;
+    }
 
     const controlsEl = document.getElementById('controls');
     const outputEl = document.getElementById('output');
@@ -267,13 +255,20 @@
     const line2El = document.getElementById('line2');
     const handle1El = document.getElementById('handle1');
     const handle2El = document.getElementById('handle2');
+    const stageEl = document.getElementById('logoStage');
+    const guideRightEl = document.getElementById('guideRight');
 
     const sliders = [
-      ['line1X', 0, 588],
-      ['line1Y', 0, 1280],
-      ['line2X', 0, 588],
-      ['line2Y', 0, 1280],
-      ['fontSize', 14, 44],
+      ['line1AnchorX', 60, 220],
+      ['line1CenterY', 0, 120],
+      ['line2AnchorX', 60, 220],
+      ['line2CenterY', 0, 120],
+      ['fontSizePx', 14, 40],
+      ['mobileFontSizePx', 12, 28],
+      ['stageLeft', 0, 80],
+      ['stageTop', 0, 40],
+      ['stageWidth', 100, 240],
+      ['stageHeight', 70, 140]
     ];
 
     function makeField(key, min, max) {
@@ -287,48 +282,65 @@
         </div>`;
       controlsEl.appendChild(wrap);
     }
-
     sliders.forEach(args => makeField(...args));
 
     function syncHash() {
       const p = new URLSearchParams();
       Object.entries(state).forEach(([k,v]) => p.set(k, v));
-      location.hash = p.toString();
+      history.replaceState(null, '', '#' + p.toString());
     }
 
     function render() {
+      stageEl.style.left = state.stageLeft + 'px';
+      stageEl.style.top = state.stageTop + 'px';
+      stageEl.style.width = state.stageWidth + 'px';
+      stageEl.style.height = state.stageHeight + 'px';
+
       line1El.textContent = state.text1;
       line2El.textContent = state.text2;
 
-      line1El.style.left = state.line1X + 'px';
-      line1El.style.top = state.line1Y + 'px';
-      line2El.style.left = state.line2X + 'px';
-      line2El.style.top = state.line2Y + 'px';
+      line1El.style.left = state.line1AnchorX + 'px';
+      line1El.style.top = state.line1CenterY + 'px';
+      line2El.style.left = state.line2AnchorX + 'px';
+      line2El.style.top = state.line2CenterY + 'px';
 
-      handle1El.style.left = state.line1X + 'px';
-      handle1El.style.top = state.line1Y + 'px';
-      handle2El.style.left = state.line2X + 'px';
-      handle2El.style.top = state.line2Y + 'px';
+      handle1El.style.left = state.line1AnchorX + 'px';
+      handle1El.style.top = state.line1CenterY + 'px';
+      handle2El.style.left = state.line2AnchorX + 'px';
+      handle2El.style.top = state.line2CenterY + 'px';
 
-      line1El.style.fontSize = state.fontSize + 'px';
-      line2El.style.fontSize = state.fontSize + 'px';
+      line1El.style.fontSize = state.fontSizePx + 'px';
+      line2El.style.fontSize = state.fontSizePx + 'px';
+
+      const rightGuide = Math.max(state.line1AnchorX, state.line2AnchorX);
+      guideRightEl.style.left = rightGuide + 'px';
 
       document.querySelectorAll('[data-value]').forEach(el => {
         const key = el.dataset.value;
-        el.textContent = state[key] + 'px';
+        el.textContent = state[key] + (typeof defaults[key] === 'number' ? 'px' : '');
       });
       document.querySelectorAll('input[type="range"]').forEach(el => {
-        const key = el.dataset.key;
-        el.value = state[key];
+        el.value = state[el.dataset.key];
       });
       document.getElementById('text1').value = state.text1;
       document.getElementById('text2').value = state.text2;
 
       outputEl.value = JSON.stringify({
-        screenshot: 'assets/tune-screenshot.jpg',
-        screenshotSize: { width: 588, height: 1280 },
-        topLine: { text: state.text1, anchorRightX: state.line1X, centerY: state.line1Y, fontSizePx: state.fontSize },
-        bottomLine: { text: state.text2, anchorRightX: state.line2X, centerY: state.line2Y, fontSizePx: state.fontSize }
+        purpose: 'shared logo placement values',
+        desktop: {
+          topLine: { text: state.text1, anchorRightX: state.line1AnchorX, centerY: state.line1CenterY, fontSizePx: state.fontSizePx },
+          bottomLine: { text: state.text2, anchorRightX: state.line2AnchorX, centerY: state.line2CenterY, fontSizePx: state.fontSizePx }
+        },
+        mobile: {
+          fontSizePx: state.mobileFontSizePx
+        },
+        sharedStage: {
+          left: state.stageLeft,
+          top: state.stageTop,
+          width: state.stageWidth,
+          height: state.stageHeight
+        },
+        note: 'heart stays fixed; apply these values to all logo instances'
       }, null, 2);
 
       syncHash();
@@ -357,19 +369,19 @@
       });
       handle.addEventListener('pointermove', (e) => {
         if (!dragging) return;
-        const rect = document.getElementById('canvas').getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 588;
-        const y = ((e.clientY - rect.top) / rect.height) * 1280;
-        state[xKey] = Math.max(0, Math.min(588, Math.round(x)));
-        state[yKey] = Math.max(0, Math.min(1280, Math.round(y)));
+        const rect = stageEl.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * state.stageWidth;
+        const y = ((e.clientY - rect.top) / rect.height) * state.stageHeight;
+        state[xKey] = Math.round(Math.max(0, Math.min(state.stageWidth + 60, x)));
+        state[yKey] = Math.round(Math.max(0, Math.min(state.stageHeight + 40, y)));
         render();
       });
       handle.addEventListener('pointerup', () => dragging = false);
       handle.addEventListener('pointercancel', () => dragging = false);
     }
 
-    makeDraggable(handle1El, 'line1X', 'line1Y');
-    makeDraggable(handle2El, 'line2X', 'line2Y');
+    makeDraggable(handle1El, 'line1AnchorX', 'line1CenterY');
+    makeDraggable(handle2El, 'line2AnchorX', 'line2CenterY');
 
     document.getElementById('copyJson').addEventListener('click', async () => {
       try {
