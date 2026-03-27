@@ -3,205 +3,232 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage Tuning Panel</title>
+  <title>Logo Tune UI</title>
   <style>
     :root {
-      --bg: #140c09;
-      --panel: rgba(24,16,12,.94);
+      --bg: #120b08;
+      --panel: rgba(24,16,12,.96);
       --line: rgba(242,215,160,.18);
       --text: #f5f2ea;
-      --muted: rgba(245,242,234,.68);
+      --muted: rgba(245,242,234,.72);
       --gold: #f2d7a0;
+      --accent: #dd9f3f;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Inter, system-ui, sans-serif;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
     .app {
-      display: grid;
-      grid-template-columns: minmax(0,1fr) 360px;
       min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
     }
-    .preview-wrap {
-      position: relative;
+    .stage-wrap {
+      padding: 16px;
       overflow: auto;
-      background: #0f0907;
+      background: #0d0806;
     }
-    .phone-note {
+    .hint {
       position: sticky;
       top: 0;
-      z-index: 30;
-      padding: .6rem .9rem;
-      font-size: .88rem;
-      color: var(--muted);
-      background: rgba(10,8,7,.75);
+      z-index: 20;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(11, 8, 7, 0.78);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
     }
-    .preview {
+    .canvas {
       position: relative;
-      width: 100%;
-      min-height: 1100px;
+      width: min(588px, 100%);
+      aspect-ratio: 588 / 1280;
+      background: url('../assets/tune-screenshot.jpg') center/contain no-repeat;
+      border-radius: 22px;
       overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(10,6,5,.08) 0%, rgba(10,6,5,.24) 42%, rgba(10,6,5,.54) 72%, rgba(10,6,5,.82) 100%),
-        url('../assets/branding/canvas-sunset-background.svg') center/cover no-repeat;
+      box-shadow: 0 24px 80px rgba(0,0,0,.42);
+      border: 1px solid rgba(255,255,255,.08);
     }
-    .header {
+    .overlay {
       position: absolute;
-      left: 0; right: 0; top: 0;
-      height: var(--header-height, 110px);
-      border-bottom: 1px dashed rgba(255,255,255,.12);
-      background: rgba(255,255,255,.02);
+      inset: 0;
     }
-    .logo-box {
-      position: absolute;
-      left: var(--logo-left, 24px);
-      top: var(--logo-top, 14px);
-      width: var(--logo-width, 170px);
-      height: var(--logo-height, 88px);
-      touch-action: none;
-      cursor: grab;
-    }
-    .logo-heart {
+    .text-layer {
       position: absolute;
       left: 0;
       top: 0;
-      width: var(--heart-size, 104px);
-      height: var(--heart-size, 104px);
-      background: url('../assets/branding/white-MH-heart-arrow-transparent.png') center/contain no-repeat;
-      filter: drop-shadow(0 8px 14px rgba(0,0,0,.32));
-    }
-    .logo-line-1,
-    .logo-line-2 {
-      position: absolute;
-      font-family: "Snell Roundhand", "Brush Script MT", "Segoe Script", cursive;
-      font-weight: 300;
-      color: #f5f2ea;
-      text-shadow: 0 2px 0 rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.72);
-      white-space: nowrap;
-      user-select: none;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
     }
-    .logo-line-1 {
-      left: var(--text1-left, 58px);
-      top: var(--text1-top, 26px);
-      font-size: var(--text1-size, 30px);
-    }
-    .logo-line-2 {
-      left: var(--text2-left, 84px);
-      top: var(--text2-top, 48px);
-      font-size: var(--text2-size, 22px);
-    }
-    .hero-copy {
+    .logo-line {
       position: absolute;
-      left: 24px;
-      right: 24px;
-      top: var(--hero-top, 280px);
-      max-width: 760px;
-      touch-action: none;
+      font-family: "Segoe Script", "Brush Script MT", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: #f5f2ea;
+      text-shadow:
+        1px 0 0 rgba(166, 118, 38, 0.9),
+        -1px 0 0 rgba(166, 118, 38, 0.9),
+        0 1px 0 rgba(166, 118, 38, 0.9),
+        0 -1px 0 rgba(166, 118, 38, 0.9),
+        1px 1px 0 rgba(166, 118, 38, 0.68),
+        -1px 1px 0 rgba(166, 118, 38, 0.68),
+        1px -1px 0 rgba(166, 118, 38, 0.68),
+        -1px -1px 0 rgba(166, 118, 38, 0.68);
+      line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
+      transform: translate(-100%, -50%);
+      text-align: right;
+    }
+    .handle {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(221, 159, 63, 0.95);
+      border: 2px solid rgba(18,11,8,0.9);
+      box-shadow: 0 8px 20px rgba(0,0,0,.35);
+      transform: translate(-50%, -50%);
       cursor: grab;
+      touch-action: none;
     }
-    .hero-brand-1 {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-size: var(--brand1-size, 62px);
-      line-height: .94;
-      margin: 0;
+    .handle::after {
+      content: attr(data-label);
+      position: absolute;
+      top: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(11, 8, 7, 0.88);
+      color: var(--text);
+      font-size: 11px;
+      padding: 3px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.08);
+      white-space: nowrap;
     }
-    .hero-brand-2 {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: var(--brand2-size, 30px);
-      line-height: .94;
-      margin: .35rem 0 2rem;
-    }
-    .hero-question {
-      margin: 0 0 1rem;
-      color: #fff8ef;
-      font-family: Georgia, serif;
-      font-size: var(--question-size, 50px);
-      line-height: 1.04;
-      max-width: 800px;
-    }
-    .hero-sub {
-      margin: 0;
-      color: rgba(255,246,236,.76);
-      font-size: var(--sub-size, 14px);
-      max-width: 520px;
-    }
-    .controls {
-      background: var(--panel);
+    .panel {
       border-left: 1px solid var(--line);
-      padding: 1rem;
+      background: var(--panel);
+      padding: 16px;
       overflow: auto;
     }
-    .controls h1 { margin: 0 0 .4rem; font-size: 1.15rem; }
-    .controls p { margin: 0 0 1rem; color: var(--muted); font-size: .92rem; }
-    .group { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-    .field { margin-bottom: .7rem; }
-    .field label { display: block; font-size: .85rem; margin-bottom: .2rem; color: var(--gold); }
-    .field input[type="range"] { width: 100%; }
-    .row { display: flex; gap: .5rem; align-items: center; }
-    .value { font-size: .82rem; color: var(--muted); min-width: 56px; text-align: right; }
-    textarea {
+    .panel h1 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .panel p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .group {
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .field {
+      margin-bottom: 10px;
+    }
+    .field label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold);
+      font-size: 13px;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .row input[type="range"] {
+      flex: 1;
+    }
+    .value {
+      min-width: 58px;
+      text-align: right;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    input[type="text"], textarea {
       width: 100%;
-      min-height: 180px;
       border-radius: 12px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.04);
       color: var(--text);
-      padding: .8rem;
+      padding: 10px 12px;
+      font: inherit;
+    }
+    textarea {
+      min-height: 180px;
       font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
     }
     button {
       border: 0;
-      border-radius: 10px;
-      padding: .7rem .9rem;
-      background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%);
-      color: #2b190f;
+      border-radius: 12px;
+      padding: 11px 14px;
       font-weight: 700;
+      color: #2b190f;
+      background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%);
+      cursor: pointer;
     }
-    @media (max-width: 900px) {
+    .button-secondary {
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    @media (max-width: 980px) {
       .app { grid-template-columns: 1fr; }
-      .controls { border-left: 0; border-top: 1px solid var(--line); }
+      .panel { border-left: 0; border-top: 1px solid var(--line); }
+      .canvas { width: 100%; max-width: 588px; margin: 0 auto; }
     }
   </style>
 </head>
 <body>
   <div class="app">
-    <div class="preview-wrap">
-      <div class="phone-note">Drag the logo block or hero text block directly. Use sliders for fine tuning. Works on phone.</div>
-      <div class="preview" id="preview">
-        <div class="header"></div>
-        <div class="logo-box" id="logoBox">
-          <div class="logo-heart"></div>
-          <div class="logo-line-1">Vital Life</div>
-          <div class="logo-line-2">w/ Paul</div>
-        </div>
-        <div class="hero-copy" id="heroCopy">
-          <div class="hero-brand-1">INTEGRATED</div>
-          <div class="hero-brand-2">HEART &amp; VITALITY</div>
-          <h2 class="hero-question">Are you in right relationship with yourself and all life around you?</h2>
-          <p class="hero-sub">Placeholder reflection-supporting introduction copy. Quiet, grounded, invitational.</p>
+    <div class="stage-wrap">
+      <div class="hint">This starts from your actual screenshot so placement matches what you see. Drag the two gold dots to move the logo text lines independently. Heart stays still for now.</div>
+      <div class="canvas" id="canvas">
+        <div class="overlay">
+          <div class="text-layer">
+            <div class="logo-line" id="line1">Vital &amp; Strong</div>
+            <div class="logo-line" id="line2">w/ Paul</div>
+            <div class="handle" id="handle1" data-label="Top line"></div>
+            <div class="handle" id="handle2" data-label="Bottom line"></div>
+          </div>
         </div>
       </div>
     </div>
-    <aside class="controls">
-      <h1>Homepage tuning panel</h1>
-      <p>Adjust visually here, then send me the exported values or a screenshot. I can apply them directly into the real site.</p>
 
-      <div class="group" id="controlFields"></div>
+    <aside class="panel">
+      <h1>Screenshot-based logo tuning</h1>
+      <p>Move the text exactly where you want it on top of the screenshot. Then copy the saved values and send them back to me, or tell me to read them from the URL. I’ll apply them to the real homepage code.</p>
 
       <div class="group">
-        <button id="copyJson">Copy current values</button>
+        <div class="field">
+          <label for="text1">Top line text</label>
+          <input id="text1" type="text" value="Vital & Strong" />
+        </div>
+        <div class="field">
+          <label for="text2">Bottom line text</label>
+          <input id="text2" type="text" value="w/ Paul" />
+        </div>
+      </div>
+
+      <div class="group" id="controls"></div>
+
+      <div class="group">
+        <div class="row" style="flex-wrap: wrap;">
+          <button id="copyJson">Copy values</button>
+          <button class="button-secondary" id="resetBtn">Reset</button>
+        </div>
       </div>
 
       <div class="group">
@@ -213,59 +240,43 @@
 
   <script>
     const defaults = {
-      headerHeight: 110,
-      logoLeft: 24,
-      logoTop: 14,
-      logoWidth: 170,
-      logoHeight: 88,
-      heartSize: 104,
-      text1Left: 58,
-      text1Top: 26,
-      text1Size: 30,
-      text2Left: 84,
-      text2Top: 48,
-      text2Size: 22,
-      heroTop: 280,
-      brand1Size: 62,
-      brand2Size: 30,
-      questionSize: 50,
-      subSize: 14,
+      text1: 'Vital & Strong',
+      text2: 'w/ Paul',
+      line1X: 146,
+      line1Y: 56,
+      line2X: 146,
+      line2Y: 79,
+      fontSize: 26,
+      lineGap: 23,
     };
 
-    const state = { ...defaults };
-    const fields = [
-      ['headerHeight', 80, 180],
-      ['logoLeft', 0, 200],
-      ['logoTop', 0, 80],
-      ['logoWidth', 100, 260],
-      ['logoHeight', 60, 160],
-      ['heartSize', 60, 160],
-      ['text1Left', 0, 180],
-      ['text1Top', 0, 100],
-      ['text1Size', 14, 48],
-      ['text2Left', 0, 200],
-      ['text2Top', 0, 120],
-      ['text2Size', 12, 36],
-      ['heroTop', 120, 520],
-      ['brand1Size', 28, 90],
-      ['brand2Size', 16, 54],
-      ['questionSize', 24, 72],
-      ['subSize', 10, 24],
+    const params = new URLSearchParams(location.hash.slice(1));
+    const state = {
+      text1: params.get('text1') || defaults.text1,
+      text2: params.get('text2') || defaults.text2,
+      line1X: Number(params.get('line1X') || defaults.line1X),
+      line1Y: Number(params.get('line1Y') || defaults.line1Y),
+      line2X: Number(params.get('line2X') || defaults.line2X),
+      line2Y: Number(params.get('line2Y') || defaults.line2Y),
+      fontSize: Number(params.get('fontSize') || defaults.fontSize),
+    };
+
+    const controlsEl = document.getElementById('controls');
+    const outputEl = document.getElementById('output');
+    const line1El = document.getElementById('line1');
+    const line2El = document.getElementById('line2');
+    const handle1El = document.getElementById('handle1');
+    const handle2El = document.getElementById('handle2');
+
+    const sliders = [
+      ['line1X', 0, 588],
+      ['line1Y', 0, 1280],
+      ['line2X', 0, 588],
+      ['line2Y', 0, 1280],
+      ['fontSize', 14, 44],
     ];
 
-    const root = document.documentElement;
-    const output = document.getElementById('output');
-    const controls = document.getElementById('controlFields');
-
-    function apply() {
-      Object.entries(state).forEach(([k, v]) => root.style.setProperty(`--${k.replace(/[A-Z]/g, m => '-' + m.toLowerCase())}`, `${v}px`));
-      output.value = JSON.stringify(state, null, 2);
-      document.querySelectorAll('[data-value]').forEach(el => {
-        el.textContent = state[el.dataset.value] + 'px';
-      });
-    }
-
-    fields.forEach(([key, min, max]) => {
+    function makeField(key, min, max) {
       const wrap = document.createElement('div');
       wrap.className = 'field';
       wrap.innerHTML = `
@@ -274,54 +285,108 @@
           <input type="range" min="${min}" max="${max}" value="${state[key]}" data-key="${key}">
           <div class="value" data-value="${key}"></div>
         </div>`;
-      controls.appendChild(wrap);
-    });
-
-    controls.addEventListener('input', (e) => {
-      if (e.target.matches('input[type="range"]')) {
-        state[e.target.dataset.key] = Number(e.target.value);
-        apply();
-      }
-    });
-
-    function makeDraggable(el, keys) {
-      let startX = 0, startY = 0, startVals = null;
-      const onMove = (clientX, clientY) => {
-        if (!startVals) return;
-        state[keys.x] = Math.round(startVals.x + (clientX - startX));
-        state[keys.y] = Math.round(startVals.y + (clientY - startY));
-        document.querySelector(`input[data-key="${keys.x}"]`).value = state[keys.x];
-        document.querySelector(`input[data-key="${keys.y}"]`).value = state[keys.y];
-        apply();
-      };
-      el.addEventListener('pointerdown', (e) => {
-        startX = e.clientX; startY = e.clientY;
-        startVals = { x: state[keys.x], y: state[keys.y] };
-        el.setPointerCapture(e.pointerId);
-      });
-      el.addEventListener('pointermove', (e) => {
-        if (!startVals) return;
-        onMove(e.clientX, e.clientY);
-      });
-      el.addEventListener('pointerup', () => { startVals = null; });
-      el.addEventListener('pointercancel', () => { startVals = null; });
+      controlsEl.appendChild(wrap);
     }
 
-    makeDraggable(document.getElementById('logoBox'), { x: 'logoLeft', y: 'logoTop' });
-    makeDraggable(document.getElementById('heroCopy'), { x: 'logoLeft', y: 'heroTop' });
+    sliders.forEach(args => makeField(...args));
+
+    function syncHash() {
+      const p = new URLSearchParams();
+      Object.entries(state).forEach(([k,v]) => p.set(k, v));
+      location.hash = p.toString();
+    }
+
+    function render() {
+      line1El.textContent = state.text1;
+      line2El.textContent = state.text2;
+
+      line1El.style.left = state.line1X + 'px';
+      line1El.style.top = state.line1Y + 'px';
+      line2El.style.left = state.line2X + 'px';
+      line2El.style.top = state.line2Y + 'px';
+
+      handle1El.style.left = state.line1X + 'px';
+      handle1El.style.top = state.line1Y + 'px';
+      handle2El.style.left = state.line2X + 'px';
+      handle2El.style.top = state.line2Y + 'px';
+
+      line1El.style.fontSize = state.fontSize + 'px';
+      line2El.style.fontSize = state.fontSize + 'px';
+
+      document.querySelectorAll('[data-value]').forEach(el => {
+        const key = el.dataset.value;
+        el.textContent = state[key] + 'px';
+      });
+      document.querySelectorAll('input[type="range"]').forEach(el => {
+        const key = el.dataset.key;
+        el.value = state[key];
+      });
+      document.getElementById('text1').value = state.text1;
+      document.getElementById('text2').value = state.text2;
+
+      outputEl.value = JSON.stringify({
+        screenshot: 'assets/tune-screenshot.jpg',
+        screenshotSize: { width: 588, height: 1280 },
+        topLine: { text: state.text1, anchorRightX: state.line1X, centerY: state.line1Y, fontSizePx: state.fontSize },
+        bottomLine: { text: state.text2, anchorRightX: state.line2X, centerY: state.line2Y, fontSizePx: state.fontSize }
+      }, null, 2);
+
+      syncHash();
+    }
+
+    controlsEl.addEventListener('input', (e) => {
+      if (!e.target.matches('input[type="range"]')) return;
+      state[e.target.dataset.key] = Number(e.target.value);
+      render();
+    });
+
+    document.getElementById('text1').addEventListener('input', (e) => {
+      state.text1 = e.target.value;
+      render();
+    });
+    document.getElementById('text2').addEventListener('input', (e) => {
+      state.text2 = e.target.value;
+      render();
+    });
+
+    function makeDraggable(handle, xKey, yKey) {
+      let dragging = false;
+      handle.addEventListener('pointerdown', (e) => {
+        dragging = true;
+        handle.setPointerCapture(e.pointerId);
+      });
+      handle.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        const rect = document.getElementById('canvas').getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 588;
+        const y = ((e.clientY - rect.top) / rect.height) * 1280;
+        state[xKey] = Math.max(0, Math.min(588, Math.round(x)));
+        state[yKey] = Math.max(0, Math.min(1280, Math.round(y)));
+        render();
+      });
+      handle.addEventListener('pointerup', () => dragging = false);
+      handle.addEventListener('pointercancel', () => dragging = false);
+    }
+
+    makeDraggable(handle1El, 'line1X', 'line1Y');
+    makeDraggable(handle2El, 'line2X', 'line2Y');
 
     document.getElementById('copyJson').addEventListener('click', async () => {
-      const text = output.value;
       try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(outputEl.value);
         alert('Copied current values');
       } catch {
-        output.select();
+        outputEl.select();
         document.execCommand('copy');
       }
     });
 
-    apply();
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      Object.assign(state, defaults);
+      render();
+    });
+
+    render();
   </script>
 </body>
 </html>
