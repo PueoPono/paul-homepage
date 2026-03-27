@@ -598,21 +598,21 @@ p { margin: 0 0 1rem; }
       -2px 0 0 rgba(72, 41, 22, 0.58),
       0 2px 0 rgba(72, 41, 22, 0.58),
       0 -2px 0 rgba(72, 41, 22, 0.58);
-    width: auto;
-    right: auto;
   }
   .brand-overlay-text--script {
-    left: 123px;
-    top: 42px;
-    transform: translate(-100%, -50%);
-    font-size: 21px;
+    left: auto;
+    right: 2px;
+    top: 28px;
+    transform: none;
+    font-size: 1.08rem;
     line-height: 1;
   }
   .brand-overlay-sub--small {
-    left: 103px;
-    top: 60px;
-    transform: translate(-100%, -50%);
-    font-size: 21px;
+    left: auto;
+    right: 0px;
+    top: 43px;
+    transform: none;
+    font-size: 1.08rem;
     line-height: 1;
   }
   .reference-hero--tall,
