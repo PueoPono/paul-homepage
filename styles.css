@@ -104,11 +104,11 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 .brand-overlay-text--script {
-  top: 23px;
-  left: 56px;
+  top: 22px;
+  left: 54px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.42rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
@@ -117,18 +117,18 @@ img { max-width: 100%; display: block; }
   top: 22px;
 }
 .brand-overlay-sub--small {
-  top: 45px;
-  left: 83px;
+  top: 43px;
+  left: 78px;
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.06rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-sub--tight {
-  top: 45px;
+  top: 43px;
 }
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
@@ -222,14 +222,15 @@ img { max-width: 100%; display: block; }
 .hero-bottom-mark {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin-top: 1.8rem;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+  padding-right: clamp(1rem, 7vw, 8rem);
 }
 .hero-bottom-mark-image {
-  width: clamp(220px, 32vw, 460px);
+  width: clamp(340px, 42vw, 620px);
   height: auto;
   opacity: 0.98;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) saturate(100%) invert(82%) sepia(24%) saturate(741%) hue-rotate(336deg) brightness(99%) contrast(92%) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.3));
 }
 .eyebrow {
   margin: 0 0 0.95rem;
@@ -592,14 +593,14 @@ p { margin: 0 0 1rem; }
       0 -2px 0 rgba(72, 41, 22, 0.58);
   }
   .brand-overlay-text--script {
-    left: 44px;
-    top: 28px;
-    font-size: 1.04rem;
+    left: 40px;
+    top: 26px;
+    font-size: 1rem;
   }
   .brand-overlay-sub--small {
-    left: 62px;
-    top: 43px;
-    font-size: 0.8rem;
+    left: 58px;
+    top: 40px;
+    font-size: 1rem;
   }
   .reference-hero--tall,
   .reference-hero-inner--lower {
@@ -614,10 +615,12 @@ p { margin: 0 0 1rem; }
     padding-bottom: 1.8rem;
   }
   .hero-bottom-mark {
-    margin-top: 1.25rem;
+    margin-top: 0.75rem;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
   }
   .hero-bottom-mark-image {
-    width: clamp(168px, 42vw, 260px);
+    width: clamp(200px, 56vw, 320px);
   }
   .hero-copy-block {
     max-width: 100%;
