@@ -23,7 +23,7 @@
     .app {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 380px;
+      grid-template-columns: minmax(0, 1fr) 390px;
     }
     .stage-wrap {
       padding: 16px;
@@ -107,26 +107,27 @@
     }
     .handle {
       position: absolute;
-      width: 22px;
-      height: 22px;
+      width: 34px;
+      height: 34px;
       border-radius: 999px;
-      background: rgba(221, 159, 63, 0.95);
-      border: 2px solid rgba(18,11,8,0.9);
+      background: rgba(221, 159, 63, 0.98);
+      border: 3px solid rgba(18,11,8,0.9);
       box-shadow: 0 8px 20px rgba(0,0,0,.35);
       transform: translate(-50%, -50%);
       cursor: grab;
       touch-action: none;
+      z-index: 4;
     }
     .handle::after {
       content: attr(data-label);
       position: absolute;
-      top: -28px;
+      top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(11, 8, 7, 0.88);
+      background: rgba(11, 8, 7, 0.92);
       color: var(--text);
       font-size: 11px;
-      padding: 3px 6px;
+      padding: 3px 7px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.08);
       white-space: nowrap;
@@ -169,6 +170,11 @@
       color: var(--text);
       border: 1px solid rgba(255,255,255,.08);
     }
+    .status {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
     @media (max-width: 980px) {
       .app { grid-template-columns: 1fr; }
       .panel { border-left: 0; border-top: 1px solid var(--line); }
@@ -179,22 +185,22 @@
 <body>
   <div class="app">
     <div class="stage-wrap">
-      <div class="hint">This tuner now models only the logo: fixed heart, independently movable text lines relative to that heart, and values that map back into the shared logo CSS. Keep the heart still. Move the text exactly where you want it.</div>
+      <div class="hint">Two ways to adjust: drag the gold handles on the screenshot, or use the sliders below. Then tap <strong>Save values</strong> so I can retrieve the result directly.</div>
       <div class="canvas" id="canvas">
         <div class="logo-stage" id="logoStage">
           <div class="heart"></div>
           <div class="guide-right" id="guideRight"></div>
           <div class="logo-line" id="line1">Vital &amp; Strong</div>
           <div class="logo-line" id="line2">w/ Paul</div>
-          <div class="handle" id="handle1" data-label="Top line"></div>
-          <div class="handle" id="handle2" data-label="Bottom line"></div>
+          <div class="handle" id="handle1" data-label="Top"></div>
+          <div class="handle" id="handle2" data-label="Bottom"></div>
         </div>
       </div>
     </div>
 
     <aside class="panel">
       <h1>Logo-only tuner</h1>
-      <p>Move each line independently relative to the heart. The shared right-edge guide shows whether the two lines are truly right-justified. The exported values are intended to persist across every logo instance.</p>
+      <p>Heart stays fixed. Move each line independently relative to the heart. The saved values can be applied to the shared logo CSS so every logo instance matches.</p>
 
       <div class="group">
         <div class="field">
@@ -211,9 +217,11 @@
 
       <div class="group">
         <div class="row" style="flex-wrap: wrap;">
+          <button id="saveBtn">Save values</button>
           <button id="copyJson">Copy values</button>
           <button class="button-secondary" id="resetBtn">Reset</button>
         </div>
+        <div class="status" id="status">Not saved yet.</div>
       </div>
 
       <div class="group">
@@ -236,10 +244,7 @@
       stageLeft: 14,
       stageTop: 9,
       stageWidth: 160,
-      stageHeight: 94,
-      heartLeft: 0,
-      heartTop: 0,
-      heartSize: 98
+      stageHeight: 94
     };
 
     const params = new URLSearchParams(location.hash.slice(1));
@@ -257,6 +262,7 @@
     const handle2El = document.getElementById('handle2');
     const stageEl = document.getElementById('logoStage');
     const guideRightEl = document.getElementById('guideRight');
+    const statusEl = document.getElementById('status');
 
     const sliders = [
       ['line1AnchorX', 60, 220],
@@ -290,6 +296,26 @@
       history.replaceState(null, '', '#' + p.toString());
     }
 
+    function currentPayload() {
+      return {
+        savedAt: new Date().toISOString(),
+        desktop: {
+          topLine: { text: state.text1, anchorRightX: state.line1AnchorX, centerY: state.line1CenterY, fontSizePx: state.fontSizePx },
+          bottomLine: { text: state.text2, anchorRightX: state.line2AnchorX, centerY: state.line2CenterY, fontSizePx: state.fontSizePx }
+        },
+        mobile: {
+          fontSizePx: state.mobileFontSizePx
+        },
+        sharedStage: {
+          left: state.stageLeft,
+          top: state.stageTop,
+          width: state.stageWidth,
+          height: state.stageHeight
+        },
+        note: 'heart stays fixed; apply these values to all logo instances'
+      };
+    }
+
     function render() {
       stageEl.style.left = state.stageLeft + 'px';
       stageEl.style.top = state.stageTop + 'px';
@@ -317,47 +343,32 @@
 
       document.querySelectorAll('[data-value]').forEach(el => {
         const key = el.dataset.value;
-        el.textContent = state[key] + (typeof defaults[key] === 'number' ? 'px' : '');
+        el.textContent = state[key] + 'px';
       });
       document.querySelectorAll('input[type="range"]').forEach(el => {
         el.value = state[el.dataset.key];
       });
       document.getElementById('text1').value = state.text1;
       document.getElementById('text2').value = state.text2;
-
-      outputEl.value = JSON.stringify({
-        purpose: 'shared logo placement values',
-        desktop: {
-          topLine: { text: state.text1, anchorRightX: state.line1AnchorX, centerY: state.line1CenterY, fontSizePx: state.fontSizePx },
-          bottomLine: { text: state.text2, anchorRightX: state.line2AnchorX, centerY: state.line2CenterY, fontSizePx: state.fontSizePx }
-        },
-        mobile: {
-          fontSizePx: state.mobileFontSizePx
-        },
-        sharedStage: {
-          left: state.stageLeft,
-          top: state.stageTop,
-          width: state.stageWidth,
-          height: state.stageHeight
-        },
-        note: 'heart stays fixed; apply these values to all logo instances'
-      }, null, 2);
-
+      outputEl.value = JSON.stringify(currentPayload(), null, 2);
       syncHash();
     }
 
     controlsEl.addEventListener('input', (e) => {
       if (!e.target.matches('input[type="range"]')) return;
       state[e.target.dataset.key] = Number(e.target.value);
+      statusEl.textContent = 'Adjusted locally. Tap Save values when ready.';
       render();
     });
 
     document.getElementById('text1').addEventListener('input', (e) => {
       state.text1 = e.target.value;
+      statusEl.textContent = 'Adjusted locally. Tap Save values when ready.';
       render();
     });
     document.getElementById('text2').addEventListener('input', (e) => {
       state.text2 = e.target.value;
+      statusEl.textContent = 'Adjusted locally. Tap Save values when ready.';
       render();
     });
 
@@ -366,6 +377,7 @@
       handle.addEventListener('pointerdown', (e) => {
         dragging = true;
         handle.setPointerCapture(e.pointerId);
+        statusEl.textContent = 'Dragging…';
       });
       handle.addEventListener('pointermove', (e) => {
         if (!dragging) return;
@@ -376,8 +388,13 @@
         state[yKey] = Math.round(Math.max(0, Math.min(state.stageHeight + 40, y)));
         render();
       });
-      handle.addEventListener('pointerup', () => dragging = false);
-      handle.addEventListener('pointercancel', () => dragging = false);
+      const stop = () => {
+        if (!dragging) return;
+        dragging = false;
+        statusEl.textContent = 'Adjusted locally. Tap Save values when ready.';
+      };
+      handle.addEventListener('pointerup', stop);
+      handle.addEventListener('pointercancel', stop);
     }
 
     makeDraggable(handle1El, 'line1AnchorX', 'line1CenterY');
@@ -386,17 +403,52 @@
     document.getElementById('copyJson').addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(outputEl.value);
-        alert('Copied current values');
+        statusEl.textContent = 'Copied current values.';
       } catch {
         outputEl.select();
         document.execCommand('copy');
+        statusEl.textContent = 'Copied current values.';
       }
     });
 
     document.getElementById('resetBtn').addEventListener('click', () => {
       Object.assign(state, defaults);
+      statusEl.textContent = 'Reset to defaults. Tap Save values when ready.';
       render();
     });
+
+    document.getElementById('saveBtn').addEventListener('click', async () => {
+      const payload = currentPayload();
+      try {
+        localStorage.setItem('paul-logo-tune', JSON.stringify(payload));
+        statusEl.textContent = 'Saved on this device and in the URL. Send me the URL or copied values.';
+      } catch {
+        statusEl.textContent = 'Saved in URL. If local save failed, send me the URL or copied values.';
+      }
+      render();
+    });
+
+    try {
+      const saved = localStorage.getItem('paul-logo-tune');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed?.desktop?.topLine) {
+          state.text1 = parsed.desktop.topLine.text ?? state.text1;
+          state.text2 = parsed.desktop.bottomLine.text ?? state.text2;
+          state.line1AnchorX = parsed.desktop.topLine.anchorRightX ?? state.line1AnchorX;
+          state.line1CenterY = parsed.desktop.topLine.centerY ?? state.line1CenterY;
+          state.line2AnchorX = parsed.desktop.bottomLine.anchorRightX ?? state.line2AnchorX;
+          state.line2CenterY = parsed.desktop.bottomLine.centerY ?? state.line2CenterY;
+          state.fontSizePx = parsed.desktop.topLine.fontSizePx ?? state.fontSizePx;
+          state.mobileFontSizePx = parsed.mobile?.fontSizePx ?? state.mobileFontSizePx;
+          state.stageLeft = parsed.sharedStage?.left ?? state.stageLeft;
+          state.stageTop = parsed.sharedStage?.top ?? state.stageTop;
+          state.stageWidth = parsed.sharedStage?.width ?? state.stageWidth;
+          state.stageHeight = parsed.sharedStage?.height ?? state.stageHeight;
+          statusEl.textContent = 'Loaded saved values from this device.';
+        }
+      }
+    } catch {}
 
     render();
   </script>
