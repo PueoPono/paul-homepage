@@ -57,37 +57,21 @@
     }
     .logo-stage {
       position: absolute;
-      left: 72px;
-      top: 18px;
-      width: 290px;
-      height: 160px;
-      border: 1px dashed rgba(255,255,255,.22);
-      border-radius: 14px;
-      background: rgba(255,255,255,.02);
+      left: 54px;
+      top: 20px;
+      width: 170px;
+      height: 92px;
+      border: 1px dashed rgba(255,255,255,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.015);
       overflow: visible;
-    }
-    .heart {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 150px;
-      height: 150px;
-      background: url('./assets/branding/white-MH-heart-arrow-transparent.png') center/contain no-repeat;
-      filter: drop-shadow(0 8px 14px rgba(0,0,0,.32));
-      pointer-events: none;
     }
     .logo-line {
       position: absolute;
       font-family: "Segoe Script", "Brush Script MT", cursive;
       font-weight: 400;
       font-style: normal;
-      color: #f5f2ea;
-      text-shadow:
-        1px 0 0 rgba(166, 118, 38, 0.7),
-        -1px 0 0 rgba(166, 118, 38, 0.7),
-        0 1px 0 rgba(166, 118, 38, 0.7),
-        0 -1px 0 rgba(166, 118, 38, 0.7),
-        0 2px 10px rgba(0,0,0,.42);
+      color: rgba(255,255,255,0.001);
       line-height: 1;
       white-space: nowrap;
       text-align: right;
@@ -182,10 +166,9 @@
 <body>
   <div class="app">
     <div class="stage-wrap">
-      <div class="hint">Test 1: only one movable logo instance. Heart stays fixed. Move the two text lines independently relative to the heart, then save and send me the URL or copied values.</div>
+      <div class="hint">Test 1 corrected: only the existing screenshot logo is visible now. No extra heart overlay. You are moving invisible text anchors with the gold handles to line up against the screenshot logo.</div>
       <div class="canvas" id="canvas">
         <div class="logo-stage" id="logoStage">
-          <div class="heart"></div>
           <div class="guide-right" id="guideRight"></div>
           <div class="logo-line" id="line1">Vital &amp; Strong</div>
           <div class="logo-line" id="line2">w/ Paul</div>
@@ -197,7 +180,7 @@
 
     <aside class="panel">
       <h1>Test 1 · mobile logo tuner</h1>
-      <p>This is an isolated test page, not the homepage. Future iterations can be test2, test3, etc. No menu changes.</p>
+      <p>This version removes the duplicate heart problem. You are only aligning text anchors against the real screenshot logo already visible in the image.</p>
 
       <div class="group">
         <div class="field">
@@ -232,15 +215,15 @@
     const defaults = {
       text1: 'Vital & Strong',
       text2: 'w/ Paul',
-      line1AnchorX: 216,
-      line1CenterY: 75,
-      line2AnchorX: 183,
-      line2CenterY: 108,
-      fontSizePx: 34,
-      stageLeft: 72,
-      stageTop: 18,
-      stageWidth: 290,
-      stageHeight: 160
+      line1AnchorX: 124,
+      line1CenterY: 41,
+      line2AnchorX: 105,
+      line2CenterY: 60,
+      fontSizePx: 21,
+      stageLeft: 54,
+      stageTop: 20,
+      stageWidth: 170,
+      stageHeight: 92
     };
 
     const params = new URLSearchParams(location.hash.slice(1));
@@ -261,15 +244,15 @@
     const statusEl = document.getElementById('status');
 
     const sliders = [
-      ['line1AnchorX', 100, 340],
-      ['line1CenterY', 0, 220],
-      ['line2AnchorX', 100, 340],
-      ['line2CenterY', 0, 220],
-      ['fontSizePx', 16, 52],
-      ['stageLeft', 0, 140],
+      ['line1AnchorX', 80, 220],
+      ['line1CenterY', 0, 140],
+      ['line2AnchorX', 80, 220],
+      ['line2CenterY', 0, 140],
+      ['fontSizePx', 14, 36],
+      ['stageLeft', 0, 120],
       ['stageTop', 0, 80],
-      ['stageWidth', 180, 360],
-      ['stageHeight', 100, 220]
+      ['stageWidth', 120, 260],
+      ['stageHeight', 70, 160]
     ];
 
     function makeField(key, min, max) {
@@ -298,7 +281,7 @@
         topLine: { text: state.text1, anchorRightX: state.line1AnchorX, centerY: state.line1CenterY, fontSizePx: state.fontSizePx },
         bottomLine: { text: state.text2, anchorRightX: state.line2AnchorX, centerY: state.line2CenterY, fontSizePx: state.fontSizePx },
         stage: { left: state.stageLeft, top: state.stageTop, width: state.stageWidth, height: state.stageHeight },
-        note: 'mobile-only test page from screenshot'
+        note: 'mobile-only test page from screenshot; screenshot already includes the real heart/logo'
       };
     }
 
@@ -363,8 +346,8 @@
         const rect = stageEl.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * state.stageWidth;
         const y = ((e.clientY - rect.top) / rect.height) * state.stageHeight;
-        state[xKey] = Math.round(Math.max(0, Math.min(state.stageWidth + 100, x)));
-        state[yKey] = Math.round(Math.max(0, Math.min(state.stageHeight + 80, y)));
+        state[xKey] = Math.round(Math.max(0, Math.min(state.stageWidth + 60, x)));
+        state[yKey] = Math.round(Math.max(0, Math.min(state.stageHeight + 40, y)));
         render();
       });
       const stop = () => {
