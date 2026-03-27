@@ -114,7 +114,7 @@ img { max-width: 100%; display: block; }
   right: 46px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: calc(1.58rem + 1px);
+  font-size: 1.01rem;
   line-height: 1;
   font-weight: 400;
   font-style: normal;
@@ -130,7 +130,7 @@ img { max-width: 100%; display: block; }
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: calc(1.58rem + 1px);
+  font-size: 1.01rem;
   line-height: 1;
   font-weight: 400;
   font-style: normal;
