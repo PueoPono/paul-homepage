@@ -93,6 +93,14 @@ User indicated:
 - much of the website text is still placeholder text
 - the website editing system should primarily help replace placeholder copy with real copy
 
+## Explicit Next Step For Homepage
+
+If asked in a future session "what's the next step for the website?" the next step should be:
+
+Create a test page. In homepage block 2, use a dark forest background image with many trees and a dark overlay for readability. Across all sections, increase vertical breathing room and visual spaciousness: more top/bottom padding, more spacing between headings, body text, and CTAs, and less dense layout overall. The feeling should be calm, grounded, premium, and easy on the nervous system.
+
+This is the current preferred next homepage design pass.
+
 ## Reference Files For Whole-Site Review
 
 Use these when reviewing site structure and copy:

@@ -152,3 +152,9 @@ Use cache-busted links after pushes:
 ## Practical Continuity Rule
 
 Before asking Pauko where things are or how deployment works, check this file first.
+
+## Current Next Homepage Step
+
+If Pauko asks what the next website step is, answer with this:
+
+Create a test page. In homepage block 2, use a dark forest background image with many trees and a dark overlay for readability. Across all sections, increase vertical breathing room and visual spaciousness: more top/bottom padding, more spacing between headings, body text, and CTAs, and less dense layout overall. The feeling should be calm, grounded, premium, and easy on the nervous system.
