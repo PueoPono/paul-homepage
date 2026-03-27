@@ -6,7 +6,6 @@
   <title>Mobile Header Logo Editor – Prototype</title>
   <link rel="stylesheet" href="../styles.css?v=layout-ref-pass-3" />
   <style>
-    /* Frame + editor chrome (intentionally minimal, mobile-first) */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -17,8 +16,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: radial-gradient(circle at top, rgba(242, 215, 160, 0.18), transparent 55%),
-                  linear-gradient(180deg, #130b08, #050304 64%);
+      background: radial-gradient(circle at top, rgba(242, 215, 160, 0.18), transparent 55%), linear-gradient(180deg, #130b08, #050304 64%);
     }
     .editor-header {
       padding: 0.85rem 1rem 0.65rem;
@@ -32,201 +30,65 @@
       top: 0;
       z-index: 20;
     }
-    .editor-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .editor-title {
-      font-size: 0.98rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .editor-subtitle {
-      font-size: 0.78rem;
-      color: rgba(245,242,234,0.72);
-    }
+    .editor-title-group { display: flex; flex-direction: column; gap: 2px; }
+    .editor-title { font-size: 0.98rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .editor-subtitle { font-size: 0.78rem; color: rgba(245,242,234,0.72); }
     .device-toggle-row {
-      display: inline-flex;
-      padding: 2px;
-      border-radius: 999px;
-      background: rgba(15,9,7,0.85);
-      border: 1px solid rgba(242,215,160,0.22);
+      display: inline-flex; padding: 2px; border-radius: 999px; background: rgba(15,9,7,0.85); border: 1px solid rgba(242,215,160,0.22);
     }
     .device-toggle {
-      border: 0;
-      background: transparent;
-      color: rgba(245,242,234,0.8);
-      font-size: 0.74rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
+      border: 0; background: transparent; color: rgba(245,242,234,0.8); font-size: 0.74rem; padding: 0.25rem 0.6rem; border-radius: 999px;
     }
     .device-toggle.is-active {
-      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%);
-      color: #26160f;
-      font-weight: 600;
+      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%); color: #26160f; font-weight: 600;
     }
-
-    .editor-main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 0.6rem 0.75rem 0.9rem;
-      gap: 0.7rem;
-    }
-
-    .phone-frame-wrap {
-      display: flex;
-      justify-content: center;
-    }
+    .editor-main { flex: 1; display: flex; flex-direction: column; padding: 0.6rem 0.75rem 0.9rem; gap: 0.7rem; }
+    .phone-frame-wrap { display: flex; justify-content: center; }
     .phone-frame {
-      position: relative;
-      border-radius: 32px;
-      padding: 0.38rem;
-      background: radial-gradient(circle at top, rgba(243, 214, 160, 0.22), rgba(12,6,4,1));
-      box-shadow: 0 18px 35px rgba(0,0,0,0.7);
-      max-width: 420px;
-      width: 100%;
+      position: relative; border-radius: 32px; padding: 0.38rem; background: radial-gradient(circle at top, rgba(243, 214, 160, 0.22), rgba(12,6,4,1)); box-shadow: 0 18px 35px rgba(0,0,0,0.7); max-width: 420px; width: 100%;
     }
     .phone-inner-bezel {
-      border-radius: 26px;
-      border: 1px solid rgba(8,4,3,0.95);
-      background: black;
-      overflow: hidden;
-      position: relative;
+      border-radius: 26px; border: 1px solid rgba(8,4,3,0.95); background: black; overflow: hidden; position: relative;
     }
     .status-notch {
-      position: absolute;
-      top: 0.45rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 36%;
-      height: 18px;
-      background: rgba(0,0,0,0.9);
-      border-radius: 999px;
-      z-index: 4;
-      box-shadow: 0 0 0 1px rgba(90, 60, 40, 0.35);
+      position: absolute; top: 0.45rem; left: 50%; transform: translateX(-50%); width: 36%; height: 18px; background: rgba(0,0,0,0.9); border-radius: 999px; z-index: 4; box-shadow: 0 0 0 1px rgba(90, 60, 40, 0.35);
     }
     .phone-iframe {
-      width: 100%;
-      height: var(--viewport-height, 640px);
-      border: 0;
-      display: block;
-      border-radius: 24px;
-      background: black;
-      transform-origin: top center;
+      width: 100%; height: var(--viewport-height, 640px); border: 0; display: block; border-radius: 24px; background: black; transform-origin: top center;
     }
-
     .controls-panel {
-      margin-top: 0.7rem;
-      border-radius: 20px;
-      padding: 0.7rem 0.75rem 0.75rem;
-      background: radial-gradient(circle at top, rgba(242,215,160,0.06), rgba(24,13,9,0.98));
-      border: 1px solid rgba(242,215,160,0.2);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+      margin-top: 0.7rem; border-radius: 20px; padding: 0.7rem 0.75rem 0.75rem; background: radial-gradient(circle at top, rgba(242,215,160,0.06), rgba(24,13,9,0.98)); border: 1px solid rgba(242,215,160,0.2); box-shadow: 0 14px 30px rgba(0,0,0,0.5);
     }
-    .controls-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.1rem;
-    }
-    .controls-title {
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #f1cf93;
-    }
-    .preset-chip-row {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-    }
+    .controls-header { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; margin-bottom: 0.1rem; }
+    .controls-title { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: #f1cf93; }
+    .preset-chip-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
     .preset-chip {
-      font-size: 0.72rem;
-      padding: 0.1rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(242,215,160,0.35);
-      background: rgba(15,9,7,0.9);
-      color: rgba(245,242,234,0.9);
+      font-size: 0.72rem; padding: 0.1rem 0.6rem; border-radius: 999px; border: 1px solid rgba(242,215,160,0.35); background: rgba(15,9,7,0.9); color: rgba(245,242,234,0.9);
     }
     .preset-chip.is-active {
-      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%);
-      color: #26160f;
-      font-weight: 600;
-      border-color: transparent;
+      background: linear-gradient(180deg, #f2d59e 0%, #d89437 100%); color: #26160f; font-weight: 600; border-color: transparent;
     }
-
-    .control-group {
-      margin-top: 0.65rem;
+    .control-group { margin-top: 0.75rem; }
+    .control-label-row { display: flex; justify-content: space-between; font-size: 0.76rem; color: rgba(245,242,234,0.9); margin-bottom: 0.18rem; }
+    .control-label-row span:last-child { color: rgba(245,242,234,0.6); }
+    .slider-shell { position: relative; padding: 0.35rem 0.1rem 0.3rem; }
+    input[type="range"] { width: 100%; appearance: none; height: 3px; border-radius: 999px; background: rgba(242,215,160,0.34); outline: none; }
+    input[type="range"]::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 999px; background: #f2d59e; border: 1px solid rgba(87,50,29,0.8); box-shadow: 0 3px 8px rgba(0,0,0,0.45); margin-top: -7px; }
+    input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 999px; background: #f2d59e; border: 1px solid rgba(87,50,29,0.8); box-shadow: 0 3px 8px rgba(0,0,0,0.45); }
+    .control-row-inline { display: flex; gap: 0.5rem; margin-top: 0.35rem; }
+    .control-row-inline > button, .mini-grid button, .summary-actions button {
+      flex: 1; padding: 0.45rem 0.5rem; border-radius: 999px; border: 1px solid rgba(242,215,160,0.3); background: rgba(12,7,5,0.96); color: rgba(245,242,234,0.9); font-size: 0.76rem;
     }
-    .control-label-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.76rem;
-      color: rgba(245,242,234,0.9);
-      margin-bottom: 0.15rem;
+    .mini-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.35rem; margin-top: 0.35rem; }
+    .summary-box {
+      margin-top: 0.8rem; padding: 0.75rem; border-radius: 16px; background: rgba(9,5,4,0.72); border: 1px solid rgba(242,215,160,0.18);
     }
-    .control-label-row span:last-child {
-      color: rgba(245,242,234,0.6);
+    .summary-title { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: #f1cf93; margin-bottom: 0.4rem; }
+    .summary-text {
+      white-space: pre-wrap; font-size: 0.82rem; line-height: 1.45; color: rgba(245,242,234,0.92); min-height: 6.5rem;
     }
-    .slider-shell {
-      position: relative;
-      padding: 0.35rem 0.1rem 0.3rem;
-    }
-    input[type="range"] {
-      width: 100%;
-      appearance: none;
-      height: 3px;
-      border-radius: 999px;
-      background: rgba(242,215,160,0.34);
-      outline: none;
-    }
-    input[type="range"]::-webkit-slider-thumb {
-      appearance: none;
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #f2d59e;
-      border: 1px solid rgba(87,50,29,0.8);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.45);
-      margin-top: -7px;
-    }
-    input[type="range"]::-moz-range-thumb {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #f2d59e;
-      border: 1px solid rgba(87,50,29,0.8);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.45);
-    }
-    .control-row-inline {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.35rem;
-    }
-    .control-row-inline > button {
-      flex: 1;
-      padding: 0.35rem 0.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(242,215,160,0.3);
-      background: rgba(12,7,5,0.96);
-      color: rgba(245,242,234,0.9);
-      font-size: 0.76rem;
-    }
-    .control-row-inline > button.secondary {
-      background: transparent;
-      color: rgba(245,242,234,0.7);
-    }
-
-    .editor-footer-note {
-      margin-top: 0.5rem;
-      font-size: 0.72rem;
-      color: rgba(245,242,234,0.7);
-      text-align: center;
-    }
+    .summary-actions { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+    .editor-footer-note { margin-top: 0.5rem; font-size: 0.72rem; color: rgba(245,242,234,0.7); text-align: center; }
   </style>
 </head>
 <body>
@@ -234,7 +96,7 @@
     <header class="editor-header">
       <div class="editor-title-group">
         <div class="editor-title">Mobile Header Logo Editor</div>
-        <div class="editor-subtitle">Prototype · works on a test copy of the homepage only</div>
+        <div class="editor-subtitle">Phone-friendly prototype with URL state + copyable change summary</div>
       </div>
       <div class="device-toggle-row" role="tablist" aria-label="Viewport preset">
         <button class="device-toggle is-active" data-width="390" data-height="720" role="tab" aria-selected="true">Phone</button>
@@ -247,12 +109,7 @@
         <div class="phone-frame">
           <div class="phone-inner-bezel">
             <div class="status-notch" aria-hidden="true"></div>
-            <iframe
-              class="phone-iframe"
-              id="previewFrame"
-              src="./mobile-home-preview.html"
-              title="Mobile homepage preview"
-            ></iframe>
+            <iframe class="phone-iframe" id="previewFrame" src="./mobile-home-preview.html" title="Mobile homepage preview"></iframe>
           </div>
         </div>
       </section>
@@ -267,53 +124,65 @@
         </div>
 
         <div class="control-group">
-          <div class="control-label-row">
-            <span>Logo size</span>
-            <span id="logoSizeValue">100%</span>
-          </div>
-          <div class="slider-shell">
-            <input type="range" id="logoSize" min="80" max="120" value="100" />
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="control-label-row">
-            <span>Text vertical offset</span>
-            <span id="textOffsetValue">0 px</span>
-          </div>
-          <div class="slider-shell">
-            <input type="range" id="textOffset" min="-16" max="16" value="0" />
+          <div class="control-label-row"><span>Logo size</span><span id="logoSizeValue">100%</span></div>
+          <div class="slider-shell"><input type="range" id="logoSize" min="80" max="120" value="100" /></div>
+          <div class="mini-grid">
+            <button data-nudge="logoX:-2">Logo ←</button>
+            <button data-nudge="logoX:2">Logo →</button>
+            <button data-nudge="logoY:-2">Logo ↑</button>
+            <button data-nudge="logoY:2">Logo ↓</button>
           </div>
         </div>
 
         <div class="control-group">
-          <div class="control-label-row">
-            <span>Script text size</span>
-            <span id="scriptSizeValue">100%</span>
-          </div>
-          <div class="slider-shell">
-            <input type="range" id="scriptSize" min="80" max="115" value="100" />
+          <div class="control-label-row"><span>Top line size</span><span id="scriptSizeValue">100%</span></div>
+          <div class="slider-shell"><input type="range" id="scriptSize" min="80" max="115" value="100" /></div>
+          <div class="mini-grid">
+            <button data-nudge="topX:-2">Top ←</button>
+            <button data-nudge="topX:2">Top →</button>
+            <button data-nudge="topY:-2">Top ↑</button>
+            <button data-nudge="topY:2">Top ↓</button>
           </div>
         </div>
 
-        <div class="control-row-inline">
-          <button id="nudgeUp">Nudge up</button>
-          <button id="nudgeDown" class="secondary">Nudge down</button>
+        <div class="control-group">
+          <div class="control-label-row"><span>Bottom line offset</span><span id="textOffsetValue">0 px</span></div>
+          <div class="slider-shell"><input type="range" id="textOffset" min="-16" max="16" value="0" /></div>
+          <div class="mini-grid">
+            <button data-nudge="bottomX:-2">Bottom ←</button>
+            <button data-nudge="bottomX:2">Bottom →</button>
+            <button data-nudge="bottomY:-2">Bottom ↑</button>
+            <button data-nudge="bottomY:2">Bottom ↓</button>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <div class="summary-title">Copyable changes</div>
+          <div class="summary-text" id="summaryText"></div>
+          <div class="summary-actions">
+            <button id="copySummary">Copy changes</button>
+            <button id="copyUrl">Copy URL</button>
+          </div>
         </div>
       </section>
 
-      <p class="editor-footer-note">
-        This prototype is sandboxed. It does not change the live homepage. Use it to find logo settings that feel right on your phone.
-      </p>
+      <p class="editor-footer-note">This prototype is sandboxed. It does not change the live homepage. Use it to find settings that feel right on your phone, then send the URL or change summary back.</p>
     </main>
   </div>
 
   <script>
-    // Maintain a single source of truth for header logo parameters
+    const defaults = { logoScale: 1, logoX: 0, logoY: 0, topX: 0, topY: 0, bottomX: 0, bottomY: 0, textOffset: 0, scriptScale: 1 };
+    const params = new URLSearchParams(location.hash.slice(1));
     const state = {
-      logoScale: 1,
-      textOffset: 0,
-      scriptScale: 1,
+      logoScale: Number(params.get('logoScale') || defaults.logoScale),
+      logoX: Number(params.get('logoX') || defaults.logoX),
+      logoY: Number(params.get('logoY') || defaults.logoY),
+      topX: Number(params.get('topX') || defaults.topX),
+      topY: Number(params.get('topY') || defaults.topY),
+      bottomX: Number(params.get('bottomX') || defaults.bottomX),
+      bottomY: Number(params.get('bottomY') || defaults.bottomY),
+      textOffset: Number(params.get('textOffset') || defaults.textOffset),
+      scriptScale: Number(params.get('scriptScale') || defaults.scriptScale),
     };
 
     const frame = document.getElementById('previewFrame');
@@ -323,30 +192,32 @@
     const logoSizeValue = document.getElementById('logoSizeValue');
     const textOffsetValue = document.getElementById('textOffsetValue');
     const scriptSizeValue = document.getElementById('scriptSizeValue');
-
+    const summaryText = document.getElementById('summaryText');
     const presetButtons = Array.from(document.querySelectorAll('.preset-chip'));
     const deviceButtons = Array.from(document.querySelectorAll('.device-toggle'));
 
     function applyViewportPreset(width, height) {
       const bezel = document.querySelector('.phone-inner-bezel');
       if (!bezel) return;
-      // Keep aspect ratio visually consistent while fitting inside available width
       const maxWidth = bezel.clientWidth || 390;
       const scale = maxWidth / width;
-      const iframe = frame;
-      iframe.style.setProperty('--viewport-height', height + 'px');
-      iframe.style.transform = 'scale(' + scale.toFixed(3) + ')';
-      iframe.style.height = height + 'px';
-      iframe.style.width = width + 'px';
+      frame.style.setProperty('--viewport-height', height + 'px');
+      frame.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      frame.style.height = height + 'px';
+      frame.style.width = width + 'px';
     }
 
     function markActiveButton(buttons, active) {
       buttons.forEach(btn => {
         btn.classList.toggle('is-active', btn === active);
-        if (btn.hasAttribute('aria-selected')) {
-          btn.setAttribute('aria-selected', btn === active ? 'true' : 'false');
-        }
+        if (btn.hasAttribute('aria-selected')) btn.setAttribute('aria-selected', btn === active ? 'true' : 'false');
       });
+    }
+
+    function serializeStateToHash() {
+      const p = new URLSearchParams();
+      Object.entries(state).forEach(([k, v]) => p.set(k, String(v)));
+      history.replaceState(null, '', '#' + p.toString());
     }
 
     function updateSlidersFromState() {
@@ -358,6 +229,19 @@
       scriptSizeValue.textContent = scriptSizeInput.value + '%';
     }
 
+    function buildSummary() {
+      const lines = [
+        `logo ${state.logoX > 0 ? '+' : ''}${state.logoX}px x, ${state.logoY > 0 ? '+' : ''}${state.logoY}px y`,
+        `top line ${state.topX > 0 ? '+' : ''}${state.topX}px x, ${state.topY > 0 ? '+' : ''}${state.topY}px y`,
+        `bottom line ${state.bottomX > 0 ? '+' : ''}${state.bottomX}px x, ${state.bottomY > 0 ? '+' : ''}${state.bottomY}px y`,
+        `logo size ${Math.round(state.logoScale * 100)}%`,
+        `script size ${Math.round(state.scriptScale * 100)}%`,
+        `bottom shared offset ${state.textOffset > 0 ? '+' : ''}${state.textOffset}px`,
+      ];
+      summaryText.textContent = lines.join('\n');
+      serializeStateToHash();
+    }
+
     function applyStateIntoFrame() {
       const doc = frame.contentDocument;
       if (!doc) return;
@@ -366,108 +250,97 @@
       const sub = doc.querySelector('.brand-overlay-sub');
       if (!logoImg || !text || !sub) return;
 
-      // Scale the logo around its center
       logoImg.style.transformOrigin = 'center center';
-      logoImg.style.transform = 'scale(' + state.logoScale.toFixed(3) + ')';
+      logoImg.style.transform = `translate(${state.logoX}px, ${state.logoY}px) scale(${state.logoScale.toFixed(3)})`;
 
-      // Apply vertical offset to both overlay texts
-      const baseTextTop = parseFloat(getComputedStyle(text).top) || 20;
-      const baseSubTop = parseFloat(getComputedStyle(sub).top) || 41;
-      const offset = state.textOffset;
-      text.style.top = (baseTextTop + offset) + 'px';
-      sub.style.top = (baseSubTop + offset) + 'px';
-
-      // Adjust script font sizes proportionally
-      const baseScriptSize = 1.08; // matches mobile CSS approx
+      const baseTextTop = 24;
+      const baseSubTop = 39;
+      const baseTextRight = 8;
+      const baseSubRight = 8;
+      const baseScriptSize = 1.0;
       const newScriptSize = baseScriptSize * state.scriptScale;
+
+      text.style.top = (baseTextTop + state.topY) + 'px';
+      text.style.right = (baseTextRight - state.topX) + 'px';
+      text.style.left = 'auto';
+      text.style.transform = 'none';
       text.style.fontSize = newScriptSize.toFixed(2) + 'rem';
+
+      sub.style.top = (baseSubTop + state.textOffset + state.bottomY) + 'px';
+      sub.style.right = (baseSubRight - state.bottomX) + 'px';
+      sub.style.left = 'auto';
+      sub.style.transform = 'none';
       sub.style.fontSize = newScriptSize.toFixed(2) + 'rem';
+
+      buildSummary();
     }
 
     function attachFrameListeners() {
-      if (!frame) return;
       if (frame.dataset._listenersAttached) return;
       frame.dataset._listenersAttached = 'true';
-      frame.addEventListener('load', () => {
-        applyStateIntoFrame();
-      });
+      frame.addEventListener('load', applyStateIntoFrame);
     }
 
-    // Slider wiring
     logoSizeInput.addEventListener('input', () => {
       state.logoScale = parseInt(logoSizeInput.value, 10) / 100;
-      logoSizeValue.textContent = logoSizeInput.value + '%';
+      updateSlidersFromState();
       applyStateIntoFrame();
     });
     textOffsetInput.addEventListener('input', () => {
       state.textOffset = parseInt(textOffsetInput.value, 10) || 0;
-      textOffsetValue.textContent = state.textOffset + ' px';
+      updateSlidersFromState();
       applyStateIntoFrame();
     });
     scriptSizeInput.addEventListener('input', () => {
       state.scriptScale = parseInt(scriptSizeInput.value, 10) / 100;
-      scriptSizeValue.textContent = scriptSizeInput.value + '%';
-      applyStateIntoFrame();
-    });
-
-    document.getElementById('nudgeUp').addEventListener('click', () => {
-      state.textOffset -= 2;
-      updateSlidersFromState();
-      applyStateIntoFrame();
-    });
-    document.getElementById('nudgeDown').addEventListener('click', () => {
-      state.textOffset += 2;
       updateSlidersFromState();
       applyStateIntoFrame();
     });
 
-    // Presets
-    const PRESETS = {
-      default: { logoScale: 1, textOffset: 0, scriptScale: 1 },
-      compact: { logoScale: 0.9, textOffset: -6, scriptScale: 0.95 },
-    };
+    document.querySelectorAll('[data-nudge]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const [key, delta] = btn.dataset.nudge.split(':');
+        state[key] += Number(delta);
+        applyStateIntoFrame();
+      });
+    });
 
+    const PRESETS = { default: { ...defaults }, compact: { ...defaults, logoScale: 0.9, textOffset: -6, scriptScale: 0.95, topY: -2, bottomY: -2 } };
     presetButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const key = btn.dataset.preset || 'default';
-        const preset = PRESETS[key] || PRESETS.default;
-        Object.assign(state, preset);
+        Object.assign(state, PRESETS[btn.dataset.preset] || PRESETS.default);
         updateSlidersFromState();
         applyStateIntoFrame();
         markActiveButton(presetButtons, btn);
       });
     });
 
-    // Device / viewport presets
     deviceButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const w = parseInt(btn.dataset.width, 10) || 390;
-        const h = parseInt(btn.dataset.height, 10) || 720;
-        applyViewportPreset(w, h);
+        applyViewportPreset(parseInt(btn.dataset.width, 10) || 390, parseInt(btn.dataset.height, 10) || 720);
         markActiveButton(deviceButtons, btn);
       });
     });
 
-    // Initial wiring
+    document.getElementById('copySummary').addEventListener('click', async () => {
+      const text = summaryText.textContent;
+      try { await navigator.clipboard.writeText(text); } catch {}
+    });
+    document.getElementById('copyUrl').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(location.href); } catch {}
+    });
+
     attachFrameListeners();
     window.addEventListener('load', () => {
       const activeDevice = deviceButtons.find(b => b.classList.contains('is-active')) || deviceButtons[0];
-      if (activeDevice) {
-        const w = parseInt(activeDevice.dataset.width, 10) || 390;
-        const h = parseInt(activeDevice.dataset.height, 10) || 720;
-        applyViewportPreset(w, h);
-      }
+      if (activeDevice) applyViewportPreset(parseInt(activeDevice.dataset.width, 10) || 390, parseInt(activeDevice.dataset.height, 10) || 720);
       updateSlidersFromState();
       applyStateIntoFrame();
     });
-
-    // Recompute scale when the window size changes (e.g. rotate phone)
     window.addEventListener('resize', () => {
       const activeDevice = deviceButtons.find(b => b.classList.contains('is-active')) || deviceButtons[0];
       if (!activeDevice) return;
-      const w = parseInt(activeDevice.dataset.width, 10) || 390;
-      const h = parseInt(activeDevice.dataset.height, 10) || 720;
-      applyViewportPreset(w, h);
+      applyViewportPreset(parseInt(activeDevice.dataset.width, 10) || 390, parseInt(activeDevice.dataset.height, 10) || 720);
     });
   </script>
 </body>
