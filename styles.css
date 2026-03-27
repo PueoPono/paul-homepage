@@ -102,37 +102,40 @@ img { max-width: 100%; display: block; }
     1px -1px 0 rgba(166, 118, 38, 0.68),
     -1px -1px 0 rgba(166, 118, 38, 0.68);
   white-space: nowrap;
-  width: max-content;
+  width: 170px;
+  display: block;
   right: 0;
 }
 .brand-overlay-text--script {
-  top: 20px;
+  top: 18px;
   left: auto;
-  right: 30px;
+  right: 26px;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.5rem;
+  font-size: 1.58rem;
+  line-height: 1;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-text--tight {
-  top: 20px;
+  top: 18px;
 }
 .brand-overlay-sub--small {
-  top: 43px;
+  top: 39px;
   left: auto;
-  right: 30px;
+  right: 26px;
   bottom: auto;
   transform: none;
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 1.5rem;
+  font-size: 1.58rem;
+  line-height: 1;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
 }
 .brand-overlay-sub--tight {
-  top: 43px;
+  top: 39px;
 }
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
@@ -598,15 +601,17 @@ p { margin: 0 0 1rem; }
   }
   .brand-overlay-text--script {
     left: auto;
-    right: 18px;
-    top: 24px;
-    font-size: 1rem;
+    right: 14px;
+    top: 22px;
+    font-size: 1.08rem;
+    line-height: 1;
   }
   .brand-overlay-sub--small {
     left: auto;
-    right: 18px;
-    top: 39px;
-    font-size: 1rem;
+    right: 14px;
+    top: 36px;
+    font-size: 1.08rem;
+    line-height: 1;
   }
   .reference-hero--tall,
   .reference-hero-inner--lower {
