@@ -53,7 +53,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 .brand { display: inline-flex; align-items: center; }
 .brand-overlay { gap: 0.75rem; }
@@ -738,22 +738,22 @@ p { margin: 0 0 1rem; }
 }
 .section-home-2::before,
 .section-story-3::before {
-  background-image: linear-gradient(180deg, rgba(13, 17, 14, 0.18), rgba(13, 17, 14, 0.28)), url("https://stock.adobe.com/images/sunlight-shining-through-a-forest-on-a-foggy-morning-light-rays-streaming-through-the-fog-illuminates-the-fir-and-cedar-trees-on-a-country-dirt-road/185433102");
+  background-image: linear-gradient(180deg, rgba(13, 17, 14, 0.18), rgba(13, 17, 14, 0.28)), url("assets/backgrounds/forest-light-1.jpg");
 }
 .section-home-4::before,
 .section-about-3::before,
 .section-resources-2::before {
-  background-image: linear-gradient(180deg, rgba(11, 10, 8, 0.26), rgba(11, 10, 8, 0.3)), url("https://stock.adobe.com/images/beams-of-sunlight-pierce-a-dark-imposing-old-growth-redwood-forest-in-humboldt-california-redwood-trees-sequoia-sempervirens-are-the-tallest-and-most-massive-tree-species-on-earth/382928012");
+  background-image: linear-gradient(180deg, rgba(11, 10, 8, 0.26), rgba(11, 10, 8, 0.3)), url("assets/backgrounds/redwood-light.jpg");
 }
 .section-work-3::before,
 .section-testimonials-3::before {
-  background-image: linear-gradient(180deg, rgba(12, 18, 12, 0.2), rgba(12, 18, 12, 0.28)), url("https://stock.adobe.com/images/sunbeams-in-green-forest-sunny-forest-nature-sunlight-through-trees-autumn-forest-landscape-in-the-morning-on-sunrise/175871006");
+  background-image: linear-gradient(180deg, rgba(12, 18, 12, 0.2), rgba(12, 18, 12, 0.28)), url("assets/backgrounds/forest-light-2.jpg");
 }
 .section-faq-1::before {
-  background-image: linear-gradient(180deg, rgba(10, 14, 11, 0.18), rgba(10, 14, 11, 0.2)), url("https://stock.adobe.com/images/group-of-dark-green-tropical-leaves-background-nature-lush-foliage-leaf-texture-tropical-leaf/558334377");
+  background-image: linear-gradient(180deg, rgba(10, 14, 11, 0.18), rgba(10, 14, 11, 0.2)), url("assets/backgrounds/leaves-dark-1.jpg");
 }
 .section-contact-1::before {
-  background-image: linear-gradient(180deg, rgba(10, 12, 11, 0.18), rgba(10, 12, 11, 0.2)), url("https://stock.adobe.com/images/dark-green-foliage-nature-background-from-clean-tropical-plant-leaves/317521483");
+  background-image: linear-gradient(180deg, rgba(10, 12, 11, 0.18), rgba(10, 12, 11, 0.2)), url("assets/backgrounds/forest-light-3.jpg");
 }
 .section-home-2::after,
 .section-story-3::after {
@@ -793,11 +793,11 @@ p { margin: 0 0 1rem; }
 }
 .page-section,
 .page-hero:not(.reference-hero--tall) {
-  padding-top: 5.9rem;
-  padding-bottom: 5.9rem;
+  padding-top: 6.8rem;
+  padding-bottom: 6.8rem;
 }
 .section-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 .section-kicker,
 .eyebrow {
@@ -816,7 +816,7 @@ p,
 .mini-feature,
 .cta-panel,
 .hero-card {
-  padding: 1.8rem;
+  padding: 2rem;
 }
 .grid-2,
 .grid-3,
@@ -826,7 +826,7 @@ p,
 .benefit-stack,
 .resource-link-list,
 .form-shell {
-  gap: 1.55rem;
+  gap: 1.9rem;
 }
 .hero-actions,
 .button-row {
@@ -873,8 +873,8 @@ p,
 @media (max-width: 760px) {
   .page-section,
   .page-hero:not(.reference-hero--tall) {
-    padding-top: 4.8rem;
-    padding-bottom: 4.8rem;
+    padding-top: 5.4rem;
+    padding-bottom: 5.4rem;
   }
   .section-header {
     margin-bottom: 2rem;
