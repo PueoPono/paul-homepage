@@ -675,3 +675,217 @@ p { margin: 0 0 1rem; }
     width: 100%;
   }
 }
+
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(1.6rem, 3vw, 3rem);
+  align-items: end;
+}
+.hero-card {
+  background: rgba(14, 16, 15, 0.52);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 1.6rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+.hero-card-title {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  color: rgba(242, 215, 160, 0.86);
+  margin-bottom: 0.8rem;
+}
+.section-atmosphere {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.section-atmosphere > .container {
+  position: relative;
+  z-index: 1;
+}
+.section-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+.section-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 8, 7, 0.86) 0%, rgba(10, 8, 7, 0.78) 100%);
+  z-index: 0;
+}
+.section-home-2::before,
+.section-home-4::before,
+.section-work-3::before,
+.section-about-3::before,
+.section-story-3::before,
+.section-testimonials-3::before,
+.section-resources-2::before,
+.section-faq-1::before,
+.section-contact-1::before {
+  opacity: 1;
+}
+.section-home-2::before,
+.section-story-3::before {
+  background-image: linear-gradient(180deg, rgba(13, 17, 14, 0.18), rgba(13, 17, 14, 0.28)), url("https://stock.adobe.com/images/sunlight-shining-through-a-forest-on-a-foggy-morning-light-rays-streaming-through-the-fog-illuminates-the-fir-and-cedar-trees-on-a-country-dirt-road/185433102");
+}
+.section-home-4::before,
+.section-about-3::before,
+.section-resources-2::before {
+  background-image: linear-gradient(180deg, rgba(11, 10, 8, 0.26), rgba(11, 10, 8, 0.3)), url("https://stock.adobe.com/images/beams-of-sunlight-pierce-a-dark-imposing-old-growth-redwood-forest-in-humboldt-california-redwood-trees-sequoia-sempervirens-are-the-tallest-and-most-massive-tree-species-on-earth/382928012");
+}
+.section-work-3::before,
+.section-testimonials-3::before {
+  background-image: linear-gradient(180deg, rgba(12, 18, 12, 0.2), rgba(12, 18, 12, 0.28)), url("https://stock.adobe.com/images/sunbeams-in-green-forest-sunny-forest-nature-sunlight-through-trees-autumn-forest-landscape-in-the-morning-on-sunrise/175871006");
+}
+.section-faq-1::before {
+  background-image: linear-gradient(180deg, rgba(10, 14, 11, 0.18), rgba(10, 14, 11, 0.2)), url("https://stock.adobe.com/images/group-of-dark-green-tropical-leaves-background-nature-lush-foliage-leaf-texture-tropical-leaf/558334377");
+}
+.section-contact-1::before {
+  background-image: linear-gradient(180deg, rgba(10, 12, 11, 0.18), rgba(10, 12, 11, 0.2)), url("https://stock.adobe.com/images/dark-green-foliage-nature-background-from-clean-tropical-plant-leaves/317521483");
+}
+.section-home-2::after,
+.section-story-3::after {
+  background: linear-gradient(180deg, rgba(10, 9, 8, 0.78) 0%, rgba(10, 9, 8, 0.66) 45%, rgba(10, 9, 8, 0.84) 100%);
+}
+.section-home-4::after,
+.section-about-3::after,
+.section-resources-2::after {
+  background: linear-gradient(180deg, rgba(9, 8, 7, 0.84) 0%, rgba(9, 8, 7, 0.72) 44%, rgba(9, 8, 7, 0.88) 100%);
+}
+.section-work-3::after,
+.section-testimonials-3::after {
+  background: linear-gradient(180deg, rgba(9, 12, 9, 0.76) 0%, rgba(9, 12, 9, 0.68) 44%, rgba(9, 12, 9, 0.84) 100%);
+}
+.section-faq-1::after,
+.section-contact-1::after {
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.78) 0%, rgba(8, 8, 8, 0.74) 100%);
+}
+.section-home-3,
+.section-work-2,
+.section-story-2,
+.section-testimonials-1,
+.section-contact-2 {
+  background: linear-gradient(180deg, #1a1310 0%, #16100d 100%);
+}
+.section-home-5,
+.section-about-2,
+.section-about-4,
+.section-faq-2,
+.section-resources-1 {
+  background: linear-gradient(180deg, #141110 0%, #100d0c 100%);
+}
+.section-work-4,
+.section-story-4,
+.section-testimonials-2 {
+  background: linear-gradient(180deg, #1d1613 0%, #15100d 100%);
+}
+.page-section,
+.page-hero:not(.reference-hero--tall) {
+  padding-top: 5.9rem;
+  padding-bottom: 5.9rem;
+}
+.section-header {
+  margin-bottom: 2.5rem;
+}
+.section-kicker,
+.eyebrow {
+  margin-bottom: 0.8rem;
+}
+h2 {
+  margin-bottom: 1.2rem;
+}
+p,
+.hero-subtitle,
+.copy-large,
+.section-intro {
+  max-width: 760px;
+}
+.card,
+.mini-feature,
+.cta-panel,
+.hero-card {
+  padding: 1.8rem;
+}
+.grid-2,
+.grid-3,
+.feature-grid,
+.destination-grid,
+.feature-split,
+.benefit-stack,
+.resource-link-list,
+.form-shell {
+  gap: 1.55rem;
+}
+.hero-actions,
+.button-row {
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.benefit-stack {
+  gap: 1rem;
+}
+.benefit-line {
+  padding: 0.4rem 0;
+}
+.feature-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 1.8rem;
+  align-items: center;
+}
+.site-footer {
+  background: linear-gradient(180deg, #120d0c 0%, #0f0b0a 100%);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 3rem 0 3.2rem;
+}
+.site-footer-top {
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+}
+.site-footer nav {
+  gap: 1.15rem 1.5rem;
+}
+.site-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.35rem;
+}
+@media (max-width: 920px) {
+  .page-hero-grid,
+  .feature-band {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .page-section,
+  .page-hero:not(.reference-hero--tall) {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  .card,
+  .mini-feature,
+  .cta-panel,
+  .hero-card {
+    padding: 1.45rem;
+  }
+  .site-footer-bottom {
+    display: grid;
+  }
+}
