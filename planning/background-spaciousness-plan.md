@@ -146,6 +146,17 @@ The visuals should guide the nervous system through distinct but coherent shifts
 - Keep heading text unchanged
 - Use strong dark overlays on image sections for readability
 - Do a clean commit before implementation and a clean commit after implementation
+- After any multi-file HTML replacement/refactor, validate that each page ends cleanly at `</html>` with no duplicated trailing content
+- After structural HTML edits, spot-check mobile menu behavior before pushing
+
+## Recorded issue from first-pass implementation
+
+A prior automated multi-file replacement introduced duplicated trailing HTML after the closing `</html>` tag on several pages (`index.html`, `mission.html`, `my-story.html`, and previously `work-with-paul.html`). This corrupted page structure and could interfere with JavaScript behavior such as the mobile menu.
+
+Fix applied:
+- removed trailing duplicated HTML/content after `</html>`
+- restored clean document endings
+- re-established the safeguard to validate page endings after automated edits
 
 ## Open question
 
