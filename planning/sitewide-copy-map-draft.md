@@ -29,20 +29,15 @@ Protected. No copy change.
 ### Current role
 Who this is for + first invitation.
 
-### Draft direction
-Use concise language around wholeness, heart, body, mind.
-
 ### Proposed copy
 **Heading**  
-If you feel there is more to health than fixing symptoms, this is for you.
+If you want to live with vitality, and wholeness — an expansive joy filled life — this work is for you.
 
 **Bullets**
-- You want health in the body, heart, and mind.
-- You want wholeness, not fragmented fixes.
+- You are willing to grow, and realize that tailored support can help that growth.
 - You want to live with more honesty, vitality, and presence.
-- You want support that includes your inner and outer life.
-- You want a path that goes deeper than surface optimization.
-- You are ready to return to what is real.
+- You recognize that complete health stems from the food you eat, to the thoughts you think, the emotions you feel, and the environment you create.
+- You know that you can be more, and drink the sweet essence of this beautiful life that we get to live and create and build.
 
 **Quote / side card**
 Broken hearts don’t work. So what do we do? We fix them.
@@ -53,17 +48,17 @@ Explain the work simply.
 
 ### Proposed copy
 **Heading**  
-Integrated Heart & Vitality: a more whole way to live.
+Integrated heart and vitality, an intention and path for growth and wholeness.
 
 **Body**  
-Healing with the heart is key to health in the mind and body. This work supports wholeness with the heart, the body, the spirit, and soul.
+Within our heart and subconscious, we all have stories that must evolve. This work starts and ends with the heart, and supports the body, mind, and even soul.
 
 **Five mini-features**
-1. **Heart** — Learn to step down into the heart with honesty and awareness.  
-2. **Body** — Support physical health with grounded practices and real care.  
-3. **Mind** — Bring more clarity, steadiness, and self-understanding.  
-4. **Within** — Part of the work is to support you in going within.  
-5. **Wholeness** — Reconnect the parts of life that have been split apart.  
+1. **Heart** — Learn to go deeper, change the stories in your heart, and access the profound wisdom locked deep in the heart-mind, your subconscious.  
+2. **Body** — Nutrition and movement coaching, and deepening your relationship with your body.  
+3. **Mind** — The mind can be a powerful ally, but is cruel as a taskmaster.  
+4. **Emotion** — A piece of this work is emotional alchemy, with methods to truly shift emotional states and not just suppress them.  
+5. **Wholeness** — Bring heart, body, mind, and soul back into relationship.  
 
 ## homepage block4
 ### Proposed copy
@@ -109,7 +104,7 @@ Wherever you are on your path, I am here to support you.
 A coaching path that meets real life.
 
 **Body**  
-I bring Emotional Alchemy, Heart Science, and other tools both ancient and modern for health and wellness, so you can live your life more fully.
+I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully.
 
 **Five mini-features**
 1. **Heart** — Healing with the heart changes the whole system.  
@@ -132,13 +127,13 @@ What support can make possible.
 
 ---
 
-# 3. About
+# 3. About Coaching
 
-## about block1
+## about coaching block1
 ### Proposed direction
 Keep structure. Shorten and sharpen if desired later, but current message is already close.
 
-## about block2
+## about coaching block2
 ### Proposed copy
 **Heading**  
 A healthier life asks more of us than surface fixes.
@@ -149,7 +144,12 @@ The holistic journey to health and happiness is what our predecessors sought and
 **Quote card**  
 This is why your wholeness is my purpose and goal.
 
-## about block3
+
+## about coaching block2.5 (possible insert or quote card)
+### Fun concept to place carefully
+Honestly, the journey is about being as sexy as you possibly can be: a happy heart is sexy, a body cared for is sexy, a mind that is curious and innovative in its own unique way is super sexy. And that’s it. Our journey is that simple. :)
+
+## about coaching block3
 ### Proposed copy
 **Heading**  
 The deeper alternative
@@ -163,7 +163,13 @@ Part of this work is supporting physical and exterior health as well.
 **Mind**  
 Healing with the heart is key to health in the mind and body.
 
-## about block4
+**Emotion**  
+Most of us in modern culture think we are dealing with emotions when we are really just pushing them away. A piece of this work is emotional alchemy — learning how to truly shift emotional states instead of suppressing them.
+
+**Literacy**  
+Emotional literacy and energy literacy are paramount for our growth and evolution.
+
+## about coaching block4
 ### Proposed copy
 **Heading**  
 A hero’s journey toward integration
@@ -187,7 +193,7 @@ My Story
 Aloha from the Big Island of Hawaii.
 
 **Body**  
-My name is Paul, or Pauko on the Island. I bring Emotional Alchemy, Heart Science, and tools both ancient and modern for health and wellness, so you can live more fully.
+My name is Paul, or Pauko on the Island. I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live more fully.
 
 ## my story block2
 ### Proposed copy
