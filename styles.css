@@ -698,6 +698,17 @@ p { margin: 0 0 1rem; }
   color: rgba(242, 215, 160, 0.86);
   margin-bottom: 0.8rem;
 }
+.mission-hero .eyebrow,
+.mission-hero h1,
+.mission-hero .hero-subtitle {
+  color: #8f6325;
+}
+.mission-hero h1 {
+  color: #7a5220;
+}
+.mission-hero .hero-subtitle {
+  color: rgba(91, 60, 22, 0.92);
+}
 .section-atmosphere {
   position: relative;
   overflow: hidden;
