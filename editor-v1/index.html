@@ -3,143 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Editor V1</title>
+  <title>Paul Homepage Text Editor</title>
   <style>
     :root {
       --bg: #0f0a08;
       --panel: #1b120f;
-      --line: rgba(242,215,160,0.18);
+      --panel-2: #140d0b;
+      --line: rgba(242,215,160,0.16);
       --text: #f5f2ea;
       --muted: rgba(245,242,234,0.72);
       --gold: #f2d7a0;
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    .app { min-height: 100vh; display: grid; grid-template-columns: 420px minmax(0, 1fr); }
-    .sidebar { padding: 16px; border-right: 1px solid var(--line); background: var(--panel); overflow: auto; }
-    .sidebar h1 { margin: 0 0 8px; font-size: 18px; }
-    .sidebar p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.45; }
-    .field { margin-bottom: 12px; }
-    .field label { display: block; font-size: 13px; margin-bottom: 4px; color: var(--gold); }
+    .app { min-height: 100vh; display: grid; grid-template-columns: 280px 420px minmax(0, 1fr); }
+    .nav, .editor { background: var(--panel); border-right: 1px solid var(--line); overflow: auto; }
+    .preview { background: var(--panel-2); padding: 16px; }
+    .nav { padding: 16px; }
+    .editor { padding: 16px; }
+    h1 { margin: 0 0 8px; font-size: 18px; }
+    h2 { margin: 0 0 10px; font-size: 16px; }
+    p { margin: 0 0 12px; color: var(--muted); line-height: 1.45; }
+    .page-list, .block-list { display: grid; gap: 8px; margin-top: 16px; }
+    .item {
+      width: 100%; text-align: left; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04); color: var(--text); cursor: pointer;
+    }
+    .item.active { background: rgba(242,215,160,0.12); border-color: rgba(242,215,160,0.28); }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--gold); }
     .field input, .field textarea {
       width: 100%; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.04);
       color: var(--text); padding: 10px 12px; font: inherit;
     }
-    .field textarea { min-height: 80px; resize: vertical; }
-    .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
-    button {
+    .field textarea { min-height: 84px; resize: vertical; }
+    .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+    button.action {
       border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 700; cursor: pointer;
       background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%); color: #2b190f;
     }
-    .secondary { background: rgba(255,255,255,0.08); color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
-    .preview-wrap { padding: 16px; }
-    .preview-frame { width: 100%; height: calc(100vh - 32px); border: 1px solid var(--line); border-radius: 16px; background: white; }
-    .summary { margin-top: 16px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); }
-    .summary pre { white-space: pre-wrap; font: 12px/1.45 ui-monospace, monospace; color: var(--muted); margin: 0; }
-    .status { margin-top: 10px; font-size: 13px; color: var(--muted); }
-    @media (max-width: 980px) {
+    button.secondary {
+      border: 1px solid var(--line); background: rgba(255,255,255,0.06); color: var(--text);
+      border-radius: 12px; padding: 10px 14px; font-weight: 700; cursor: pointer;
+    }
+    .status { margin-top: 12px; font-size: 13px; color: var(--muted); }
+    .preview-card {
+      height: calc(100vh - 32px); border: 1px solid var(--line); border-radius: 18px; overflow: auto;
+      background: #0d0908; padding: 18px;
+    }
+    .preview-card pre { white-space: pre-wrap; word-break: break-word; color: var(--text); font: 13px/1.5 ui-monospace, monospace; }
+    .muted { color: var(--muted); }
+    @media (max-width: 1100px) {
       .app { grid-template-columns: 1fr; }
-      .preview-frame { height: 60vh; }
+      .nav, .editor { border-right: 0; border-bottom: 1px solid var(--line); }
+      .preview-card { height: auto; min-height: 40vh; }
     }
   </style>
 </head>
 <body>
   <div class="app">
-    <aside class="sidebar">
-      <h1>Website Editor V1</h1>
-      <p>First version focused on homepage copy. Edit text here, preview on the right, then save changes locally on your device. If clipboard fails on phone, you can still long-press and copy from the JSON box.</p>
-
-      <div class="field"><label>Logo primary</label><input id="logoPrimary" /></div>
-      <div class="field"><label>Logo secondary</label><input id="logoSecondary" /></div>
-      <div class="field"><label>Hero brand primary</label><input id="heroBrandPrimary" /></div>
-      <div class="field"><label>Hero brand secondary</label><input id="heroBrandSecondary" /></div>
-      <div class="field"><label>Hero title line 1</label><input id="heroTitle0" /></div>
-      <div class="field"><label>Hero title line 2</label><input id="heroTitle1" /></div>
-      <div class="field"><label>Hero title line 3</label><input id="heroTitle2" /></div>
-      <div class="field"><label>Hero signature</label><input id="heroSignature" /></div>
-      <div class="field"><label>Intro heading</label><textarea id="introHeading"></textarea></div>
-      <div class="field"><label>Method heading</label><textarea id="methodHeading"></textarea></div>
-      <div class="field"><label>Method body</label><textarea id="methodBody"></textarea></div>
-      <div class="field"><label>Benefits heading</label><textarea id="benefitsHeading"></textarea></div>
-
-      <div class="button-row">
-        <button id="previewBtn">Refresh preview</button>
-        <button id="saveBtn">Save locally</button>
-        <button class="secondary" id="copyBtn">Copy JSON</button>
-      </div>
-      <div class="status" id="status">Ready.</div>
-
-      <div class="summary">
-        <pre id="jsonPreview"></pre>
-      </div>
+    <aside class="nav">
+      <h1>Text Editor MVP</h1>
+      <p>Edit page copy by block. This version is content-structured and intended to become the safer source for future website text updates.</p>
+      <div class="page-list" id="pageList"></div>
+      <h2 style="margin-top:18px;">Blocks</h2>
+      <div class="block-list" id="blockList"></div>
     </aside>
 
-    <main class="preview-wrap">
-      <iframe class="preview-frame" id="previewFrame" src="./preview-homepage.html"></iframe>
+    <section class="editor">
+      <h2 id="editorTitle">Select a block</h2>
+      <p id="editorHint">Fields for the selected block will appear here.</p>
+      <div id="fields"></div>
+      <div class="button-row">
+        <button class="action" id="saveLocalBtn">Save locally</button>
+        <button class="secondary" id="copyJsonBtn">Copy JSON</button>
+      </div>
+      <div class="status" id="status">Ready.</div>
+    </section>
+
+    <main class="preview">
+      <div class="preview-card">
+        <h2>Current content JSON</h2>
+        <p class="muted">This is the current editable data model. Later we can wire this into full page rendering and publish flow.</p>
+        <pre id="jsonPreview"></pre>
+      </div>
     </main>
   </div>
 
   <script>
-    const fields = ['logoPrimary','logoSecondary','heroBrandPrimary','heroBrandSecondary','heroSignature','introHeading','methodHeading','methodBody','benefitsHeading'];
-    let data = null;
-    const statusEl = document.getElementById('status');
+    const STORAGE_KEY = 'paul-homepage-editor-v1-site-content';
+    let state = null;
+    let selectedPage = null;
+    let selectedBlock = null;
 
-    async function loadData() {
-      const raw = localStorage.getItem('editor-v1-homepage-content');
-      if (raw) {
-        data = JSON.parse(raw);
+    async function loadState() {
+      const local = localStorage.getItem(STORAGE_KEY);
+      if (local) {
+        state = JSON.parse(local);
       } else {
-        const res = await fetch('./homepage-content.json', { cache: 'no-store' });
-        data = await res.json();
+        const res = await fetch('./site-content.json', { cache: 'no-store' });
+        state = await res.json();
       }
-      for (const key of fields) document.getElementById(key).value = data[key] || '';
-      (data.heroTitle || ['', '', '']).forEach((line, idx) => {
-        document.getElementById('heroTitle' + idx).value = line || '';
+      const pages = Object.keys(state.pages);
+      selectedPage = pages[0];
+      selectedBlock = state.pages[selectedPage].blocks[0].id;
+      render();
+    }
+
+    function getCurrentBlock() {
+      return state.pages[selectedPage].blocks.find(b => b.id === selectedBlock);
+    }
+
+    function renderPages() {
+      const wrap = document.getElementById('pageList');
+      wrap.innerHTML = '';
+      Object.entries(state.pages).forEach(([key, page]) => {
+        const btn = document.createElement('button');
+        btn.className = 'item' + (key === selectedPage ? ' active' : '');
+        btn.textContent = page.label;
+        btn.onclick = () => {
+          selectedPage = key;
+          selectedBlock = state.pages[key].blocks[0].id;
+          render();
+        };
+        wrap.appendChild(btn);
       });
+    }
+
+    function renderBlocks() {
+      const wrap = document.getElementById('blockList');
+      wrap.innerHTML = '';
+      state.pages[selectedPage].blocks.forEach(block => {
+        const btn = document.createElement('button');
+        btn.className = 'item' + (block.id === selectedBlock ? ' active' : '');
+        btn.textContent = block.label;
+        btn.onclick = () => {
+          selectedBlock = block.id;
+          render();
+        };
+        wrap.appendChild(btn);
+      });
+    }
+
+    function renderFields() {
+      const block = getCurrentBlock();
+      document.getElementById('editorTitle').textContent = block.label;
+      document.getElementById('editorHint').textContent = 'Edit the fields below. Changes stay local until we wire publishing into the site flow.';
+      const wrap = document.getElementById('fields');
+      wrap.innerHTML = '';
+
+      Object.entries(block.fields).forEach(([key, value]) => {
+        if (Array.isArray(value)) {
+          if (value.length && typeof value[0] === 'object') {
+            value.forEach((item, idx) => {
+              const group = document.createElement('div');
+              group.className = 'field';
+              group.innerHTML = `<label>${key} ${idx + 1} title</label><input data-type="object-array" data-key="${key}" data-index="${idx}" data-subkey="title" value="${escapeHtml(item.title || '')}"><label style="margin-top:8px;">${key} ${idx + 1} body</label><textarea data-type="object-array" data-key="${key}" data-index="${idx}" data-subkey="body">${escapeHtml(item.body || '')}</textarea>`;
+              wrap.appendChild(group);
+            });
+          } else {
+            value.forEach((item, idx) => {
+              const group = document.createElement('div');
+              group.className = 'field';
+              group.innerHTML = `<label>${key} ${idx + 1}</label><textarea data-type="array" data-key="${key}" data-index="${idx}">${escapeHtml(item || '')}</textarea>`;
+              wrap.appendChild(group);
+            });
+          }
+        } else {
+          const field = document.createElement('div');
+          field.className = 'field';
+          const isLong = String(value).length > 80;
+          field.innerHTML = `<label>${key}</label>${isLong ? `<textarea data-type="scalar" data-key="${key}">${escapeHtml(value || '')}</textarea>` : `<input data-type="scalar" data-key="${key}" value="${escapeHtml(value || '')}">`}`;
+          wrap.appendChild(field);
+        }
+      });
+
+      wrap.querySelectorAll('input, textarea').forEach(el => el.addEventListener('input', onFieldInput));
+    }
+
+    function onFieldInput(e) {
+      const block = getCurrentBlock();
+      const el = e.target;
+      const type = el.dataset.type;
+      const key = el.dataset.key;
+      if (type === 'scalar') {
+        block.fields[key] = el.value;
+      } else if (type === 'array') {
+        block.fields[key][Number(el.dataset.index)] = el.value;
+      } else if (type === 'object-array') {
+        block.fields[key][Number(el.dataset.index)][el.dataset.subkey] = el.value;
+      }
       renderJson();
     }
 
-    function collectData() {
-      const next = structuredClone(data || {});
-      for (const key of fields) next[key] = document.getElementById(key).value;
-      next.heroTitle = [0,1,2].map(i => document.getElementById('heroTitle' + i).value);
-      return next;
-    }
-
     function renderJson() {
-      document.getElementById('jsonPreview').textContent = JSON.stringify(collectData(), null, 2);
+      document.getElementById('jsonPreview').textContent = JSON.stringify(state, null, 2);
     }
 
-    function refreshPreview() {
-      const payload = collectData();
-      localStorage.setItem('editor-v1-homepage-content', JSON.stringify(payload));
-      const frame = document.getElementById('previewFrame');
-      frame.contentWindow.location.reload();
-      statusEl.textContent = 'Preview refreshed with current edits.';
+    function render() {
+      renderPages();
+      renderBlocks();
+      renderFields();
+      renderJson();
     }
 
-    fields.concat(['heroTitle0','heroTitle1','heroTitle2']).forEach(id => {
-      document.getElementById(id).addEventListener('input', renderJson);
-    });
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
 
-    document.getElementById('previewBtn').addEventListener('click', refreshPreview);
-    document.getElementById('copyBtn').addEventListener('click', async () => {
-      const text = JSON.stringify(collectData(), null, 2);
+    document.getElementById('saveLocalBtn').onclick = () => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      document.getElementById('status').textContent = 'Saved locally on this device.';
+    };
+
+    document.getElementById('copyJsonBtn').onclick = async () => {
+      const text = JSON.stringify(state, null, 2);
       try {
         await navigator.clipboard.writeText(text);
-        statusEl.textContent = 'JSON copied.';
+        document.getElementById('status').textContent = 'JSON copied.';
       } catch {
-        statusEl.textContent = 'Clipboard blocked. Long-press in the JSON box to copy manually.';
+        document.getElementById('status').textContent = 'Clipboard blocked. Copy manually from the JSON panel.';
       }
-    });
+    };
 
-    document.getElementById('saveBtn').addEventListener('click', () => {
-      const payload = collectData();
-      localStorage.setItem('editor-v1-homepage-content', JSON.stringify(payload));
-      statusEl.textContent = 'Saved locally on this device.';
-    });
-
-    loadData();
+    loadState();
   </script>
 </body>
 </html>

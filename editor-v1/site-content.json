@@ -1,0 +1,96 @@
+{
+  "pages": {
+    "home": {
+      "label": "Homepage",
+      "blocks": [
+        {
+          "id": "home-2",
+          "label": "Homepage Block 2",
+          "fields": {
+            "heading": "I don’t know about you, but I think the future is bright, and our potential for a beautiful life - a beautiful world - is limitless.",
+            "bullets": [
+              "Let’s revitalize the body and live to our fullest potential.",
+              "Are you ready and willing to listen more deeply to yourself?",
+              "Are you ready and willing to change, heal, and grow?",
+              "I’m here to support your journey to your best life, your healthiest self, your happiest heart."
+            ],
+            "quote": "Speak to Paul, he will absolutely change your life, I guarantee it.",
+            "cite": "Scott Anthony · Australia"
+          }
+        },
+        {
+          "id": "home-3",
+          "label": "Homepage Block 3",
+          "fields": {
+            "heading": "Integrated heart and vitality, an intention and path for growth and wholeness.",
+            "body": "Within our heart and subconscious, we all have stories that must evolve. This work starts and ends with the heart, and supports the body, mind, and even soul.",
+            "features": [
+              { "title": "Heart", "body": "Learn to go deeper, change the stories in your heart, and access the profound wisdom locked deep in the heart-mind, your subconscious." },
+              { "title": "Body", "body": "Nutrition and movement coaching, and deepening your relationship with your body." },
+              { "title": "Mind", "body": "The mind can be a powerful ally, but is cruel as a taskmaster." },
+              { "title": "Emotion", "body": "A piece of this work is emotional alchemy, with methods to truly shift emotional states and not just suppress them." },
+              { "title": "Wholeness", "body": "Bring heart, body, mind, and soul back into relationship." }
+            ]
+          }
+        },
+        {
+          "id": "home-4",
+          "label": "Homepage Block 4",
+          "fields": {
+            "heading": "What this path can begin to restore.",
+            "benefits": [
+              "A healthier relationship with your body",
+              "Greater steadiness in heart and mind",
+              "More honesty in how you live",
+              "More vitality and presence",
+              "A deeper sense of wholeness",
+              "Change that can be lived, not just understood"
+            ]
+          }
+        }
+      ]
+    },
+    "work": {
+      "label": "Work With Me",
+      "blocks": [
+        {
+          "id": "work-2",
+          "label": "Work With Me Block 2",
+          "fields": {
+            "heading": "If you’re here, some part of you is ready for a more whole way of living.",
+            "bullets": [
+              "You want support for the body, heart, and mind.",
+              "You are tired of fragmented growth.",
+              "You want honesty, vitality, and grounded change.",
+              "You want guidance that includes both inner and outer life."
+            ],
+            "quote": "Wherever you are on your path, I am here to support you.",
+            "cite": "– Dr. Paul"
+          }
+        },
+        {
+          "id": "work-3",
+          "label": "Work With Me Block 3",
+          "fields": {
+            "heading": "A coaching path that meets real life.",
+            "body": "I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully."
+          }
+        }
+      ]
+    },
+    "about": {
+      "label": "About Coaching",
+      "blocks": [
+        {
+          "id": "about-1",
+          "label": "About Coaching Block 1",
+          "fields": {
+            "eyebrow": "About Coaching",
+            "heading": "Integrated Heart & Vitality is a return to wholeness.",
+            "body": "Healing with the heart is key to health in the mind and body. This work exists to reconnect heart, body, spirit, and soul into one lived path."
+          }
+        }
+      ]
+    }
+  }
+}
