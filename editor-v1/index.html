@@ -75,6 +75,7 @@
       <p id="editorHint">Fields for the selected block will appear here.</p>
       <div id="fields"></div>
       <div class="button-row">
+        <button class="action" id="updateJsonBtn">Update JSON</button>
         <button class="action" id="saveLocalBtn">Save JSON</button>
         <button class="secondary" id="copyJsonBtn">Copy JSON</button>
       </div>
@@ -226,6 +227,11 @@
       a.remove();
       URL.revokeObjectURL(url);
     }
+
+    document.getElementById('updateJsonBtn').onclick = () => {
+      renderJson();
+      document.getElementById('status').textContent = 'JSON updated below.';
+    };
 
     document.getElementById('saveLocalBtn').onclick = () => {
       const text = JSON.stringify(state, null, 2);
