@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Brief Viewer</title>
+  <style>
+    body{font-family:Arial, sans-serif; padding:20px; background:#f6f6f6; color:#111}
+    pre{background:white; padding:12px; border:1px solid #ddd; border-radius:6px; overflow:auto; max-height:70vh}
+  </style>
+</head>
+<body>
+  <h1>Visual Implementation Brief</h1>
+  <div id="content"></div>
+  <pre id="raw" style="display:none"></pre>
+  <script>
+    // read data from ?d= or ?data= (base64)
+    function getQuery(name){ const q=new URLSearchParams(window.location.search); return q.get(name); }
+    function b64(s){ try{ return atob(s); } catch(e){ return s; } }
+    const d = getQuery('data') || getQuery('d');
+    let data = null;
+    if(d){
+      try{
+        const json = typeof d === 'string' ? JSON.parse(decodeURIComponent(escape(window.atob(d)))) : d;
+        data = json;
+      }catch{ data = null; }
+    }
+    const wrap=document.getElementById('content');
+    if(!data){ wrap.innerHTML = '<p>No data provided. Paste a share link with data param.</p>'; }
+    else {
+      wrap.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+    }
+  </script>
+</body>
+</html>"} }```
+
+Let's skip formatting here. We'll add via tool. But above is a sample.
+
