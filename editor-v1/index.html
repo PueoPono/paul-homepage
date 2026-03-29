@@ -64,7 +64,7 @@
   <div class="app">
     <aside class="nav">
       <h1>Text Editor MVP</h1>
-      <p>Edit page copy by block. Save writes to this browser and also downloads a JSON file you can directly access.</p>
+      <p>Edit page copy by block. Save writes to this browser and also downloads a JSON file you can directly access. Copy JSON now includes project context for future sessions.</p>
       <div class="page-list" id="pageList"></div>
       <h2 style="margin-top:18px;">Blocks</h2>
       <div class="block-list" id="blockList"></div>
@@ -84,8 +84,8 @@
 
     <main class="preview">
       <div class="preview-card">
-        <h2>Current content JSON</h2>
-        <p class="muted">Save JSON downloads a file named <code>site-content-edited.json</code> and also saves the data locally in this browser.</p>
+        <h2>Current content JSON + context</h2>
+        <p class="muted">Save JSON downloads a file named <code>site-content-edited.json</code> and also saves the data locally in this browser. The JSON includes metadata/context so it can be pasted into a future session and used to update the website and related resources.</p>
         <pre id="jsonPreview"></pre>
       </div>
     </main>

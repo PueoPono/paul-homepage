@@ -9,13 +9,13 @@
           "fields": {
             "heading": "I believe in a very bright future for me and you. So much peace, joy, and fulfillment. ",
             "bullets": [
-              "Let’s revitalize the body and live to our fullest potential.",
+              "Let\u2019s revitalize the body and live to our fullest potential.",
               "Are you ready and willing to enjoy life, naturally and deeply, more than you currently know how? ",
               "Are you ready and willing to change, heal, and grow?",
-              "I’m here to support your journey to your best life, your healthiest self, your happiest heart."
+              "I\u2019m here to support your journey to your best life, your healthiest self, your happiest heart."
             ],
             "quote": "Speak to Paul, he will absolutely change your life, I guarantee it.",
-            "cite": "Scott Anthony · Australia"
+            "cite": "Scott Anthony \u00b7 Australia"
           }
         },
         {
@@ -72,7 +72,7 @@
           "id": "work-2",
           "label": "Work With Me Block 2",
           "fields": {
-            "heading": "If you’re here, some part of you is ready for a more whole way of living.",
+            "heading": "If you\u2019re here, some part of you is ready for a more whole way of living.",
             "bullets": [
               "You want support for the body, heart, and mind.",
               "You are tired of fragmented growth.",
@@ -80,7 +80,7 @@
               "You want guidance that includes both inner and outer life."
             ],
             "quote": "Wherever you are on your path, I am here to support you.",
-            "cite": "– Dr. Paul"
+            "cite": "\u2013 Dr. Paul"
           }
         },
         {
@@ -216,5 +216,31 @@
         }
       ]
     }
+  },
+  "meta": {
+    "project": "paul-homepage",
+    "siteUrl": "https://pueopono.github.io/paul-homepage/",
+    "editorUrl": "https://pueopono.github.io/paul-homepage/editor-v1/",
+    "purpose": "Structured website text source for editor-driven updates.",
+    "updateInstructions": [
+      "When this JSON is pasted in a future session, treat it as the intended content source for the website sections it covers.",
+      "Update both the editor source file and the corresponding website pages to match this JSON.",
+      "Preserve protected sections unless explicitly changed by the user: homepage hero and work-with-me hero.",
+      "Also update related planning/resources when the content model materially changes."
+    ],
+    "protectedSections": [
+      "homepage hero",
+      "work with me hero"
+    ],
+    "editorSourceFile": "editor-v1/site-content.json",
+    "relatedResources": [
+      "planning/sitewide-copy-map-draft.md",
+      "planning/text-editor-mvp-plan.md"
+    ],
+    "notes": [
+      "The website currently mixes direct HTML content and structured editor content.",
+      "Current workflow: update editor JSON, then mirror those changes into live page HTML until full rendering automation exists."
+    ],
+    "exportedAt": "2026-03-28"
   }
 }
