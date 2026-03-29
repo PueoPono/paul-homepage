@@ -64,7 +64,7 @@
   <div class="app">
     <aside class="nav">
       <h1>Text Editor MVP</h1>
-      <p>Edit page copy by block. This version is content-structured and intended to become the safer source for future website text updates.</p>
+      <p>Edit page copy by block. Save writes to this browser and also downloads a JSON file you can directly access.</p>
       <div class="page-list" id="pageList"></div>
       <h2 style="margin-top:18px;">Blocks</h2>
       <div class="block-list" id="blockList"></div>
@@ -75,7 +75,7 @@
       <p id="editorHint">Fields for the selected block will appear here.</p>
       <div id="fields"></div>
       <div class="button-row">
-        <button class="action" id="saveLocalBtn">Save locally</button>
+        <button class="action" id="saveLocalBtn">Save JSON</button>
         <button class="secondary" id="copyJsonBtn">Copy JSON</button>
       </div>
       <div class="status" id="status">Ready.</div>
@@ -84,7 +84,7 @@
     <main class="preview">
       <div class="preview-card">
         <h2>Current content JSON</h2>
-        <p class="muted">This is the current editable data model. Later we can wire this into full page rendering and publish flow.</p>
+        <p class="muted">Save JSON downloads a file named <code>site-content-edited.json</code> and also saves the data locally in this browser.</p>
         <pre id="jsonPreview"></pre>
       </div>
     </main>
@@ -148,7 +148,7 @@
     function renderFields() {
       const block = getCurrentBlock();
       document.getElementById('editorTitle').textContent = block.label;
-      document.getElementById('editorHint').textContent = 'Edit the fields below. Changes stay local until we wire publishing into the site flow.';
+      document.getElementById('editorHint').textContent = 'Edit the fields below. Save JSON downloads a directly accessible file.';
       const wrap = document.getElementById('fields');
       wrap.innerHTML = '';
 
@@ -215,9 +215,23 @@
         .replace(/"/g, '&quot;');
     }
 
+    function downloadJson(filename, text) {
+      const blob = new Blob([text], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
     document.getElementById('saveLocalBtn').onclick = () => {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      document.getElementById('status').textContent = 'Saved locally on this device.';
+      const text = JSON.stringify(state, null, 2);
+      localStorage.setItem(STORAGE_KEY, text);
+      downloadJson('site-content-edited.json', text);
+      document.getElementById('status').textContent = 'Saved in browser and downloaded as site-content-edited.json';
     };
 
     document.getElementById('copyJsonBtn').onclick = async () => {
