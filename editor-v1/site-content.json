@@ -151,6 +151,49 @@
             "body": "The holistic journey to health and happiness is what our predecessors sought and taught, but we have lost that way. Even Hippocrates was a Holistic, but we have moved very far away from Holistic Health & Wellness. This work is rooted in the belief that people become whole through integration and untangling the full (very complex!) human. ",
             "quote": "Your wholeness is my purpose and goal."
           }
+        },
+        {
+          "id": "about-3",
+          "label": "About Coaching Block 3",
+          "fields": {
+            "heading": "The deeper alternative",
+            "features": [
+              {
+                "title": "Heart",
+                "body": "The masculine heart is core to mature masculinity and manhood."
+              },
+              {
+                "title": "Body",
+                "body": "Part of this work is supporting physical and exterior health as well."
+              },
+              {
+                "title": "Mind",
+                "body": "Healing with the heart is key to health in the mind and body."
+              },
+              {
+                "title": "Emotion",
+                "body": "Most of us in modern culture think we are dealing with emotions when we are really just pushing them away. A piece of this work is emotional alchemy \u2014 learning how to truly shift emotional states instead of suppressing them."
+              },
+              {
+                "title": "Literacy",
+                "body": "Emotional literacy and energy literacy are paramount for our growth and evolution."
+              }
+            ]
+          }
+        },
+        {
+          "id": "about-4",
+          "label": "About Coaching Block 4",
+          "fields": {
+            "heading": "A hero\u2019s journey toward integration",
+            "body": [
+              "For some of our indigenous ancestors, a man connecting to his heart was part of his rite of passage into manhood. This work draws from that deeper remembering while also using modern tools, insight, and practice. The aim is not performance for its own sake, but a fuller, steadier, and more whole life.",
+              "Wherever you are on your path, this work is here to support you.",
+              "Honestly, the journey is about being as sexy as you possibly can be: a happy heart is sexy, a body cared for is sexy, a mind that is curious and innovative in its own unique way is super sexy. And that\u2019s it. Our journey is that simple. :)"
+            ],
+            "primaryCta": "Explore Coaching",
+            "secondaryCta": "Read My Story"
+          }
         }
       ]
     },
