@@ -7,15 +7,15 @@
           "id": "home-2",
           "label": "Homepage Block 2",
           "fields": {
-            "heading": "I don’t know about you, but I think the future is bright, and our potential for a beautiful life - a beautiful world - is limitless.",
+            "heading": "I don\u2019t know about you, but I think the future is bright, and our potential for a beautiful life - a beautiful world - is limitless.",
             "bullets": [
-              "Let’s revitalize the body and live to our fullest potential.",
+              "Let\u2019s revitalize the body and live to our fullest potential.",
               "Are you ready and willing to listen more deeply to yourself?",
               "Are you ready and willing to change, heal, and grow?",
-              "I’m here to support your journey to your best life, your healthiest self, your happiest heart."
+              "I\u2019m here to support your journey to your best life, your healthiest self, your happiest heart."
             ],
             "quote": "Speak to Paul, he will absolutely change your life, I guarantee it.",
-            "cite": "Scott Anthony · Australia"
+            "cite": "Scott Anthony \u00b7 Australia"
           }
         },
         {
@@ -25,11 +25,26 @@
             "heading": "Integrated heart and vitality, an intention and path for growth and wholeness.",
             "body": "Within our heart and subconscious, we all have stories that must evolve. This work starts and ends with the heart, and supports the body, mind, and even soul.",
             "features": [
-              { "title": "Heart", "body": "Learn to go deeper, change the stories in your heart, and access the profound wisdom locked deep in the heart-mind, your subconscious." },
-              { "title": "Body", "body": "Nutrition and movement coaching, and deepening your relationship with your body." },
-              { "title": "Mind", "body": "The mind can be a powerful ally, but is cruel as a taskmaster." },
-              { "title": "Emotion", "body": "A piece of this work is emotional alchemy, with methods to truly shift emotional states and not just suppress them." },
-              { "title": "Wholeness", "body": "Bring heart, body, mind, and soul back into relationship." }
+              {
+                "title": "Heart",
+                "body": "Learn to go deeper, change the stories in your heart, and access the profound wisdom locked deep in the heart-mind, your subconscious."
+              },
+              {
+                "title": "Body",
+                "body": "Nutrition and movement coaching, and deepening your relationship with your body."
+              },
+              {
+                "title": "Mind",
+                "body": "The mind can be a powerful ally, but is cruel as a taskmaster."
+              },
+              {
+                "title": "Emotion",
+                "body": "A piece of this work is emotional alchemy, with methods to truly shift emotional states and not just suppress them."
+              },
+              {
+                "title": "Wholeness",
+                "body": "Bring heart, body, mind, and soul back into relationship."
+              }
             ]
           }
         },
@@ -57,7 +72,7 @@
           "id": "work-2",
           "label": "Work With Me Block 2",
           "fields": {
-            "heading": "If you’re here, some part of you is ready for a more whole way of living.",
+            "heading": "If you\u2019re here, some part of you is ready for a more whole way of living.",
             "bullets": [
               "You want support for the body, heart, and mind.",
               "You are tired of fragmented growth.",
@@ -65,7 +80,7 @@
               "You want guidance that includes both inner and outer life."
             ],
             "quote": "Wherever you are on your path, I am here to support you.",
-            "cite": "– Dr. Paul"
+            "cite": "\u2013 Dr. Paul"
           }
         },
         {
@@ -73,7 +88,43 @@
           "label": "Work With Me Block 3",
           "fields": {
             "heading": "A coaching path that meets real life.",
-            "body": "I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully."
+            "body": "I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully.",
+            "features": [
+              {
+                "title": "Heart",
+                "body": "Healing with the heart changes the whole system."
+              },
+              {
+                "title": "Vitality",
+                "body": "Support your life force, energy, and physical wellbeing."
+              },
+              {
+                "title": "Awareness",
+                "body": "Meet yourself with more honesty and consciousness."
+              },
+              {
+                "title": "Integration",
+                "body": "Bring inner work into lived daily life."
+              },
+              {
+                "title": "Wholeness",
+                "body": "Return to a more complete way of being."
+              }
+            ]
+          }
+        },
+        {
+          "id": "work-4",
+          "label": "Work With Me Block 4",
+          "fields": {
+            "heading": "What support can make possible.",
+            "benefits": [
+              "Greater vitality and presence",
+              "More honesty in the heart",
+              "Better relationship with the body",
+              "More clarity and steadiness",
+              "A more integrated life"
+            ]
           }
         }
       ]
@@ -87,7 +138,80 @@
           "fields": {
             "eyebrow": "About Coaching",
             "heading": "Integrated Heart & Vitality is a return to wholeness.",
-            "body": "Healing with the heart is key to health in the mind and body. This work exists to reconnect heart, body, spirit, and soul into one lived path."
+            "body": "Healing with the heart is key to health in the mind and body. This work exists to reconnect heart, body, spirit, and soul into one lived path.",
+            "asideTitle": "Core idea",
+            "asideBody": "Wholeness with the Heart, the Body, the Spirit, and Soul."
+          }
+        },
+        {
+          "id": "about-2",
+          "label": "About Coaching Block 2",
+          "fields": {
+            "heading": "A healthier life asks more of us than surface fixes.",
+            "body": "The holistic journey to health and happiness is what our predecessors sought and taught, but we have lost that way. This work is rooted in the belief that people do not become whole through fragmented solutions alone.",
+            "quote": "This is why your wholeness is my purpose and goal."
+          }
+        }
+      ]
+    },
+    "story": {
+      "label": "My Story",
+      "blocks": [
+        {
+          "id": "story-1",
+          "label": "My Story Block 1",
+          "fields": {
+            "eyebrow": "My Story",
+            "heading": "Aloha from the Big Island of Hawaii.",
+            "body": "My name is Paul, or Pauko on the Island. I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live more fully."
+          }
+        },
+        {
+          "id": "story-2",
+          "label": "My Story Block 2",
+          "fields": {
+            "heading": "I knew things were out of balance because...",
+            "bullets": [
+              "The heart, body, and mind were not living in honest relationship.",
+              "Modern healthcare was not offering the full answer.",
+              "Healing required both inner and outer work.",
+              "Wholeness had to become the path."
+            ]
+          }
+        },
+        {
+          "id": "story-3",
+          "label": "My Story Block 3",
+          "fields": {
+            "heading": "The personal struggle",
+            "body": "From my work and research, I came to believe the heart is central to our emotional and energetic life. Healing with the heart is not separate from physical health or mental clarity. It is one of the keys to both.",
+            "quote": "Your heart is real.",
+            "cite": "your heart is in part the subconscious stories that are driving your life"
+          }
+        }
+      ]
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "blocks": [
+        {
+          "id": "testimonials-3",
+          "label": "Testimonials Quotes",
+          "fields": {
+            "items": [
+              {
+                "title": "Scott Anthony",
+                "body": "Speak to Paul, he will absolutely change your life, I guarantee it."
+              },
+              {
+                "title": "Dave",
+                "body": "I can begin to see the possibility of life that is far more exciting and joyful than what I have known."
+              },
+              {
+                "title": "Jon",
+                "body": "I see myself more clearly and can therefore improve and make progress more quickly and effectively."
+              }
+            ]
           }
         }
       ]
