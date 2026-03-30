@@ -997,3 +997,33 @@ p,
   font-size: 0.95rem;
   color: rgba(245, 242, 234, 0.86);
 }
+
+
+.mission-hero-copy {
+  background: rgba(248, 241, 228, 0.72);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 24px;
+  padding: 1.4rem 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 18px 40px rgba(73, 48, 18, 0.12);
+}
+
+.quote-feature {
+  text-align: center;
+}
+
+.quote-feature blockquote {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  line-height: 1.45;
+  color: #6f4b1f;
+  font-style: italic;
+}
+
+.quote-feature cite {
+  display: block;
+  margin-top: 0.9rem;
+  color: rgba(91, 60, 22, 0.88);
+  font-style: normal;
+  letter-spacing: 0.04em;
+}

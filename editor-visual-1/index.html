@@ -5,69 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paul Homepage Visual Editor 1</title>
   <style>
-    :root {
-      --bg: #0f0a08;
-      --panel: #1b120f;
-      --panel-2: #140d0b;
-      --line: rgba(242,215,160,0.16);
-      --text: #f5f2ea;
-      --muted: rgba(245,242,234,0.72);
-      --gold: #f2d7a0;
-      --accent: #dd9f3f;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    .app { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) 420px; }
-    .stage { position: relative; background: #0d0908; padding: 14px; }
-    .frame-wrap { position: relative; height: calc(100vh - 28px); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #111; }
-    iframe { width: 100%; height: 100%; border: 0; background: white; }
-    .sidebar { background: var(--panel); border-left: 1px solid var(--line); padding: 16px; overflow: auto; }
-    h1 { margin: 0 0 8px; font-size: 18px; }
-    h2 { margin: 0 0 10px; font-size: 15px; }
-    p { margin: 0 0 12px; color: var(--muted); line-height: 1.45; }
-    .toolbar, .button-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .toolbar { margin-bottom: 14px; }
-    button, select {
-      border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font: inherit;
-      background: rgba(255,255,255,0.05); color: var(--text);
-    }
-    button.primary {
-      border: 0;
-      background: linear-gradient(180deg, #f2d59e 0%, #dd9f3f 55%, #c96d2e 100%);
-      color: #2b190f; font-weight: 700;
-    }
-    .field { margin-bottom: 12px; }
-    .field label { display: block; margin-bottom: 6px; font-size: 13px; color: var(--gold); }
-    .field input, .field textarea, .field select {
-      width: 100%; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.04);
-      color: var(--text); padding: 10px 12px; font: inherit;
-    }
-    .field textarea { min-height: 84px; resize: vertical; }
-    .status { margin: 10px 0 14px; font-size: 13px; color: var(--muted); }
-    .card {
-      border: 1px solid var(--line); border-radius: 16px; padding: 14px; background: rgba(255,255,255,0.03);
-      margin-bottom: 14px;
-    }
-    .instruction-list { display: grid; gap: 10px; }
-    .instruction-item {
-      border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 12px; background: rgba(255,255,255,0.04);
-    }
-    .small { font-size: 12px; color: var(--muted); }
-    .highlight-box {
-      position: absolute; border: 2px solid var(--accent); border-radius: 10px; pointer-events: none;
-      box-shadow: 0 0 0 9999px rgba(0,0,0,0.1) inset;
-      display: none; z-index: 10;
-    }
-    .note { font-size: 12px; color: var(--muted); margin-top: 8px; }
-    pre {
-      white-space: pre-wrap; word-break: break-word; font: 12px/1.5 ui-monospace, monospace;
-      color: var(--text); margin: 0;
-    }
-    @media (max-width: 1100px) {
-      .app { grid-template-columns: 1fr; }
-      .sidebar { border-left: 0; border-top: 1px solid var(--line); }
-      .frame-wrap { height: 58vh; }
-    }
+    :root {--bg:#0f0a08;--panel:#1b120f;--panel-2:#140d0b;--line:rgba(242,215,160,0.16);--text:#f5f2ea;--muted:rgba(245,242,234,0.72);--gold:#f2d7a0;--accent:#dd9f3f;}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:Inter, system-ui, sans-serif;background:var(--bg);color:var(--text);}
+    .app{min-height:100vh;display:grid;grid-template-columns:1fr 420px;}
+    .stage{position:relative;background:#0d0908;padding:14px;}
+    .frame-wrap{position:relative;height: calc(100vh - 28px);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#111;}
+    iframe{width:100%;height:100%;border:0;background:white;}
+    .sidebar{background:var(--panel);border-left:1px solid var(--line);padding:16px;overflow:auto;}
+    h1{margin:0 0 8px;font-size:18px;}
+    .field{margin-bottom:12px;}
+    .field label{display:block;font-size:13px;margin-bottom:4px;color:var(--gold);}
+    .field input,.field textarea,.field select{width:100%;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.04);color:var(--text);padding:10px 12px;font:inherit;}
+    .field textarea{min-height:84px;resize:vertical;}
+    .button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+    button{border:0;border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer;background:linear-gradient(180deg,#f2d59e 0%,#dd9f3f 55%,#c96d2e 100%);color:#2b190f;}
+    .secondary{background:rgba(255,255,255,0.08);color:var(--text);border:1px solid rgba(255,255,255,0.08);}
+    .frame-preview{width:100%;height:100%;border:0;}
+    .status{margin-top:10px;font-size:13px;color:var(--muted);}
+    .card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(255,255,255,0.03);margin-bottom:14px;}
+    pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace, monospace;background:white;padding:12px;border-radius:6px;border:1px solid #eee;color:#111;}
+    @media (max-width: 900px){ .app{grid-template-columns:1fr;} .frame-wrap{height:50vh;} }
   </style>
 </head>
 <body>
@@ -83,12 +41,11 @@
           <option value="../testimonials.html">Testimonials</option>
           <option value="../resources.html">Resources</option>
           <option value="../contact.html">Contact</option>
-          <option value="../next-live-prototype.html">Prototype</option>
         </select>
         <button id="loadPageBtn">Load page</button>
       </div>
       <div class="frame-wrap" id="frameWrap">
-        <iframe id="siteFrame" src="../index.html"></iframe>
+        <iframe id="siteFrame" src="../index.html" class="frame"></iframe>
         <div class="highlight-box" id="highlightBox"></div>
       </div>
     </main>
@@ -96,56 +53,23 @@
     <aside class="sidebar">
       <h1>Visual Editor 1</h1>
       <p>Click any visible page element, then write an instruction for me to implement. This tool is for visual, structural, image, style, and layout requests — not just direct text editing.</p>
-
       <div class="status" id="status">Load a page, then click an element inside the website preview.</div>
-
-      <div class="card">
-        <h2>Selected element</h2>
+      <div class="card"><h2>Selected element</h2>
         <div class="field"><label>Page</label><input id="selectedPage" readonly /></div>
         <div class="field"><label>Element type</label><input id="selectedType" readonly /></div>
         <div class="field"><label>Element path</label><textarea id="selectedPath" readonly></textarea></div>
         <div class="field"><label>Current text / summary</label><textarea id="selectedSummary" readonly></textarea></div>
       </div>
-
-      <div class="card">
-        <h2>Add instruction</h2>
-        <div class="field">
-          <label>Instruction type</label>
-          <select id="instructionType">
-            <option>text</option>
-            <option>image</option>
-            <option>style</option>
-            <option>spacing</option>
-            <option>reorder</option>
-            <option>cta</option>
-            <option>remove</option>
-            <option>add</option>
-            <option>note</option>
-          </select>
-        </div>
+      <div class="card"><h2>Add instruction</h2>
+        <div class="field"><label>Instruction type</label><select id="instructionType"><option>text</option><option>image</option><option>style</option><option>spacing</option><option>reorder</option><option>cta</option><option>remove</option><option>add</option><option>note</option></select></div>
         <div class="field"><label>Instruction</label><textarea id="instructionText" placeholder="Example: Replace this image with something more alive and hopeful, morning light through trees."></textarea></div>
         <div class="field"><label>Priority</label><select id="instructionPriority"><option>now</option><option>later</option><option>idea</option></select></div>
-        <div class="button-row">
-          <button class="primary" id="addInstructionBtn">Add instruction</button>
-          <button id="updateOutputBtn">Update output</button>
-        </div>
+        <div class="button-row"><button class="primary" id="addInstructionBtn">Add instruction</button><button id="updateOutputBtn">Update output</button></div>
         <div class="note">The goal is to create an implementation brief you can paste back to me.</div>
       </div>
-
-      <div class="card">
-        <h2>Instructions</h2>
-        <div class="instruction-list" id="instructionList"></div>
-      </div>
-
-      <div class="card">
-        <h2>Export</h2>
-        <div class="button-row">
-          <button class="primary" id="copyBriefBtn">Copy instructions</button>
-          <button id="saveBriefBtn">Save brief</button>
-        </div>
-        <div class="note">Save brief downloads a JSON file you can keep or paste into chat later.</div>
-        <pre id="exportPreview"></pre>
-      </div>
+      <div class="card"><h2>Instructions</h2><div class="instruction-list" id="instructionList"></div></div>
+      <div class="card"><h2>Export</h2><div class="button-row"><button class="primary" id="copyBriefBtn">Copy instructions</button><button id="shareLinkBtn">Share link</button><button id="saveBriefBtn">Save brief</button></div>
+        <div class="note">Share link creates a URL you can send via Telegram. Save brief downloads a JSON file you can keep or paste into chat later.</div><pre id="exportPreview"></pre></div>
     </aside>
   </div>
 
@@ -154,195 +78,27 @@
     const frame = document.getElementById('siteFrame');
     const pageSelect = document.getElementById('pageSelect');
     const highlightBox = document.getElementById('highlightBox');
-    const state = {
-      selected: null,
-      instructions: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
-    };
-
-    function setStatus(text) {
-      document.getElementById('status').textContent = text;
-    }
-
-    function loadPage() {
-      frame.src = pageSelect.value;
-      setStatus('Loading page… then click any element in the preview.');
-    }
-
-    document.getElementById('loadPageBtn').onclick = loadPage;
-    pageSelect.onchange = loadPage;
-
-    frame.addEventListener('load', () => {
-      try {
-        const doc = frame.contentDocument;
-        const win = frame.contentWindow;
-        if (!doc || !win) return;
-        doc.addEventListener('click', onFrameClick, true);
-        setStatus('Page loaded. Click any element to attach an instruction.');
-      } catch {
-        setStatus('Could not attach click capture for this page.');
-      }
-    });
-
-    function onFrameClick(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const el = e.target;
-      const rect = el.getBoundingClientRect();
-      const frameRect = frame.getBoundingClientRect();
-      highlightBox.style.display = 'block';
-      highlightBox.style.left = (rect.left + frameRect.left - frameRect.left) + 'px';
-      highlightBox.style.top = (rect.top + frameRect.top - frameRect.top) + 'px';
-      highlightBox.style.width = rect.width + 'px';
-      highlightBox.style.height = rect.height + 'px';
-
-      const summary = summarizeElement(el);
-      const selected = {
-        page: pageSelect.options[pageSelect.selectedIndex].text,
-        url: pageSelect.value,
-        type: getElementType(el),
-        path: getDomPath(el),
-        summary
-      };
-      state.selected = selected;
-      document.getElementById('selectedPage').value = selected.page;
-      document.getElementById('selectedType').value = selected.type;
-      document.getElementById('selectedPath').value = selected.path;
-      document.getElementById('selectedSummary').value = selected.summary;
-      setStatus('Element selected. Add your instruction in the panel.');
-    }
-
-    function getElementType(el) {
-      const tag = el.tagName.toLowerCase();
-      if (tag === 'img') return 'image';
-      if (tag === 'button') return 'button';
-      if (tag === 'a') return 'link/button';
-      if (/^h[1-6]$/.test(tag)) return 'heading';
-      if (tag === 'p' || tag === 'li' || tag === 'blockquote' || tag === 'cite') return 'text';
-      return tag;
-    }
-
-    function summarizeElement(el) {
-      const text = (el.innerText || el.alt || el.getAttribute('aria-label') || '').trim().replace(/\s+/g,' ');
-      if (text) return text.slice(0, 300);
-      if (el.tagName.toLowerCase() === 'img') return `image: ${el.getAttribute('src') || '(no src)'}`;
-      return `<${el.tagName.toLowerCase()}>`;
-    }
-
-    function getDomPath(el) {
-      const parts = [];
-      while (el && el.nodeType === 1 && parts.length < 6) {
-        let part = el.tagName.toLowerCase();
-        if (el.id) part += '#' + el.id;
-        else if (el.className && typeof el.className === 'string') {
-          const cls = el.className.trim().split(/\s+/).slice(0,2).join('.');
-          if (cls) part += '.' + cls;
-        }
-        parts.unshift(part);
-        el = el.parentElement;
-      }
-      return parts.join(' > ');
-    }
-
-    function addInstruction() {
-      if (!state.selected) {
-        setStatus('Select an element first.');
-        return;
-      }
-      const text = document.getElementById('instructionText').value.trim();
-      if (!text) {
-        setStatus('Write an instruction first.');
-        return;
-      }
-      state.instructions.push({
-        page: state.selected.page,
-        url: state.selected.url,
-        elementType: state.selected.type,
-        elementPath: state.selected.path,
-        currentSummary: state.selected.summary,
-        instructionType: document.getElementById('instructionType').value,
-        priority: document.getElementById('instructionPriority').value,
-        instruction: text
-      });
-      document.getElementById('instructionText').value = '';
-      persist();
-      renderInstructions();
-      renderExport();
-      setStatus('Instruction added.');
-    }
-
-    function persist() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.instructions));
-    }
-
-    function renderInstructions() {
-      const wrap = document.getElementById('instructionList');
-      wrap.innerHTML = '';
-      state.instructions.forEach((item, idx) => {
-        const div = document.createElement('div');
-        div.className = 'instruction-item';
-        div.innerHTML = `
-          <div><strong>${idx + 1}. ${item.page}</strong> · ${item.elementType}</div>
-          <div class="small">${item.elementPath}</div>
-          <div class="small">Current: ${escapeHtml(item.currentSummary)}</div>
-          <div style="margin-top:6px;">${escapeHtml(item.instruction)}</div>
-          <div class="small" style="margin-top:6px;">type=${item.instructionType} · priority=${item.priority}</div>
-        `;
-        wrap.appendChild(div);
-      });
-    }
-
-    function buildExport() {
-      return {
-        meta: {
-          tool: 'editor-visual-1',
-          purpose: 'Visual implementation brief for paul-homepage',
-          siteUrl: 'https://pueopono.github.io/paul-homepage/',
-          editorUrl: 'https://pueopono.github.io/paul-homepage/editor-visual-1/',
-          instruction: 'Treat these notes as requested website implementation edits tied to specific visible elements.'
-        },
-        instructions: state.instructions
-      };
-    }
-
-    function renderExport() {
-      document.getElementById('exportPreview').textContent = JSON.stringify(buildExport(), null, 2);
-    }
-
-    function escapeHtml(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-    }
-
-    document.getElementById('addInstructionBtn').onclick = addInstruction;
-    document.getElementById('updateOutputBtn').onclick = () => {
-      renderExport();
-      setStatus('Export updated.');
-    };
-    document.getElementById('copyBriefBtn').onclick = async () => {
-      const text = JSON.stringify(buildExport(), null, 2);
-      try {
-        await navigator.clipboard.writeText(text);
-        setStatus('Instructions copied.');
-      } catch {
-        setStatus('Clipboard blocked. Copy from the export box manually.');
-      }
-    };
-    document.getElementById('saveBriefBtn').onclick = () => {
-      const text = JSON.stringify(buildExport(), null, 2);
-      const blob = new Blob([text], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'visual-implementation-brief.json';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      setStatus('Brief saved as visual-implementation-brief.json');
-    };
-
+    const state = { selected: null, instructions: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]') };
+    function setStatus(t){ document.getElementById('status').textContent = t; }
+    function loadPage(){ frame.src = pageSelect.value; setStatus('Loading page… then click an element in the preview.'); }
+    document.getElementById('loadPageBtn').onclick = loadPage; pageSelect.onchange = loadPage;
+    frame.addEventListener('load', ()=>{ try{ const doc = frame.contentDocument; const win = frame.contentWindow; if(!doc||!win) return; doc.addEventListener('click', onFrameClick, true); setStatus('Page loaded. Click any element to attach an instruction.'); }catch{ setStatus('Could not attach click capture for this page.'); } });
+    function onFrameClick(e){ e.preventDefault(); e.stopPropagation(); const el=e.target; const rect=el.getBoundingClientRect(); const frameRect=frame.getBoundingClientRect(); highlightBox.style.display='block'; highlightBox.style.left = rect.left+'px'; highlightBox.style.top = rect.top+'px'; highlightBox.style.width = rect.width+'px'; highlightBox.style.height = rect.height+'px'; const summary = summarizeElement(el); const selected = { page: pageSelect.options[pageSelect.selectedIndex].text, url: pageSelect.value, type: getElementType(el), path: getDomPath(el), summary }; state.selected = selected; document.getElementById('selectedPage').value = selected.page; document.getElementById('selectedType').value = selected.type; document.getElementById('selectedPath').value = selected.path; document.getElementById('selectedSummary').value = selected.summary; setStatus('Element selected. Add your instruction in the panel.'); }
+    function getElementType(el){ const tag=el.tagName.toLowerCase(); if(tag==='img') return 'image'; if(tag==='button') return 'button'; if(tag==='a') return 'link/button'; if(/^h[1-6]$/.test(tag)) return 'heading'; if(tag==='p'||tag==='li'||tag==='blockquote'||tag==='cite') return 'text'; return tag; }
+    function summarizeElement(el){ const text=(el.innerText||el.alt||el.getAttribute('aria-label')||'').trim().replace(/\s+/g,' '); if(text) return text.slice(0,300); if(el.tagName.toLowerCase()==='img') return 'image: '+(el.getAttribute('src')||'(no src)'); return `<${el.tagName.toLowerCase()}>`; }
+    function getDomPath(el){ const parts=[]; while(el && el.nodeType===1 && parts.length<6){ let part=el.tagName.toLowerCase(); if(el.id) part += '#'+el.id; else if(el.className && typeof el.className==='string'){ const cls = el.className.trim().split(/\s+/).slice(0,2).join('.'); if(cls) part += '.'+cls; } parts.unshift(part); el=el.parentElement; } return parts.join(' > '); }
+    function addInstruction(){ if(!state.selected){ setStatus('Select an element first.'); return; } const text=document.getElementById('instructionText').value.trim(); if(!text){ setStatus('Write an instruction first.'); return; } state.instructions.push({ page: state.selected.page, url: state.selected.url, elementType: state.selected.type, elementPath: state.selected.path, currentSummary: state.selected.summary, instructionType: document.getElementById('instructionType').value, priority: document.getElementById('instructionPriority').value, instruction: text }); document.getElementById('instructionText').value=''; persist(); renderInstructions(); renderExport(); setStatus('Instruction added.'); }
+    function persist(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state.instructions)); }
+    function renderInstructions(){ const wrap=document.getElementById('instructionList'); wrap.innerHTML=''; state.instructions.forEach((item,idx)=>{ const div=document.createElement('div'); div.className='instruction-item'; div.innerHTML=`<div><strong>${idx+1}. ${item.page}</strong> · ${item.elementType}</div><div class="small">${item.elementPath}</div><div class="small">Current: ${escapeHtml(item.currentSummary)}</div><div style="margin-top:6px;">${escapeHtml(item.instruction)}</div><div class="small" style="margin-top:6px;">type=${item.instructionType} · priority=${item.priority}</div>`; wrap.appendChild(div); }); }
+    function buildExport(){ return { meta: { tool:'editor-visual-1', purpose:'Visual implementation brief for paul-homepage', siteUrl:'https://pueopono.github.io/paul-homepage/', editorUrl:'https://pueopono.github.io/paul-homepage/editor-visual-1/', instruction:'Treat these notes as requested website implementation edits tied to specific visible elements.' }, instructions: state.instructions }; }
+    function renderExport(){ document.getElementById('exportPreview').textContent = JSON.stringify(buildExport(), null, 2); }
+    function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function createShareLink(){ const jsonText = JSON.stringify(buildExport(), null, 2); const b64 = btoa(unescape(encodeURIComponent(jsonText))); const shareUrl = window.location.origin + window.location.pathname.replace('index.html', 'brief-view.html') + '?data=' + b64; return shareUrl; }
+    document.getElementById('addInstructionBtn').onclick = ()=>{ if(!state.selected){ setStatus('Select an element first.'); return; } const text=document.getElementById('instructionText').value.trim(); if(!text){ setStatus('Write an instruction first.'); return; } state.instructions.push({ page: state.selected.page, url: state.selected.url, elementType: state.selected.type, elementPath: state.selected.path, currentSummary: state.selected.summary, instructionType: document.getElementById('instructionType').value, priority: document.getElementById('instructionPriority').value, instruction: text }); document.getElementById('instructionText').value=''; persist(); renderInstructions(); renderExport(); setStatus('Instruction added.'); };
+    document.getElementById('updateOutputBtn').onclick = ()=>{ renderExport(); setStatus('Export updated.'); };
+    document.getElementById('copyBriefBtn').onclick = async ()=>{ const text = JSON.stringify(buildExport(), null, 2); try{ await navigator.clipboard.writeText(text); setStatus('Instructions copied.'); }catch{ setStatus('Clipboard blocked. Copy from the export box manually.'); } };
+    document.getElementById('shareLinkBtn').onclick = async ()=>{ const shareUrl = createShareLink(); try{ await navigator.clipboard.writeText(shareUrl); setStatus('Share link copied to clipboard.'); }catch{ setStatus('Clipboard blocked. Copy from the share link below.'); document.getElementById('exportPreview').textContent = shareUrl; } };
+    document.getElementById('saveBriefBtn').onclick = ()=>{ const text = JSON.stringify(buildExport(), null, 2); const blob = new Blob([text], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'visual-implementation-brief.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); setStatus('Brief saved as visual-implementation-brief.json'); };
     renderInstructions();
     renderExport();
   </script>
