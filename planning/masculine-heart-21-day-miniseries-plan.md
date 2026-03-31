@@ -627,3 +627,238 @@ After the inventory pass, next create:
 2. portal wireframes / design mock draft
 3. landing-page copy for the Quest
 4. MVP portal project scaffold
+
+
+---
+
+## Landing Page Draft — Archetypal Masculine Heart Quest
+
+### Hero
+**Eyebrow**
+The Masculine Heart
+
+**Headline**
+Archetypal Masculine Heart Quest
+
+**Subheadline**
+A 21-day guided journey into the heart, archetype, masculinity, intention, and lived vitality.
+
+**Support copy**
+This is not just a video series. It is a structured quest — one day at a time — to help you reconnect with the deeper intelligence of the heart, the language of symbol and story, and a more mature, grounded masculinity.
+
+**Primary CTA**
+Begin the Quest
+
+**Secondary CTA**
+See the 21-day path
+
+**Hero notes**
+- dark cinematic background
+- strong title hierarchy
+- subtle gold linework / constellation / map feeling
+- immediate sense of initiation, dignity, and seriousness
+
+---
+
+### Section 1 — What this is
+**Heading**
+A daily path into the heart.
+
+**Body**
+The Archetypal Masculine Heart Quest brings together three streams of work into one guided progression:
+- opening the heart
+- learning the language of story and symbol
+- planting deeper intentions into the heart and subconscious
+
+Each day gives you:
+- a short video lesson
+- reflection prompts
+- an integration step
+- a clear completion moment
+- and then the next day unlocks 24 hours later
+
+This creates rhythm, digestion, and actual integration.
+
+---
+
+### Section 2 — Who it is for
+**Heading**
+For men ready for something deeper than self-improvement.
+
+**Body**
+This quest is for men who sense that strength without heart becomes brittle, and that growth without honesty becomes performance.
+
+It is for men who want:
+- deeper self-awareness
+- more emotional honesty
+- grounded masculinity
+- greater vitality
+- more wholeness in daily life
+
+It is not about hype, domination, or image.
+It is about depth, integration, and becoming more fully human.
+
+---
+
+### Section 3 — The three arcs
+**Heading**
+The quest unfolds in three arcs.
+
+#### Arc I — Unlock the Heart
+Days 1–7
+A return to feeling, honesty, and the emotional truths that shape life beneath the surface.
+
+#### Arc II — Language of the Heart
+Days 8–14
+A journey through Iron John, symbol, story, identity, shadow, and the deeper architecture of masculinity.
+
+#### Arc III — Intentions Worth Planting
+Days 15–21
+A final arc of planting qualities into the heart and subconscious so your path can continue in lived form.
+
+---
+
+### Section 4 — How the drip works
+**Heading**
+One day at a time, by design.
+
+**Body**
+This is not meant to be binge-watched.
+
+When you complete a lesson, the next day unlocks 24 hours later.
+That pacing is intentional.
+It gives the heart, body, and mind time to respond.
+
+This helps the work move from concept into lived experience.
+
+**Possible support bullets**
+- mark a day complete
+- next lesson unlocks 24 hours later
+- optional reminders by email or text
+- progress saved across devices
+
+---
+
+### Section 5 — What each day includes
+**Heading**
+A clear daily container.
+
+**Body**
+Each day includes:
+- one focused lesson
+- sometimes two videos when an arc begins or closes
+- practical prompts for reflection
+- an integration action
+- a simple completion step
+
+The experience should feel light enough to sustain, but meaningful enough to matter.
+
+---
+
+### Section 6 — The promise
+**Heading**
+What this work supports.
+
+**Body**
+This quest is designed to support:
+- more honesty with yourself
+- better relationship with your heart
+- greater emotional awareness
+- mature masculine development
+- more intentional living
+- practical inner steadiness
+
+The aim is not perfection.
+The aim is wholeness.
+
+---
+
+### Section 7 — Reflection / quote band
+**Heading**
+The heart is not a metaphor only.
+
+**Body**
+The heart carries story, image, memory, and a kind of intelligence that modern life often trains us to ignore.
+
+This quest is an invitation to restore that relationship.
+
+**Optional quote style block**
+Broken hearts don't work. So what do we do? We fix them.
+— Dr. Paul, PhD
+
+---
+
+### Section 8 — Daily reminders
+**Heading**
+Support, without noise.
+
+**Body**
+If desired, you can receive reminder support as you move through the quest.
+
+Possible support includes:
+- daily unlock emails
+- gentle reminder prompts
+- optional text reminders
+- integration questions sent at the right time
+
+The aim is to help you stay in rhythm, not overwhelm you.
+
+---
+
+### Section 9 — Final CTA
+**Heading**
+Begin the 21-day journey.
+
+**Body**
+If you are ready to approach the heart with honesty, depth, and grounded practice, this quest is here for you.
+
+**CTA**
+Begin the Quest
+
+**Secondary CTA**
+Preview the path
+
+---
+
+## Landing Page Design Notes
+
+### Overall feel
+- premium
+- initiatory
+- modern
+- masculine without cliché
+- dark and spacious
+
+### Visual motifs
+- subtle topographic lines / map feeling
+- low-contrast sacred geometry or symbolic patterning
+- quest-path progress markers
+- warm gold highlights for active / unlocked moments
+- soft glow on current-day card
+
+### Avoid
+- gamer aesthetics
+- fantasy clichés
+- aggressive “alpha male” tone
+- too much copy density above the fold
+
+---
+
+## Suggested First Portal Copy Architecture
+1. Hero
+2. What this is
+3. Who it is for
+4. Three arcs
+5. Drip logic / how it works
+6. What each day includes
+7. Promise / outcomes
+8. Reminder support
+9. Final CTA
+
+---
+
+## Next Deliverables After This Draft
+1. lesson metadata table for all 21 days
+2. low-fidelity wireframe map
+3. UI component draft for dashboard + lesson page
+4. portal scaffold project spec
