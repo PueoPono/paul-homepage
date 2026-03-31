@@ -282,3 +282,348 @@ Build this as a separate portal/app project, not inside the static homepage repo
 
 Keep `paul-homepage` as the public site.
 Use the Resources page to funnel people into the mini-series once the draft portal exists.
+
+
+---
+
+## Merged 21-Day Curriculum Draft
+This version includes intro videos folded into the daily experience where useful, so some days may contain two videos.
+
+### Arc 1 — Heart Unlock (Days 1–7)
+**Theme:** opening emotional honesty and restoring feeling capacity
+
+#### Day 1 — Welcome to the Heart
+- source videos:
+  - `heartunlock/index` intro video
+  - `heartunlock/day1`
+- focus:
+  - stepping down to the heart
+  - identifying emotional pain
+- prompts:
+  - what pain am I carrying?
+  - where do I already know I am defended?
+
+#### Day 2 — Sadness and scars
+- source:
+  - `heartunlock/day2`
+- focus:
+  - sadness
+  - scars from emotional pain
+- prompts:
+  - what sadness have I covered over?
+  - what still wants to be felt?
+
+#### Day 3 — Anger and defenses
+- source:
+  - `heartunlock/day3`
+- focus:
+  - anger
+  - emotional sovereignty
+- prompts:
+  - how do I lose emotional sovereignty?
+  - what defense patterns protect me?
+
+#### Day 4 — Numbing and disconnection
+- source:
+  - `heartunlock/day4`
+- focus:
+  - numbing
+  - stifled feeling, stifled happiness
+- prompts:
+  - where am I numb?
+  - what does that numbness protect?
+
+#### Day 5 — Shame and not-enoughness
+- source:
+  - `heartunlock/day5`
+- focus:
+  - shame
+  - awareness as medicine
+- prompts:
+  - where does “I am not enough” still operate?
+  - what changes when I simply see it clearly?
+
+#### Day 6 — Regret and consequence
+- source:
+  - `heartunlock/day6`
+- focus:
+  - regret
+  - consequences of unacknowledged pain
+- prompts:
+  - what has pain cost me?
+  - what becomes possible if I acknowledge it now?
+
+#### Day 7 — Choosing to feel
+- source:
+  - `heartunlock/day7`
+- focus:
+  - commitment to feel
+  - integration checkpoint
+- prompts:
+  - will I choose to feel more fully?
+  - what support helps me stay open?
+
+### Arc 2 — Language of the Heart / Iron John (Days 8–14)
+**Theme:** archetype, symbol, imagination, masculinity, identity
+
+#### Day 8 — Entering the story
+- source videos:
+  - `ironjohn/index` intro video (`467500375`)
+  - `ironjohn/day1` (`467494269`)
+- focus:
+  - stories and symbols as language of the heart
+  - beginning Iron John
+- prompts:
+  - what does the story stir in me?
+  - what stands out immediately?
+
+#### Day 9 — The cage and the false self
+- source:
+  - `ironjohn/day2` (`468344269`)
+- focus:
+  - beliefs and conditioning
+  - the cage built around authenticity
+- prompts:
+  - how was I told I should be?
+  - what part of me was lost?
+
+#### Day 10 — Non-judgement and inner gold
+- source:
+  - `ironjohn/day3` (`469815966`)
+- focus:
+  - non-judgement
+  - finding gold inside mistakes
+- prompts:
+  - where do I still judge myself?
+  - what gold may be hidden there?
+
+#### Day 11 — Breath, change, and imprinting
+- source:
+  - `ironjohn/day4` (`469578165`)
+- focus:
+  - box breathing
+  - shifting the heart-state
+- prompts:
+  - what word do I want to breathe into my system?
+  - what state do I want to train?
+
+#### Day 12 — Tending the inner garden
+- source:
+  - `ironjohn/day5` (`471745654`)
+- focus:
+  - heart as spring, fire, garden
+  - conscious tending
+- prompts:
+  - what am I growing in my inner garden?
+  - what do I want to plant now?
+
+#### Day 13 — The Earth and the Masculine Heart
+- source:
+  - `ironjohn/day6` (`471753829`)
+- focus:
+  - grounding
+  - masculine heart and father earth imagery
+- prompts:
+  - what grounds me deeply?
+  - how do I relate to strength and rootedness?
+
+#### Day 14 — Identity, shadow, and the rest of the story
+- source videos:
+  - `ironjohn/day7` (`475973182`)
+  - `ironjohn/day8` (`475973182`)
+- focus:
+  - identity attachments
+  - shadow and gold
+  - completing the story
+- prompts:
+  - what do I need to let go of?
+  - what part of my identity contains both gold and shadow?
+
+### Arc 3 — Intentions Worth Planting (Days 15–21)
+**Theme:** planting deeper qualities into the heart and subconscious
+
+#### Day 15 — Introduction + Be Creative
+- source videos:
+  - `intentions/index` (`483878304`)
+  - `intentions/intention1` (`491451277`)
+- focus:
+  - intention as heart/subconscious training
+  - creativity and imagination
+- prompts:
+  - what do I want to create?
+  - what happens when I imagine something deeply good?
+
+#### Day 16 — Be Kind
+- source:
+  - `intentions/intention2` (`483727694`)
+- focus:
+  - kindness as courage
+- prompts:
+  - what does kindness mean to me?
+  - how can I breathe kindness into my day?
+
+#### Day 17 — Be Beauty
+- source:
+  - `intentions/intention3` (`483879872`)
+- focus:
+  - truth, beauty, alignment
+- prompts:
+  - what beauty feels true to me?
+  - where do I want deeper alignment?
+
+#### Day 18 — Be Love
+- source:
+  - `intentions/intention4` (`488237870`)
+- focus:
+  - love as deep orientation
+- prompts:
+  - what does it mean for me to be love?
+  - how does this become practical?
+
+#### Day 19 — Be Abundance
+- source:
+  - `intentions/intention5` (`483880757`)
+- focus:
+  - abundance as belief and posture
+- prompts:
+  - what abundance do I resist?
+  - what changes when I practice abundance intentionally?
+
+#### Day 20 — Be Receptive
+- source:
+  - `intentions/intention6` (`483881976`)
+- focus:
+  - receptivity as growth capacity
+- prompts:
+  - what am I not letting in?
+  - where do I need more openness?
+
+#### Day 21 — Be Ever-Expansive + Summary
+- source videos:
+  - `intentions/intention7` (`486241765`)
+  - `intentions/summary` (`486242220`)
+- focus:
+  - expansiveness
+  - tending the planted intentions
+  - completion / continuation
+- prompts:
+  - what is expanding in me now?
+  - what will I keep tending beyond this quest?
+
+---
+
+## Product Identity Draft
+
+### Working product name
+**Archetypal Masculine Heart Quest**
+
+### Positioning
+A premium 21-day guided quest into the heart, archetype, masculinity, and intentional living.
+
+### Experience principles
+- dark, grounded visual field
+- premium feel
+- modern but mythic
+- phone-first
+- low clutter
+- strong use of contrast and spacing
+- each day should feel like entering a chamber / stage of the quest
+
+### Visual direction
+Use a design language that feels aligned with the public site, especially `faq.html`, but more immersive:
+- dark charcoals / black-browns
+- warm gold accents
+- sand / bone text
+- subtle gradients
+- glass or layered panels sparingly
+- clear progress markers
+- “quest map” feeling without becoming gimmicky
+
+### Suggested palette
+- obsidian: `#120d0b`
+- deep bark: `#1d1411`
+- warm charcoal: `#241916`
+- sand text: `#f3eadf`
+- muted sand: `rgba(243,234,223,0.72)`
+- gold accent: `#d8a14a`
+- brighter gold for active state: `#efc06a`
+- soft line: `rgba(239,192,106,0.18)`
+
+---
+
+## Portal / Website Draft
+
+### Core pages
+1. Landing page
+2. Login / access page
+3. Dashboard / quest map
+4. Daily lesson page
+5. Locked-day state
+6. Completion / next unlock state
+7. Reminder settings
+
+### Landing page sections
+- Hero: Archetypal Masculine Heart Quest
+- short promise / invitation
+- three arcs of the quest
+- how the drip works
+- testimonials / reflections later
+- CTA to begin
+
+### Dashboard draft
+- current day card
+- countdown until next unlock if locked
+- quest progress tracker (1–21)
+- completed days
+- reminder status
+
+### Lesson page draft
+- day number + arc
+- title
+- framing paragraph
+- one or two videos if applicable
+- reflection prompts
+- integration action
+- mark complete button
+- next unlock notice
+
+### Special UI note
+For days with two videos:
+- show them as Part A / Part B
+- keep the page simple
+- avoid autoplay overload
+
+---
+
+## Email Automation Draft
+Because old email copy may take time to locate, draft a new support sequence now.
+
+### Sequence skeleton
+- Welcome / orientation
+- Day unlocked email (21 variants)
+- Reminder if unlocked but incomplete
+- Arc completion emails (after day 7 and 14)
+- Final completion email
+- Invitation to next coaching step
+
+### Example support pattern
+- Welcome email immediately after enrollment
+- Day unlock email when next day becomes available
+- Gentle reminder 12–18 hours later if not started
+- Completion affirmation email at arc transitions
+
+### Tone
+- grounded
+- encouraging
+- not too salesy
+- initiatory but warm
+- practical and concise
+
+---
+
+## Next Build Recommendation
+After the inventory pass, next create:
+1. lesson metadata table for all 21 days
+2. portal wireframes / design mock draft
+3. landing-page copy for the Quest
+4. MVP portal project scaffold
