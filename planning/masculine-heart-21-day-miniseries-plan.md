@@ -862,3 +862,79 @@ Preview the path
 2. low-fidelity wireframe map
 3. UI component draft for dashboard + lesson page
 4. portal scaffold project spec
+
+
+---
+
+## Lesson Metadata Table Draft
+This table is the first content backbone for the portal. It allows more than 21 source items while still supporting a 21-day guided quest. Where appropriate, intro videos are folded into a day rather than treated as separate unlocks.
+
+| Quest Day | Arc | Display Title | Source Pages / Videos | Known Vimeo IDs | Core Theme | Reflection / Integration Focus | Notes |
+|---|---|---|---|---|---|---|---|
+| 1 | Heart Unlock | Welcome to the Heart | `heartunlock/index` + `heartunlock/day1` | unknown + unknown | entering the heart / emotional pain | identify emotional pain, begin notebook practice | intro folded into day 1 |
+| 2 | Heart Unlock | Sadness and Scars | `heartunlock/day2` | unknown | sadness / scars | identify sources of sadness, what still wants to be felt |  |
+| 3 | Heart Unlock | Anger and Defenses | `heartunlock/day3` | unknown | anger / emotional sovereignty | identify defense patterns, loss of sovereignty |  |
+| 4 | Heart Unlock | Numbing and Disconnection | `heartunlock/day4` | unknown | numbing / stifled life | where am I numb, what is protected there |  |
+| 5 | Heart Unlock | Shame and Not-Enoughness | `heartunlock/day5` | unknown | shame / awareness | notice “I am not enough” patterns |  |
+| 6 | Heart Unlock | Regret and Consequence | `heartunlock/day6` | unknown | regret / consequence | what has pain cost me, what needs acknowledgment |  |
+| 7 | Heart Unlock | Choosing to Feel | `heartunlock/day7` | unknown | commitment to feeling | willingness to feel fully, completion checkpoint | arc 1 completion |
+| 8 | Iron John | Entering the Story | `ironjohn/index` + `ironjohn/day1` | `467500375`, `467494269` | story, symbol, imagination | what does the story stir, what stands out | intro folded into day 8 |
+| 9 | Iron John | The Cage and the False Self | `ironjohn/day2` | `468344269` | conditioning / false self | how was I told I should be, what was lost |  |
+| 10 | Iron John | Non-Judgement and Inner Gold | `ironjohn/day3` | `469815966` | non-judgement / hidden gold | mistake, gold, honesty |  |
+| 11 | Iron John | Breath and State Change | `ironjohn/day4` | `469578165` | box breathing / heart-state training | choose a word / state to breathe in |  |
+| 12 | Iron John | Tending the Inner Garden | `ironjohn/day5` | `471745654` | tending the heart | what am I planting, feeding, growing |  |
+| 13 | Iron John | The Earth and the Masculine Heart | `ironjohn/day6` | `471753829` | grounding / masculine heart | grounding meditation, father earth imagery |  |
+| 14 | Iron John | Identity, Shadow, and the Rest of the Story | `ironjohn/day7` + `ironjohn/day8` | `475973182`, `475973182` | identity / shadow / story completion | what must be let go, what gold hides in shadow | two-part closing day |
+| 15 | Intentions | Intention as Practice | `intentions/index` + `intentions/intention1` | `483878304`, `491451277` | intention / creativity | what do I want to create, imagination as medicine | intro folded into day 15 |
+| 16 | Intentions | Be Kind | `intentions/intention2` | `483727694` | kindness as courage | what does kindness mean to me |  |
+| 17 | Intentions | Be Beauty | `intentions/intention3` | `483879872` | truth / beauty / alignment | where do I seek truth and beauty |  |
+| 18 | Intentions | Be Love | `intentions/intention4` | `488237870` | love as orientation | what does it mean to be love in practice |  |
+| 19 | Intentions | Be Abundance | `intentions/intention5` | `483880757` | abundance as belief | what changes when I practice abundance |  |
+| 20 | Intentions | Be Receptive | `intentions/intention6` | `483881976` | receptivity / openness | what am I not letting in |  |
+| 21 | Intentions | Be Ever-Expansive | `intentions/intention7` + `intentions/summary` | `486241765`, `486242220` | expansiveness / tending the path | what is growing, what continues beyond completion | final day + summary |
+
+### Extended Source Inventory Beyond the 21-Day Path
+This section keeps all core source items visible in case a longer version, bonus library, or expanded portal is created.
+
+| Source Course | Source Item | URL Pattern | Known Vimeo ID | Recommended Use |
+|---|---|---|---|---|
+| Heart Unlock | Intro | `heartunlock/index` | unknown | fold into day 1 |
+| Heart Unlock | Day 1 | `heartunlock/day1` | unknown | core lesson |
+| Heart Unlock | Day 2 | `heartunlock/day2` | unknown | core lesson |
+| Heart Unlock | Day 3 | `heartunlock/day3` | unknown | core lesson |
+| Heart Unlock | Day 4 | `heartunlock/day4` | unknown | core lesson |
+| Heart Unlock | Day 5 | `heartunlock/day5` | unknown | core lesson |
+| Heart Unlock | Day 6 | `heartunlock/day6` | unknown | core lesson |
+| Heart Unlock | Day 7 | `heartunlock/day7` | unknown | core lesson |
+| Iron John | Intro | `ironjohn/index` | `467500375` | fold into day 8 |
+| Iron John | Day 1 | `ironjohn/day1` | `467494269` | core lesson |
+| Iron John | Day 2 | `ironjohn/day2` | `468344269` | core lesson |
+| Iron John | Day 3 | `ironjohn/day3` | `469815966` | core lesson |
+| Iron John | Day 4 | `ironjohn/day4` | `469578165` | core lesson |
+| Iron John | Day 5 | `ironjohn/day5` | `471745654` | core lesson |
+| Iron John | Day 6 | `ironjohn/day6` | `471753829` | core lesson |
+| Iron John | Day 7 | `ironjohn/day7` | `475973182` | part of merged day 14 |
+| Iron John | Day 8 | `ironjohn/day8` | `475973182` | part of merged day 14 |
+| Intentions | Intro | `intentions/index` | `483878304` | fold into day 15 |
+| Intentions | Intention 1 | `intentions/intention1` | `491451277` | core lesson |
+| Intentions | Intention 2 | `intentions/intention2` | `483727694` | core lesson |
+| Intentions | Intention 3 | `intentions/intention3` | `483879872` | core lesson |
+| Intentions | Intention 4 | `intentions/intention4` | `488237870` | core lesson |
+| Intentions | Intention 5 | `intentions/intention5` | `483880757` | core lesson |
+| Intentions | Intention 6 | `intentions/intention6` | `483881976` | core lesson |
+| Intentions | Intention 7 | `intentions/intention7` | `486241765` | core lesson |
+| Intentions | Summary | `intentions/summary` | `486242220` | fold into day 21 |
+
+### Notes on Merge Logic
+- The quest remains 21 days, but includes more than 21 source videos by folding intros and summaries into key days.
+- If a longer “expanded library” version is desired later, these source items can also be exposed separately as bonus or companion materials.
+- Heart Unlock Vimeo IDs remain unknown for now and should be filled in once recovered from files, Vimeo, or Groove-hosted sources.
+
+### Next metadata layer to add
+For each day later add:
+- lesson summary
+- 1–3 final portal prompts
+- completion text
+- reminder text
+- email subject line
+- SMS reminder variant
