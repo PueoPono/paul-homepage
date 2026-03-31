@@ -938,3 +938,263 @@ For each day later add:
 - reminder text
 - email subject line
 - SMS reminder variant
+
+
+---
+
+## Wireframe + Page Map Draft
+
+### Portal Sitemap
+
+#### Public / semi-public
+1. Quest landing page
+2. About the quest / methodology section
+3. Sign up / login page
+
+#### Private / enrolled
+4. Dashboard / quest map
+5. Current lesson page
+6. Locked lesson page
+7. Completion / transition page
+8. Reminder settings page
+9. Profile / account page
+
+#### Optional later
+10. Journal / notes page
+11. Bonus library page
+12. Archive of completed lessons
+
+---
+
+## 1. Quest Landing Page Wireframe
+
+### Block A — Hero
+- dark atmospheric background
+- eyebrow: The Masculine Heart
+- large title: Archetypal Masculine Heart Quest
+- short subheadline
+- primary CTA: Begin the Quest
+- secondary CTA: Preview the 21-day path
+
+### Block B — What this is
+- short explanatory text
+- 3 or 4 feature bullets
+- visual side panel describing daily unlock rhythm
+
+### Block C — Three arcs
+- 3 cards or horizontal milestones
+  - Unlock the Heart
+  - Language of the Heart
+  - Intentions Worth Planting
+- each with short description and days covered
+
+### Block D — How the quest works
+- daily lesson
+- reflection prompts
+- completion
+- 24-hour unlock
+- optional reminders
+
+### Block E — Why it matters
+- stronger emotional / existential framing
+- heart, masculinity, subconscious, wholeness
+
+### Block F — CTA band
+- invitation to begin
+- maybe note that it is phone-friendly and paced intentionally
+
+---
+
+## 2. Sign Up / Login Page Wireframe
+
+### Core elements
+- simple dark panel centered
+- title
+- email field
+- password / magic link option
+- optional note: one lesson a day by design
+- support/help link
+
+### Tone
+- minimal friction
+- clean and modern
+- premium, not corporate
+
+---
+
+## 3. Dashboard / Quest Map Wireframe
+
+### Top band
+- welcome line
+- quest title
+- progress indicator: Day X of 21
+- current arc label
+
+### Main card
+- current lesson card
+- title
+- short lesson prompt
+- CTA: Continue today’s lesson
+
+### Progress area
+Possible designs:
+- vertical quest path with 21 nodes
+or
+- 3 arc panels with day markers inside
+
+Recommended:
+- **3 arc panels** for clarity on phone and desktop
+
+Each day state:
+- completed
+- unlocked/current
+- locked
+
+### Side/support cards
+- next unlock countdown
+- reminders on/off
+- short inspirational line / quote
+
+---
+
+## 4. Lesson Page Wireframe
+
+### Header area
+- day number
+- arc name
+- lesson title
+- subtle progress marker
+
+### Lesson content area
+#### Part 1 — Orientation
+- short paragraph framing the lesson
+
+#### Part 2 — Video block
+- one video or two stacked videos
+- if two videos:
+  - Part A
+  - Part B
+
+#### Part 3 — Reflection prompts
+- 1 to 3 prompts
+- spacious styling
+- optional “copy prompts” / journal prompt button later
+
+#### Part 4 — Integration action
+- one practical action for the day
+- simple and clear
+
+#### Part 5 — Completion card
+- checkbox or completion button
+- when clicked:
+  - save completion
+  - show unlock timing for next lesson
+
+### Design note
+This page should feel immersive but simple.
+Avoid clutter and unnecessary navigation noise.
+
+---
+
+## 5. Locked Lesson Page Wireframe
+
+### Core elements
+- lesson title visible
+- lock state message
+- countdown until unlock
+- short note explaining pacing is intentional
+- optional quote / supportive reflection
+
+### Purpose
+Turn waiting into part of the initiation, not frustration.
+
+---
+
+## 6. Completion / Transition Page Wireframe
+
+### Core elements
+- affirmation message
+- “Day complete” state
+- next lesson unlock time
+- optional reflection line
+- CTA back to dashboard
+
+### Arc checkpoints
+At day 7, 14, and 21:
+- show stronger milestone page
+- acknowledge completion of an arc
+- invite brief reflection
+
+---
+
+## 7. Reminder Settings Page Wireframe
+
+### Core settings
+- email reminders on/off
+- text reminders on/off
+- preferred timezone
+- preferred delivery window
+
+### Optional later
+- morning / evening preference
+- prompt-only reminders vs full reminders
+
+---
+
+## 8. Visual Component System Draft
+
+### Key reusable components
+- hero panel
+- arc card
+- day node
+- lesson card
+- locked state card
+- quote band
+- progress pill
+- countdown card
+- reminder toggle row
+
+### UI feel
+- rounded but serious
+- restrained animation
+- subtle glow on active elements
+- gold accents only where meaningful
+
+---
+
+## Dashboard UI Recommendation
+Best layout for clarity and elegance:
+
+### Desktop
+- left: current lesson + arc overview
+- right: progress / countdown / reminders
+
+### Mobile
+- stacked layout
+- current lesson first
+- progress second
+- support cards below
+
+---
+
+## Wireframe Priority Order for Build
+1. Landing page
+2. Dashboard
+3. Lesson page
+4. Locked state
+5. Completion state
+6. Settings
+7. Auth page
+
+This is the order that best converts planning into a working MVP quickly.
+
+---
+
+## Immediate Next Build Deliverable
+After this wireframe step, the next best move is:
+- create a separate project scaffold for the quest portal
+- or draft the actual landing page HTML/mock layout first
+
+Recommended next:
+**draft actual landing page HTML/mock layout first**
+so the visual language gets locked before app structure expands.
