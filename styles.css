@@ -493,6 +493,45 @@ p { margin: 0 0 1rem; }
   object-fit: cover;
 }
 .resource-link-list { display: grid; gap: 1rem; }
+.card--quest-resource {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(22, 28, 20, 0.9), rgba(33, 20, 14, 0.92));
+  border-color: rgba(242, 215, 160, 0.18);
+}
+.quest-resource-media {
+  position: relative;
+  min-height: 220px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(239, 197, 120, 0.18), transparent 38%),
+    linear-gradient(180deg, rgba(17, 28, 21, 0.94), rgba(24, 17, 13, 0.94));
+  border: 1px solid rgba(242, 215, 160, 0.14);
+}
+.quest-resource-media img {
+  width: min(76%, 200px);
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.28));
+}
+.quest-resource-glow {
+  position: absolute;
+  inset: 18% 16%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(239, 197, 120, 0.16), transparent 64%);
+  filter: blur(18px);
+}
+.quest-resource-copy p {
+  max-width: 62ch;
+}
 .form-shell { display: grid; gap: 1rem; }
 .field { display: grid; gap: 0.45rem; }
 .field label { font-weight: 700; color: var(--color-cream); }
@@ -562,7 +601,8 @@ p { margin: 0 0 1rem; }
   .feature-split,
   .uneven-grid,
   .grid-2,
-  .site-footer-top {
+  .site-footer-top,
+  .card--quest-resource {
     grid-template-columns: 1fr;
   }
   .site-footer-top {
