@@ -555,6 +555,20 @@ p { margin: 0 0 1rem; }
 .quest-resource-copy p {
   max-width: 62ch;
 }
+.card--meditation-resource {
+  background: linear-gradient(180deg, rgba(28, 20, 16, 0.9), rgba(21, 26, 20, 0.92));
+  border-color: rgba(242, 215, 160, 0.16);
+}
+.meditation-optin-copy {
+  background: linear-gradient(180deg, rgba(18, 22, 18, 0.86), rgba(31, 21, 16, 0.88));
+}
+.meditation-video-card {
+  background: linear-gradient(180deg, rgba(18, 22, 18, 0.86), rgba(31, 21, 16, 0.88));
+}
+.meditation-followup-note {
+  margin-top: 1.25rem;
+  color: rgba(245, 242, 234, 0.82);
+}
 .form-shell { display: grid; gap: 1rem; }
 .field { display: grid; gap: 0.45rem; }
 .field label { font-weight: 700; color: var(--color-cream); }
