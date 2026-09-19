@@ -3,288 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coaching Site Copy Admin</title>
+  <title>Coaching Site Copy + Reference Admin</title>
   <style>
-    :root{--bg:#09131d;--panel:#102132;--panel2:#0c1926;--line:rgba(226,180,96,.24);--text:#f7efe2;--muted:rgba(247,239,226,.68);--gold:#e7b766;--gold2:#ffd999;--blue:#7ba7c7;--danger:#f08b8b;--ok:#98d7a5}
-    *{box-sizing:border-box} html,body{height:100%} body{margin:0;background:radial-gradient(circle at top left,rgba(231,183,102,.12),transparent 32%),linear-gradient(180deg,#07111b,#0b1723 42%,#08111b);color:var(--text);font:14px/1.45 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    button,input,textarea{font:inherit} button{cursor:pointer} code{color:var(--gold2)}
-    .app{min-height:100vh;display:grid;grid-template-columns:300px minmax(500px,620px) minmax(0,1fr)}
-    aside,.editor{background:rgba(16,33,50,.92);border-right:1px solid var(--line);overflow:auto}.nav,.editor,.preview{padding:16px}.preview{background:rgba(7,17,27,.72);overflow:hidden}
-    h1{font-size:18px;margin:0 0 8px;color:var(--gold2)} h2{font-size:15px;margin:18px 0 8px;color:var(--gold)} h3{font-size:13px;margin:14px 0 6px;color:var(--gold2)} p{color:var(--muted);margin:0 0 12px}.small,.meta{font-size:12px;color:var(--muted)}
-    .item{width:100%;text-align:left;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;margin:0 0 8px}.item.active{border-color:var(--gold);background:rgba(231,183,102,.12)}
-    input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(3,9,15,.66);color:var(--text);padding:10px 12px;outline:none} textarea{min-height:96px;resize:vertical}.search{margin:8px 0 14px}.settings{display:grid;gap:8px}
-    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.toolbar{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,rgba(16,33,50,.98),rgba(16,33,50,.92));padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:12px}
-    button{border:1px solid var(--line);border-radius:12px;color:var(--text);background:rgba(255,255,255,.05);padding:9px 12px}button.primary{background:linear-gradient(180deg,#d4a954,#9d7130);border-color:rgba(255,217,153,.55);color:#12100b;font-weight:700}button.secondary{background:rgba(255,255,255,.04)}button.danger{border-color:rgba(240,139,139,.45);color:#ffd8d8}.status{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.16);color:var(--muted)}
-    .field,.referenceBox,.handoffBox{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);padding:12px;margin:0 0 12px}.field.changed{border-color:rgba(231,183,102,.55);background:rgba(231,183,102,.08)}label{display:block;color:var(--gold2);font-weight:700;margin-bottom:6px}.original{max-height:72px;overflow:auto;border-left:2px solid var(--line);padding-left:8px;margin-top:8px;color:var(--muted);font-size:12px}.fieldNote{min-height:62px;margin-top:8px}.note{color:var(--blue)}
-    details{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 12px;background:rgba(0,0,0,.12)}summary{cursor:pointer;color:var(--gold2);font-weight:700}.handoff{min-height:260px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;white-space:pre}.previewHeader{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.preview iframe, iframe#preview{width:100%;height:calc(100vh - 78px);border:1px solid var(--line);border-radius:18px;background:white}.pill{display:inline-flex;gap:4px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--muted);font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:1100px){.app{grid-template-columns:1fr}.preview iframe{height:70vh}.toolbar{position:static}}
+    :root{--bg:#09131d;--panel:#102132;--line:rgba(226,180,96,.24);--text:#f7efe2;--muted:rgba(247,239,226,.68);--gold:#e7b766;--gold2:#ffd999;--blue:#7ba7c7;--danger:#f08b8b;--ok:#98d7a5}*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:radial-gradient(circle at top left,rgba(231,183,102,.12),transparent 32%),linear-gradient(180deg,#07111b,#0b1723 42%,#08111b);color:var(--text);font:14px/1.45 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}code{color:var(--gold2)}.app{min-height:100vh;display:grid;grid-template-columns:300px minmax(500px,620px) minmax(0,1fr)}aside,.editor{background:rgba(16,33,50,.92);border-right:1px solid var(--line);overflow:auto}.nav,.editor,.preview{padding:16px}.preview{background:rgba(7,17,27,.72);overflow:hidden}h1{font-size:18px;margin:0 0 8px;color:var(--gold2)}h2{font-size:15px;margin:18px 0 8px;color:var(--gold)}p{color:var(--muted);margin:0 0 12px}.small,.meta{font-size:12px;color:var(--muted)}.item{width:100%;text-align:left;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;margin:0 0 8px}.item.active{border-color:var(--gold);background:rgba(231,183,102,.12)}input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(3,9,15,.66);color:var(--text);padding:10px 12px;outline:none}textarea{min-height:96px;resize:vertical}.search{margin:8px 0 14px}.settings{display:grid;gap:8px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.toolbar{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,rgba(16,33,50,.98),rgba(16,33,50,.92));padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:12px}button{border:1px solid var(--line);border-radius:12px;color:var(--text);background:rgba(255,255,255,.05);padding:9px 12px}button.primary{background:linear-gradient(180deg,#d4a954,#9d7130);border-color:rgba(255,217,153,.55);color:#12100b;font-weight:700}button.secondary{background:rgba(255,255,255,.04)}button.danger{border-color:rgba(240,139,139,.45);color:#ffd8d8}.status{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.16);color:var(--muted)}.field,.handoffBox,.selectionBox,.assetRef{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);padding:12px;margin:0 0 12px}.field.changed,.selectionBox.active{border-color:rgba(231,183,102,.55);background:rgba(231,183,102,.08)}label{display:block;color:var(--gold2);font-weight:700;margin-bottom:6px}.original{max-height:72px;overflow:auto;border-left:2px solid var(--line);padding-left:8px;margin-top:8px;color:var(--muted);font-size:12px}.fieldNote{min-height:62px;margin-top:8px}.assetRef{border-color:rgba(123,167,199,.34);background:rgba(123,167,199,.08)}details{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 12px;background:rgba(0,0,0,.12)}summary{cursor:pointer;color:var(--gold2);font-weight:700}.handoff{min-height:260px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;white-space:pre}.previewHeader{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.preview iframe{width:100%;height:calc(100vh - 78px);border:1px solid var(--line);border-radius:18px;background:white}.pill{display:inline-flex;gap:4px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--muted);font-size:12px}.liveSelected{outline:3px solid #e7b766!important;outline-offset:3px!important;box-shadow:0 0 0 6px rgba(231,183,102,.25)!important}@media(max-width:1100px){.app{grid-template-columns:1fr}.preview iframe{height:70vh}}
   </style>
 </head>
 <body data-copy-admin-root>
 <div class="app">
   <aside class="nav">
-    <h1>Coaching Copy Admin</h1>
-    <p>Vector Pilot style editor with local drafts, live preview, GitHub publish, and a clean agent handoff you can paste into chat.</p>
+    <h1>Coaching Site Editor</h1>
+    <p>Live click editor for <code>coaching.paulcropper.com</code>. Text is editable; assets/sections/buttons create referenced notes for a pasteable implementation document.</p>
     <input class="search" id="search" placeholder="Search copy…" />
     <div id="pages"></div>
     <h2>Publish settings</h2>
-    <div class="settings">
-      <input id="owner" value="PueoPono" placeholder="GitHub owner">
-      <input id="repo" value="paul-homepage" placeholder="Repo">
-      <input id="branch" value="main" placeholder="Branch">
-      <input id="token" type="password" placeholder="GitHub token: Contents read/write">
-    </div>
-    <p class="small">Token is kept only in this browser tab. Publish commits <code>site-copy.json</code>; pages read it at runtime.</p>
+    <div class="settings"><input id="owner" value="PueoPono" placeholder="GitHub owner"><input id="repo" value="paul-homepage" placeholder="Repo"><input id="branch" value="main" placeholder="Branch"><input id="token" type="password" placeholder="GitHub token: Contents read/write"></div>
+    <p class="small">Token stays in this browser tab. Publish commits <code>site-copy.json</code>; copy/reference notes are for handoff only.</p>
   </aside>
-
   <section class="editor">
-    <div class="toolbar">
-      <h1 id="title">Loading…</h1>
-      <p id="hint"></p>
-      <div class="row">
-        <button class="secondary" id="changedOnly">Changed only</button>
-        <button class="secondary" id="showAll">Show all</button>
-        <button class="primary" id="save">Save local draft</button>
-        <button class="secondary" id="copyRequestTop">Copy agent request</button>
-      </div>
-    </div>
-
-    <details open>
-      <summary>Reference editor / agent instructions</summary>
-      <p class="small">Use this for non-copy requests: layout, images, behavior, links, styling, screenshots, or any context the agent should reference. These notes are included in the copy/paste handoff and are not published to the website.</p>
-      <label for="overallRequest">Overall request / implementation notes</label>
-      <textarea id="overallRequest" placeholder="Example: Make the hero feel warmer; use the attached screenshot as the visual reference; keep the existing section order."></textarea>
-      <label for="pageRequest">Reference notes for this page</label>
-      <textarea id="pageRequest" placeholder="Page-specific notes, visual references, behavior requests, or context for this page."></textarea>
-    </details>
-
-    <div class="row" style="margin-bottom:12px">
-      <button class="secondary" id="exportJson">Export JSON</button>
-      <button class="secondary" id="copyJson">Copy JSON</button>
-      <button class="primary" id="publish">Publish to GitHub</button>
-      <button class="secondary danger" id="reset">Reset local</button>
-    </div>
-    <div class="status" id="status">Ready.</div>
-
-    <h2>Editable copy</h2>
-    <div id="fields"></div>
-
-    <div class="handoffBox">
-      <h2>Copy/paste request for agent</h2>
-      <p class="small">This is the thing to paste to Kukui. It clearly documents text edits and separately lists reference/non-text requests.</p>
-      <div class="row" style="margin-bottom:8px">
-        <button class="primary" id="copyRequest">Copy agent request</button>
-        <button class="secondary" id="refreshRequest">Refresh request text</button>
-        <button class="secondary" id="downloadRequest">Download .md</button>
-      </div>
-      <textarea class="handoff" id="handoff" readonly></textarea>
-    </div>
+    <div class="toolbar"><h1 id="title">Loading…</h1><p id="hint"></p><div class="row"><button class="secondary" id="changedOnly">Changed only</button><button class="secondary" id="showAll">Show all</button><button class="primary" id="save">Save local draft</button><button class="secondary" id="copyRequestTop">Copy agent request</button></div></div>
+    <details open><summary>Reference editor / agent instructions</summary><p class="small">Use this for layout, images, behavior, links, styling, screenshots, or any context the agent should reference.</p><label for="overallRequest">Overall request / implementation notes</label><textarea id="overallRequest" placeholder="Example: Make the hero feel warmer; keep existing section order."></textarea><label for="pageRequest">Reference notes for this page</label><textarea id="pageRequest" placeholder="Page-specific visual, behavior, or context notes."></textarea></details>
+    <div class="selectionBox" id="selectionBox"><h2>Live click selection</h2><p class="small">Click anything in the live site. Text jumps to the editable copy field. Images, sections, buttons, forms, and other assets create a clearly referenced note.</p><div class="meta" id="selectionMeta">No live element selected yet.</div><label for="assetNote">Reference / implementation note for selected asset</label><textarea id="assetNote" placeholder="Example: replace this image; make this section more spacious; update button behavior."></textarea><div class="row" style="margin-top:8px"><button class="primary" id="saveAssetNote">Save referenced asset note</button><button class="secondary" id="clearSelection">Clear selection</button></div></div>
+    <details open><summary>Referenced assets / non-text notes</summary><div id="assetRefs"></div></details>
+    <div class="row" style="margin-bottom:12px"><button class="secondary" id="exportJson">Export JSON</button><button class="secondary" id="copyJson">Copy JSON</button><button class="primary" id="publish">Publish to GitHub</button><button class="secondary danger" id="reset">Reset local</button></div><div class="status" id="status">Ready.</div>
+    <h2>Editable copy</h2><div id="fields"></div>
+    <div class="handoffBox"><h2>Copy/paste request for agent</h2><p class="small">Paste this to Kukui. It separates text edits from referenced live-site asset notes.</p><div class="row" style="margin-bottom:8px"><button class="primary" id="copyRequest">Copy agent request</button><button class="secondary" id="refreshRequest">Refresh request text</button><button class="secondary" id="downloadRequest">Download .md</button></div><textarea class="handoff" id="handoff" readonly></textarea></div>
   </section>
-
-  <main class="preview">
-    <div class="previewHeader"><h1>Live preview</h1><span class="pill" id="previewStatus">Draft preview</span></div>
-    <iframe id="preview" title="Site preview"></iframe>
-  </main>
+  <main class="preview"><div class="previewHeader"><h1>Live site</h1><span class="pill" id="previewStatus">Draft preview</span></div><iframe id="preview" title="Coaching site live editor"></iframe></main>
 </div>
-
 <script>
-const STORAGE_KEY = 'paul-coaching-site-copy-admin-draft';
-const NOTES_KEY = 'paul-coaching-site-copy-admin-reference-notes';
-let state, selectedPage, showChangedOnly = false, query = '', notes = { overall: '', pageNotes: {}, fieldNotes: {} };
-const $ = (id) => document.getElementById(id);
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-const page = () => state.pages[selectedPage];
-const allEntries = () => Object.values(state.pages).flatMap((p) => p.entries || []);
-const changedEntries = () => allEntries().filter((e) => (e.value ?? '') !== (e.original ?? ''));
-const pageUrl = (key) => key === 'index.html' ? '/' : '/' + key;
-
-async function load() {
-  const local = localStorage.getItem(STORAGE_KEY);
-  const rawNotes = localStorage.getItem(NOTES_KEY);
-  if (rawNotes) notes = { ...notes, ...JSON.parse(rawNotes) };
-  state = local ? JSON.parse(local) : await (await fetch('/site-copy.json', { cache: 'no-store' })).json();
-  selectedPage = Object.keys(state.pages)[0];
-  bindStaticHandlers();
-  render();
-}
-function saveDraft() {
-  state.updatedAt = new Date().toISOString();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state, null, 2));
-  localStorage.setItem(NOTES_KEY, JSON.stringify(notes, null, 2));
-}
-function visibleEntries() {
-  let entries = page().entries || [];
-  if (query) {
-    const q = query.toLowerCase();
-    entries = entries.filter((x) => `${x.label} ${x.id} ${x.kind} ${x.original} ${x.value}`.toLowerCase().includes(q));
-  }
-  if (showChangedOnly) entries = entries.filter((x) => (x.value ?? '') !== (x.original ?? ''));
-  return entries;
-}
-function renderPages() {
-  $('pages').innerHTML = Object.entries(state.pages).map(([key, p]) => {
-    const changed = (p.entries || []).filter((e) => (e.value ?? '') !== (e.original ?? '')).length;
-    const note = notes.pageNotes?.[key] ? ' · note' : '';
-    return `<button class="item ${key === selectedPage ? 'active' : ''}" data-page="${esc(key)}">${esc(p.label)}<br><span class="small">${changed} changed / ${(p.entries || []).length} fields${note}</span></button>`;
-  }).join('');
-  document.querySelectorAll('[data-page]').forEach((b) => b.onclick = () => { selectedPage = b.dataset.page; render(); });
-}
-function renderReferenceEditors() {
-  $('overallRequest').value = notes.overall || '';
-  $('pageRequest').value = notes.pageNotes?.[selectedPage] || '';
-}
-function renderFields() {
-  const p = page();
-  $('title').textContent = p.label;
-  $('hint').textContent = `Editing ${selectedPage}. Draft preview uses local changes before publishing. Copy the agent request when you want Kukui to implement changes.`;
-  const entries = visibleEntries();
-  $('fields').innerHTML = entries.map((e) => {
-    const changed = (e.value ?? '') !== (e.original ?? '');
-    const original = String(e.original ?? '');
-    return `<div class="field ${changed ? 'changed' : ''}">
-      <label>${esc(e.label || e.id)}</label>
-      <div class="meta">${esc(e.kind)}${e.attribute ? ' · ' + esc(e.attribute) : ''}${e.name ? ' · ' + esc(e.name) : ''} · <code>${esc(e.id)}</code></div>
-      <textarea data-id="${esc(e.id)}" aria-label="Edit ${esc(e.label || e.id)}">${esc(e.value ?? '')}</textarea>
-      <div class="original"><strong>Original:</strong> ${esc(original.slice(0, 320))}${original.length > 320 ? '…' : ''}</div>
-      <textarea class="fieldNote" data-note-id="${esc(e.id)}" placeholder="Optional reference note for this field: why changed, related visual/behavior request, screenshot reference, etc.">${esc(notes.fieldNotes?.[e.id] || '')}</textarea>
-    </div>`;
-  }).join('') || '<p>No fields match.</p>';
-  document.querySelectorAll('textarea[data-id]').forEach((t) => t.oninput = () => {
-    const ent = allEntries().find((e) => e.id === t.dataset.id);
-    ent.value = t.value;
-    saveDraft();
-    renderPages();
-    updateHandoff();
-    refreshPreview(false);
-  });
-  document.querySelectorAll('textarea[data-note-id]').forEach((t) => t.oninput = () => {
-    notes.fieldNotes[t.dataset.noteId] = t.value;
-    if (!t.value.trim()) delete notes.fieldNotes[t.dataset.noteId];
-    saveDraft();
-    updateHandoff();
-    renderPages();
-  });
-}
-function refreshPreview(reset = true) {
-  saveDraft();
-  const src = pageUrl(selectedPage) + '?site-copy-draft=local&adminPreview=' + Date.now();
-  if (reset) $('preview').src = src;
-  else {
-    clearTimeout(window.__previewTimer);
-    window.__previewTimer = setTimeout(() => { $('preview').src = src; }, 350);
-  }
-}
-function render() {
-  renderPages();
-  renderReferenceEditors();
-  renderFields();
-  updateHandoff();
-  refreshPreview();
-}
-function download(name, text, type = 'text/plain') {
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([text], { type }));
-  a.download = name;
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-function buildHandoff() {
-  const changes = changedEntries();
-  const lines = [];
-  lines.push('# Coaching site change request');
-  lines.push('');
-  lines.push('Site: https://coaching.paulcropper.com');
-  lines.push('Repo: PueoPono/paul-homepage');
-  lines.push(`Generated: ${new Date().toISOString()}`);
-  lines.push('');
-  lines.push('## Request summary / references');
-  const overall = (notes.overall || '').trim();
-  lines.push(overall || '- No overall notes entered.');
-  lines.push('');
-  const pageNotes = Object.entries(notes.pageNotes || {}).filter(([, v]) => String(v || '').trim());
-  lines.push('## Page/reference notes for non-text changes');
-  if (!pageNotes.length) lines.push('- No page-level reference notes entered.');
-  pageNotes.forEach(([key, value]) => lines.push(`- ${state.pages[key]?.label || key} (${key}): ${value.trim().replace(/\n/g, '\n  ')}`));
-  lines.push('');
-  lines.push('## Text copy edits to implement');
-  if (!changes.length) lines.push('- No text/copy field values changed yet.');
-  for (const e of changes) {
-    const p = Object.values(state.pages).find((pg) => (pg.entries || []).some((entry) => entry.id === e.id));
-    const pageKey = p?.path || e.id.split(':')[0];
-    lines.push(`### ${p?.label || pageKey} — ${e.label || e.id}`);
-    lines.push(`- Field ID: ${e.id}`);
-    lines.push(`- Page/file: ${pageKey}`);
-    lines.push(`- Kind: ${e.kind}${e.attribute ? ' / ' + e.attribute : ''}${e.name ? ' / ' + e.name : ''}`);
-    lines.push('- Original:');
-    lines.push('```');
-    lines.push(String(e.original ?? ''));
-    lines.push('```');
-    lines.push('- New:');
-    lines.push('```');
-    lines.push(String(e.value ?? ''));
-    lines.push('```');
-    const note = (notes.fieldNotes?.[e.id] || '').trim();
-    if (note) {
-      lines.push('- Reference note:');
-      lines.push(note);
-    }
-    lines.push('');
-  }
-  const fieldNotes = Object.entries(notes.fieldNotes || {}).filter(([id, v]) => String(v || '').trim() && !changes.some((e) => e.id === id));
-  lines.push('## Field reference notes without text edits');
-  if (!fieldNotes.length) lines.push('- None.');
-  for (const [id, note] of fieldNotes) {
-    const ent = allEntries().find((e) => e.id === id);
-    lines.push(`- ${ent?.label || id} (${id}): ${note.trim().replace(/\n/g, '\n  ')}`);
-  }
-  lines.push('');
-  lines.push('## Implementation instructions');
-  lines.push('- Please implement the text edits above and use the reference notes for layout/image/behavior/other requested changes.');
-  lines.push('- Preserve unrelated site copy and behavior unless explicitly requested above.');
-  lines.push('- Verify the live site/admin after changes.');
-  return lines.join('\n');
-}
-function updateHandoff() {
-  $('handoff').value = buildHandoff();
-}
-async function copyAgentRequest() {
-  updateHandoff();
-  await navigator.clipboard.writeText($('handoff').value);
-  $('status').textContent = 'Agent-ready change request copied. Paste it into chat for implementation.';
-}
-function bindStaticHandlers() {
-  $('search').oninput = (e) => { query = e.target.value; renderFields(); updateHandoff(); };
-  $('changedOnly').onclick = () => { showChangedOnly = true; renderFields(); };
-  $('showAll').onclick = () => { showChangedOnly = false; renderFields(); };
-  $('overallRequest').oninput = (e) => { notes.overall = e.target.value; saveDraft(); updateHandoff(); };
-  $('pageRequest').oninput = (e) => { notes.pageNotes[selectedPage] = e.target.value; if (!e.target.value.trim()) delete notes.pageNotes[selectedPage]; saveDraft(); renderPages(); updateHandoff(); };
-  $('save').onclick = () => { saveDraft(); $('status').textContent = 'Local draft and reference notes saved.'; refreshPreview(); };
-  $('exportJson').onclick = () => download('site-copy.json', JSON.stringify(state, null, 2), 'application/json');
-  $('copyJson').onclick = async () => { await navigator.clipboard.writeText(JSON.stringify(state, null, 2)); $('status').textContent = 'site-copy.json copied.'; };
-  $('copyRequest').onclick = copyAgentRequest;
-  $('copyRequestTop').onclick = copyAgentRequest;
-  $('refreshRequest').onclick = () => { updateHandoff(); $('status').textContent = 'Agent request refreshed.'; };
-  $('downloadRequest').onclick = () => download('coaching-site-change-request.md', buildHandoff(), 'text/markdown');
-  $('reset').onclick = () => { if (confirm('Clear local draft/reference notes and reload published copy?')) { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(NOTES_KEY); location.reload(); } };
-  $('publish').onclick = publishToGithub;
-}
-async function publishToGithub() {
-  try {
-    const owner = $('owner').value.trim(), repo = $('repo').value.trim(), branch = $('branch').value.trim(), token = $('token').value.trim();
-    if (!token) { $('status').textContent = 'Add a GitHub token first.'; return; }
-    $('status').textContent = 'Publishing site-copy.json…';
-    const path = 'site-copy.json';
-    const headers = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' };
-    const current = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, { headers }).then((r) => r.ok ? r.json() : null);
-    const body = { message: 'Update coaching site copy from admin portal', branch, content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2)))) };
-    if (current?.sha) body.sha = current.sha;
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, { method: 'PUT', headers, body: JSON.stringify(body) });
-    if (!res.ok) throw new Error(await res.text());
-    $('status').textContent = 'Published. GitHub Pages may take a minute to update.';
-  } catch (error) {
-    $('status').textContent = 'Publish failed: ' + error.message;
-  }
-}
-load().catch((err) => { $('title').textContent = 'Load failed'; $('status').textContent = err.message; console.error(err); });
+const STORAGE_KEY='paul-coaching-site-copy-admin-draft', NOTES_KEY='paul-coaching-site-copy-admin-reference-notes';let state,selectedPage,showChangedOnly=false,query='',selectedLiveTarget=null,notes={overall:'',pageNotes:{},fieldNotes:{},assetNotes:[]};const $=(id)=>document.getElementById(id);const esc=(s)=>String(s??'').replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));const norm=(s)=>String(s||'').replace(/\s+/g,' ').trim();const page=()=>state.pages[selectedPage];const allEntries=()=>Object.values(state.pages).flatMap((p)=>p.entries||[]);const changedEntries=()=>allEntries().filter((e)=>(e.value??'')!==(e.original??''));const pageUrl=(key)=>key==='index.html'?'/':'/'+key;
+async function load(){const local=localStorage.getItem(STORAGE_KEY),rawNotes=localStorage.getItem(NOTES_KEY);if(rawNotes)notes={...notes,...JSON.parse(rawNotes)};notes.assetNotes||=[];state=local?JSON.parse(local):await(await fetch('/site-copy.json',{cache:'no-store'})).json();selectedPage=Object.keys(state.pages)[0];bindStaticHandlers();render();}
+function saveDraft(){state.updatedAt=new Date().toISOString();localStorage.setItem(STORAGE_KEY,JSON.stringify(state,null,2));localStorage.setItem(NOTES_KEY,JSON.stringify(notes,null,2));}
+function visibleEntries(){let entries=page().entries||[];if(query){const q=query.toLowerCase();entries=entries.filter((x)=>`${x.label} ${x.id} ${x.kind} ${x.original} ${x.value}`.toLowerCase().includes(q));}if(showChangedOnly)entries=entries.filter((x)=>(x.value??'')!==(x.original??''));return entries;}
+function renderPages(){$('pages').innerHTML=Object.entries(state.pages).map(([key,p])=>{const changed=(p.entries||[]).filter((e)=>(e.value??'')!==(e.original??'')).length;const refs=(notes.assetNotes||[]).filter((x)=>x.page===key).length;const note=notes.pageNotes?.[key]?' · page note':'';return `<button class="item ${key===selectedPage?'active':''}" data-page="${esc(key)}">${esc(p.label)}<br><span class="small">${changed} changed / ${(p.entries||[]).length} fields · ${refs} refs${note}</span></button>`;}).join('');document.querySelectorAll('[data-page]').forEach((b)=>b.onclick=()=>{selectedPage=b.dataset.page;selectedLiveTarget=null;render();});}
+function renderReferenceEditors(){$('overallRequest').value=notes.overall||'';$('pageRequest').value=notes.pageNotes?.[selectedPage]||'';}
+function renderFields(){const p=page();$('title').textContent=p.label;$('hint').textContent=`Editing ${selectedPage}. Click live text/assets in the right pane, or edit fields here.`;const entries=visibleEntries();$('fields').innerHTML=entries.map((e)=>{const changed=(e.value??'')!==(e.original??'');const selected=selectedLiveTarget?.entryId===e.id;return `<div class="field ${changed||selected?'changed':''}"><label>${esc(e.label||e.id)}</label><div class="meta">${esc(e.kind)}${e.attribute?' · '+esc(e.attribute):''}${e.name?' · '+esc(e.name):''} · <code>${esc(e.id)}</code></div><textarea data-id="${esc(e.id)}" aria-label="Edit ${esc(e.label||e.id)}">${esc(e.value??'')}</textarea><div class="original"><strong>Original:</strong> ${esc(String(e.original??'').slice(0,320))}</div><textarea class="fieldNote" data-note-id="${esc(e.id)}" placeholder="Optional reference note for this field">${esc(notes.fieldNotes?.[e.id]||'')}</textarea></div>`;}).join('')||'<p>No fields match.</p>';document.querySelectorAll('textarea[data-id]').forEach((t)=>t.oninput=()=>{const ent=allEntries().find((e)=>e.id===t.dataset.id);ent.value=t.value;saveDraft();renderPages();updateHandoff();refreshPreview(false);});document.querySelectorAll('textarea[data-note-id]').forEach((t)=>t.oninput=()=>{notes.fieldNotes[t.dataset.noteId]=t.value;if(!t.value.trim())delete notes.fieldNotes[t.dataset.noteId];saveDraft();updateHandoff();renderPages();});}
+function refreshPreview(reset=true){saveDraft();const src=pageUrl(selectedPage)+'?site-copy-draft=local&adminPreview='+Date.now();if(reset){$('preview').src=src;$('preview').onload=()=>setTimeout(installPreviewClickCapture,100);}else{clearTimeout(window.__previewTimer);window.__previewTimer=setTimeout(()=>{$('preview').src=src;},350);}}
+function render(){renderPages();renderReferenceEditors();renderFields();renderAssetRefs();updateSelectionBox();updateHandoff();refreshPreview();}
+function download(name,text,type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();URL.revokeObjectURL(a.href);}
+function cssPath(el){const parts=[];for(let node=el;node&&node.nodeType===1&&node.tagName!=='HTML';node=node.parentElement){let part=node.tagName.toLowerCase();if(node.id){part+='#'+CSS.escape(node.id);parts.unshift(part);break;}const cls=[...node.classList].filter((c)=>c!=='liveSelected').slice(0,2).map((c)=>'.'+CSS.escape(c)).join('');if(cls)part+=cls;const parent=node.parentElement;if(parent){const same=[...parent.children].filter((x)=>x.tagName===node.tagName);if(same.length>1)part+=`:nth-of-type(${same.indexOf(node)+1})`;}parts.unshift(part);if(parts.length>=5)break;}return parts.join(' > ');}
+function entryForElement(el){const text=norm(el.innerText||el.textContent||'');if(!text)return null;const entries=page().entries||[];return entries.find((e)=>e.kind==='text'&&norm(e.value)===text)||entries.find((e)=>e.kind==='text'&&norm(e.original)===text)||entries.find((e)=>e.kind==='text'&&text.includes(norm(e.value))&&norm(e.value).length>10)||entries.find((e)=>e.kind==='text'&&text.includes(norm(e.original))&&norm(e.original).length>10);}
+function describeLiveElement(el){const tag=el.tagName.toLowerCase(),img=tag==='img'?el:el.querySelector?.('img'),link=tag==='a'?el:el.closest?.('a'),text=norm(el.innerText||el.getAttribute('aria-label')||el.getAttribute('alt')||'');return{page:selectedPage,tag,selector:cssPath(el),role:el.getAttribute('role')||'',label:text.slice(0,90)||el.getAttribute('aria-label')||el.getAttribute('alt')||tag,text:text.slice(0,240),href:link?.getAttribute('href')||'',src:img?.getAttribute('src')||'',alt:img?.getAttribute('alt')||''};}
+function clearLiveHighlights(){try{$('preview').contentDocument.querySelectorAll('.liveSelected').forEach((el)=>el.classList.remove('liveSelected'));}catch{}}
+function installPreviewClickCapture(){const frame=$('preview'),doc=frame.contentDocument;if(!doc||doc.__copyAdminCapture)return;doc.__copyAdminCapture=true;doc.addEventListener('click',(event)=>{const raw=event.target?.nodeType===1?event.target:event.target?.parentElement;const el=raw?.closest?.('a,button,img,p,h1,h2,h3,h4,h5,h6,li,blockquote,label,input,textarea,select,form,section,article,figure,div')||raw;if(!el)return;event.preventDefault();event.stopPropagation();clearLiveHighlights();el.classList.add('liveSelected');const entry=entryForElement(el);if(entry){selectedLiveTarget={type:'text',entryId:entry.id,...describeLiveElement(el)};showChangedOnly=false;renderFields();setTimeout(()=>{const field=document.querySelector(`textarea[data-id="${CSS.escape(entry.id)}"]`);field?.scrollIntoView({behavior:'smooth',block:'center'});field?.focus();},40);$('status').textContent=`Selected editable text: ${entry.label||entry.id}`;}else{selectedLiveTarget={type:'asset',...describeLiveElement(el)};$('assetNote').focus();$('status').textContent='Selected live asset/reference target. Add note and save it.';}updateSelectionBox();},true);}
+function updateSelectionBox(){$('selectionBox').classList.toggle('active',!!selectedLiveTarget);if(!selectedLiveTarget){$('selectionMeta').textContent='No live element selected yet.';return;}const t=selectedLiveTarget;$('selectionMeta').innerHTML=`${esc(t.type.toUpperCase())} · ${esc(t.label||t.entryId||t.tag)}<br><code>${esc(t.selector||'')}</code>${t.entryId?'<br><code>'+esc(t.entryId)+'</code>':''}`;}
+function saveSelectedAssetNote(){if(!selectedLiveTarget){$('status').textContent='Click an asset in the live site first.';return;}const note=$('assetNote').value.trim();if(!note){$('status').textContent='Enter a reference note first.';return;}notes.assetNotes=(notes.assetNotes||[]);notes.assetNotes.push({...selectedLiveTarget,note,savedAt:new Date().toISOString()});$('assetNote').value='';saveDraft();renderAssetRefs();renderPages();updateHandoff();$('status').textContent='Referenced asset note saved into the pasteable document.';}
+function renderAssetRefs(){const refs=(notes.assetNotes||[]).filter((x)=>x.page===selectedPage);$('assetRefs').innerHTML=refs.length?refs.map((x,i)=>`<div class="assetRef"><div class="meta"><strong>${esc(x.label||x.tag)}</strong><br><code>${esc(x.selector)}</code>${x.src?'<br>src: <code>'+esc(x.src)+'</code>':''}${x.href?'<br>href: <code>'+esc(x.href)+'</code>':''}</div><p>${esc(x.note)}</p><button class="danger" data-delete-asset="${i}">Delete</button></div>`).join(''):'<p class="small">No referenced assets saved for this page yet.</p>';document.querySelectorAll('[data-delete-asset]').forEach((b)=>b.onclick=()=>{const pageRefs=(notes.assetNotes||[]).filter((x)=>x.page===selectedPage),target=pageRefs[Number(b.dataset.deleteAsset)];notes.assetNotes=(notes.assetNotes||[]).filter((x)=>x!==target);saveDraft();renderAssetRefs();renderPages();updateHandoff();});}
+function buildHandoff(){const lines=[],changes=changedEntries();lines.push('# Coaching site change request','','Site: https://coaching.paulcropper.com','Repo: PueoPono/paul-homepage',`Generated: ${new Date().toISOString()}`,'','## Request summary / references',(notes.overall||'').trim()||'- No overall notes entered.','');const pageNotes=Object.entries(notes.pageNotes||{}).filter(([,v])=>String(v||'').trim());lines.push('## Page/reference notes for non-text changes');if(!pageNotes.length)lines.push('- No page-level reference notes entered.');pageNotes.forEach(([key,value])=>lines.push(`- ${state.pages[key]?.label||key} (${key}): ${value.trim().replace(/\n/g,'\n  ')}`));lines.push('','## Text copy edits to implement');if(!changes.length)lines.push('- No text/copy field values changed yet.');for(const e of changes){const p=Object.values(state.pages).find((pg)=>(pg.entries||[]).some((entry)=>entry.id===e.id));const pageKey=p?.path||e.id.split(':')[0];lines.push(`### ${p?.label||pageKey} — ${e.label||e.id}`,`- Field ID: ${e.id}`,`- Page/file: ${pageKey}`,`- Kind: ${e.kind}${e.attribute?' / '+e.attribute:''}${e.name?' / '+e.name:''}`,'- Original:','```',String(e.original??''),'```','- New:','```',String(e.value??''),'```');const note=(notes.fieldNotes?.[e.id]||'').trim();if(note)lines.push('- Reference note:',note);lines.push('');}const fieldNotes=Object.entries(notes.fieldNotes||{}).filter(([id,v])=>String(v||'').trim()&&!changes.some((e)=>e.id===id));lines.push('## Field reference notes without text edits');if(!fieldNotes.length)lines.push('- None.');for(const[id,note]of fieldNotes){const ent=allEntries().find((e)=>e.id===id);lines.push(`- ${ent?.label||id} (${id}): ${note.trim().replace(/\n/g,'\n  ')}`);}lines.push('','## Referenced live-site assets / non-text implementation notes');const assetNotes=(notes.assetNotes||[]).filter((x)=>String(x.note||'').trim());if(!assetNotes.length)lines.push('- None.');for(const item of assetNotes){lines.push(`### ${state.pages[item.page]?.label||item.page} — ${item.label||item.tag}`,`- Page/file: ${item.page}`,`- Selector: ${item.selector}`,`- Element: ${item.tag}${item.role?' / role='+item.role:''}`);if(item.href)lines.push(`- href: ${item.href}`);if(item.src)lines.push(`- src: ${item.src}`);if(item.alt)lines.push(`- alt: ${item.alt}`);if(item.text)lines.push(`- visible text: ${item.text}`);lines.push('- Request/reference note:',item.note.trim(),'');}lines.push('## Implementation instructions','- Please implement the text edits above and use referenced asset notes for layout/image/behavior/style changes.','- Preserve unrelated site copy and behavior unless explicitly requested above.','- Verify the live site/admin after changes.');return lines.join('\n');}
+function updateHandoff(){$('handoff').value=buildHandoff();}
+async function copyAgentRequest(){updateHandoff();await navigator.clipboard.writeText($('handoff').value);$('status').textContent='Agent-ready change request copied. Paste it into chat for implementation.';}
+function bindStaticHandlers(){$('search').oninput=(e)=>{query=e.target.value;renderFields();updateHandoff();};$('changedOnly').onclick=()=>{showChangedOnly=true;renderFields();};$('showAll').onclick=()=>{showChangedOnly=false;renderFields();};$('overallRequest').oninput=(e)=>{notes.overall=e.target.value;saveDraft();updateHandoff();};$('pageRequest').oninput=(e)=>{notes.pageNotes[selectedPage]=e.target.value;if(!e.target.value.trim())delete notes.pageNotes[selectedPage];saveDraft();renderPages();updateHandoff();};$('save').onclick=()=>{saveDraft();$('status').textContent='Local draft and reference notes saved.';refreshPreview();};$('exportJson').onclick=()=>download('site-copy.json',JSON.stringify(state,null,2),'application/json');$('copyJson').onclick=async()=>{await navigator.clipboard.writeText(JSON.stringify(state,null,2));$('status').textContent='site-copy.json copied.';};$('copyRequest').onclick=copyAgentRequest;$('copyRequestTop').onclick=copyAgentRequest;$('refreshRequest').onclick=()=>{updateHandoff();$('status').textContent='Agent request refreshed.';};$('downloadRequest').onclick=()=>download('coaching-site-change-request.md',buildHandoff(),'text/markdown');$('reset').onclick=()=>{if(confirm('Clear local draft/reference notes and reload published copy?')){localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(NOTES_KEY);location.reload();}};$('publish').onclick=publishToGithub;$('saveAssetNote').onclick=saveSelectedAssetNote;$('clearSelection').onclick=()=>{selectedLiveTarget=null;$('assetNote').value='';updateSelectionBox();clearLiveHighlights();};}
+async function publishToGithub(){try{const owner=$('owner').value.trim(),repo=$('repo').value.trim(),branch=$('branch').value.trim(),token=$('token').value.trim();if(!token){$('status').textContent='Add a GitHub token first.';return;}$('status').textContent='Publishing site-copy.json…';const path='site-copy.json',headers={Authorization:`Bearer ${token}`,Accept:'application/vnd.github+json','Content-Type':'application/json'};const current=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`,{headers}).then((r)=>r.ok?r.json():null);const body={message:'Update coaching site copy from admin portal',branch,content:btoa(unescape(encodeURIComponent(JSON.stringify(state,null,2))))};if(current?.sha)body.sha=current.sha;const res=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`,{method:'PUT',headers,body:JSON.stringify(body)});if(!res.ok)throw new Error(await res.text());$('status').textContent='Published. GitHub Pages may take a minute to update.';}catch(error){$('status').textContent='Publish failed: '+error.message;}}
+load().catch((err)=>{$('title').textContent='Load failed';$('status').textContent=err.message;console.error(err);});
 </script>
 </body>
 </html>
