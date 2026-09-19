@@ -5,33 +5,286 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coaching Site Copy Admin</title>
   <style>
-    :root{--bg:#09131d;--panel:#102132;--panel2:#0c1926;--line:rgba(226,180,96,.24);--text:#f7efe2;--muted:rgba(247,239,226,.68);--gold:#e7b766;--gold2:#ffd999;--blue:#7ba7c7;}
-    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,rgba(231,183,102,.12),transparent 32%),linear-gradient(180deg,#07111b,#0b1723 42%,#08111b);color:var(--text);font:14px/1.45 Inter,system-ui,sans-serif} button,input,textarea{font:inherit} .app{min-height:100vh;display:grid;grid-template-columns:300px 440px minmax(0,1fr)} aside,.editor{background:rgba(16,33,50,.92);border-right:1px solid var(--line);overflow:auto}.nav,.editor{padding:16px}.preview{padding:16px;background:rgba(7,17,27,.72)} h1{font-size:18px;margin:0 0 8px;color:var(--gold2)} h2{font-size:15px;margin:18px 0 8px;color:var(--gold)} p{color:var(--muted);margin:0 0 12px}.item{width:100%;text-align:left;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;cursor:pointer;margin:0 0 8px}.item.active{background:rgba(231,183,102,.13);border-color:rgba(231,183,102,.45)} .row{display:flex;gap:8px;flex-wrap:wrap}.field{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px;margin:0 0 10px;background:rgba(255,255,255,.035)} label{display:block;color:var(--gold2);font-size:12px;letter-spacing:.02em;margin-bottom:6px}.meta{font-size:11px;color:var(--muted);margin-bottom:8px;word-break:break-word} textarea,input{width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.22);color:var(--text);padding:10px 12px} textarea{min-height:86px;resize:vertical}.actions{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(16,33,50,.6),var(--panel));padding:12px 0 0;margin-top:12px} .primary{border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer;background:linear-gradient(180deg,#ffe0a1,#d79b42);color:#1b1008}.secondary{border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;background:rgba(255,255,255,.06);color:var(--text)} .danger{border-color:rgba(255,99,99,.35);color:#ffd1d1}.status{margin-top:10px;color:var(--muted);font-size:12px}.preview iframe{width:100%;height:calc(100vh - 34px);border:1px solid var(--line);border-radius:18px;background:white}.settings{display:grid;gap:8px}.small{font-size:12px}.search{margin:12px 0}@media(max-width:1150px){.app{grid-template-columns:1fr}.preview iframe{height:70vh} aside,.editor{border-right:0;border-bottom:1px solid var(--line)}}
+    :root{--bg:#09131d;--panel:#102132;--panel2:#0c1926;--line:rgba(226,180,96,.24);--text:#f7efe2;--muted:rgba(247,239,226,.68);--gold:#e7b766;--gold2:#ffd999;--blue:#7ba7c7;--danger:#f08b8b;--ok:#98d7a5}
+    *{box-sizing:border-box} html,body{height:100%} body{margin:0;background:radial-gradient(circle at top left,rgba(231,183,102,.12),transparent 32%),linear-gradient(180deg,#07111b,#0b1723 42%,#08111b);color:var(--text);font:14px/1.45 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,textarea{font:inherit} button{cursor:pointer} code{color:var(--gold2)}
+    .app{min-height:100vh;display:grid;grid-template-columns:300px minmax(500px,620px) minmax(0,1fr)}
+    aside,.editor{background:rgba(16,33,50,.92);border-right:1px solid var(--line);overflow:auto}.nav,.editor,.preview{padding:16px}.preview{background:rgba(7,17,27,.72);overflow:hidden}
+    h1{font-size:18px;margin:0 0 8px;color:var(--gold2)} h2{font-size:15px;margin:18px 0 8px;color:var(--gold)} h3{font-size:13px;margin:14px 0 6px;color:var(--gold2)} p{color:var(--muted);margin:0 0 12px}.small,.meta{font-size:12px;color:var(--muted)}
+    .item{width:100%;text-align:left;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;margin:0 0 8px}.item.active{border-color:var(--gold);background:rgba(231,183,102,.12)}
+    input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(3,9,15,.66);color:var(--text);padding:10px 12px;outline:none} textarea{min-height:96px;resize:vertical}.search{margin:8px 0 14px}.settings{display:grid;gap:8px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.toolbar{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,rgba(16,33,50,.98),rgba(16,33,50,.92));padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:12px}
+    button{border:1px solid var(--line);border-radius:12px;color:var(--text);background:rgba(255,255,255,.05);padding:9px 12px}button.primary{background:linear-gradient(180deg,#d4a954,#9d7130);border-color:rgba(255,217,153,.55);color:#12100b;font-weight:700}button.secondary{background:rgba(255,255,255,.04)}button.danger{border-color:rgba(240,139,139,.45);color:#ffd8d8}.status{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.16);color:var(--muted)}
+    .field,.referenceBox,.handoffBox{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);padding:12px;margin:0 0 12px}.field.changed{border-color:rgba(231,183,102,.55);background:rgba(231,183,102,.08)}label{display:block;color:var(--gold2);font-weight:700;margin-bottom:6px}.original{max-height:72px;overflow:auto;border-left:2px solid var(--line);padding-left:8px;margin-top:8px;color:var(--muted);font-size:12px}.fieldNote{min-height:62px;margin-top:8px}.note{color:var(--blue)}
+    details{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 12px;background:rgba(0,0,0,.12)}summary{cursor:pointer;color:var(--gold2);font-weight:700}.handoff{min-height:260px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;white-space:pre}.previewHeader{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.preview iframe, iframe#preview{width:100%;height:calc(100vh - 78px);border:1px solid var(--line);border-radius:18px;background:white}.pill{display:inline-flex;gap:4px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--muted);font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:1100px){.app{grid-template-columns:1fr}.preview iframe{height:70vh}.toolbar{position:static}}
   </style>
 </head>
 <body data-copy-admin-root>
 <div class="app">
-  <aside class="nav"><h1>Coaching Copy Admin</h1><p>Vector Pilot style: page list, editable copy fields, local drafts, live preview, export, and GitHub publish.</p><input class="search" id="search" placeholder="Search copy…" /><div id="pages"></div><h2>Publish settings</h2><div class="settings"><input id="owner" value="PueoPono" placeholder="GitHub owner"><input id="repo" value="paul-homepage" placeholder="Repo"><input id="branch" value="main" placeholder="Branch"><input id="token" type="password" placeholder="GitHub token: Contents read/write"></div><p class="small">Token is kept only in this browser tab. Publish commits <code>site-copy.json</code>; pages read it at runtime.</p></aside>
-  <section class="editor"><h1 id="title">Loading…</h1><p id="hint"></p><div class="row"><button class="secondary" id="collapse">Changed only</button><button class="secondary" id="expand">Show all</button></div><div id="fields"></div><div class="actions"><div class="row"><button class="primary" id="save">Save local draft</button><button class="secondary" id="export">Export JSON</button><button class="secondary" id="copy">Copy JSON</button><button class="primary" id="publish">Publish to GitHub</button><button class="secondary danger" id="reset">Reset local</button></div><div class="status" id="status">Ready.</div></div></section>
-  <main class="preview"><iframe id="preview" title="Site preview"></iframe></main>
+  <aside class="nav">
+    <h1>Coaching Copy Admin</h1>
+    <p>Vector Pilot style editor with local drafts, live preview, GitHub publish, and a clean agent handoff you can paste into chat.</p>
+    <input class="search" id="search" placeholder="Search copy…" />
+    <div id="pages"></div>
+    <h2>Publish settings</h2>
+    <div class="settings">
+      <input id="owner" value="PueoPono" placeholder="GitHub owner">
+      <input id="repo" value="paul-homepage" placeholder="Repo">
+      <input id="branch" value="main" placeholder="Branch">
+      <input id="token" type="password" placeholder="GitHub token: Contents read/write">
+    </div>
+    <p class="small">Token is kept only in this browser tab. Publish commits <code>site-copy.json</code>; pages read it at runtime.</p>
+  </aside>
+
+  <section class="editor">
+    <div class="toolbar">
+      <h1 id="title">Loading…</h1>
+      <p id="hint"></p>
+      <div class="row">
+        <button class="secondary" id="changedOnly">Changed only</button>
+        <button class="secondary" id="showAll">Show all</button>
+        <button class="primary" id="save">Save local draft</button>
+        <button class="secondary" id="copyRequestTop">Copy agent request</button>
+      </div>
+    </div>
+
+    <details open>
+      <summary>Reference editor / agent instructions</summary>
+      <p class="small">Use this for non-copy requests: layout, images, behavior, links, styling, screenshots, or any context the agent should reference. These notes are included in the copy/paste handoff and are not published to the website.</p>
+      <label for="overallRequest">Overall request / implementation notes</label>
+      <textarea id="overallRequest" placeholder="Example: Make the hero feel warmer; use the attached screenshot as the visual reference; keep the existing section order."></textarea>
+      <label for="pageRequest">Reference notes for this page</label>
+      <textarea id="pageRequest" placeholder="Page-specific notes, visual references, behavior requests, or context for this page."></textarea>
+    </details>
+
+    <div class="row" style="margin-bottom:12px">
+      <button class="secondary" id="exportJson">Export JSON</button>
+      <button class="secondary" id="copyJson">Copy JSON</button>
+      <button class="primary" id="publish">Publish to GitHub</button>
+      <button class="secondary danger" id="reset">Reset local</button>
+    </div>
+    <div class="status" id="status">Ready.</div>
+
+    <h2>Editable copy</h2>
+    <div id="fields"></div>
+
+    <div class="handoffBox">
+      <h2>Copy/paste request for agent</h2>
+      <p class="small">This is the thing to paste to Kukui. It clearly documents text edits and separately lists reference/non-text requests.</p>
+      <div class="row" style="margin-bottom:8px">
+        <button class="primary" id="copyRequest">Copy agent request</button>
+        <button class="secondary" id="refreshRequest">Refresh request text</button>
+        <button class="secondary" id="downloadRequest">Download .md</button>
+      </div>
+      <textarea class="handoff" id="handoff" readonly></textarea>
+    </div>
+  </section>
+
+  <main class="preview">
+    <div class="previewHeader"><h1>Live preview</h1><span class="pill" id="previewStatus">Draft preview</span></div>
+    <iframe id="preview" title="Site preview"></iframe>
+  </main>
 </div>
+
 <script>
-const STORAGE_KEY='paul-coaching-site-copy-admin-draft'; let state,selectedPage,showChangedOnly=false,query='';
-const $=id=>document.getElementById(id); const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-async function load(){const local=localStorage.getItem(STORAGE_KEY); state=local?JSON.parse(local):await (await fetch('/site-copy.json',{cache:'no-store'})).json(); selectedPage=Object.keys(state.pages)[0]; render();}
-function page(){return state.pages[selectedPage]} function allEntries(){return Object.values(state.pages).flatMap(p=>p.entries||[])}
-function visibleEntries(){let e=page().entries||[]; if(query) e=e.filter(x=>`${x.label} ${x.original} ${x.value}`.toLowerCase().includes(query.toLowerCase())); if(showChangedOnly) e=e.filter(x=>x.value!==x.original); return e;}
-function renderPages(){ $('pages').innerHTML=Object.entries(state.pages).map(([key,p])=>`<button class="item ${key===selectedPage?'active':''}" data-page="${key}">${esc(p.label)}<br><span class="small">${(p.entries||[]).filter(e=>e.value!==e.original).length} changed / ${(p.entries||[]).length} fields</span></button>`).join(''); document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{selectedPage=b.dataset.page; render();});}
-function renderFields(){const p=page(); $('title').textContent=p.label; $('hint').textContent=`Editing ${selectedPage}. Draft preview uses local changes before publishing.`; $('fields').innerHTML=visibleEntries().map(e=>`<div class="field"><label>${esc(e.label||e.id)}</label><div class="meta">${esc(e.kind)}${e.attribute?' · '+esc(e.attribute):''}${e.name?' · '+esc(e.name):''} · ${esc(e.id)}</div><textarea data-id="${esc(e.id)}">${esc(e.value??'')}</textarea><div class="meta">Original: ${esc((e.original||'').slice(0,240))}${(e.original||'').length>240?'…':''}</div></div>`).join('')||'<p>No fields match.</p>'; document.querySelectorAll('textarea[data-id]').forEach(t=>t.oninput=()=>{const ent=allEntries().find(e=>e.id===t.dataset.id); ent.value=t.value; state.updatedAt=new Date().toISOString(); localStorage.setItem(STORAGE_KEY,JSON.stringify(state,null,2)); renderPages(); refreshPreview(false);});}
-function refreshPreview(reset=true){localStorage.setItem(STORAGE_KEY,JSON.stringify(state,null,2)); const src='/' + selectedPage + '?site-copy-draft=local&adminPreview=' + Date.now(); if(reset) $('preview').src=src; else {clearTimeout(window.__pvt); window.__pvt=setTimeout(()=>$('preview').src=src,350);}}
-function render(){renderPages();renderFields();refreshPreview();}
-function download(name,text){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'application/json'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}
-$('search').oninput=e=>{query=e.target.value;renderFields()}; $('collapse').onclick=()=>{showChangedOnly=true;renderFields()}; $('expand').onclick=()=>{showChangedOnly=false;renderFields()};
-$('save').onclick=()=>{localStorage.setItem(STORAGE_KEY,JSON.stringify(state,null,2));$('status').textContent='Local draft saved.';refreshPreview();};
-$('export').onclick=()=>download('site-copy.json',JSON.stringify(state,null,2)); $('copy').onclick=async()=>{await navigator.clipboard.writeText(JSON.stringify(state,null,2));$('status').textContent='JSON copied.'};
-$('reset').onclick=()=>{if(confirm('Clear local draft and reload published copy?')){localStorage.removeItem(STORAGE_KEY);location.reload();}};
-$('publish').onclick=async()=>{try{const owner=$('owner').value.trim(),repo=$('repo').value.trim(),branch=$('branch').value.trim(),token=$('token').value.trim(); if(!token){$('status').textContent='Add a GitHub token first.';return} $('status').textContent='Publishing site-copy.json…'; const path='site-copy.json'; const headers={Authorization:`Bearer ${token}`,Accept:'application/vnd.github+json','Content-Type':'application/json'}; const current=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`,{headers}).then(r=>r.ok?r.json():null); const body={message:'Update coaching site copy from admin portal',branch,content:btoa(unescape(encodeURIComponent(JSON.stringify(state,null,2))))}; if(current?.sha) body.sha=current.sha; const res=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`,{method:'PUT',headers,body:JSON.stringify(body)}); const data=await res.json(); if(!res.ok) throw new Error(data.message||'Publish failed'); $('status').textContent=`Published ${data.commit?.sha?.slice(0,7)||''}. GitHub Pages will update shortly.`;}catch(err){$('status').textContent=err.message;}};
-load().catch(err=>{$('title').textContent='Load failed';$('status').textContent=err.message;});
+const STORAGE_KEY = 'paul-coaching-site-copy-admin-draft';
+const NOTES_KEY = 'paul-coaching-site-copy-admin-reference-notes';
+let state, selectedPage, showChangedOnly = false, query = '', notes = { overall: '', pageNotes: {}, fieldNotes: {} };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const page = () => state.pages[selectedPage];
+const allEntries = () => Object.values(state.pages).flatMap((p) => p.entries || []);
+const changedEntries = () => allEntries().filter((e) => (e.value ?? '') !== (e.original ?? ''));
+const pageUrl = (key) => key === 'index.html' ? '/' : '/' + key;
+
+async function load() {
+  const local = localStorage.getItem(STORAGE_KEY);
+  const rawNotes = localStorage.getItem(NOTES_KEY);
+  if (rawNotes) notes = { ...notes, ...JSON.parse(rawNotes) };
+  state = local ? JSON.parse(local) : await (await fetch('/site-copy.json', { cache: 'no-store' })).json();
+  selectedPage = Object.keys(state.pages)[0];
+  bindStaticHandlers();
+  render();
+}
+function saveDraft() {
+  state.updatedAt = new Date().toISOString();
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state, null, 2));
+  localStorage.setItem(NOTES_KEY, JSON.stringify(notes, null, 2));
+}
+function visibleEntries() {
+  let entries = page().entries || [];
+  if (query) {
+    const q = query.toLowerCase();
+    entries = entries.filter((x) => `${x.label} ${x.id} ${x.kind} ${x.original} ${x.value}`.toLowerCase().includes(q));
+  }
+  if (showChangedOnly) entries = entries.filter((x) => (x.value ?? '') !== (x.original ?? ''));
+  return entries;
+}
+function renderPages() {
+  $('pages').innerHTML = Object.entries(state.pages).map(([key, p]) => {
+    const changed = (p.entries || []).filter((e) => (e.value ?? '') !== (e.original ?? '')).length;
+    const note = notes.pageNotes?.[key] ? ' · note' : '';
+    return `<button class="item ${key === selectedPage ? 'active' : ''}" data-page="${esc(key)}">${esc(p.label)}<br><span class="small">${changed} changed / ${(p.entries || []).length} fields${note}</span></button>`;
+  }).join('');
+  document.querySelectorAll('[data-page]').forEach((b) => b.onclick = () => { selectedPage = b.dataset.page; render(); });
+}
+function renderReferenceEditors() {
+  $('overallRequest').value = notes.overall || '';
+  $('pageRequest').value = notes.pageNotes?.[selectedPage] || '';
+}
+function renderFields() {
+  const p = page();
+  $('title').textContent = p.label;
+  $('hint').textContent = `Editing ${selectedPage}. Draft preview uses local changes before publishing. Copy the agent request when you want Kukui to implement changes.`;
+  const entries = visibleEntries();
+  $('fields').innerHTML = entries.map((e) => {
+    const changed = (e.value ?? '') !== (e.original ?? '');
+    const original = String(e.original ?? '');
+    return `<div class="field ${changed ? 'changed' : ''}">
+      <label>${esc(e.label || e.id)}</label>
+      <div class="meta">${esc(e.kind)}${e.attribute ? ' · ' + esc(e.attribute) : ''}${e.name ? ' · ' + esc(e.name) : ''} · <code>${esc(e.id)}</code></div>
+      <textarea data-id="${esc(e.id)}" aria-label="Edit ${esc(e.label || e.id)}">${esc(e.value ?? '')}</textarea>
+      <div class="original"><strong>Original:</strong> ${esc(original.slice(0, 320))}${original.length > 320 ? '…' : ''}</div>
+      <textarea class="fieldNote" data-note-id="${esc(e.id)}" placeholder="Optional reference note for this field: why changed, related visual/behavior request, screenshot reference, etc.">${esc(notes.fieldNotes?.[e.id] || '')}</textarea>
+    </div>`;
+  }).join('') || '<p>No fields match.</p>';
+  document.querySelectorAll('textarea[data-id]').forEach((t) => t.oninput = () => {
+    const ent = allEntries().find((e) => e.id === t.dataset.id);
+    ent.value = t.value;
+    saveDraft();
+    renderPages();
+    updateHandoff();
+    refreshPreview(false);
+  });
+  document.querySelectorAll('textarea[data-note-id]').forEach((t) => t.oninput = () => {
+    notes.fieldNotes[t.dataset.noteId] = t.value;
+    if (!t.value.trim()) delete notes.fieldNotes[t.dataset.noteId];
+    saveDraft();
+    updateHandoff();
+    renderPages();
+  });
+}
+function refreshPreview(reset = true) {
+  saveDraft();
+  const src = pageUrl(selectedPage) + '?site-copy-draft=local&adminPreview=' + Date.now();
+  if (reset) $('preview').src = src;
+  else {
+    clearTimeout(window.__previewTimer);
+    window.__previewTimer = setTimeout(() => { $('preview').src = src; }, 350);
+  }
+}
+function render() {
+  renderPages();
+  renderReferenceEditors();
+  renderFields();
+  updateHandoff();
+  refreshPreview();
+}
+function download(name, text, type = 'text/plain') {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], { type }));
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+function buildHandoff() {
+  const changes = changedEntries();
+  const lines = [];
+  lines.push('# Coaching site change request');
+  lines.push('');
+  lines.push('Site: https://coaching.paulcropper.com');
+  lines.push('Repo: PueoPono/paul-homepage');
+  lines.push(`Generated: ${new Date().toISOString()}`);
+  lines.push('');
+  lines.push('## Request summary / references');
+  const overall = (notes.overall || '').trim();
+  lines.push(overall || '- No overall notes entered.');
+  lines.push('');
+  const pageNotes = Object.entries(notes.pageNotes || {}).filter(([, v]) => String(v || '').trim());
+  lines.push('## Page/reference notes for non-text changes');
+  if (!pageNotes.length) lines.push('- No page-level reference notes entered.');
+  pageNotes.forEach(([key, value]) => lines.push(`- ${state.pages[key]?.label || key} (${key}): ${value.trim().replace(/\n/g, '\n  ')}`));
+  lines.push('');
+  lines.push('## Text copy edits to implement');
+  if (!changes.length) lines.push('- No text/copy field values changed yet.');
+  for (const e of changes) {
+    const p = Object.values(state.pages).find((pg) => (pg.entries || []).some((entry) => entry.id === e.id));
+    const pageKey = p?.path || e.id.split(':')[0];
+    lines.push(`### ${p?.label || pageKey} — ${e.label || e.id}`);
+    lines.push(`- Field ID: ${e.id}`);
+    lines.push(`- Page/file: ${pageKey}`);
+    lines.push(`- Kind: ${e.kind}${e.attribute ? ' / ' + e.attribute : ''}${e.name ? ' / ' + e.name : ''}`);
+    lines.push('- Original:');
+    lines.push('```');
+    lines.push(String(e.original ?? ''));
+    lines.push('```');
+    lines.push('- New:');
+    lines.push('```');
+    lines.push(String(e.value ?? ''));
+    lines.push('```');
+    const note = (notes.fieldNotes?.[e.id] || '').trim();
+    if (note) {
+      lines.push('- Reference note:');
+      lines.push(note);
+    }
+    lines.push('');
+  }
+  const fieldNotes = Object.entries(notes.fieldNotes || {}).filter(([id, v]) => String(v || '').trim() && !changes.some((e) => e.id === id));
+  lines.push('## Field reference notes without text edits');
+  if (!fieldNotes.length) lines.push('- None.');
+  for (const [id, note] of fieldNotes) {
+    const ent = allEntries().find((e) => e.id === id);
+    lines.push(`- ${ent?.label || id} (${id}): ${note.trim().replace(/\n/g, '\n  ')}`);
+  }
+  lines.push('');
+  lines.push('## Implementation instructions');
+  lines.push('- Please implement the text edits above and use the reference notes for layout/image/behavior/other requested changes.');
+  lines.push('- Preserve unrelated site copy and behavior unless explicitly requested above.');
+  lines.push('- Verify the live site/admin after changes.');
+  return lines.join('\n');
+}
+function updateHandoff() {
+  $('handoff').value = buildHandoff();
+}
+async function copyAgentRequest() {
+  updateHandoff();
+  await navigator.clipboard.writeText($('handoff').value);
+  $('status').textContent = 'Agent-ready change request copied. Paste it into chat for implementation.';
+}
+function bindStaticHandlers() {
+  $('search').oninput = (e) => { query = e.target.value; renderFields(); updateHandoff(); };
+  $('changedOnly').onclick = () => { showChangedOnly = true; renderFields(); };
+  $('showAll').onclick = () => { showChangedOnly = false; renderFields(); };
+  $('overallRequest').oninput = (e) => { notes.overall = e.target.value; saveDraft(); updateHandoff(); };
+  $('pageRequest').oninput = (e) => { notes.pageNotes[selectedPage] = e.target.value; if (!e.target.value.trim()) delete notes.pageNotes[selectedPage]; saveDraft(); renderPages(); updateHandoff(); };
+  $('save').onclick = () => { saveDraft(); $('status').textContent = 'Local draft and reference notes saved.'; refreshPreview(); };
+  $('exportJson').onclick = () => download('site-copy.json', JSON.stringify(state, null, 2), 'application/json');
+  $('copyJson').onclick = async () => { await navigator.clipboard.writeText(JSON.stringify(state, null, 2)); $('status').textContent = 'site-copy.json copied.'; };
+  $('copyRequest').onclick = copyAgentRequest;
+  $('copyRequestTop').onclick = copyAgentRequest;
+  $('refreshRequest').onclick = () => { updateHandoff(); $('status').textContent = 'Agent request refreshed.'; };
+  $('downloadRequest').onclick = () => download('coaching-site-change-request.md', buildHandoff(), 'text/markdown');
+  $('reset').onclick = () => { if (confirm('Clear local draft/reference notes and reload published copy?')) { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(NOTES_KEY); location.reload(); } };
+  $('publish').onclick = publishToGithub;
+}
+async function publishToGithub() {
+  try {
+    const owner = $('owner').value.trim(), repo = $('repo').value.trim(), branch = $('branch').value.trim(), token = $('token').value.trim();
+    if (!token) { $('status').textContent = 'Add a GitHub token first.'; return; }
+    $('status').textContent = 'Publishing site-copy.json…';
+    const path = 'site-copy.json';
+    const headers = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' };
+    const current = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, { headers }).then((r) => r.ok ? r.json() : null);
+    const body = { message: 'Update coaching site copy from admin portal', branch, content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2)))) };
+    if (current?.sha) body.sha = current.sha;
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, { method: 'PUT', headers, body: JSON.stringify(body) });
+    if (!res.ok) throw new Error(await res.text());
+    $('status').textContent = 'Published. GitHub Pages may take a minute to update.';
+  } catch (error) {
+    $('status').textContent = 'Publish failed: ' + error.message;
+  }
+}
+load().catch((err) => { $('title').textContent = 'Load failed'; $('status').textContent = err.message; console.error(err); });
 </script>
 </body>
 </html>
