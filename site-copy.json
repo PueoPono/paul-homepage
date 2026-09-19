@@ -1,0 +1,2905 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-19T07:46:37Z",
+  "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
+  "pages": {
+    "index.html": {
+      "label": "Home",
+      "path": "index.html",
+      "entries": [
+        {
+          "id": "index.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Men's Health | Vitality Coaching",
+          "value": "Men's Health | Vitality Coaching"
+        },
+        {
+          "id": "index.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "index.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Integrated Heart & Vitality — complete wellness to help you thrive with the body, heart, and mind.",
+          "value": "Integrated Heart & Vitality — complete wellness to help you thrive with the body, heart, and mind.",
+          "name": "description"
+        },
+        {
+          "id": "index.html:meta:4",
+          "label": "Meta og:title",
+          "kind": "meta",
+          "original": "Men",
+          "value": "Men",
+          "name": "og:title"
+        },
+        {
+          "id": "index.html:meta:5",
+          "label": "Meta og:description",
+          "kind": "meta",
+          "original": "Complete Wellness — Thrive with the Body, Heart, and Mind.",
+          "value": "Complete Wellness — Thrive with the Body, Heart, and Mind.",
+          "name": "og:description"
+        },
+        {
+          "id": "index.html:meta:6",
+          "label": "Meta og:type",
+          "kind": "meta",
+          "original": "website",
+          "value": "website",
+          "name": "og:type"
+        },
+        {
+          "id": "index.html:meta:7",
+          "label": "Meta og:image",
+          "kind": "meta",
+          "original": "assets/branding/canvas-sunset-background.svg",
+          "value": "assets/branding/canvas-sunset-background.svg",
+          "name": "og:image"
+        },
+        {
+          "id": "index.html:attribute:8",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "index.html:attribute:9",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "index.html:attribute:10",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "index.html:attribute:11",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "index.html:attribute:12",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Canvas sunset background",
+          "value": "Canvas sunset background",
+          "attribute": "alt"
+        },
+        {
+          "id": "index.html:attribute:13",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "index.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vitality w/ Paul",
+          "value": "Vitality w/ Paul"
+        },
+        {
+          "id": "index.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "index.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "index.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "index.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "index.html:text:19",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "index.html:text:20",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "index.html:text:21",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "index.html:text:22",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Align the Heart. Train and Enjoy the Body. Calm the Mind.",
+          "value": "Align the Heart. Train and Enjoy the Body. Calm the Mind."
+        },
+        {
+          "id": "index.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "Dr. Paul, PhD",
+          "value": "Dr. Paul, PhD"
+        },
+        {
+          "id": "index.html:text:24",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "The future is brilliant, beautiful and full of life... if we make it so.",
+          "value": "The future is brilliant, beautiful and full of life... if we make it so."
+        },
+        {
+          "id": "index.html:text:25",
+          "label": "A text",
+          "kind": "text",
+          "original": "Explore the Path",
+          "value": "Explore the Path"
+        },
+        {
+          "id": "index.html:text:26",
+          "label": "LI text",
+          "kind": "text",
+          "original": "We can revitalize our bodies, and live with vitality and strength, like never before.",
+          "value": "We can revitalize our bodies, and live with vitality and strength, like never before."
+        },
+        {
+          "id": "index.html:text:27",
+          "label": "LI text",
+          "kind": "text",
+          "original": "We can strengthen our Hearts, and learn to enjoy... because enjoying life is both a skill and a muscle.",
+          "value": "We can strengthen our Hearts, and learn to enjoy... because enjoying life is both a skill and a muscle."
+        },
+        {
+          "id": "index.html:text:28",
+          "label": "LI text",
+          "kind": "text",
+          "original": "And what we create INSIDE, can be reflected OUTSIDE, as we care for people, places and things around us.",
+          "value": "And what we create INSIDE, can be reflected OUTSIDE, as we care for people, places and things around us."
+        },
+        {
+          "id": "index.html:text:29",
+          "label": "LI text",
+          "kind": "text",
+          "original": "I’m here to support your journey to your best life, your healthiest self, your happiest heart.",
+          "value": "I’m here to support your journey to your best life, your healthiest self, your happiest heart."
+        },
+        {
+          "id": "index.html:text:30",
+          "label": "BLOCKQUOTE text",
+          "kind": "text",
+          "original": "“Speak to Paul, he will absolutely change your life, I guarantee it.” Scott Anthony · Australia",
+          "value": "“Speak to Paul, he will absolutely change your life, I guarantee it.” Scott Anthony · Australia"
+        },
+        {
+          "id": "index.html:text:31",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Integrated heart and vitality, an intention and path for wholeness and healing.",
+          "value": "Integrated heart and vitality, an intention and path for wholeness and healing."
+        },
+        {
+          "id": "index.html:text:32",
+          "label": "P text",
+          "kind": "text",
+          "original": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart. It supports the body, mind, and your relationship with all around you.",
+          "value": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart. It supports the body, mind, and your relationship with all around you."
+        },
+        {
+          "id": "index.html:text:33",
+          "label": "A text",
+          "kind": "text",
+          "original": "Explore the coaching path",
+          "value": "Explore the coaching path"
+        },
+        {
+          "id": "index.html:text:34",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "1.",
+          "value": "1."
+        },
+        {
+          "id": "index.html:text:35",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Heart",
+          "value": "Heart"
+        },
+        {
+          "id": "index.html:text:36",
+          "label": "P text",
+          "kind": "text",
+          "original": "Learn to honestly shift the stories in your heart, and access the intuition & wisdom locked deep in your heart and subconscious.",
+          "value": "Learn to honestly shift the stories in your heart, and access the intuition & wisdom locked deep in your heart and subconscious."
+        },
+        {
+          "id": "index.html:text:37",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "2.",
+          "value": "2."
+        },
+        {
+          "id": "index.html:text:38",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Body",
+          "value": "Body"
+        },
+        {
+          "id": "index.html:text:39",
+          "label": "P text",
+          "kind": "text",
+          "original": "As a Phd researcher, I bring you nutrition and movement coaching - and we fine tune it for you. We must learn to revitalize the whole system inside and out.",
+          "value": "As a Phd researcher, I bring you nutrition and movement coaching - and we fine tune it for you. We must learn to revitalize the whole system inside and out."
+        },
+        {
+          "id": "index.html:text:40",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "3.",
+          "value": "3."
+        },
+        {
+          "id": "index.html:text:41",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Mind",
+          "value": "Mind"
+        },
+        {
+          "id": "index.html:text:42",
+          "label": "P text",
+          "kind": "text",
+          "original": "The mind can be a powerful ally, but is a cruel master. Learn to calm the mind- this is a key to internal peace and vitality.",
+          "value": "The mind can be a powerful ally, but is a cruel master. Learn to calm the mind- this is a key to internal peace and vitality."
+        },
+        {
+          "id": "index.html:text:43",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "4.",
+          "value": "4."
+        },
+        {
+          "id": "index.html:text:44",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Emotion",
+          "value": "Emotion"
+        },
+        {
+          "id": "index.html:text:45",
+          "label": "P text",
+          "kind": "text",
+          "original": "An important part of this work is emotional alchemy, as you learn to truly shift mental-emotional states and not just suppress them.",
+          "value": "An important part of this work is emotional alchemy, as you learn to truly shift mental-emotional states and not just suppress them."
+        },
+        {
+          "id": "index.html:text:46",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "5.",
+          "value": "5."
+        },
+        {
+          "id": "index.html:text:47",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Wholeness",
+          "value": "Wholeness"
+        },
+        {
+          "id": "index.html:text:48",
+          "label": "P text",
+          "kind": "text",
+          "original": "The journey to right relationship with self and other is ongoing! And it's core to your evolution and wholeness.",
+          "value": "The journey to right relationship with self and other is ongoing! And it's core to your evolution and wholeness."
+        },
+        {
+          "id": "index.html:text:49",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "What this path can begin to restore.",
+          "value": "What this path can begin to restore."
+        },
+        {
+          "id": "index.html:text:50",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Where do you want to go next?",
+          "value": "Where do you want to go next?"
+        },
+        {
+          "id": "index.html:text:51",
+          "label": "A text",
+          "kind": "text",
+          "original": "Open page",
+          "value": "Open page"
+        },
+        {
+          "id": "index.html:text:52",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "index.html:text:53",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "work-with-paul.html": {
+      "label": "Work With Me",
+      "path": "work-with-paul.html",
+      "entries": [
+        {
+          "id": "work-with-paul.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Work With Paul | Integrated Heart & Vitality",
+          "value": "Work With Paul | Integrated Heart & Vitality"
+        },
+        {
+          "id": "work-with-paul.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "work-with-paul.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Integrated Heart & Vitality — complete wellness support to help you thrive with the body, heart, and mind.",
+          "value": "Integrated Heart & Vitality — complete wellness support to help you thrive with the body, heart, and mind.",
+          "name": "description"
+        },
+        {
+          "id": "work-with-paul.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "work-with-paul.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "work-with-paul.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "work-with-paul.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "work-with-paul.html:attribute:8",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Sky image for Work With Me page",
+          "value": "Sky image for Work With Me page",
+          "attribute": "alt"
+        },
+        {
+          "id": "work-with-paul.html:attribute:9",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "work-with-paul.html:text:10",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "work-with-paul.html:text:11",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "work-with-paul.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "work-with-paul.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "About",
+          "value": "About"
+        },
+        {
+          "id": "work-with-paul.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "work-with-paul.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ",
+          "value": "FAQ"
+        },
+        {
+          "id": "work-with-paul.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "Testimonials",
+          "value": "Testimonials"
+        },
+        {
+          "id": "work-with-paul.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "work-with-paul.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "work-with-paul.html:text:19",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Support for people ready to live with more wholeness, vitality, and honesty.",
+          "value": "Support for people ready to live with more wholeness, vitality, and honesty."
+        },
+        {
+          "id": "work-with-paul.html:text:20",
+          "label": "P text",
+          "kind": "text",
+          "original": "Placeholder invitation copy. Calm, grounded, and clear. This page should feel like a safe doorway into working together, not a pressure page.",
+          "value": "Placeholder invitation copy. Calm, grounded, and clear. This page should feel like a safe doorway into working together, not a pressure page."
+        },
+        {
+          "id": "work-with-paul.html:text:21",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "If you’re here, some part of you is ready for a more whole way of living.",
+          "value": "If you’re here, some part of you is ready for a more whole way of living."
+        },
+        {
+          "id": "work-with-paul.html:text:22",
+          "label": "LI text",
+          "kind": "text",
+          "original": "You want support for the body, heart, and mind.",
+          "value": "You want support for the body, heart, and mind."
+        },
+        {
+          "id": "work-with-paul.html:text:23",
+          "label": "LI text",
+          "kind": "text",
+          "original": "You are tired of fragmented growth.",
+          "value": "You are tired of fragmented growth."
+        },
+        {
+          "id": "work-with-paul.html:text:24",
+          "label": "LI text",
+          "kind": "text",
+          "original": "You want honesty, vitality, and grounded change.",
+          "value": "You want honesty, vitality, and grounded change."
+        },
+        {
+          "id": "work-with-paul.html:text:25",
+          "label": "LI text",
+          "kind": "text",
+          "original": "You want guidance that includes both inner and outer life.",
+          "value": "You want guidance that includes both inner and outer life."
+        },
+        {
+          "id": "work-with-paul.html:text:26",
+          "label": "BLOCKQUOTE text",
+          "kind": "text",
+          "original": "Wherever you are on your path, I am here to support you. – Dr. Paul",
+          "value": "Wherever you are on your path, I am here to support you. – Dr. Paul"
+        },
+        {
+          "id": "work-with-paul.html:text:27",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "A coaching path that meets real life.",
+          "value": "A coaching path that meets real life."
+        },
+        {
+          "id": "work-with-paul.html:text:28",
+          "label": "P text",
+          "kind": "text",
+          "original": "I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully.",
+          "value": "I bring integrated heart and vitality coaching, with tools both ancient and modern for health and wellness, so you can live your life more fully."
+        },
+        {
+          "id": "work-with-paul.html:text:29",
+          "label": "A text",
+          "kind": "text",
+          "original": "Begin the conversation",
+          "value": "Begin the conversation"
+        },
+        {
+          "id": "work-with-paul.html:text:30",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "1.",
+          "value": "1."
+        },
+        {
+          "id": "work-with-paul.html:text:31",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Heart",
+          "value": "Heart"
+        },
+        {
+          "id": "work-with-paul.html:text:32",
+          "label": "P text",
+          "kind": "text",
+          "original": "Your Heart is your subconscious mind. Healing with the heart is usually the part everyone misses.",
+          "value": "Your Heart is your subconscious mind. Healing with the heart is usually the part everyone misses."
+        },
+        {
+          "id": "work-with-paul.html:text:33",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "2.",
+          "value": "2."
+        },
+        {
+          "id": "work-with-paul.html:text:34",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Vitality",
+          "value": "Vitality"
+        },
+        {
+          "id": "work-with-paul.html:text:35",
+          "label": "P text",
+          "kind": "text",
+          "original": "Vitalism is the science of sustaining vitality. Support your life force, energy, and physical wellbeing.",
+          "value": "Vitalism is the science of sustaining vitality. Support your life force, energy, and physical wellbeing."
+        },
+        {
+          "id": "work-with-paul.html:text:36",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "3.",
+          "value": "3."
+        },
+        {
+          "id": "work-with-paul.html:text:37",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Awareness",
+          "value": "Awareness"
+        },
+        {
+          "id": "work-with-paul.html:text:38",
+          "label": "P text",
+          "kind": "text",
+          "original": "Meet yourself and your relations with more honesty and consciousness.",
+          "value": "Meet yourself and your relations with more honesty and consciousness."
+        },
+        {
+          "id": "work-with-paul.html:text:39",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "4.",
+          "value": "4."
+        },
+        {
+          "id": "work-with-paul.html:text:40",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Integration",
+          "value": "Integration"
+        },
+        {
+          "id": "work-with-paul.html:text:41",
+          "label": "P text",
+          "kind": "text",
+          "original": "Integration is simple yet ongoing- it must be prioritized. We must pause and allow the system to integrate. Let our hard work bear fruits!",
+          "value": "Integration is simple yet ongoing- it must be prioritized. We must pause and allow the system to integrate. Let our hard work bear fruits!"
+        },
+        {
+          "id": "work-with-paul.html:text:42",
+          "label": "SPAN text",
+          "kind": "text",
+          "original": "5.",
+          "value": "5."
+        },
+        {
+          "id": "work-with-paul.html:text:43",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Wholeness",
+          "value": "Wholeness"
+        },
+        {
+          "id": "work-with-paul.html:text:44",
+          "label": "P text",
+          "kind": "text",
+          "original": "The moment you can accept everything exactly as it is, is the moment you know your wholeness. And from there... we grow :)",
+          "value": "The moment you can accept everything exactly as it is, is the moment you know your wholeness. And from there... we grow :)"
+        },
+        {
+          "id": "work-with-paul.html:text:45",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "What support can make possible.",
+          "value": "What support can make possible."
+        },
+        {
+          "id": "work-with-paul.html:text:46",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "work-with-paul.html:text:47",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "mission.html": {
+      "label": "Coaching",
+      "path": "mission.html",
+      "entries": [
+        {
+          "id": "mission.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "About Coaching | Integrated Heart & Vitality",
+          "value": "About Coaching | Integrated Heart & Vitality"
+        },
+        {
+          "id": "mission.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "mission.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "About coaching with Integrated Heart & Vitality — complete wellness through health in body, heart, and mind.",
+          "value": "About coaching with Integrated Heart & Vitality — complete wellness through health in body, heart, and mind.",
+          "name": "description"
+        },
+        {
+          "id": "mission.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "mission.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "mission.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "mission.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "mission.html:attribute:8",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Brand texture",
+          "value": "Brand texture",
+          "attribute": "alt"
+        },
+        {
+          "id": "mission.html:attribute:9",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "White masculine heart arrow logo",
+          "value": "White masculine heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "mission.html:attribute:10",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Paul Cropper portrait",
+          "value": "Paul Cropper portrait",
+          "attribute": "alt"
+        },
+        {
+          "id": "mission.html:attribute:11",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "mission.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "mission.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "mission.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "mission.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "mission.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "mission.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "mission.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "mission.html:text:19",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "mission.html:text:20",
+          "label": "P text",
+          "kind": "text",
+          "original": "About Coaching",
+          "value": "About Coaching"
+        },
+        {
+          "id": "mission.html:text:21",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Integrated Heart & Vitality Coaching is offered to support your individuation journey.",
+          "value": "Integrated Heart & Vitality Coaching is offered to support your individuation journey."
+        },
+        {
+          "id": "mission.html:text:22",
+          "label": "P text",
+          "kind": "text",
+          "original": "Growth and Vitality which includes the Heart, is about seeing with compassion and honesty to the deepest layers of our Self.",
+          "value": "Growth and Vitality which includes the Heart, is about seeing with compassion and honesty to the deepest layers of our Self."
+        },
+        {
+          "id": "mission.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "Core idea",
+          "value": "Core idea"
+        },
+        {
+          "id": "mission.html:text:24",
+          "label": "P text",
+          "kind": "text",
+          "original": "Our wholeness, must be guided by our greater awareness of Self. Integrating this intention into our work sets us up for ongoing success and wellness in life. Most doctors and coaches do no have the patience for this, the time, or training. And that's where this coaching approach differs from most of what you'll see.",
+          "value": "Our wholeness, must be guided by our greater awareness of Self. Integrating this intention into our work sets us up for ongoing success and wellness in life. Most doctors and coaches do no have the patience for this, the time, or training. And that's where this coaching approach differs from most of what you'll see."
+        },
+        {
+          "id": "mission.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "About section 1",
+          "value": "About section 1"
+        },
+        {
+          "id": "mission.html:text:26",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "A healthier heart and life asks more of us that surface fixes.",
+          "value": "A healthier heart and life asks more of us that surface fixes."
+        },
+        {
+          "id": "mission.html:text:27",
+          "label": "P text",
+          "kind": "text",
+          "original": "The holistic journey to health and happiness is what our predecessors sought and taught, but we have lost that way. Even Hippocrates was a Holistic, but we have moved very far away from Holistic Health & Wellness. This work is rooted in the belief that people become whole through integration and untangling the full (very complex!) human.",
+          "value": "The holistic journey to health and happiness is what our predecessors sought and taught, but we have lost that way. Even Hippocrates was a Holistic, but we have moved very far away from Holistic Health & Wellness. This work is rooted in the belief that people become whole through integration and untangling the full (very complex!) human."
+        },
+        {
+          "id": "mission.html:text:28",
+          "label": "P text",
+          "kind": "text",
+          "original": "Your wholeness is my purpose and goal. And for that, you need a working understanding of your Heart.",
+          "value": "Your wholeness is my purpose and goal. And for that, you need a working understanding of your Heart."
+        },
+        {
+          "id": "mission.html:text:29",
+          "label": "BLOCKQUOTE text",
+          "kind": "text",
+          "original": "Broken hearts don't work. So what do we do? We fix them.",
+          "value": "Broken hearts don't work. So what do we do? We fix them."
+        },
+        {
+          "id": "mission.html:text:30",
+          "label": "CITE text",
+          "kind": "text",
+          "original": "-Dr. Paul, PhD",
+          "value": "-Dr. Paul, PhD"
+        },
+        {
+          "id": "mission.html:text:31",
+          "label": "P text",
+          "kind": "text",
+          "original": "About section 2",
+          "value": "About section 2"
+        },
+        {
+          "id": "mission.html:text:32",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "The deeper alternative",
+          "value": "The deeper alternative"
+        },
+        {
+          "id": "mission.html:text:33",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "The Masculine Heart",
+          "value": "The Masculine Heart"
+        },
+        {
+          "id": "mission.html:text:34",
+          "label": "P text",
+          "kind": "text",
+          "original": "To work at a deep level, we must work and understand the world of archetypes. In work with Men, the Masculine Heart archetype is the development of mature masculinity. The concept develops the hearts of men, and is a medicine of it's own kind.",
+          "value": "To work at a deep level, we must work and understand the world of archetypes. In work with Men, the Masculine Heart archetype is the development of mature masculinity. The concept develops the hearts of men, and is a medicine of it's own kind."
+        },
+        {
+          "id": "mission.html:text:35",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Body",
+          "value": "Body"
+        },
+        {
+          "id": "mission.html:text:36",
+          "label": "P text",
+          "kind": "text",
+          "original": "Feeling good in the body cannot be underestimated. Through natural methods, and mindful movement, both ancient and scientifically backed, we support the bodies innate wisdom to heal and thrive. This is core to our coaching work together.",
+          "value": "Feeling good in the body cannot be underestimated. Through natural methods, and mindful movement, both ancient and scientifically backed, we support the bodies innate wisdom to heal and thrive. This is core to our coaching work together."
+        },
+        {
+          "id": "mission.html:text:37",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Mind",
+          "value": "Mind"
+        },
+        {
+          "id": "mission.html:text:38",
+          "label": "P text",
+          "kind": "text",
+          "original": "Cultivating states of mind is necessary for growth and a healthy life. Qi Gong, and other aspects of meditation and awareness as principle tools used in the coaching journey.",
+          "value": "Cultivating states of mind is necessary for growth and a healthy life. Qi Gong, and other aspects of meditation and awareness as principle tools used in the coaching journey."
+        },
+        {
+          "id": "mission.html:text:39",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Emotion",
+          "value": "Emotion"
+        },
+        {
+          "id": "mission.html:text:40",
+          "label": "P text",
+          "kind": "text",
+          "original": "Most of us in modern culture think we are dealing with emotions when we are really just pushing them away. A piece of this work is emotional alchemy — learning how to truly shift emotional states instead of suppressing them.",
+          "value": "Most of us in modern culture think we are dealing with emotions when we are really just pushing them away. A piece of this work is emotional alchemy — learning how to truly shift emotional states instead of suppressing them."
+        },
+        {
+          "id": "mission.html:text:41",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Literacy",
+          "value": "Literacy"
+        },
+        {
+          "id": "mission.html:text:42",
+          "label": "P text",
+          "kind": "text",
+          "original": "Emotional literacy and energy literacy are paramount for our growth and evolution. We'll work on these too.",
+          "value": "Emotional literacy and energy literacy are paramount for our growth and evolution. We'll work on these too."
+        },
+        {
+          "id": "mission.html:text:43",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Power of the Sub-conscious",
+          "value": "Power of the Sub-conscious"
+        },
+        {
+          "id": "mission.html:text:44",
+          "label": "P text",
+          "kind": "text",
+          "original": "I find it very likely, that when we reference the power of the Human Heart, it is analogous to our sub-conscious Mind, and leads to a certain quality of intuition. The sub-conscious processes a billion times more information than the conscious mind... Thus we must clear our internal lens, and learn to access the Heart and the wealth of utility that is there.",
+          "value": "I find it very likely, that when we reference the power of the Human Heart, it is analogous to our sub-conscious Mind, and leads to a certain quality of intuition. The sub-conscious processes a billion times more information than the conscious mind... Thus we must clear our internal lens, and learn to access the Heart and the wealth of utility that is there."
+        },
+        {
+          "id": "mission.html:text:45",
+          "label": "P text",
+          "kind": "text",
+          "original": "About section 3",
+          "value": "About section 3"
+        },
+        {
+          "id": "mission.html:text:46",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "A hero’s journey toward integration",
+          "value": "A hero’s journey toward integration"
+        },
+        {
+          "id": "mission.html:text:47",
+          "label": "P text",
+          "kind": "text",
+          "original": "For some of our indigenous ancestors, a man connecting to his heart was part of his rite of passage into manhood. This work draws from that deeper remembering while also using modern tools, insight, and practice. The aim is not performance for its own sake, but a fuller, steadier, and more whole life.",
+          "value": "For some of our indigenous ancestors, a man connecting to his heart was part of his rite of passage into manhood. This work draws from that deeper remembering while also using modern tools, insight, and practice. The aim is not performance for its own sake, but a fuller, steadier, and more whole life."
+        },
+        {
+          "id": "mission.html:text:48",
+          "label": "P text",
+          "kind": "text",
+          "original": "Wherever you are on your path, this work is here to support you.",
+          "value": "Wherever you are on your path, this work is here to support you."
+        },
+        {
+          "id": "mission.html:text:49",
+          "label": "P text",
+          "kind": "text",
+          "original": "When it comes down to it, being healthy is about being as sexy as you possibly can be in every way: a happy heart is sexy, a body cared for is sexy, a mind that is curious and innovative in its own unique way is super sexy. And that’s it. Our journey is that simple. ;)",
+          "value": "When it comes down to it, being healthy is about being as sexy as you possibly can be in every way: a happy heart is sexy, a body cared for is sexy, a mind that is curious and innovative in its own unique way is super sexy. And that’s it. Our journey is that simple. ;)"
+        },
+        {
+          "id": "mission.html:text:50",
+          "label": "A text",
+          "kind": "text",
+          "original": "Explore Coaching",
+          "value": "Explore Coaching"
+        },
+        {
+          "id": "mission.html:text:51",
+          "label": "A text",
+          "kind": "text",
+          "original": "Read My Story",
+          "value": "Read My Story"
+        },
+        {
+          "id": "mission.html:text:52",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "mission.html:text:53",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "mission.html:text:54",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "my-story.html": {
+      "label": "My Story",
+      "path": "my-story.html",
+      "entries": [
+        {
+          "id": "my-story.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "My Story | Paul Cropper",
+          "value": "My Story | Paul Cropper"
+        },
+        {
+          "id": "my-story.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "my-story.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Paul Cropper",
+          "value": "Paul Cropper",
+          "name": "description"
+        },
+        {
+          "id": "my-story.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "my-story.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "my-story.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "my-story.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "my-story.html:attribute:8",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Warm gold background",
+          "value": "Warm gold background",
+          "attribute": "alt"
+        },
+        {
+          "id": "my-story.html:attribute:9",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Paul Cropper portrait",
+          "value": "Paul Cropper portrait",
+          "attribute": "alt"
+        },
+        {
+          "id": "my-story.html:attribute:10",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Branding mood image",
+          "value": "Branding mood image",
+          "attribute": "alt"
+        },
+        {
+          "id": "my-story.html:attribute:11",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "my-story.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "my-story.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "my-story.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "my-story.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "my-story.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "my-story.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "my-story.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "my-story.html:text:19",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "my-story.html:text:20",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Aloha from the Big Island of Hawaii.",
+          "value": "Aloha from the Big Island of Hawaii."
+        },
+        {
+          "id": "my-story.html:text:21",
+          "label": "P text",
+          "kind": "text",
+          "original": "Paul here, or Pauko on the Island. And I bring you integrated heart and vitality coaching, with tools both ancient and modern for health and wellness. My aim is your vitality and wellness, as well as lofty goals of making our home and planet as beautiful and healthy as it can be.",
+          "value": "Paul here, or Pauko on the Island. And I bring you integrated heart and vitality coaching, with tools both ancient and modern for health and wellness. My aim is your vitality and wellness, as well as lofty goals of making our home and planet as beautiful and healthy as it can be."
+        },
+        {
+          "id": "my-story.html:text:22",
+          "label": "P text",
+          "kind": "text",
+          "original": "Story section 1",
+          "value": "Story section 1"
+        },
+        {
+          "id": "my-story.html:text:23",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "I knew things were out of balance because...",
+          "value": "I knew things were out of balance because..."
+        },
+        {
+          "id": "my-story.html:text:24",
+          "label": "LI text",
+          "kind": "text",
+          "original": "I came to realize I had turned off my heart completely.",
+          "value": "I came to realize I had turned off my heart completely."
+        },
+        {
+          "id": "my-story.html:text:25",
+          "label": "LI text",
+          "kind": "text",
+          "original": "I had serious physical problems, and Modern healthcare was not offering the full answer.",
+          "value": "I had serious physical problems, and Modern healthcare was not offering the full answer."
+        },
+        {
+          "id": "my-story.html:text:26",
+          "label": "LI text",
+          "kind": "text",
+          "original": "My mind was losing it's sharpness.",
+          "value": "My mind was losing it's sharpness."
+        },
+        {
+          "id": "my-story.html:text:27",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Wholeness through the Holistic had to become the path.",
+          "value": "Wholeness through the Holistic had to become the path."
+        },
+        {
+          "id": "my-story.html:text:28",
+          "label": "LI text",
+          "kind": "text",
+          "original": "The result of my processes and path, has been a peace, presence and vitality I am here to promote and teach.",
+          "value": "The result of my processes and path, has been a peace, presence and vitality I am here to promote and teach."
+        },
+        {
+          "id": "my-story.html:text:29",
+          "label": "P text",
+          "kind": "text",
+          "original": "Story section 2",
+          "value": "Story section 2"
+        },
+        {
+          "id": "my-story.html:text:30",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "The personal struggle",
+          "value": "The personal struggle"
+        },
+        {
+          "id": "my-story.html:text:31",
+          "label": "P text",
+          "kind": "text",
+          "original": "From my work and research, I came to believe the heart is central to our emotional and energetic life. Healing with the heart is not separate from physical health or mental clarity. It is key to both.",
+          "value": "From my work and research, I came to believe the heart is central to our emotional and energetic life. Healing with the heart is not separate from physical health or mental clarity. It is key to both."
+        },
+        {
+          "id": "my-story.html:text:32",
+          "label": "P text",
+          "kind": "text",
+          "original": "I have also lived through my own real initiations: working through kidney issues and chronic fatigue, navigating divorce, and learning again and again that honest inner work must meet practical physical care.",
+          "value": "I have also lived through my own real initiations: working through kidney issues and chronic fatigue, navigating divorce, and learning again and again that honest inner work must meet practical physical care."
+        },
+        {
+          "id": "my-story.html:text:33",
+          "label": "P text",
+          "kind": "text",
+          "original": "That is part of why this work is integrated. It is not only insight. It is lived practice.",
+          "value": "That is part of why this work is integrated. It is not only insight. It is lived practice."
+        },
+        {
+          "id": "my-story.html:text:34",
+          "label": "BLOCKQUOTE text",
+          "kind": "text",
+          "original": "Your heart is real. Your heart is in part the subconscious stories that are driving your life",
+          "value": "Your heart is real. Your heart is in part the subconscious stories that are driving your life"
+        },
+        {
+          "id": "my-story.html:text:35",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Qualifications & practices",
+          "value": "Qualifications & practices"
+        },
+        {
+          "id": "my-story.html:text:36",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Herbalist",
+          "value": "Herbalist"
+        },
+        {
+          "id": "my-story.html:text:37",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Life Coach",
+          "value": "Life Coach"
+        },
+        {
+          "id": "my-story.html:text:38",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Qi Gong Practitioner",
+          "value": "Qi Gong Practitioner"
+        },
+        {
+          "id": "my-story.html:text:39",
+          "label": "LI text",
+          "kind": "text",
+          "original": "PhD Chemist, now translated toward research for healthy people and a healthy planet",
+          "value": "PhD Chemist, now translated toward research for healthy people and a healthy planet"
+        },
+        {
+          "id": "my-story.html:text:40",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Men's work facilitator",
+          "value": "Men's work facilitator"
+        },
+        {
+          "id": "my-story.html:text:41",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Men's coach",
+          "value": "Men's coach"
+        },
+        {
+          "id": "my-story.html:text:42",
+          "label": "LI text",
+          "kind": "text",
+          "original": "Author of The Archetype of the Masculine Heart (book soon available)",
+          "value": "Author of The Archetype of the Masculine Heart (book soon available)"
+        },
+        {
+          "id": "my-story.html:text:43",
+          "label": "P text",
+          "kind": "text",
+          "original": "Story section 3",
+          "value": "Story section 3"
+        },
+        {
+          "id": "my-story.html:text:44",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Asking for help, rebuilding, integrating",
+          "value": "Asking for help, rebuilding, integrating"
+        },
+        {
+          "id": "my-story.html:text:45",
+          "label": "P text",
+          "kind": "text",
+          "original": "Part of my work is to support you in going within. Part of my work is to support your physical and exterior health as well. That bridge between inner and outer healing is what shapes the work.",
+          "value": "Part of my work is to support you in going within. Part of my work is to support your physical and exterior health as well. That bridge between inner and outer healing is what shapes the work."
+        },
+        {
+          "id": "my-story.html:text:46",
+          "label": "P text",
+          "kind": "text",
+          "original": "Wherever you are on your path, you do not have to walk it alone.",
+          "value": "Wherever you are on your path, you do not have to walk it alone."
+        },
+        {
+          "id": "my-story.html:text:47",
+          "label": "A text",
+          "kind": "text",
+          "original": "Read the About",
+          "value": "Read the About"
+        },
+        {
+          "id": "my-story.html:text:48",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "my-story.html:text:49",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "my-story.html:text:50",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "faq.html": {
+      "label": "FAQ & Testimonials",
+      "path": "faq.html",
+      "entries": [
+        {
+          "id": "faq.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "FAQ | Integrated Heart & Vitality",
+          "value": "FAQ | Integrated Heart & Vitality"
+        },
+        {
+          "id": "faq.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "faq.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Frequently asked questions about Integrated Heart & Vitality and complete wellness coaching with Paul Cropper.",
+          "value": "Frequently asked questions about Integrated Heart & Vitality and complete wellness coaching with Paul Cropper.",
+          "name": "description"
+        },
+        {
+          "id": "faq.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "faq.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "faq.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "faq.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "faq.html:attribute:8",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Scott testimonial photo",
+          "value": "Scott testimonial photo",
+          "attribute": "alt"
+        },
+        {
+          "id": "faq.html:attribute:9",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Dave testimonial photo",
+          "value": "Dave testimonial photo",
+          "attribute": "alt"
+        },
+        {
+          "id": "faq.html:attribute:10",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Jon testimonial photo",
+          "value": "Jon testimonial photo",
+          "attribute": "alt"
+        },
+        {
+          "id": "faq.html:attribute:11",
+          "label": "title attribute",
+          "kind": "attribute",
+          "original": "Client video testimonial 1",
+          "value": "Client video testimonial 1",
+          "attribute": "title"
+        },
+        {
+          "id": "faq.html:attribute:12",
+          "label": "title attribute",
+          "kind": "attribute",
+          "original": "Client video testimonial 2",
+          "value": "Client video testimonial 2",
+          "attribute": "title"
+        },
+        {
+          "id": "faq.html:attribute:13",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "faq.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "faq.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "faq.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "faq.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "faq.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "faq.html:text:19",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "faq.html:text:20",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "faq.html:text:21",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "faq.html:text:22",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Frequently asked questions & client reflections",
+          "value": "Frequently asked questions & client reflections"
+        },
+        {
+          "id": "faq.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "Answers about wholeness, vitality, and health in the body, heart, and mind.",
+          "value": "Answers about wholeness, vitality, and health in the body, heart, and mind."
+        },
+        {
+          "id": "faq.html:text:24",
+          "label": "P text",
+          "kind": "text",
+          "original": "Focus",
+          "value": "Focus"
+        },
+        {
+          "id": "faq.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "This work is about integrated health, not surface optimization.",
+          "value": "This work is about integrated health, not surface optimization."
+        },
+        {
+          "id": "faq.html:text:26",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "What is coaching with Paul like?",
+          "value": "What is coaching with Paul like?"
+        },
+        {
+          "id": "faq.html:text:27",
+          "label": "P text",
+          "kind": "text",
+          "original": "Coaching with Paul is support for the body, heart, and mind — a path toward greater honesty, vitality, and wholeness.",
+          "value": "Coaching with Paul is support for the body, heart, and mind — a path toward greater honesty, vitality, and wholeness."
+        },
+        {
+          "id": "faq.html:text:28",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Who is this work for?",
+          "value": "Who is this work for?"
+        },
+        {
+          "id": "faq.html:text:29",
+          "label": "P text",
+          "kind": "text",
+          "original": "This work is for people who want health that includes the heart, not just surface optimization.",
+          "value": "This work is for people who want health that includes the heart, not just surface optimization."
+        },
+        {
+          "id": "faq.html:text:30",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "What kinds of results can people expect?",
+          "value": "What kinds of results can people expect?"
+        },
+        {
+          "id": "faq.html:text:31",
+          "label": "P text",
+          "kind": "text",
+          "original": "People often seek greater steadiness, more vitality, more self-understanding, and a healthier relationship with their body, emotions, and daily life.",
+          "value": "People often seek greater steadiness, more vitality, more self-understanding, and a healthier relationship with their body, emotions, and daily life."
+        },
+        {
+          "id": "faq.html:text:32",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Is this therapy or medical care?",
+          "value": "Is this therapy or medical care?"
+        },
+        {
+          "id": "faq.html:text:33",
+          "label": "P text",
+          "kind": "text",
+          "original": "No. This is not therapy, diagnosis, or medical treatment. It is coaching and guidance designed to support awareness, vitality, and practical change in the context of a whole life.",
+          "value": "No. This is not therapy, diagnosis, or medical treatment. It is coaching and guidance designed to support awareness, vitality, and practical change in the context of a whole life."
+        },
+        {
+          "id": "faq.html:text:34",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "How long does change usually take?",
+          "value": "How long does change usually take?"
+        },
+        {
+          "id": "faq.html:text:35",
+          "label": "P text",
+          "kind": "text",
+          "original": "Change happens through honesty, practice, and integration. Some shifts come quickly, while deeper wholeness is built over time.",
+          "value": "Change happens through honesty, practice, and integration. Some shifts come quickly, while deeper wholeness is built over time."
+        },
+        {
+          "id": "faq.html:text:36",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "How do we begin?",
+          "value": "How do we begin?"
+        },
+        {
+          "id": "faq.html:text:37",
+          "label": "P text",
+          "kind": "text",
+          "original": "We begin with a conversation. From there, the next step can be shaped around inquiry, coaching, or a more structured path depending on what support is most useful.",
+          "value": "We begin with a conversation. From there, the next step can be shaped around inquiry, coaching, or a more structured path depending on what support is most useful."
+        },
+        {
+          "id": "faq.html:text:38",
+          "label": "P text",
+          "kind": "text",
+          "original": "Testimonials",
+          "value": "Testimonials"
+        },
+        {
+          "id": "faq.html:text:39",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Real client reflections",
+          "value": "Real client reflections"
+        },
+        {
+          "id": "faq.html:text:40",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Scott",
+          "value": "Scott"
+        },
+        {
+          "id": "faq.html:text:41",
+          "label": "P text",
+          "kind": "text",
+          "original": "“Speak to Paul, he will absolutely change your life, I guarantee it.”",
+          "value": "“Speak to Paul, he will absolutely change your life, I guarantee it.”"
+        },
+        {
+          "id": "faq.html:text:42",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Dave",
+          "value": "Dave"
+        },
+        {
+          "id": "faq.html:text:43",
+          "label": "P text",
+          "kind": "text",
+          "original": "“I can begin to see the possibility of life that is far more exciting and joyful than what I have known.”",
+          "value": "“I can begin to see the possibility of life that is far more exciting and joyful than what I have known.”"
+        },
+        {
+          "id": "faq.html:text:44",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Jon",
+          "value": "Jon"
+        },
+        {
+          "id": "faq.html:text:45",
+          "label": "P text",
+          "kind": "text",
+          "original": "“I see myself more clearly and can therefore improve and make progress more quickly and effectively.”",
+          "value": "“I see myself more clearly and can therefore improve and make progress more quickly and effectively.”"
+        },
+        {
+          "id": "faq.html:text:46",
+          "label": "P text",
+          "kind": "text",
+          "original": "Video Testimonials",
+          "value": "Video Testimonials"
+        },
+        {
+          "id": "faq.html:text:47",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Watch real client reflections",
+          "value": "Watch real client reflections"
+        },
+        {
+          "id": "faq.html:text:48",
+          "label": "P text",
+          "kind": "text",
+          "original": "A deeper sense of the work, in clients’ own voices.",
+          "value": "A deeper sense of the work, in clients’ own voices."
+        },
+        {
+          "id": "faq.html:text:49",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "faq.html:text:50",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "faq.html:text:51",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "resources.html": {
+      "label": "Resources",
+      "path": "resources.html",
+      "entries": [
+        {
+          "id": "resources.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Resources | Integrated Heart & Vitality",
+          "value": "Resources | Integrated Heart & Vitality"
+        },
+        {
+          "id": "resources.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "resources.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Resources for complete wellness through health in body, heart, and mind.",
+          "value": "Resources for complete wellness through health in body, heart, and mind.",
+          "name": "description"
+        },
+        {
+          "id": "resources.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "resources.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "resources.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "resources.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "resources.html:attribute:8",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "resources.html:text:9",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "resources.html:text:10",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "resources.html:text:11",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "resources.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "resources.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "resources.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "resources.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "resources.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "resources.html:text:17",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Practical support for the path.",
+          "value": "Practical support for the path."
+        },
+        {
+          "id": "resources.html:text:18",
+          "label": "P text",
+          "kind": "text",
+          "original": "Resources to support wholeness, vitality, and health in the body, heart, and mind.",
+          "value": "Resources to support wholeness, vitality, and health in the body, heart, and mind."
+        },
+        {
+          "id": "resources.html:text:19",
+          "label": "P text",
+          "kind": "text",
+          "original": "Use cases",
+          "value": "Use cases"
+        },
+        {
+          "id": "resources.html:text:20",
+          "label": "P text",
+          "kind": "text",
+          "original": "Practices, teachings, and tools for lived integration.",
+          "value": "Practices, teachings, and tools for lived integration."
+        },
+        {
+          "id": "resources.html:text:21",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Starter Guide",
+          "value": "Starter Guide"
+        },
+        {
+          "id": "resources.html:text:22",
+          "label": "P text",
+          "kind": "text",
+          "original": "A grounded starting point for the path of wholeness.",
+          "value": "A grounded starting point for the path of wholeness."
+        },
+        {
+          "id": "resources.html:text:23",
+          "label": "A text",
+          "kind": "text",
+          "original": "Placeholder link",
+          "value": "Placeholder link"
+        },
+        {
+          "id": "resources.html:text:24",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Free Guided Meditation",
+          "value": "Free Guided Meditation"
+        },
+        {
+          "id": "resources.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "A calming guided meditation to help settle the body, reconnect with the heart, and return to a steadier inner state.",
+          "value": "A calming guided meditation to help settle the body, reconnect with the heart, and return to a steadier inner state."
+        },
+        {
+          "id": "resources.html:text:26",
+          "label": "A text",
+          "kind": "text",
+          "original": "Get the meditation",
+          "value": "Get the meditation"
+        },
+        {
+          "id": "resources.html:text:27",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Writing / Article Series",
+          "value": "Writing / Article Series"
+        },
+        {
+          "id": "resources.html:text:28",
+          "label": "P text",
+          "kind": "text",
+          "original": "Teachings on heart, vitality, masculinity, and whole health.",
+          "value": "Teachings on heart, vitality, masculinity, and whole health."
+        },
+        {
+          "id": "resources.html:text:29",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Recommended Practices",
+          "value": "Recommended Practices"
+        },
+        {
+          "id": "resources.html:text:30",
+          "label": "P text",
+          "kind": "text",
+          "original": "Simple ways to support body, heart, and mind in daily life.",
+          "value": "Simple ways to support body, heart, and mind in daily life."
+        },
+        {
+          "id": "resources.html:text:31",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "The Masculine Heart Quest",
+          "value": "The Masculine Heart Quest"
+        },
+        {
+          "id": "resources.html:text:32",
+          "label": "P text",
+          "kind": "text",
+          "original": "A premium 21-day guided course with reflection, daily integration, and progressive unlocks — designed to lead men into greater presence, mature masculinity, and the architecture of the heart.",
+          "value": "A premium 21-day guided course with reflection, daily integration, and progressive unlocks — designed to lead men into greater presence, mature masculinity, and the architecture of the heart."
+        },
+        {
+          "id": "resources.html:text:33",
+          "label": "A text",
+          "kind": "text",
+          "original": "Open landing page",
+          "value": "Open landing page"
+        },
+        {
+          "id": "resources.html:text:34",
+          "label": "A text",
+          "kind": "text",
+          "original": "Open visual editor",
+          "value": "Open visual editor"
+        },
+        {
+          "id": "resources.html:text:35",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "resources.html:text:36",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "resources.html:text:37",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "contact.html": {
+      "label": "Schedule A Call",
+      "path": "contact.html",
+      "entries": [
+        {
+          "id": "contact.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Schedule A Call | Integrated Heart & Vitality",
+          "value": "Schedule A Call | Integrated Heart & Vitality"
+        },
+        {
+          "id": "contact.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "contact.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Schedule A Call Cropper about Integrated Heart & Vitality and complete wellness coaching.",
+          "value": "Schedule A Call Cropper about Integrated Heart & Vitality and complete wellness coaching.",
+          "name": "description"
+        },
+        {
+          "id": "contact.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "contact.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "contact.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "contact.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "contact.html:attribute:8",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "Your name",
+          "value": "Your name",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "contact.html:attribute:9",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "you@example.com",
+          "value": "you@example.com",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "contact.html:attribute:10",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "What are you reaching out about?",
+          "value": "What are you reaching out about?",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "contact.html:attribute:11",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "contact.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "contact.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "contact.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "contact.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "About",
+          "value": "About"
+        },
+        {
+          "id": "contact.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "contact.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ",
+          "value": "FAQ"
+        },
+        {
+          "id": "contact.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "Testimonials",
+          "value": "Testimonials"
+        },
+        {
+          "id": "contact.html:text:19",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "contact.html:text:20",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "contact.html:text:21",
+          "label": "P text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "contact.html:text:22",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Start the conversation.",
+          "value": "Start the conversation."
+        },
+        {
+          "id": "contact.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "If you are seeking more wholeness, vitality, and honesty in your life, this is where we begin.",
+          "value": "If you are seeking more wholeness, vitality, and honesty in your life, this is where we begin."
+        },
+        {
+          "id": "contact.html:text:24",
+          "label": "P text",
+          "kind": "text",
+          "original": "Current status",
+          "value": "Current status"
+        },
+        {
+          "id": "contact.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "Wherever you are on your path, I am here to support you.",
+          "value": "Wherever you are on your path, I am here to support you."
+        },
+        {
+          "id": "contact.html:text:26",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Connect with Paul",
+          "value": "Connect with Paul"
+        },
+        {
+          "id": "contact.html:text:27",
+          "label": "P text",
+          "kind": "text",
+          "original": "Reach out if you feel called toward a more whole way of living — one that supports the heart, trains the body, and steadies the mind.",
+          "value": "Reach out if you feel called toward a more whole way of living — one that supports the heart, trains the body, and steadies the mind."
+        },
+        {
+          "id": "contact.html:text:28",
+          "label": "A text",
+          "kind": "text",
+          "original": "Email Paul",
+          "value": "Email Paul"
+        },
+        {
+          "id": "contact.html:text:29",
+          "label": "A text",
+          "kind": "text",
+          "original": "Booking Link Placeholder",
+          "value": "Booking Link Placeholder"
+        },
+        {
+          "id": "contact.html:text:30",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Send a message",
+          "value": "Send a message"
+        },
+        {
+          "id": "contact.html:text:31",
+          "label": "LABEL text",
+          "kind": "text",
+          "original": "Name",
+          "value": "Name"
+        },
+        {
+          "id": "contact.html:text:32",
+          "label": "LABEL text",
+          "kind": "text",
+          "original": "Email",
+          "value": "Email"
+        },
+        {
+          "id": "contact.html:text:33",
+          "label": "LABEL text",
+          "kind": "text",
+          "original": "Message",
+          "value": "Message"
+        },
+        {
+          "id": "contact.html:text:34",
+          "label": "BUTTON text",
+          "kind": "text",
+          "original": "Placeholder Submit",
+          "value": "Placeholder Submit"
+        },
+        {
+          "id": "contact.html:text:35",
+          "label": "P text",
+          "kind": "text",
+          "original": "This is a visual form shell only. No backend is connected yet.",
+          "value": "This is a visual form shell only. No backend is connected yet."
+        },
+        {
+          "id": "contact.html:text:36",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "contact.html:text:37",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "meditation.html": {
+      "label": "Meditation",
+      "path": "meditation.html",
+      "entries": [
+        {
+          "id": "meditation.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Free Guided Meditation | Integrated Heart & Vitality",
+          "value": "Free Guided Meditation | Integrated Heart & Vitality"
+        },
+        {
+          "id": "meditation.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "meditation.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Receive a guided meditation for settling the body, opening the heart, and returning to a steadier inner state.",
+          "value": "Receive a guided meditation for settling the body, opening the heart, and returning to a steadier inner state.",
+          "name": "description"
+        },
+        {
+          "id": "meditation.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "meditation.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation.html:attribute:8",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "Your first name",
+          "value": "Your first name",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "meditation.html:attribute:9",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "you@example.com",
+          "value": "you@example.com",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "meditation.html:attribute:10",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation.html:text:11",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "meditation.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "meditation.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "meditation.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "meditation.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "meditation.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "meditation.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "meditation.html:text:18",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "meditation.html:text:19",
+          "label": "P text",
+          "kind": "text",
+          "original": "Free Meditation",
+          "value": "Free Meditation"
+        },
+        {
+          "id": "meditation.html:text:20",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "A guided meditation for steadiness, heart, and inner return.",
+          "value": "A guided meditation for steadiness, heart, and inner return."
+        },
+        {
+          "id": "meditation.html:text:21",
+          "label": "P text",
+          "kind": "text",
+          "original": "Enter your email and I’ll send you this free meditation, along with a short follow-up sequence to help you get more from it.",
+          "value": "Enter your email and I’ll send you this free meditation, along with a short follow-up sequence to help you get more from it."
+        },
+        {
+          "id": "meditation.html:text:22",
+          "label": "P text",
+          "kind": "text",
+          "original": "What you receive",
+          "value": "What you receive"
+        },
+        {
+          "id": "meditation.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "A calming guided meditation, immediate access after sign-up, and a gentle follow-up email sequence.",
+          "value": "A calming guided meditation, immediate access after sign-up, and a gentle follow-up email sequence."
+        },
+        {
+          "id": "meditation.html:text:24",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "What this meditation is for",
+          "value": "What this meditation is for"
+        },
+        {
+          "id": "meditation.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "This practice is meant to help you settle the body, reconnect with the heart, and create a more grounded internal atmosphere. It can be used in the morning, after stress, or anytime you need to come back to yourself.",
+          "value": "This practice is meant to help you settle the body, reconnect with the heart, and create a more grounded internal atmosphere. It can be used in the morning, after stress, or anytime you need to come back to yourself."
+        },
+        {
+          "id": "meditation.html:text:26",
+          "label": "LI text",
+          "kind": "text",
+          "original": "create more inner steadiness",
+          "value": "create more inner steadiness"
+        },
+        {
+          "id": "meditation.html:text:27",
+          "label": "LI text",
+          "kind": "text",
+          "original": "soften mental noise and pressure",
+          "value": "soften mental noise and pressure"
+        },
+        {
+          "id": "meditation.html:text:28",
+          "label": "LI text",
+          "kind": "text",
+          "original": "support a calmer, more connected nervous system",
+          "value": "support a calmer, more connected nervous system"
+        },
+        {
+          "id": "meditation.html:text:29",
+          "label": "LI text",
+          "kind": "text",
+          "original": "begin a deeper relationship with presence",
+          "value": "begin a deeper relationship with presence"
+        },
+        {
+          "id": "meditation.html:text:30",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Get the meditation",
+          "value": "Get the meditation"
+        },
+        {
+          "id": "meditation.html:text:31",
+          "label": "LABEL text",
+          "kind": "text",
+          "original": "First name",
+          "value": "First name"
+        },
+        {
+          "id": "meditation.html:text:32",
+          "label": "LABEL text",
+          "kind": "text",
+          "original": "Email",
+          "value": "Email"
+        },
+        {
+          "id": "meditation.html:text:33",
+          "label": "BUTTON text",
+          "kind": "text",
+          "original": "Send me the meditation",
+          "value": "Send me the meditation"
+        },
+        {
+          "id": "meditation.html:text:34",
+          "label": "P text",
+          "kind": "text",
+          "original": "You’ll get immediate access after sign-up.",
+          "value": "You’ll get immediate access after sign-up."
+        },
+        {
+          "id": "meditation.html:text:35",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "meditation.html:text:36",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "meditation.html:text:37",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "meditation-thank-you.html": {
+      "label": "Meditation Thank You",
+      "path": "meditation-thank-you.html",
+      "entries": [
+        {
+          "id": "meditation-thank-you.html:text:1",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Your Meditation | Integrated Heart & Vitality",
+          "value": "Your Meditation | Integrated Heart & Vitality"
+        },
+        {
+          "id": "meditation-thank-you.html:meta:2",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "meditation-thank-you.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Your free guided meditation is ready.",
+          "value": "Your free guided meditation is ready.",
+          "name": "description"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:6",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:7",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:8",
+          "label": "title attribute",
+          "kind": "attribute",
+          "original": "Guided meditation video",
+          "value": "Guided meditation video",
+          "attribute": "title"
+        },
+        {
+          "id": "meditation-thank-you.html:attribute:9",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "meditation-thank-you.html:text:10",
+          "label": "A text",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "meditation-thank-you.html:text:11",
+          "label": "A text",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "meditation-thank-you.html:text:12",
+          "label": "A text",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "meditation-thank-you.html:text:13",
+          "label": "A text",
+          "kind": "text",
+          "original": "Coaching",
+          "value": "Coaching"
+        },
+        {
+          "id": "meditation-thank-you.html:text:14",
+          "label": "A text",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "meditation-thank-you.html:text:15",
+          "label": "A text",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "meditation-thank-you.html:text:16",
+          "label": "A text",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "meditation-thank-you.html:text:17",
+          "label": "A text",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "meditation-thank-you.html:text:18",
+          "label": "P text",
+          "kind": "text",
+          "original": "Meditation Ready",
+          "value": "Meditation Ready"
+        },
+        {
+          "id": "meditation-thank-you.html:text:19",
+          "label": "H1 text",
+          "kind": "text",
+          "original": "Your guided meditation is here.",
+          "value": "Your guided meditation is here."
+        },
+        {
+          "id": "meditation-thank-you.html:text:20",
+          "label": "P text",
+          "kind": "text",
+          "original": "I’ve also set aside a short email sequence to help you use this practice more deeply and consistently.",
+          "value": "I’ve also set aside a short email sequence to help you use this practice more deeply and consistently."
+        },
+        {
+          "id": "meditation-thank-you.html:text:21",
+          "label": "P text",
+          "kind": "text",
+          "original": "Next step",
+          "value": "Next step"
+        },
+        {
+          "id": "meditation-thank-you.html:text:22",
+          "label": "P text",
+          "kind": "text",
+          "original": "Give yourself uninterrupted space. Let this be a real pause, not background audio.",
+          "value": "Give yourself uninterrupted space. Let this be a real pause, not background audio."
+        },
+        {
+          "id": "meditation-thank-you.html:text:23",
+          "label": "P text",
+          "kind": "text",
+          "original": "Guided Meditation",
+          "value": "Guided Meditation"
+        },
+        {
+          "id": "meditation-thank-you.html:text:24",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Press play when you are ready.",
+          "value": "Press play when you are ready."
+        },
+        {
+          "id": "meditation-thank-you.html:text:25",
+          "label": "P text",
+          "kind": "text",
+          "original": "You should also receive a follow-up email series with reflections, best-use suggestions, and a gentle next step.",
+          "value": "You should also receive a follow-up email series with reflections, best-use suggestions, and a gentle next step."
+        },
+        {
+          "id": "meditation-thank-you.html:text:26",
+          "label": "A text",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "meditation-thank-you.html:text:27",
+          "label": "P text",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "meditation-thank-you.html:text:28",
+          "label": "P text",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    }
+  }
+}
