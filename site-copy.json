@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T07:46:37Z",
+  "updatedAt": "2026-09-20T21:11:17Z",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -535,35 +535,35 @@
           "label": "H1 text",
           "kind": "text",
           "original": "Support for people ready to live with more wholeness, vitality, and honesty.",
-          "value": "Support for people ready to live with more wholeness, vitality, and honesty."
+          "value": "1-1 Support. Tailored to your life. A discovery of what you want and need."
         },
         {
           "id": "work-with-paul.html:text:20",
           "label": "P text",
           "kind": "text",
           "original": "Placeholder invitation copy. Calm, grounded, and clear. This page should feel like a safe doorway into working together, not a pressure page.",
-          "value": "Placeholder invitation copy. Calm, grounded, and clear. This page should feel like a safe doorway into working together, not a pressure page."
+          "value": "Level up. Enjoy more. Grow from the roots."
         },
         {
           "id": "work-with-paul.html:text:21",
           "label": "H2 text",
           "kind": "text",
           "original": "If you’re here, some part of you is ready for a more whole way of living.",
-          "value": "If you’re here, some part of you is ready for a more whole way of living."
+          "value": "If you’re reading this, some part of you is probably ready for some new perspective or support..."
         },
         {
           "id": "work-with-paul.html:text:22",
           "label": "LI text",
           "kind": "text",
           "original": "You want support for the body, heart, and mind.",
-          "value": "You want support for the body, heart, and mind."
+          "value": "You want support for the body, heart, or mind."
         },
         {
           "id": "work-with-paul.html:text:23",
           "label": "LI text",
           "kind": "text",
           "original": "You are tired of fragmented growth.",
-          "value": "You are tired of fragmented growth."
+          "value": "You are tired of fragmented growth, or would like more cohesion to your life."
         },
         {
           "id": "work-with-paul.html:text:24",
@@ -577,14 +577,14 @@
           "label": "LI text",
           "kind": "text",
           "original": "You want guidance that includes both inner and outer life.",
-          "value": "You want guidance that includes both inner and outer life."
+          "value": "You want perspective that includes both inner and outer life."
         },
         {
           "id": "work-with-paul.html:text:26",
           "label": "BLOCKQUOTE text",
           "kind": "text",
           "original": "Wherever you are on your path, I am here to support you. – Dr. Paul",
-          "value": "Wherever you are on your path, I am here to support you. – Dr. Paul"
+          "value": "Whatever the reason, I'm here to support you the best I can. We're all in this together."
         },
         {
           "id": "work-with-paul.html:text:27",
@@ -605,7 +605,7 @@
           "label": "A text",
           "kind": "text",
           "original": "Begin the conversation",
-          "value": "Begin the conversation"
+          "value": "Schedule A Call"
         },
         {
           "id": "work-with-paul.html:text:30",
@@ -2357,7 +2357,7 @@
           "label": "A text",
           "kind": "text",
           "original": "Booking Link Placeholder",
-          "value": "Booking Link Placeholder"
+          "value": "Book a coaching call"
         },
         {
           "id": "contact.html:text:30",

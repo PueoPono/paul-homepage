@@ -3,7 +3,7 @@
   const status = document.getElementById('meditationFormStatus');
   if (!form || !status) return;
 
-  const API_ENDPOINT = window.MEDITATION_OPTIN_ENDPOINT || 'https://masculineheart.vercel.app/api/meditation-optin';
+  const API_ENDPOINT = window.MEDITATION_OPTIN_ENDPOINT || '/api/meditation-optin';
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
