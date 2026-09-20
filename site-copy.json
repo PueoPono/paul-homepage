@@ -2139,6 +2139,35 @@
           "kind": "text",
           "original": "© 2026 Paul Cropper",
           "value": "© 2026 Paul Cropper"
+        },
+        {
+          "id": "resources.html:text:38",
+          "label": "H3 text",
+          "kind": "text",
+          "original": "Vector Pilot",
+          "value": "Vector Pilot"
+        },
+        {
+          "id": "resources.html:text:39",
+          "label": "P text",
+          "kind": "text",
+          "original": "A creative planning and reflection tool for clarifying direction, tracking momentum, and staying connected to the next right step.",
+          "value": "A creative planning and reflection tool for clarifying direction, tracking momentum, and staying connected to the next right step."
+        },
+        {
+          "id": "resources.html:attribute:40",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "https://vector-pilot.vercel.app/",
+          "value": "https://vector-pilot.vercel.app/",
+          "attribute": "href"
+        },
+        {
+          "id": "resources.html:text:41",
+          "label": "A text",
+          "kind": "text",
+          "original": "Open Vector Pilot",
+          "value": "Open Vector Pilot"
         }
       ]
     },
