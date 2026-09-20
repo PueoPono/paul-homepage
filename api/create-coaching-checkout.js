@@ -47,7 +47,9 @@ module.exports = async function handler(req, res) {
     params.set('metadata[terms_accepted]', 'true');
     params.set('metadata[name]', name);
     params.set('metadata[source_url]', String(body.source_url || ''));
-    params.set('allow_promotion_codes', 'true');
+    if (plan === 'one_pay') {
+      params.set('allow_promotion_codes', 'true');
+    }
     params.set('billing_address_collection', 'auto');
 
     if (plan === 'three_pay') {
@@ -71,6 +73,7 @@ module.exports = async function handler(req, res) {
       params.set('line_items[0][price_data][product_data][description]', 'One payment for the Heart-Body-Mind coaching package.');
       params.set('payment_intent_data[metadata][program]', 'Coaching Startup Collaboration');
       params.set('payment_intent_data[metadata][terms_accepted]', 'true');
+      params.set('payment_intent_data[receipt_email]', email);
     }
 
     const stripeResponse = await fetch('https://api.stripe.com/v1/checkout/sessions', {
