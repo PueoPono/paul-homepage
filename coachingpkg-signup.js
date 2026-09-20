@@ -25,6 +25,20 @@
 
   function updatePaymentState() {
     const accepted = terms.checked;
+    const plan = selectedPlan();
+    if (plan === 'three_pay') {
+      venmo.hidden = true;
+      venmo.style.display = 'none';
+      venmo.href = '#full-payment-only';
+      venmo.classList.add('payment-button--disabled');
+      status.textContent = accepted
+        ? 'Ready for Stripe checkout. Your card will be charged monthly for 3 payments.'
+        : 'Check the terms box to activate Stripe checkout.';
+      return;
+    }
+
+    venmo.hidden = false;
+    venmo.style.display = '';
     venmo.href = accepted ? venmoUrl() : '#terms';
     venmo.classList.toggle('payment-button--disabled', !accepted);
     status.textContent = accepted ? 'Ready for payment.' : 'Check the terms box to activate payment links.';
