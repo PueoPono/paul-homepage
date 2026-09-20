@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20T21:11:17Z",
+  "updatedAt": "2026-09-20T22:23:39Z",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -2898,6 +2898,1733 @@
           "kind": "text",
           "original": "© 2026 Paul Cropper",
           "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "coaching-terms-and-conditions.html": {
+      "label": "Coaching Terms & Conditions",
+      "path": "coaching-terms-and-conditions.html",
+      "entries": [
+        {
+          "id": "coaching-terms-and-conditions.html:meta:1",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:2",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Coaching Terms and Conditions | Paul Cropper",
+          "value": "Coaching Terms and Conditions | Paul Cropper"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Terms and Conditions for Paul Cropper coaching packages.",
+          "value": "Terms and Conditions for Paul Cropper coaching packages.",
+          "name": "description"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:6",
+          "label": "Vital Life",
+          "kind": "text",
+          "original": "Vital Life",
+          "value": "Vital Life"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:7",
+          "label": "w/ Paul",
+          "kind": "text",
+          "original": "w/ Paul",
+          "value": "w/ Paul"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:8",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:9",
+          "label": "Home",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:10",
+          "label": "Work With Me",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:11",
+          "label": "Signup",
+          "kind": "text",
+          "original": "Signup",
+          "value": "Signup"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:12",
+          "label": "Terms of Use",
+          "kind": "text",
+          "original": "Terms of Use",
+          "value": "Terms of Use"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:13",
+          "label": "Coaching Terms and Conditions",
+          "kind": "text",
+          "original": "Coaching Terms and Conditions",
+          "value": "Coaching Terms and Conditions"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:14",
+          "label": "Last updated:",
+          "kind": "text",
+          "original": "Last updated:",
+          "value": "Last updated:"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:15",
+          "label": "September 20, 2026",
+          "kind": "text",
+          "original": "September 20, 2026",
+          "value": "September 20, 2026"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:16",
+          "label": "These Terms and Conditions apply…",
+          "kind": "text",
+          "original": "These Terms and Conditions apply to the Coaching Startup Collaboration / Heart-Body-Mind Life Coaching Package with Paul Cropper. By purchasing or beginning coaching, you agree to these terms.",
+          "value": "These Terms and Conditions apply to the Coaching Startup Collaboration / Heart-Body-Mind Life Coaching Package with Paul Cropper. By purchasing or beginning coaching, you agree to these terms."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:17",
+          "label": "1. Coaching relationship",
+          "kind": "text",
+          "original": "1. Coaching relationship",
+          "value": "1. Coaching relationship"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:18",
+          "label": "Coaching is a collaborative proc…",
+          "kind": "text",
+          "original": "Coaching is a collaborative process for personal growth, reflection, life skills, and holistic support. Coaching is not medical care, psychotherapy, legal advice, financial advice, or emergency support. You remain responsible for your own choices, health care, and decisions.",
+          "value": "Coaching is a collaborative process for personal growth, reflection, life skills, and holistic support. Coaching is not medical care, psychotherapy, legal advice, financial advice, or emergency support. You remain responsible for your own choices, health care, and decisions."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:19",
+          "label": "2. Package structure",
+          "kind": "text",
+          "original": "2. Package structure",
+          "value": "2. Package structure"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:20",
+          "label": "The package includes 12 coaching…",
+          "kind": "text",
+          "original": "The package includes 12 coaching calls spread over approximately 3–4 months, with weekly or biweekly rhythm as agreed, action steps tailored to you, online content where applicable, and messaging support during the package window.",
+          "value": "The package includes 12 coaching calls spread over approximately 3–4 months, with weekly or biweekly rhythm as agreed, action steps tailored to you, online content where applicable, and messaging support during the package window."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:21",
+          "label": "3. Payment options",
+          "kind": "text",
+          "original": "3. Payment options",
+          "value": "3. Payment options"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:22",
+          "label": "You may choose either one paymen…",
+          "kind": "text",
+          "original": "You may choose either one payment of $3,450 or three payments of $1,250. Payment may be made by credit card through Stripe or through Venmo @Paul-Cropper. Payment must be complete or the payment plan active before coaching begins unless another written arrangement is made.",
+          "value": "You may choose either one payment of $3,450 or three payments of $1,250. Payment may be made by credit card through Stripe or through Venmo @Paul-Cropper. Payment must be complete or the payment plan active before coaching begins unless another written arrangement is made."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:23",
+          "label": "4. Scheduling and rescheduling",
+          "kind": "text",
+          "original": "4. Scheduling and rescheduling",
+          "value": "4. Scheduling and rescheduling"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:24",
+          "label": "Please give at least 24 hours no…",
+          "kind": "text",
+          "original": "Please give at least 24 hours notice when rescheduling a session when possible. Missed sessions or repeated last-minute cancellations may count as used sessions at Paul’s discretion, while emergencies will be handled with care and reasonable flexibility.",
+          "value": "Please give at least 24 hours notice when rescheduling a session when possible. Missed sessions or repeated last-minute cancellations may count as used sessions at Paul’s discretion, while emergencies will be handled with care and reasonable flexibility."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:25",
+          "label": "5. Refunds and cancellations",
+          "kind": "text",
+          "original": "5. Refunds and cancellations",
+          "value": "5. Refunds and cancellations"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:26",
+          "label": "Because coaching reserves time,…",
+          "kind": "text",
+          "original": "Because coaching reserves time, attention, and program capacity, payments are generally non-refundable once the package begins. If an unexpected situation arises, contact Paul directly so the next best arrangement can be discussed in good faith.",
+          "value": "Because coaching reserves time, attention, and program capacity, payments are generally non-refundable once the package begins. If an unexpected situation arises, contact Paul directly so the next best arrangement can be discussed in good faith."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:27",
+          "label": "6. Confidentiality",
+          "kind": "text",
+          "original": "6. Confidentiality",
+          "value": "6. Confidentiality"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:28",
+          "label": "Paul will treat coaching convers…",
+          "kind": "text",
+          "original": "Paul will treat coaching conversations with respect and care. Confidentiality may be limited where disclosure is required by law, where there is risk of harm, or where you give permission to share information.",
+          "value": "Paul will treat coaching conversations with respect and care. Confidentiality may be limited where disclosure is required by law, where there is risk of harm, or where you give permission to share information."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:29",
+          "label": "7. Personal responsibility",
+          "kind": "text",
+          "original": "7. Personal responsibility",
+          "value": "7. Personal responsibility"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:30",
+          "label": "You agree to participate honestl…",
+          "kind": "text",
+          "original": "You agree to participate honestly, communicate relevant needs or concerns, and make your own decisions about assignments, practices, health choices, relationships, and life changes. Results vary by person and are not guaranteed.",
+          "value": "You agree to participate honestly, communicate relevant needs or concerns, and make your own decisions about assignments, practices, health choices, relationships, and life changes. Results vary by person and are not guaranteed."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:31",
+          "label": "8. Technology and messaging",
+          "kind": "text",
+          "original": "8. Technology and messaging",
+          "value": "8. Technology and messaging"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:32",
+          "label": "Online calls, email, text, or me…",
+          "kind": "text",
+          "original": "Online calls, email, text, or messaging may be used for coaching support. No digital system is perfectly secure, and you agree to use reasonable discretion with sensitive information.",
+          "value": "Online calls, email, text, or messaging may be used for coaching support. No digital system is perfectly secure, and you agree to use reasonable discretion with sensitive information."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:33",
+          "label": "9. Intellectual property",
+          "kind": "text",
+          "original": "9. Intellectual property",
+          "value": "9. Intellectual property"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:34",
+          "label": "Any coaching materials, exercise…",
+          "kind": "text",
+          "original": "Any coaching materials, exercises, recordings, written content, or online resources provided by Paul are for your personal use only and may not be copied, sold, or distributed without permission.",
+          "value": "Any coaching materials, exercises, recordings, written content, or online resources provided by Paul are for your personal use only and may not be copied, sold, or distributed without permission."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:35",
+          "label": "10. Agreement",
+          "kind": "text",
+          "original": "10. Agreement",
+          "value": "10. Agreement"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:36",
+          "label": "By checking the Terms and Condit…",
+          "kind": "text",
+          "original": "By checking the Terms and Conditions box on the signup page and completing payment, you confirm that you have read, understood, and agree to these terms.",
+          "value": "By checking the Terms and Conditions box on the signup page and completing payment, you confirm that you have read, understood, and agree to these terms."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:37",
+          "label": "Back to signup",
+          "kind": "text",
+          "original": "Back to signup",
+          "value": "Back to signup"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:38",
+          "label": "Vital Life w/ Paul",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:39",
+          "label": "© 2026 Paul Cropper",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "coachingpkg-signup-thank-you.html": {
+      "label": "Coaching Package Thank You",
+      "path": "coachingpkg-signup-thank-you.html",
+      "entries": [
+        {
+          "id": "coachingpkg-signup-thank-you.html:meta:1",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:2",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Thank You | Coaching Startup Collaboration",
+          "value": "Thank You | Coaching Startup Collaboration"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Thank you for signing up for coaching with Paul Cropper.",
+          "value": "Thank you for signing up for coaching with Paul Cropper.",
+          "name": "description"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:6",
+          "label": "Vital Life",
+          "kind": "text",
+          "original": "Vital Life",
+          "value": "Vital Life"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:7",
+          "label": "w/ Paul",
+          "kind": "text",
+          "original": "w/ Paul",
+          "value": "w/ Paul"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:8",
+          "label": "Home",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:9",
+          "label": "Contact",
+          "kind": "text",
+          "original": "Contact",
+          "value": "Contact"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:10",
+          "label": "Payment received",
+          "kind": "text",
+          "original": "Payment received",
+          "value": "Payment received"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:11",
+          "label": "Thank you.",
+          "kind": "text",
+          "original": "Thank you.",
+          "value": "Thank you."
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:12",
+          "label": "Your coaching signup payment has…",
+          "kind": "text",
+          "original": "Your coaching signup payment has been started or completed through Stripe. Paul will follow up directly with next steps and scheduling.",
+          "value": "Your coaching signup payment has been started or completed through Stripe. Paul will follow up directly with next steps and scheduling."
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:13",
+          "label": "If you have any questions, email",
+          "kind": "text",
+          "original": "If you have any questions, email",
+          "value": "If you have any questions, email"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:14",
+          "label": "hello@paulcropper.com",
+          "kind": "text",
+          "original": "hello@paulcropper.com",
+          "value": "hello@paulcropper.com"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:15",
+          "label": ".",
+          "kind": "text",
+          "original": ".",
+          "value": "."
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:16",
+          "label": "Back home",
+          "kind": "text",
+          "original": "Back home",
+          "value": "Back home"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:17",
+          "label": "Vital Life w/ Paul",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "coachingpkg-signup-thank-you.html:text:18",
+          "label": "© 2026 Paul Cropper",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "coachingpkg-signup.html": {
+      "label": "Coaching Package Signup",
+      "path": "coachingpkg-signup.html",
+      "entries": [
+        {
+          "id": "coachingpkg-signup.html:meta:1",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:2",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Coaching Startup Collaboration | Paul Cropper",
+          "value": "Coaching Startup Collaboration | Paul Cropper"
+        },
+        {
+          "id": "coachingpkg-signup.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Heart-Body-Mind Life Coaching Package with Paul Cropper.",
+          "value": "Heart-Body-Mind Life Coaching Package with Paul Cropper.",
+          "name": "description"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:4",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:5",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:6",
+          "label": "Vital Life",
+          "kind": "text",
+          "original": "Vital Life",
+          "value": "Vital Life"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:7",
+          "label": "w/ Paul",
+          "kind": "text",
+          "original": "w/ Paul",
+          "value": "w/ Paul"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:8",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:9",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:10",
+          "label": "Home",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:11",
+          "label": "Work With Me",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:12",
+          "label": "About",
+          "kind": "text",
+          "original": "About",
+          "value": "About"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:13",
+          "label": "Resources",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:14",
+          "label": "Schedule A Call",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:15",
+          "label": "Coaching Startup Collaboration",
+          "kind": "text",
+          "original": "Coaching Startup Collaboration",
+          "value": "Coaching Startup Collaboration"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:16",
+          "label": "Heart-Body-Mind",
+          "kind": "text",
+          "original": "Heart-Body-Mind",
+          "value": "Heart-Body-Mind"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:17",
+          "label": "Life Coaching Package",
+          "kind": "text",
+          "original": "Life Coaching Package",
+          "value": "Life Coaching Package"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:18",
+          "label": "with Paul",
+          "kind": "text",
+          "original": "with Paul",
+          "value": "with Paul"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:19",
+          "label": "A 12-call holistic coaching coll…",
+          "kind": "text",
+          "original": "A 12-call holistic coaching collaboration spread over 3–4 months.",
+          "value": "A 12-call holistic coaching collaboration spread over 3–4 months."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:20",
+          "label": "Life Coaching Package",
+          "kind": "text",
+          "original": "Life Coaching Package",
+          "value": "Life Coaching Package"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:21",
+          "label": "We will start with 12 coaching c…",
+          "kind": "text",
+          "original": "We will start with 12 coaching calls, spread over 3–4 months, where we look at your life Holistically — the Whole picture.",
+          "value": "We will start with 12 coaching calls, spread over 3–4 months, where we look at your life Holistically — the Whole picture."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:22",
+          "label": "You will have assignments along…",
+          "kind": "text",
+          "original": "You will have assignments along the way, and we will adjust them to your life and what works for you.",
+          "value": "You will have assignments along the way, and we will adjust them to your life and what works for you."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:23",
+          "label": "Coaching is largely to support y…",
+          "kind": "text",
+          "original": "Coaching is largely to support your process of individuation, your healthy connection to your Self and other, helping you get through blockages both conscious and sub-conscious.",
+          "value": "Coaching is largely to support your process of individuation, your healthy connection to your Self and other, helping you get through blockages both conscious and sub-conscious."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:24",
+          "label": "We will explore tools and resour…",
+          "kind": "text",
+          "original": "We will explore tools and resources you need for complete Health in your life.",
+          "value": "We will explore tools and resources you need for complete Health in your life."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:25",
+          "label": "Weekly or biweekly calls, action…",
+          "kind": "text",
+          "original": "Weekly or biweekly calls, action steps tailored to you, online content, unlimited messaging support and more.",
+          "value": "Weekly or biweekly calls, action steps tailored to you, online content, unlimited messaging support and more."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:26",
+          "label": "The holistic journey teaches vit…",
+          "kind": "text",
+          "original": "The holistic journey teaches vitality, strength. Libido for LIFE!",
+          "value": "The holistic journey teaches vitality, strength. Libido for LIFE!"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:27",
+          "label": "Below are a couple payment struc…",
+          "kind": "text",
+          "original": "Below are a couple payment structures. More options are available upon request.",
+          "value": "Below are a couple payment structures. More options are available upon request."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:28",
+          "label": "Perhaps the best time to take ac…",
+          "kind": "text",
+          "original": "Perhaps the best time to take action was months or years ago. The second best time is now.",
+          "value": "Perhaps the best time to take action was months or years ago. The second best time is now."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:29",
+          "label": "Much love, and good Qi,",
+          "kind": "text",
+          "original": "Much love, and good Qi,",
+          "value": "Much love, and good Qi,"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:30",
+          "label": "-Paul",
+          "kind": "text",
+          "original": "-Paul",
+          "value": "-Paul"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:31",
+          "label": "Choose payment",
+          "kind": "text",
+          "original": "Choose payment",
+          "value": "Choose payment"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:32",
+          "label": "Pay securely by credit card thro…",
+          "kind": "text",
+          "original": "Pay securely by credit card through Stripe. Venmo is available only for the full-payment option.",
+          "value": "Pay securely by credit card through Stripe. Venmo is available only for the full-payment option."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:33",
+          "label": "Name",
+          "kind": "text",
+          "original": "Name",
+          "value": "Name"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:34",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "Your name",
+          "value": "Your name",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:35",
+          "label": "Email",
+          "kind": "text",
+          "original": "Email",
+          "value": "Email"
+        },
+        {
+          "id": "coachingpkg-signup.html:attribute:36",
+          "label": "placeholder attribute",
+          "kind": "attribute",
+          "original": "you@example.com",
+          "value": "you@example.com",
+          "attribute": "placeholder"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:37",
+          "label": "Payment structure",
+          "kind": "text",
+          "original": "Payment structure",
+          "value": "Payment structure"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:38",
+          "label": "One payment",
+          "kind": "text",
+          "original": "One payment",
+          "value": "One payment"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:39",
+          "label": "$3,450",
+          "kind": "text",
+          "original": "$3,450",
+          "value": "$3,450"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:40",
+          "label": "3 payments",
+          "kind": "text",
+          "original": "3 payments",
+          "value": "3 payments"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:41",
+          "label": "$1,250 / month for 3 months — ca…",
+          "kind": "text",
+          "original": "$1,250 / month for 3 months — card is automatically charged monthly by Stripe",
+          "value": "$1,250 / month for 3 months — card is automatically charged monthly by Stripe"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:42",
+          "label": "I have read and agree to the",
+          "kind": "text",
+          "original": "I have read and agree to the",
+          "value": "I have read and agree to the"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:43",
+          "label": "Terms and Conditions",
+          "kind": "text",
+          "original": "Terms and Conditions",
+          "value": "Terms and Conditions"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:44",
+          "label": ".",
+          "kind": "text",
+          "original": ".",
+          "value": "."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:45",
+          "label": "Pay by credit card",
+          "kind": "text",
+          "original": "Pay by credit card",
+          "value": "Pay by credit card"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:46",
+          "label": "Pay with Venmo @Paul-Cropper",
+          "kind": "text",
+          "original": "Pay with Venmo @Paul-Cropper",
+          "value": "Pay with Venmo @Paul-Cropper"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:47",
+          "label": "Check the terms box to activate…",
+          "kind": "text",
+          "original": "Check the terms box to activate payment links.",
+          "value": "Check the terms box to activate payment links."
+        },
+        {
+          "id": "coachingpkg-signup.html:text:48",
+          "label": "Vital Life w/ Paul",
+          "kind": "text",
+          "original": "Vital Life w/ Paul",
+          "value": "Vital Life w/ Paul"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:49",
+          "label": "HEALTH IN THE BODY, HEART, AND MIND",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "coachingpkg-signup.html:text:50",
+          "label": "© 2026 Paul Cropper",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "next-live-prototype.html": {
+      "label": "Next Live Prototype",
+      "path": "next-live-prototype.html",
+      "entries": [
+        {
+          "id": "next-live-prototype.html:meta:1",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "next-live-prototype.html:text:2",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Integrated Heart & Vitality | Next Homepage Prototype",
+          "value": "Integrated Heart & Vitality | Next Homepage Prototype"
+        },
+        {
+          "id": "next-live-prototype.html:meta:3",
+          "label": "Meta description",
+          "kind": "meta",
+          "original": "Integrated Heart & Vitality coaching for people ready to live with more wholeness, vitality, and honesty.",
+          "value": "Integrated Heart & Vitality coaching for people ready to live with more wholeness, vitality, and honesty.",
+          "name": "description"
+        },
+        {
+          "id": "next-live-prototype.html:meta:4",
+          "label": "Meta og:title",
+          "kind": "meta",
+          "original": "Integrated Heart & Vitality | Coaching with Paul",
+          "value": "Integrated Heart & Vitality | Coaching with Paul",
+          "name": "og:title"
+        },
+        {
+          "id": "next-live-prototype.html:meta:5",
+          "label": "Meta og:description",
+          "kind": "meta",
+          "original": "Align the heart, enjoy the body, and calm the mind — with support that meets real life.",
+          "value": "Align the heart, enjoy the body, and calm the mind — with support that meets real life.",
+          "name": "og:description"
+        },
+        {
+          "id": "next-live-prototype.html:meta:6",
+          "label": "Meta og:type",
+          "kind": "meta",
+          "original": "website",
+          "value": "website",
+          "name": "og:type"
+        },
+        {
+          "id": "next-live-prototype.html:meta:7",
+          "label": "Meta og:image",
+          "kind": "meta",
+          "original": "assets/branding/canvas-sunset-background.svg",
+          "value": "assets/branding/canvas-sunset-background.svg",
+          "name": "og:image"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:8",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Vital Life with Paul home",
+          "value": "Vital Life with Paul home",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:9",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Heart arrow logo",
+          "value": "Heart arrow logo",
+          "attribute": "alt"
+        },
+        {
+          "id": "next-live-prototype.html:text:10",
+          "label": "Vitality",
+          "kind": "text",
+          "original": "Vitality",
+          "value": "Vitality"
+        },
+        {
+          "id": "next-live-prototype.html:text:11",
+          "label": "w/ Paul",
+          "kind": "text",
+          "original": "w/ Paul",
+          "value": "w/ Paul"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:12",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Open menu",
+          "value": "Open menu",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:13",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Primary navigation",
+          "value": "Primary navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:text:14",
+          "label": "Home",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "next-live-prototype.html:text:15",
+          "label": "Work With Me",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "next-live-prototype.html:text:16",
+          "label": "About",
+          "kind": "text",
+          "original": "About",
+          "value": "About"
+        },
+        {
+          "id": "next-live-prototype.html:text:17",
+          "label": "My Story",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "next-live-prototype.html:text:18",
+          "label": "FAQ",
+          "kind": "text",
+          "original": "FAQ",
+          "value": "FAQ"
+        },
+        {
+          "id": "next-live-prototype.html:text:19",
+          "label": "Testimonials",
+          "kind": "text",
+          "original": "Testimonials",
+          "value": "Testimonials"
+        },
+        {
+          "id": "next-live-prototype.html:text:20",
+          "label": "Resources",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "next-live-prototype.html:text:21",
+          "label": "Schedule A Call",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:22",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Canvas sunset background",
+          "value": "Canvas sunset background",
+          "attribute": "alt"
+        },
+        {
+          "id": "next-live-prototype.html:text:23",
+          "label": "INTEGRATED",
+          "kind": "text",
+          "original": "INTEGRATED",
+          "value": "INTEGRATED"
+        },
+        {
+          "id": "next-live-prototype.html:text:24",
+          "label": "HEART & VITALITY COACHING",
+          "kind": "text",
+          "original": "HEART & VITALITY COACHING",
+          "value": "HEART & VITALITY COACHING"
+        },
+        {
+          "id": "next-live-prototype.html:text:25",
+          "label": "Align the heart. Enjoy the body.…",
+          "kind": "text",
+          "original": "Align the heart. Enjoy the body. Calm the mind.",
+          "value": "Align the heart. Enjoy the body. Calm the mind."
+        },
+        {
+          "id": "next-live-prototype.html:text:26",
+          "label": "Live a more honest, vital life.",
+          "kind": "text",
+          "original": "Live a more honest, vital life.",
+          "value": "Live a more honest, vital life."
+        },
+        {
+          "id": "next-live-prototype.html:text:27",
+          "label": "I support people who are ready a…",
+          "kind": "text",
+          "original": "I support people who are ready and willing to change, heal, and grow — in the body, heart, and mind, together.",
+          "value": "I support people who are ready and willing to change, heal, and grow — in the body, heart, and mind, together."
+        },
+        {
+          "id": "next-live-prototype.html:text:28",
+          "label": "Explore your path",
+          "kind": "text",
+          "original": "Explore your path",
+          "value": "Explore your path"
+        },
+        {
+          "id": "next-live-prototype.html:text:29",
+          "label": "Schedule a call",
+          "kind": "text",
+          "original": "Schedule a call",
+          "value": "Schedule a call"
+        },
+        {
+          "id": "next-live-prototype.html:text:30",
+          "label": "Is this for you?",
+          "kind": "text",
+          "original": "Is this for you?",
+          "value": "Is this for you?"
+        },
+        {
+          "id": "next-live-prototype.html:text:31",
+          "label": "You’re committed to your growth…",
+          "kind": "text",
+          "original": "You’re committed to your growth and ready for honest support.",
+          "value": "You’re committed to your growth and ready for honest support."
+        },
+        {
+          "id": "next-live-prototype.html:text:32",
+          "label": "You want your health, emotions,…",
+          "kind": "text",
+          "original": "You want your health, emotions, and relationships to all be included.",
+          "value": "You want your health, emotions, and relationships to all be included."
+        },
+        {
+          "id": "next-live-prototype.html:text:33",
+          "label": "You’re willing to experiment, fe…",
+          "kind": "text",
+          "original": "You’re willing to experiment, feel, and actually integrate change.",
+          "value": "You’re willing to experiment, feel, and actually integrate change."
+        },
+        {
+          "id": "next-live-prototype.html:text:34",
+          "label": "If this resonates, we may be a s…",
+          "kind": "text",
+          "original": "If this resonates, we may be a strong fit.",
+          "value": "If this resonates, we may be a strong fit."
+        },
+        {
+          "id": "next-live-prototype.html:text:35",
+          "label": "Clarity",
+          "kind": "text",
+          "original": "Clarity",
+          "value": "Clarity"
+        },
+        {
+          "id": "next-live-prototype.html:text:36",
+          "label": "What this work is, and what it i…",
+          "kind": "text",
+          "original": "What this work is, and what it is not.",
+          "value": "What this work is, and what it is not."
+        },
+        {
+          "id": "next-live-prototype.html:text:37",
+          "label": "Within your heart and subconscio…",
+          "kind": "text",
+          "original": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart, and supports the body, mind, and your relationship with all around you.",
+          "value": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart, and supports the body, mind, and your relationship with all around you."
+        },
+        {
+          "id": "next-live-prototype.html:text:38",
+          "label": "This path is for you if…",
+          "kind": "text",
+          "original": "This path is for you if…",
+          "value": "This path is for you if…"
+        },
+        {
+          "id": "next-live-prototype.html:text:39",
+          "label": "You want support for the body, h…",
+          "kind": "text",
+          "original": "You want support for the body, heart, and mind together.",
+          "value": "You want support for the body, heart, and mind together."
+        },
+        {
+          "id": "next-live-prototype.html:text:40",
+          "label": "You are tired of fragmented grow…",
+          "kind": "text",
+          "original": "You are tired of fragmented growth and quick fixes.",
+          "value": "You are tired of fragmented growth and quick fixes."
+        },
+        {
+          "id": "next-live-prototype.html:text:41",
+          "label": "You want honesty, vitality, and…",
+          "kind": "text",
+          "original": "You want honesty, vitality, and grounded change you can live.",
+          "value": "You want honesty, vitality, and grounded change you can live."
+        },
+        {
+          "id": "next-live-prototype.html:text:42",
+          "label": "You’re open to emotional alchemy…",
+          "kind": "text",
+          "original": "You’re open to emotional alchemy, not just mental insight.",
+          "value": "You’re open to emotional alchemy, not just mental insight."
+        },
+        {
+          "id": "next-live-prototype.html:text:43",
+          "label": "You are ready and willing to enj…",
+          "kind": "text",
+          "original": "You are ready and willing to enjoy life, naturally and deeply, more than you currently know how.",
+          "value": "You are ready and willing to enjoy life, naturally and deeply, more than you currently know how."
+        },
+        {
+          "id": "next-live-prototype.html:text:44",
+          "label": "This path is not for you if…",
+          "kind": "text",
+          "original": "This path is not for you if…",
+          "value": "This path is not for you if…"
+        },
+        {
+          "id": "next-live-prototype.html:text:45",
+          "label": "You want a shortcut without real…",
+          "kind": "text",
+          "original": "You want a shortcut without real participation.",
+          "value": "You want a shortcut without real participation."
+        },
+        {
+          "id": "next-live-prototype.html:text:46",
+          "label": "You are looking for a one-size-f…",
+          "kind": "text",
+          "original": "You are looking for a one-size-fits-all protocol or rigid program.",
+          "value": "You are looking for a one-size-fits-all protocol or rigid program."
+        },
+        {
+          "id": "next-live-prototype.html:text:47",
+          "label": "You want to stay in your head an…",
+          "kind": "text",
+          "original": "You want to stay in your head and avoid feeling.",
+          "value": "You want to stay in your head and avoid feeling."
+        },
+        {
+          "id": "next-live-prototype.html:text:48",
+          "label": "You are not willing to be honest…",
+          "kind": "text",
+          "original": "You are not willing to be honest with yourself and your life.",
+          "value": "You are not willing to be honest with yourself and your life."
+        },
+        {
+          "id": "next-live-prototype.html:text:49",
+          "label": "You expect change without practi…",
+          "kind": "text",
+          "original": "You expect change without practice, repetition, or integration.",
+          "value": "You expect change without practice, repetition, or integration."
+        },
+        {
+          "id": "next-live-prototype.html:text:50",
+          "label": "Choose your starting place",
+          "kind": "text",
+          "original": "Choose your starting place",
+          "value": "Choose your starting place"
+        },
+        {
+          "id": "next-live-prototype.html:text:51",
+          "label": "Three ways this work can meet you.",
+          "kind": "text",
+          "original": "Three ways this work can meet you.",
+          "value": "Three ways this work can meet you."
+        },
+        {
+          "id": "next-live-prototype.html:text:52",
+          "label": "Wherever you are on your path, I…",
+          "kind": "text",
+          "original": "Wherever you are on your path, I am here to support you. These are not rigid packages, but living pathways we can shape together.",
+          "value": "Wherever you are on your path, I am here to support you. These are not rigid packages, but living pathways we can shape together."
+        },
+        {
+          "id": "next-live-prototype.html:attribute:53",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Coaching pathways",
+          "value": "Coaching pathways",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:text:54",
+          "label": "Stabilize & Restore",
+          "kind": "text",
+          "original": "Stabilize & Restore",
+          "value": "Stabilize & Restore"
+        },
+        {
+          "id": "next-live-prototype.html:text:55",
+          "label": "Rebuild & Strengthen",
+          "kind": "text",
+          "original": "Rebuild & Strengthen",
+          "value": "Rebuild & Strengthen"
+        },
+        {
+          "id": "next-live-prototype.html:text:56",
+          "label": "Deepen & Integrate",
+          "kind": "text",
+          "original": "Deepen & Integrate",
+          "value": "Deepen & Integrate"
+        },
+        {
+          "id": "next-live-prototype.html:text:57",
+          "label": "Path 1 · Stabilize & Restore",
+          "kind": "text",
+          "original": "Path 1 · Stabilize & Restore",
+          "value": "Path 1 · Stabilize & Restore"
+        },
+        {
+          "id": "next-live-prototype.html:text:58",
+          "label": "For seasons when your system fee…",
+          "kind": "text",
+          "original": "For seasons when your system feels overwhelmed, depleted, or frayed. We begin with steadiness in the nervous system, simple practices for the heart, and practical support for the body.",
+          "value": "For seasons when your system feels overwhelmed, depleted, or frayed. We begin with steadiness in the nervous system, simple practices for the heart, and practical support for the body."
+        },
+        {
+          "id": "next-live-prototype.html:text:59",
+          "label": "Gentle nervous system regulation…",
+          "kind": "text",
+          "original": "Gentle nervous system regulation and grounding.",
+          "value": "Gentle nervous system regulation and grounding."
+        },
+        {
+          "id": "next-live-prototype.html:text:60",
+          "label": "Nutrition and movement coaching…",
+          "kind": "text",
+          "original": "Nutrition and movement coaching tuned for recovery.",
+          "value": "Nutrition and movement coaching tuned for recovery."
+        },
+        {
+          "id": "next-live-prototype.html:text:61",
+          "label": "Simple emotional alchemy practic…",
+          "kind": "text",
+          "original": "Simple emotional alchemy practices for daily life.",
+          "value": "Simple emotional alchemy practices for daily life."
+        },
+        {
+          "id": "next-live-prototype.html:text:62",
+          "label": "Honest reflection to understand…",
+          "kind": "text",
+          "original": "Honest reflection to understand what your life is asking of you.",
+          "value": "Honest reflection to understand what your life is asking of you."
+        },
+        {
+          "id": "next-live-prototype.html:text:63",
+          "label": "Explore if this is your path",
+          "kind": "text",
+          "original": "Explore if this is your path",
+          "value": "Explore if this is your path"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:64",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Forest light scene",
+          "value": "Forest light scene",
+          "attribute": "alt"
+        },
+        {
+          "id": "next-live-prototype.html:text:65",
+          "label": "Path 2 · Rebuild & Strengthen",
+          "kind": "text",
+          "original": "Path 2 · Rebuild & Strengthen",
+          "value": "Path 2 · Rebuild & Strengthen"
+        },
+        {
+          "id": "next-live-prototype.html:text:66",
+          "label": "When you’re ready to revitalize…",
+          "kind": "text",
+          "original": "When you’re ready to revitalize the body and live to your fullest potential. We combine heart work with training, nourishment, and clear structures that support real change.",
+          "value": "When you’re ready to revitalize the body and live to your fullest potential. We combine heart work with training, nourishment, and clear structures that support real change."
+        },
+        {
+          "id": "next-live-prototype.html:text:67",
+          "label": "Integrated heart work so your su…",
+          "kind": "text",
+          "original": "Integrated heart work so your subconscious stories support your goals.",
+          "value": "Integrated heart work so your subconscious stories support your goals."
+        },
+        {
+          "id": "next-live-prototype.html:text:68",
+          "label": "Strength, mobility, and movement…",
+          "kind": "text",
+          "original": "Strength, mobility, and movement coaching that respects your life.",
+          "value": "Strength, mobility, and movement coaching that respects your life."
+        },
+        {
+          "id": "next-live-prototype.html:text:69",
+          "label": "Vitality-focused nutrition guida…",
+          "kind": "text",
+          "original": "Vitality-focused nutrition guidance, from a PhD researcher’s lens.",
+          "value": "Vitality-focused nutrition guidance, from a PhD researcher’s lens."
+        },
+        {
+          "id": "next-live-prototype.html:text:70",
+          "label": "Practice rhythms that make chang…",
+          "kind": "text",
+          "original": "Practice rhythms that make change sustainable, not exhausting.",
+          "value": "Practice rhythms that make change sustainable, not exhausting."
+        },
+        {
+          "id": "next-live-prototype.html:text:71",
+          "label": "See how we can work together",
+          "kind": "text",
+          "original": "See how we can work together",
+          "value": "See how we can work together"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:72",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Sky and light scene",
+          "value": "Sky and light scene",
+          "attribute": "alt"
+        },
+        {
+          "id": "next-live-prototype.html:text:73",
+          "label": "Path 3 · Deepen & Integrate",
+          "kind": "text",
+          "original": "Path 3 · Deepen & Integrate",
+          "value": "Path 3 · Deepen & Integrate"
+        },
+        {
+          "id": "next-live-prototype.html:text:74",
+          "label": "For people who have done inner w…",
+          "kind": "text",
+          "original": "For people who have done inner work, but want to live with more wholeness, honesty, and relational depth. We focus on integration so your insights become lived reality.",
+          "value": "For people who have done inner work, but want to live with more wholeness, honesty, and relational depth. We focus on integration so your insights become lived reality."
+        },
+        {
+          "id": "next-live-prototype.html:text:75",
+          "label": "Advanced emotional alchemy and h…",
+          "kind": "text",
+          "original": "Advanced emotional alchemy and heart-based practices.",
+          "value": "Advanced emotional alchemy and heart-based practices."
+        },
+        {
+          "id": "next-live-prototype.html:text:76",
+          "label": "Support around relationships, vo…",
+          "kind": "text",
+          "original": "Support around relationships, vocation, and right livelihood.",
+          "value": "Support around relationships, vocation, and right livelihood."
+        },
+        {
+          "id": "next-live-prototype.html:text:77",
+          "label": "Integration time built in — so g…",
+          "kind": "text",
+          "original": "Integration time built in — so growth becomes embodied.",
+          "value": "Integration time built in — so growth becomes embodied."
+        },
+        {
+          "id": "next-live-prototype.html:text:78",
+          "label": "Ongoing refinement toward a more…",
+          "kind": "text",
+          "original": "Ongoing refinement toward a more whole way of living.",
+          "value": "Ongoing refinement toward a more whole way of living."
+        },
+        {
+          "id": "next-live-prototype.html:text:79",
+          "label": "Begin the conversation",
+          "kind": "text",
+          "original": "Begin the conversation",
+          "value": "Begin the conversation"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:80",
+          "label": "alt attribute",
+          "kind": "attribute",
+          "original": "Redwood forest",
+          "value": "Redwood forest",
+          "attribute": "alt"
+        },
+        {
+          "id": "next-live-prototype.html:text:81",
+          "label": "Lived change",
+          "kind": "text",
+          "original": "Lived change",
+          "value": "Lived change"
+        },
+        {
+          "id": "next-live-prototype.html:text:82",
+          "label": "What this path can begin to rest…",
+          "kind": "text",
+          "original": "What this path can begin to restore.",
+          "value": "What this path can begin to restore."
+        },
+        {
+          "id": "next-live-prototype.html:text:83",
+          "label": "The work is about real change pe…",
+          "kind": "text",
+          "original": "The work is about real change people can feel in life: in the body, the heart, the mind, and in relationship.",
+          "value": "The work is about real change people can feel in life: in the body, the heart, the mind, and in relationship."
+        },
+        {
+          "id": "next-live-prototype.html:text:84",
+          "label": "A healthier relationship with yo…",
+          "kind": "text",
+          "original": "A healthier relationship with your body",
+          "value": "A healthier relationship with your body"
+        },
+        {
+          "id": "next-live-prototype.html:text:85",
+          "label": "Greater steadiness in heart and…",
+          "kind": "text",
+          "original": "Greater steadiness in heart and mind",
+          "value": "Greater steadiness in heart and mind"
+        },
+        {
+          "id": "next-live-prototype.html:text:86",
+          "label": "More honesty in how you live",
+          "kind": "text",
+          "original": "More honesty in how you live",
+          "value": "More honesty in how you live"
+        },
+        {
+          "id": "next-live-prototype.html:text:87",
+          "label": "More vitality and presence",
+          "kind": "text",
+          "original": "More vitality and presence",
+          "value": "More vitality and presence"
+        },
+        {
+          "id": "next-live-prototype.html:text:88",
+          "label": "A deeper sense of wholeness",
+          "kind": "text",
+          "original": "A deeper sense of wholeness",
+          "value": "A deeper sense of wholeness"
+        },
+        {
+          "id": "next-live-prototype.html:text:89",
+          "label": "Change that can be lived, not ju…",
+          "kind": "text",
+          "original": "Change that can be lived, not just understood",
+          "value": "Change that can be lived, not just understood"
+        },
+        {
+          "id": "next-live-prototype.html:text:90",
+          "label": "“Speak to Paul, he will absolute…",
+          "kind": "text",
+          "original": "“Speak to Paul, he will absolutely change your life, I guarantee it.”",
+          "value": "“Speak to Paul, he will absolutely change your life, I guarantee it.”"
+        },
+        {
+          "id": "next-live-prototype.html:text:91",
+          "label": "Scott · Australia",
+          "kind": "text",
+          "original": "Scott · Australia",
+          "value": "Scott · Australia"
+        },
+        {
+          "id": "next-live-prototype.html:text:92",
+          "label": "“I can begin to see the possibil…",
+          "kind": "text",
+          "original": "“I can begin to see the possibility of life that is far more exciting and joyful than what I have known.”",
+          "value": "“I can begin to see the possibility of life that is far more exciting and joyful than what I have known.”"
+        },
+        {
+          "id": "next-live-prototype.html:text:93",
+          "label": "Dave",
+          "kind": "text",
+          "original": "Dave",
+          "value": "Dave"
+        },
+        {
+          "id": "next-live-prototype.html:text:94",
+          "label": "“I see myself more clearly and c…",
+          "kind": "text",
+          "original": "“I see myself more clearly and can therefore improve and make progress more quickly and effectively.”",
+          "value": "“I see myself more clearly and can therefore improve and make progress more quickly and effectively.”"
+        },
+        {
+          "id": "next-live-prototype.html:text:95",
+          "label": "Jon",
+          "kind": "text",
+          "original": "Jon",
+          "value": "Jon"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:96",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Select a client story",
+          "value": "Select a client story",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:97",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Scott's story",
+          "value": "Scott's story",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:98",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Dave's story",
+          "value": "Dave's story",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:99",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Jon's story",
+          "value": "Jon's story",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:text:100",
+          "label": "Next steps",
+          "kind": "text",
+          "original": "Next steps",
+          "value": "Next steps"
+        },
+        {
+          "id": "next-live-prototype.html:text:101",
+          "label": "Where we can go from here.",
+          "kind": "text",
+          "original": "Where we can go from here.",
+          "value": "Where we can go from here."
+        },
+        {
+          "id": "next-live-prototype.html:text:102",
+          "label": "This page is a doorway, not a pr…",
+          "kind": "text",
+          "original": "This page is a doorway, not a pressure page. Wherever you are on your path, there is a simple next step available.",
+          "value": "This page is a doorway, not a pressure page. Wherever you are on your path, there is a simple next step available."
+        },
+        {
+          "id": "next-live-prototype.html:text:103",
+          "label": "Understand the work",
+          "kind": "text",
+          "original": "Understand the work",
+          "value": "Understand the work"
+        },
+        {
+          "id": "next-live-prototype.html:text:104",
+          "label": "Read more about how I support pe…",
+          "kind": "text",
+          "original": "Read more about how I support people ready for a more whole way of living.",
+          "value": "Read more about how I support people ready for a more whole way of living."
+        },
+        {
+          "id": "next-live-prototype.html:text:105",
+          "label": "Open Work With Me",
+          "kind": "text",
+          "original": "Open Work With Me",
+          "value": "Open Work With Me"
+        },
+        {
+          "id": "next-live-prototype.html:text:106",
+          "label": "Get to know me",
+          "kind": "text",
+          "original": "Get to know me",
+          "value": "Get to know me"
+        },
+        {
+          "id": "next-live-prototype.html:text:107",
+          "label": "Learn more about my story, train…",
+          "kind": "text",
+          "original": "Learn more about my story, training, and why I care this much.",
+          "value": "Learn more about my story, training, and why I care this much."
+        },
+        {
+          "id": "next-live-prototype.html:text:108",
+          "label": "Open My Story",
+          "kind": "text",
+          "original": "Open My Story",
+          "value": "Open My Story"
+        },
+        {
+          "id": "next-live-prototype.html:text:109",
+          "label": "Have a real conversation",
+          "kind": "text",
+          "original": "Have a real conversation",
+          "value": "Have a real conversation"
+        },
+        {
+          "id": "next-live-prototype.html:text:110",
+          "label": "If your heart is already saying…",
+          "kind": "text",
+          "original": "If your heart is already saying yes, we can begin with a simple, honest call.",
+          "value": "If your heart is already saying yes, we can begin with a simple, honest call."
+        },
+        {
+          "id": "next-live-prototype.html:text:111",
+          "label": "Schedule A Call",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "next-live-prototype.html:text:112",
+          "label": "Paul Cropper",
+          "kind": "text",
+          "original": "Paul Cropper",
+          "value": "Paul Cropper"
+        },
+        {
+          "id": "next-live-prototype.html:text:113",
+          "label": "Integrated Heart & Vitality",
+          "kind": "text",
+          "original": "Integrated Heart & Vitality",
+          "value": "Integrated Heart & Vitality"
+        },
+        {
+          "id": "next-live-prototype.html:attribute:114",
+          "label": "aria-label attribute",
+          "kind": "attribute",
+          "original": "Footer navigation",
+          "value": "Footer navigation",
+          "attribute": "aria-label"
+        },
+        {
+          "id": "next-live-prototype.html:text:115",
+          "label": "Home",
+          "kind": "text",
+          "original": "Home",
+          "value": "Home"
+        },
+        {
+          "id": "next-live-prototype.html:text:116",
+          "label": "Work With Me",
+          "kind": "text",
+          "original": "Work With Me",
+          "value": "Work With Me"
+        },
+        {
+          "id": "next-live-prototype.html:text:117",
+          "label": "About",
+          "kind": "text",
+          "original": "About",
+          "value": "About"
+        },
+        {
+          "id": "next-live-prototype.html:text:118",
+          "label": "My Story",
+          "kind": "text",
+          "original": "My Story",
+          "value": "My Story"
+        },
+        {
+          "id": "next-live-prototype.html:text:119",
+          "label": "FAQ",
+          "kind": "text",
+          "original": "FAQ",
+          "value": "FAQ"
+        },
+        {
+          "id": "next-live-prototype.html:text:120",
+          "label": "Testimonials",
+          "kind": "text",
+          "original": "Testimonials",
+          "value": "Testimonials"
+        },
+        {
+          "id": "next-live-prototype.html:text:121",
+          "label": "Resources",
+          "kind": "text",
+          "original": "Resources",
+          "value": "Resources"
+        },
+        {
+          "id": "next-live-prototype.html:text:122",
+          "label": "Schedule A Call",
+          "kind": "text",
+          "original": "Schedule A Call",
+          "value": "Schedule A Call"
+        },
+        {
+          "id": "next-live-prototype.html:text:123",
+          "label": "HEALTH IN THE BODY, HEART, AND MIND",
+          "kind": "text",
+          "original": "HEALTH IN THE BODY, HEART, AND MIND",
+          "value": "HEALTH IN THE BODY, HEART, AND MIND"
+        },
+        {
+          "id": "next-live-prototype.html:text:124",
+          "label": "© 2026 Paul Cropper",
+          "kind": "text",
+          "original": "© 2026 Paul Cropper",
+          "value": "© 2026 Paul Cropper"
+        }
+      ]
+    },
+    "testimonials.html": {
+      "label": "Testimonials",
+      "path": "testimonials.html",
+      "entries": [
+        {
+          "id": "testimonials.html:meta:1",
+          "label": "Meta viewport",
+          "kind": "meta",
+          "original": "width=device-width, initial-scale=1.0",
+          "value": "width=device-width, initial-scale=1.0",
+          "name": "viewport"
+        },
+        {
+          "id": "testimonials.html:text:2",
+          "label": "Browser title",
+          "kind": "text",
+          "original": "Testimonials moved | Integrated Heart & Vitality",
+          "value": "Testimonials moved | Integrated Heart & Vitality"
+        },
+        {
+          "id": "testimonials.html:text:3",
+          "label": "Testimonials moved",
+          "kind": "text",
+          "original": "Testimonials moved",
+          "value": "Testimonials moved"
+        },
+        {
+          "id": "testimonials.html:text:4",
+          "label": "This page is now part of",
+          "kind": "text",
+          "original": "This page is now part of",
+          "value": "This page is now part of"
+        },
+        {
+          "id": "testimonials.html:text:5",
+          "label": "FAQ & Testimonials",
+          "kind": "text",
+          "original": "FAQ & Testimonials",
+          "value": "FAQ & Testimonials"
+        },
+        {
+          "id": "testimonials.html:text:6",
+          "label": ".",
+          "kind": "text",
+          "original": ".",
+          "value": "."
         }
       ]
     }

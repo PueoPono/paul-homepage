@@ -111,5 +111,6 @@
     const updateHeader = () => { if (!header) return; const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; header.classList.toggle('site-header--transparent', scrolled <= 24); header.classList.toggle('site-header--solid', scrolled > 24); };
     window.addEventListener('load', updateHeader); window.addEventListener('scroll', updateHeader, { passive: true }); updateHeader();
   </script>
+  <script src="site-copy-runtime.js"></script>
 </body>
 </html>
