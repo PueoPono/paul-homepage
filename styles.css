@@ -584,6 +584,61 @@ p { margin: 0 0 1rem; }
 }
 .field textarea { min-height: 180px; resize: vertical; }
 .placeholder-note { color: rgba(255,243,226,0.66); font-size: 0.93rem; }
+.form-status { color: rgba(255,243,226,0.72); font-size: 0.94rem; min-height: 1.5rem; }
+.signup-grid { align-items: start; }
+.signup-copy-card .check-list { margin-bottom: 1.2rem; }
+.quote-panel {
+  margin: 1.5rem 0 0;
+  padding: 1.15rem 1.25rem;
+  border-left: 3px solid var(--color-gold);
+  background: rgba(255,255,255,0.045);
+  border-radius: 16px;
+}
+.quote-panel p { margin-top: 0; }
+.quote-panel cite { color: var(--color-sand); font-style: normal; }
+.payment-card {
+  position: sticky;
+  top: 128px;
+  background: linear-gradient(180deg, rgba(37, 23, 16, 0.94), rgba(20, 13, 10, 0.94));
+  border-color: rgba(230, 164, 58, 0.28);
+}
+.signup-form { display: grid; gap: 1rem; }
+.payment-options {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.payment-options legend { font-weight: 800; margin-bottom: 0.35rem; color: var(--color-cream); }
+.payment-option {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.9rem;
+  border: 1px solid rgba(242, 215, 160, 0.18);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.045);
+  cursor: pointer;
+}
+.payment-option span { display: grid; gap: 0.1rem; }
+.payment-option em { color: var(--color-sand); font-style: normal; }
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.94rem;
+  color: rgba(245,242,234,0.86);
+}
+.terms-check a,
+.legal-container a.text-link { color: var(--color-sand); text-decoration: underline; }
+.payment-button { width: 100%; justify-content: center; text-align: center; }
+.payment-button--disabled { opacity: 0.48; cursor: not-allowed; }
+.legal-page { padding-top: 106px; }
+.legal-section { min-height: 70vh; }
+.legal-container { max-width: 880px; }
+.legal-container h1 { font-size: clamp(2.2rem, 5vw, 4rem); margin-top: 0; }
+.legal-container h2 { margin-top: 1.6rem; color: var(--color-sand); }
 .cta-panel {
   padding: 2rem;
   border-radius: 24px;
