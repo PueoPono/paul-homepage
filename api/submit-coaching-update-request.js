@@ -1,6 +1,13 @@
 const TABLE = 'coaching_page_update_requests';
 
+function setCors(res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+}
+
 function send(res, status, body) {
+  setCors(res);
   res.statusCode = status;
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Cache-Control', 'no-store');
@@ -26,6 +33,12 @@ function normalizePayload(body) {
 }
 
 module.exports = async function handler(req, res) {
+  if (req.method === 'OPTIONS') {
+    setCors(res);
+    res.statusCode = 204;
+    return res.end();
+  }
+
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return send(res, 405, { error: 'Method not allowed' });
