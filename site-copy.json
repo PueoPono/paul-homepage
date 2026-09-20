@@ -2959,6 +2959,14 @@
         },
         {
           "id": "coaching-terms-and-conditions.html:attribute:4",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "styles.css?v=coaching-signup-1",
+          "value": "styles.css?v=coaching-signup-1",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:5",
           "label": "aria-label attribute",
           "kind": "attribute",
           "original": "Vital Life with Paul home",
@@ -2966,7 +2974,15 @@
           "attribute": "aria-label"
         },
         {
-          "id": "coaching-terms-and-conditions.html:attribute:5",
+          "id": "coaching-terms-and-conditions.html:attribute:6",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "index.html",
+          "value": "index.html",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:7",
           "label": "alt attribute",
           "kind": "attribute",
           "original": "Heart arrow logo",
@@ -2974,21 +2990,21 @@
           "attribute": "alt"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:6",
-          "label": "Vital Life",
+          "id": "coaching-terms-and-conditions.html:text:8",
+          "label": "SPAN text",
           "kind": "text",
           "original": "Vital Life",
           "value": "Vital Life"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:7",
-          "label": "w/ Paul",
+          "id": "coaching-terms-and-conditions.html:text:9",
+          "label": "SPAN text",
           "kind": "text",
           "original": "w/ Paul",
           "value": "w/ Paul"
         },
         {
-          "id": "coaching-terms-and-conditions.html:attribute:8",
+          "id": "coaching-terms-and-conditions.html:attribute:10",
           "label": "aria-label attribute",
           "kind": "attribute",
           "original": "Primary navigation",
@@ -2996,218 +3012,285 @@
           "attribute": "aria-label"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:9",
-          "label": "Home",
+          "id": "coaching-terms-and-conditions.html:attribute:11",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "index.html",
+          "value": "index.html",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:12",
+          "label": "A text",
           "kind": "text",
           "original": "Home",
           "value": "Home"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:10",
-          "label": "Work With Me",
+          "id": "coaching-terms-and-conditions.html:attribute:13",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "work-with-paul.html",
+          "value": "work-with-paul.html",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:14",
+          "label": "A text",
           "kind": "text",
           "original": "Work With Me",
           "value": "Work With Me"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:11",
-          "label": "Signup",
+          "id": "coaching-terms-and-conditions.html:attribute:15",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "coachingpkg-signup.html",
+          "value": "coachingpkg-signup.html",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:16",
+          "label": "A text",
           "kind": "text",
           "original": "Signup",
           "value": "Signup"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:12",
-          "label": "Terms of Use",
+          "id": "coaching-terms-and-conditions.html:text:17",
+          "label": "P text",
           "kind": "text",
-          "original": "Terms of Use",
-          "value": "Terms of Use"
+          "original": "Terms & Conditions",
+          "value": "Terms & Conditions"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:13",
-          "label": "Coaching Terms and Conditions",
+          "id": "coaching-terms-and-conditions.html:text:18",
+          "label": "H1 text",
           "kind": "text",
           "original": "Coaching Terms and Conditions",
           "value": "Coaching Terms and Conditions"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:14",
-          "label": "Last updated:",
-          "kind": "text",
-          "original": "Last updated:",
-          "value": "Last updated:"
-        },
-        {
-          "id": "coaching-terms-and-conditions.html:text:15",
-          "label": "September 20, 2026",
-          "kind": "text",
-          "original": "September 20, 2026",
-          "value": "September 20, 2026"
-        },
-        {
-          "id": "coaching-terms-and-conditions.html:text:16",
-          "label": "These Terms and Conditions apply…",
-          "kind": "text",
-          "original": "These Terms and Conditions apply to the Coaching Startup Collaboration / Heart-Body-Mind Life Coaching Package with Paul Cropper. By purchasing or beginning coaching, you agree to these terms.",
-          "value": "These Terms and Conditions apply to the Coaching Startup Collaboration / Heart-Body-Mind Life Coaching Package with Paul Cropper. By purchasing or beginning coaching, you agree to these terms."
-        },
-        {
-          "id": "coaching-terms-and-conditions.html:text:17",
-          "label": "1. Coaching relationship",
-          "kind": "text",
-          "original": "1. Coaching relationship",
-          "value": "1. Coaching relationship"
-        },
-        {
-          "id": "coaching-terms-and-conditions.html:text:18",
-          "label": "Coaching is a collaborative proc…",
-          "kind": "text",
-          "original": "Coaching is a collaborative process for personal growth, reflection, life skills, and holistic support. Coaching is not medical care, psychotherapy, legal advice, financial advice, or emergency support. You remain responsible for your own choices, health care, and decisions.",
-          "value": "Coaching is a collaborative process for personal growth, reflection, life skills, and holistic support. Coaching is not medical care, psychotherapy, legal advice, financial advice, or emergency support. You remain responsible for your own choices, health care, and decisions."
-        },
-        {
           "id": "coaching-terms-and-conditions.html:text:19",
-          "label": "2. Package structure",
+          "label": "P text",
           "kind": "text",
-          "original": "2. Package structure",
-          "value": "2. Package structure"
+          "original": "The coaching schedule and online material will be arranged between the Coach (Paul) and the Client (you). The Coach will recommend the frequency of coaching sessions based on assessment of the client’s requirements. Normally, the monthly coaching schedule includes 3 calls a month, minimum 30 minutes each. The 4th week may be a check-in through messaging or a phone call. Client may request any additional contact and is encouraged to do so. This recommendation, or plan, is not binding and may be altered and adjusted throughout the coaching journey, in accordance with the terms set out in this agreement.",
+          "value": "The coaching schedule and online material will be arranged between the Coach (Paul) and the Client (you). The Coach will recommend the frequency of coaching sessions based on assessment of the client’s requirements. Normally, the monthly coaching schedule includes 3 calls a month, minimum 30 minutes each. The 4th week may be a check-in through messaging or a phone call. Client may request any additional contact and is encouraged to do so. This recommendation, or plan, is not binding and may be altered and adjusted throughout the coaching journey, in accordance with the terms set out in this agreement."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:20",
-          "label": "The package includes 12 coaching…",
+          "label": "P text",
           "kind": "text",
-          "original": "The package includes 12 coaching calls spread over approximately 3–4 months, with weekly or biweekly rhythm as agreed, action steps tailored to you, online content where applicable, and messaging support during the package window.",
-          "value": "The package includes 12 coaching calls spread over approximately 3–4 months, with weekly or biweekly rhythm as agreed, action steps tailored to you, online content where applicable, and messaging support during the package window."
+          "original": "In general, sessions will be provided on a session-by-session basis.",
+          "value": "In general, sessions will be provided on a session-by-session basis."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:21",
-          "label": "3. Payment options",
+          "label": "P text",
           "kind": "text",
-          "original": "3. Payment options",
-          "value": "3. Payment options"
+          "original": "In return for the fees payable by the client (or by a third party on their behalf), Paul agrees to provide the coaching service in accordance with the terms and conditions set out below. The client agrees to pay fees for the service on the terms and conditions set out below. In situations where a third party pays the fees, the third party counts as an agent acting on behalf of the client.",
+          "value": "In return for the fees payable by the client (or by a third party on their behalf), Paul agrees to provide the coaching service in accordance with the terms and conditions set out below. The client agrees to pay fees for the service on the terms and conditions set out below. In situations where a third party pays the fees, the third party counts as an agent acting on behalf of the client."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:22",
-          "label": "You may choose either one paymen…",
+          "label": "P text",
           "kind": "text",
-          "original": "You may choose either one payment of $3,450 or three payments of $1,250. Payment may be made by credit card through Stripe or through Venmo @Paul-Cropper. Payment must be complete or the payment plan active before coaching begins unless another written arrangement is made.",
-          "value": "You may choose either one payment of $3,450 or three payments of $1,250. Payment may be made by credit card through Stripe or through Venmo @Paul-Cropper. Payment must be complete or the payment plan active before coaching begins unless another written arrangement is made."
+          "original": "The date that payment ensues will be considered the start date for the service. Where any client is unhappy with any of the terms and conditions, they can contact Paul to discuss any concerns and see if they can be resolved.",
+          "value": "The date that payment ensues will be considered the start date for the service. Where any client is unhappy with any of the terms and conditions, they can contact Paul to discuss any concerns and see if they can be resolved."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:23",
-          "label": "4. Scheduling and rescheduling",
+          "label": "H2 text",
           "kind": "text",
-          "original": "4. Scheduling and rescheduling",
-          "value": "4. Scheduling and rescheduling"
+          "original": "Billing",
+          "value": "Billing"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:24",
-          "label": "Please give at least 24 hours no…",
+          "label": "H3 text",
           "kind": "text",
-          "original": "Please give at least 24 hours notice when rescheduling a session when possible. Missed sessions or repeated last-minute cancellations may count as used sessions at Paul’s discretion, while emergencies will be handled with care and reasonable flexibility.",
-          "value": "Please give at least 24 hours notice when rescheduling a session when possible. Missed sessions or repeated last-minute cancellations may count as used sessions at Paul’s discretion, while emergencies will be handled with care and reasonable flexibility."
+          "original": "For the Single-Payment Package:",
+          "value": "For the Single-Payment Package:"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:25",
-          "label": "5. Refunds and cancellations",
+          "label": "P text",
           "kind": "text",
-          "original": "5. Refunds and cancellations",
-          "value": "5. Refunds and cancellations"
+          "original": "The client agrees to this one-time payment. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client.",
+          "value": "The client agrees to this one-time payment. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:26",
-          "label": "Because coaching reserves time,…",
+          "label": "H3 text",
           "kind": "text",
-          "original": "Because coaching reserves time, attention, and program capacity, payments are generally non-refundable once the package begins. If an unexpected situation arises, contact Paul directly so the next best arrangement can be discussed in good faith.",
-          "value": "Because coaching reserves time, attention, and program capacity, payments are generally non-refundable once the package begins. If an unexpected situation arises, contact Paul directly so the next best arrangement can be discussed in good faith."
+          "original": "For the Monthly-Payment Package:",
+          "value": "For the Monthly-Payment Package:"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:27",
-          "label": "6. Confidentiality",
+          "label": "P text",
           "kind": "text",
-          "original": "6. Confidentiality",
-          "value": "6. Confidentiality"
+          "original": "The client agrees to monthly billing for the full length of the coaching package. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client.",
+          "value": "The client agrees to monthly billing for the full length of the coaching package. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:28",
-          "label": "Paul will treat coaching convers…",
+          "label": "H3 text",
           "kind": "text",
-          "original": "Paul will treat coaching conversations with respect and care. Confidentiality may be limited where disclosure is required by law, where there is risk of harm, or where you give permission to share information.",
-          "value": "Paul will treat coaching conversations with respect and care. Confidentiality may be limited where disclosure is required by law, where there is risk of harm, or where you give permission to share information."
+          "original": "For Monthly-Recurring Payment (Year):",
+          "value": "For Monthly-Recurring Payment (Year):"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:29",
-          "label": "7. Personal responsibility",
+          "label": "P text",
           "kind": "text",
-          "original": "7. Personal responsibility",
-          "value": "7. Personal responsibility"
+          "original": "The client agrees to monthly billing for the full year of this coaching package. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client. After 1 year, recurring coaching will continue unless canceled by Client.",
+          "value": "The client agrees to monthly billing for the full year of this coaching package. The client understands that no refund is offered for this service. In the event of any conflict, Coach will attempt to work out a resolution with Client. After 1 year, recurring coaching will continue unless canceled by Client."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:30",
-          "label": "You agree to participate honestl…",
+          "label": "H3 text",
           "kind": "text",
-          "original": "You agree to participate honestly, communicate relevant needs or concerns, and make your own decisions about assignments, practices, health choices, relationships, and life changes. Results vary by person and are not guaranteed.",
-          "value": "You agree to participate honestly, communicate relevant needs or concerns, and make your own decisions about assignments, practices, health choices, relationships, and life changes. Results vary by person and are not guaranteed."
+          "original": "For Single Session:",
+          "value": "For Single Session:"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:31",
-          "label": "8. Technology and messaging",
+          "label": "P text",
           "kind": "text",
-          "original": "8. Technology and messaging",
-          "value": "8. Technology and messaging"
+          "original": "The client agrees to payment at time of scheduling. The client understands that no refund is offered for cancellations, unless Paul is able to fill that spot; otherwise, you have purchased it.",
+          "value": "The client agrees to payment at time of scheduling. The client understands that no refund is offered for cancellations, unless Paul is able to fill that spot; otherwise, you have purchased it."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:32",
-          "label": "Online calls, email, text, or me…",
+          "label": "H2 text",
           "kind": "text",
-          "original": "Online calls, email, text, or messaging may be used for coaching support. No digital system is perfectly secure, and you agree to use reasonable discretion with sensitive information.",
-          "value": "Online calls, email, text, or messaging may be used for coaching support. No digital system is perfectly secure, and you agree to use reasonable discretion with sensitive information."
+          "original": "Format of Sessions",
+          "value": "Format of Sessions"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:33",
-          "label": "9. Intellectual property",
+          "label": "P text",
           "kind": "text",
-          "original": "9. Intellectual property",
-          "value": "9. Intellectual property"
+          "original": "Sessions are by phone either via Telegram, Messenger, FaceTime audio, WhatsApp audio, or by telephone direct. In all cases, the client is responsible for calling the coach. The coach is available for other formats by mutual agreement. Client is responsible for ensuring that he is available for consultation at agreed times. If Client does not show, or reschedule 24 hours prior to appointed time, the time allotted is subject to count toward his coaching call for that week.",
+          "value": "Sessions are by phone either via Telegram, Messenger, FaceTime audio, WhatsApp audio, or by telephone direct. In all cases, the client is responsible for calling the coach. The coach is available for other formats by mutual agreement. Client is responsible for ensuring that he is available for consultation at agreed times. If Client does not show, or reschedule 24 hours prior to appointed time, the time allotted is subject to count toward his coaching call for that week."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:34",
-          "label": "Any coaching materials, exercise…",
+          "label": "H2 text",
           "kind": "text",
-          "original": "Any coaching materials, exercises, recordings, written content, or online resources provided by Paul are for your personal use only and may not be copied, sold, or distributed without permission.",
-          "value": "Any coaching materials, exercises, recordings, written content, or online resources provided by Paul are for your personal use only and may not be copied, sold, or distributed without permission."
+          "original": "Waiver",
+          "value": "Waiver"
         },
         {
           "id": "coaching-terms-and-conditions.html:text:35",
-          "label": "10. Agreement",
+          "label": "P text",
           "kind": "text",
-          "original": "10. Agreement",
-          "value": "10. Agreement"
+          "original": "You hereby release, waive, acquit and forever discharge your Coach, any agents, successors, assigns, personal representatives, executors, heirs and employees from every claim, suit action, demand or right to compensation for damages you may claim to have or that you may have arising out of acts or omissions by yourself or by your Coach as a result of the advice given by your Coach or otherwise resulting from the coaching relationship contemplated by this agreement.",
+          "value": "You hereby release, waive, acquit and forever discharge your Coach, any agents, successors, assigns, personal representatives, executors, heirs and employees from every claim, suit action, demand or right to compensation for damages you may claim to have or that you may have arising out of acts or omissions by yourself or by your Coach as a result of the advice given by your Coach or otherwise resulting from the coaching relationship contemplated by this agreement."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:36",
-          "label": "By checking the Terms and Condit…",
+          "label": "P text",
           "kind": "text",
-          "original": "By checking the Terms and Conditions box on the signup page and completing payment, you confirm that you have read, understood, and agree to these terms.",
-          "value": "By checking the Terms and Conditions box on the signup page and completing payment, you confirm that you have read, understood, and agree to these terms."
+          "original": "You further declare and represent that no promise, inducement or agreement not expressed in this agreement has been made to you to sign this agreement. This agreement shall bind your heirs, executors, personal representatives, successors, assigns, and agents.",
+          "value": "You further declare and represent that no promise, inducement or agreement not expressed in this agreement has been made to you to sign this agreement. This agreement shall bind your heirs, executors, personal representatives, successors, assigns, and agents."
         },
         {
           "id": "coaching-terms-and-conditions.html:text:37",
-          "label": "Back to signup",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Refunds",
+          "value": "Refunds"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:38",
+          "label": "P text",
+          "kind": "text",
+          "original": "Refunds are not provided. Where issues may arise, Client is expected to discuss these with Coach openly and honestly.",
+          "value": "Refunds are not provided. Where issues may arise, Client is expected to discuss these with Coach openly and honestly."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:39",
+          "label": "H2 text",
+          "kind": "text",
+          "original": "Coaching Disclaimer",
+          "value": "Coaching Disclaimer"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:40",
+          "label": "P text",
+          "kind": "text",
+          "original": "In committing to holistic life coaching with Paul Cropper, you acknowledge the following:",
+          "value": "In committing to holistic life coaching with Paul Cropper, you acknowledge the following:"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:41",
+          "label": "P text",
+          "kind": "text",
+          "original": "You understand that the coaching services you will be receiving from your Coach are not offered as a substitute for professional mental health care or medical care and are not intended to diagnose, treat or cure any mental health or medical conditions. You also understand that your Coach is not acting as a mental health counsellor or a medical professional.",
+          "value": "You understand that the coaching services you will be receiving from your Coach are not offered as a substitute for professional mental health care or medical care and are not intended to diagnose, treat or cure any mental health or medical conditions. You also understand that your Coach is not acting as a mental health counsellor or a medical professional."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:42",
+          "label": "P text",
+          "kind": "text",
+          "original": "For legal purposes, you understand that coaching is currently an unregulated industry and that your Coach is not “licensed” by any body even though the sessions may take place in the USA or elsewhere.",
+          "value": "For legal purposes, you understand that coaching is currently an unregulated industry and that your Coach is not “licensed” by any body even though the sessions may take place in the USA or elsewhere."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:43",
+          "label": "P text",
+          "kind": "text",
+          "original": "You understand and agree that you are fully responsible for your well-being during your coaching sessions and subsequently, including your choices and decisions.",
+          "value": "You understand and agree that you are fully responsible for your well-being during your coaching sessions and subsequently, including your choices and decisions."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:44",
+          "label": "P text",
+          "kind": "text",
+          "original": "You understand that coaching is not a substitute for counselling, psychotherapy, psychoanalysis, mental health care or substance abuse treatment, and you will not use it in place of any form of therapy.",
+          "value": "You understand that coaching is not a substitute for counselling, psychotherapy, psychoanalysis, mental health care or substance abuse treatment, and you will not use it in place of any form of therapy."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:45",
+          "label": "P text",
+          "kind": "text",
+          "original": "You understand that all comments and ideas offered by your Coach are solely for the purpose of aiding you in achieving the defined goals you create with your Coach. You have the ability to give your informed consent, and hereby give such consent to your coach to assist you in achieving such goals and understand that results are not guaranteed.",
+          "value": "You understand that all comments and ideas offered by your Coach are solely for the purpose of aiding you in achieving the defined goals you create with your Coach. You have the ability to give your informed consent, and hereby give such consent to your coach to assist you in achieving such goals and understand that results are not guaranteed."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:46",
+          "label": "P text",
+          "kind": "text",
+          "original": "You understand that to the extent our work together involves personal development, career or business, your Coach is not promising outcomes included but not limited to trauma recovery, personal introspection, increased personal happiness, career progression, profitability and/or business success.",
+          "value": "You understand that to the extent our work together involves personal development, career or business, your Coach is not promising outcomes included but not limited to trauma recovery, personal introspection, increased personal happiness, career progression, profitability and/or business success."
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:attribute:47",
+          "label": "href attribute",
+          "kind": "attribute",
+          "original": "coachingpkg-signup.html",
+          "value": "coachingpkg-signup.html",
+          "attribute": "href"
+        },
+        {
+          "id": "coaching-terms-and-conditions.html:text:48",
+          "label": "A text",
           "kind": "text",
           "original": "Back to signup",
           "value": "Back to signup"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:38",
-          "label": "Vital Life w/ Paul",
+          "id": "coaching-terms-and-conditions.html:text:49",
+          "label": "STRONG text",
           "kind": "text",
           "original": "Vital Life w/ Paul",
           "value": "Vital Life w/ Paul"
         },
         {
-          "id": "coaching-terms-and-conditions.html:text:39",
-          "label": "© 2026 Paul Cropper",
+          "id": "coaching-terms-and-conditions.html:text:50",
+          "label": "P text",
           "kind": "text",
           "original": "© 2026 Paul Cropper",
           "value": "© 2026 Paul Cropper"
