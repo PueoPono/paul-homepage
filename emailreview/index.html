@@ -8,231 +8,366 @@
   <style>
     :root {
       --bg: #07111f;
-      --panel: rgba(12, 26, 45, 0.92);
-      --panel-soft: rgba(255, 255, 255, 0.055);
-      --line: rgba(234, 204, 132, 0.24);
+      --ink: #f7f0df;
+      --muted: rgba(247,240,223,.68);
       --gold: #e7c982;
-      --gold-soft: #f4dfaa;
-      --text: #f7f0df;
-      --muted: rgba(247, 240, 223, 0.72);
-      --blue: #13294a;
-      --green: #85d5af;
+      --gold-soft: #f6dfaa;
+      --line: rgba(231,201,130,.24);
+      --panel: rgba(9,20,36,.91);
+      --panel-2: rgba(255,255,255,.055);
+      --green: #82d6ae;
       --red: #ff9f9f;
-      --shadow: 0 26px 90px rgba(0,0,0,.38);
+      --email-ink: #1e2b36;
+      --email-muted: #68737c;
+      --email-bg: #f7f1e5;
+      --shadow: 0 26px 90px rgba(0,0,0,.35);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      color: var(--text);
+      min-height: 100vh;
+      color: var(--ink);
       background:
-        radial-gradient(circle at 15% 0%, rgba(231, 201, 130, .16), transparent 32rem),
-        radial-gradient(circle at 80% 10%, rgba(55, 104, 160, .24), transparent 36rem),
-        linear-gradient(135deg, #050915, var(--bg) 44%, #090d16);
+        radial-gradient(circle at 12% 0%, rgba(231,201,130,.16), transparent 28rem),
+        radial-gradient(circle at 82% 8%, rgba(52,100,158,.27), transparent 35rem),
+        linear-gradient(135deg, #040813, var(--bg) 46%, #080d16);
+    }
+    button, input, textarea { font: inherit; }
+    button {
+      appearance: none;
+      border: 1px solid rgba(231,201,130,.38);
+      border-radius: 999px;
+      padding: 10px 14px;
+      background: rgba(231,201,130,.11);
+      color: var(--gold-soft);
+      font-weight: 760;
+      cursor: pointer;
+    }
+    button:hover { border-color: rgba(246,223,170,.75); background: rgba(231,201,130,.18); }
+    button.primary { background: linear-gradient(135deg, #e0bc66, #f5dfa8); color: #10213a; border-color: transparent; }
+    button.ghost { background: transparent; }
+    button.danger { border-color: rgba(255,159,159,.45); color: var(--red); background: rgba(255,159,159,.08); }
+    button.mini { padding: 7px 10px; font-size: 12px; }
+    .app {
+      display: grid;
+      grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
       min-height: 100vh;
     }
-    header {
-      padding: 40px clamp(18px, 4vw, 54px) 22px;
-      border-bottom: 1px solid rgba(231, 201, 130, .18);
-      background: rgba(5, 9, 18, .42);
-      backdrop-filter: blur(18px);
+    aside {
       position: sticky;
       top: 0;
-      z-index: 5;
+      height: 100vh;
+      overflow: auto;
+      border-right: 1px solid var(--line);
+      background: rgba(4,8,16,.6);
+      backdrop-filter: blur(18px);
+      padding: 24px 18px;
     }
-    .topbar {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .kicker { color: var(--gold); letter-spacing: .13em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
-    h1 { margin: 8px 0 8px; font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(34px, 5vw, 62px); line-height: .98; }
-    .intro { margin: 0; color: var(--muted); max-width: 760px; font-size: 16px; line-height: 1.6; }
-    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; min-width: 240px; }
-    button, .button {
-      appearance: none;
-      border: 1px solid rgba(231, 201, 130, .42);
-      border-radius: 999px;
-      padding: 11px 16px;
-      background: rgba(231, 201, 130, .12);
-      color: var(--gold-soft);
-      font-weight: 750;
-      letter-spacing: .01em;
-      cursor: pointer;
-      transition: transform .15s ease, border-color .15s ease, background .15s ease;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    button:hover, .button:hover { transform: translateY(-1px); border-color: rgba(244, 223, 170, .72); background: rgba(231, 201, 130, .18); }
-    button.primary { background: linear-gradient(135deg, #e3bf69, #f2dfad); color: #10213a; border-color: transparent; }
-    button.ghost { background: transparent; }
-    button.small { padding: 8px 12px; font-size: 12px; }
-    button.danger { border-color: rgba(255, 159, 159, .45); color: var(--red); background: rgba(255, 159, 159, .08); }
-    main { max-width: 1280px; margin: 0 auto; padding: 26px clamp(18px, 4vw, 54px) 70px; }
-    .statusbar {
-      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-      color: var(--muted); font-size: 14px; margin: 0 0 18px;
-    }
-    .pill { border: 1px solid rgba(231, 201, 130, .26); color: var(--gold-soft); border-radius: 999px; padding: 7px 11px; background: rgba(255,255,255,.04); }
-    .sequence {
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgba(12, 26, 45, .94), rgba(8, 16, 29, .94));
-      border-radius: 28px;
-      margin: 18px 0;
+    .brand-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .brand-row img { width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,.32)); }
+    .kicker { color: var(--gold); letter-spacing: .13em; text-transform: uppercase; font-size: 11px; font-weight: 850; }
+    h1 { margin: 3px 0 0; font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: 25px; line-height: 1.05; }
+    .side-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 18px 0; }
+    .side-actions .wide { grid-column: 1 / -1; }
+    .status { color: var(--muted); font-size: 12px; line-height: 1.45; min-height: 18px; }
+    .status.saved { color: var(--green); }
+    .status.saving { color: var(--gold-soft); }
+    .status.error { color: var(--red); }
+    .source-pill { display: inline-flex; margin-top: 8px; border: 1px solid rgba(231,201,130,.24); border-radius: 999px; padding: 5px 9px; color: var(--gold-soft); font-size: 11px; }
+    .sequence-nav { display: grid; gap: 10px; margin-top: 18px; }
+    .seq-card {
+      border: 1px solid rgba(231,201,130,.2);
+      border-radius: 18px;
+      background: rgba(255,255,255,.045);
       overflow: hidden;
+    }
+    .seq-head {
+      width: 100%;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      display: grid;
+      grid-template-columns: 18px 1fr auto;
+      align-items: center;
+      text-align: left;
+      gap: 8px;
+      padding: 12px;
+    }
+    .seq-head.active { background: rgba(231,201,130,.1); }
+    .chev { color: var(--gold); transform: rotate(-90deg); transition: transform .15s ease; }
+    .seq-card.open .chev { transform: rotate(0); }
+    .seq-title { font-weight: 820; font-size: 13px; line-height: 1.25; }
+    .seq-mini { color: var(--muted); font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+    .seq-count { color: var(--gold-soft); font-size: 11px; }
+    .mail-list { display: none; padding: 4px 7px 9px; }
+    .seq-card.open .mail-list { display: grid; gap: 6px; }
+    .mail-item {
+      border: 1px solid transparent;
+      border-radius: 13px;
+      background: transparent;
+      color: var(--ink);
+      padding: 9px 10px;
+      text-align: left;
+      display: grid;
+      gap: 3px;
+      width: 100%;
+    }
+    .mail-item:hover, .mail-item.active { border-color: rgba(231,201,130,.28); background: rgba(231,201,130,.09); }
+    .mail-title { font-size: 12px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mail-time { color: var(--green); font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .left-tools { display: flex; gap: 6px; margin-top: 7px; padding: 0 7px 7px; }
+    main { min-width: 0; padding: 24px clamp(18px, 4vw, 56px) 48px; }
+    .workspace-top {
+      max-width: 980px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .selected-meta .label { color: var(--gold); letter-spacing: .12em; text-transform: uppercase; font-size: 11px; font-weight: 850; }
+    .selected-meta h2 { margin: 4px 0 6px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 4vw, 45px); font-weight: 500; line-height: 1; }
+    .selected-meta p { margin: 0; color: var(--muted); line-height: 1.45; max-width: 650px; }
+    .preview-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      border: 1px solid rgba(231,201,130,.22);
+      border-radius: 30px;
+      background: rgba(255,255,255,.045);
+      padding: clamp(14px, 2vw, 26px);
       box-shadow: var(--shadow);
     }
-    .sequence-head {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      padding: 22px 24px;
-      align-items: center;
-      cursor: pointer;
-      border-bottom: 1px solid rgba(231, 201, 130, .14);
+    .reader-note { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 13px; margin: 0 4px 14px; }
+    .email-frame {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fffaf0;
+      color: var(--email-ink);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 65px rgba(0,0,0,.28);
+      border: 1px solid rgba(30,43,54,.1);
     }
-    .sequence-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .chev { color: var(--gold); font-size: 20px; transition: transform .16s ease; }
-    .sequence.collapsed .chev { transform: rotate(-90deg); }
-    h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(24px, 3vw, 34px); font-weight: 500; }
-    .sequence-meta { margin-top: 8px; color: var(--muted); line-height: 1.5; }
-    .sequence-body { padding: 22px 24px 26px; }
-    .sequence.collapsed .sequence-body { display: none; }
-    .grid { display: grid; gap: 14px; }
-    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid.three { grid-template-columns: 1.1fr .8fr .7fr; }
-    label { display: grid; gap: 7px; color: var(--gold-soft); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; }
+    .email-preheader {
+      background: #f3eadc;
+      color: var(--email-muted);
+      font-size: 12px;
+      line-height: 1.45;
+      padding: 12px 24px;
+      text-align: center;
+    }
+    .email-hero {
+      position: relative;
+      min-height: 210px;
+      background:
+        linear-gradient(rgba(6,15,28,.2), rgba(6,15,28,.7)),
+        url('/assets/branding/canvas-sunset-background.svg') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 34px 28px;
+      color: #fff7df;
+      text-align: center;
+    }
+    .email-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 20%, rgba(231,201,130,.22), transparent 22rem); pointer-events: none; }
+    .email-hero-inner { position: relative; z-index: 1; }
+    .email-logo { width: 86px; height: 86px; object-fit: contain; margin: 0 auto 10px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+    .email-brand { color: #f3d58c; letter-spacing: .15em; font-weight: 850; text-transform: uppercase; font-size: 11px; }
+    .email-hero h3 { margin: 8px auto 0; max-width: 520px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-weight: 500; }
+    .email-content { padding: clamp(28px, 5vw, 48px); background: linear-gradient(180deg, #fffaf0, #f7efe0); }
+    .subject-row { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(145,111,51,.18); }
+    .subject-label { color: #9d793a; letter-spacing: .12em; text-transform: uppercase; font-size: 11px; font-weight: 850; }
+    .subject-line { margin: 6px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 28px; line-height: 1.15; color: #172938; }
+    .body-copy { font-size: 17px; line-height: 1.78; color: #243441; }
+    .body-copy p { margin: 0 0 18px; }
+    .cta-wrap { text-align: center; padding: 16px 0 8px; }
+    .email-cta { display: inline-block; padding: 14px 22px; border-radius: 999px; background: linear-gradient(135deg, #172d4a, #31567e); color: #fff6df; text-decoration: none; font-weight: 850; box-shadow: 0 12px 28px rgba(23,45,74,.22); }
+    .email-footer { padding: 22px 32px; background: #10213a; color: rgba(255,250,240,.72); text-align: center; font-size: 12px; line-height: 1.55; }
+    .email-footer strong { display: block; color: #f2d78f; letter-spacing: .12em; text-transform: uppercase; font-size: 11px; margin-bottom: 6px; }
+    .editable {
+      position: relative;
+      outline: 1px dashed transparent;
+      outline-offset: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: outline-color .15s ease, background .15s ease;
+    }
+    .editable:hover { outline-color: rgba(231,201,130,.85); background: rgba(231,201,130,.09); }
+    .editable::after {
+      content: 'edit';
+      position: absolute;
+      top: -17px;
+      right: -3px;
+      background: #10213a;
+      color: #f6dfaa;
+      border: 1px solid rgba(231,201,130,.38);
+      border-radius: 999px;
+      font: 800 9px/1 Inter, sans-serif;
+      padding: 4px 6px;
+      opacity: 0;
+      transform: translateY(3px);
+      transition: opacity .15s ease, transform .15s ease;
+      pointer-events: none;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .editable:hover::after { opacity: 1; transform: translateY(0); }
+    .empty-state { max-width: 680px; margin: 80px auto; border: 1px dashed rgba(231,201,130,.35); border-radius: 26px; padding: 34px; text-align: center; color: var(--muted); }
+    dialog {
+      border: 1px solid rgba(231,201,130,.32);
+      border-radius: 24px;
+      padding: 0;
+      background: #07111f;
+      color: var(--ink);
+      box-shadow: 0 34px 110px rgba(0,0,0,.56);
+      width: min(760px, calc(100vw - 30px));
+    }
+    dialog::backdrop { background: rgba(0,0,0,.62); backdrop-filter: blur(4px); }
+    .modal-head { padding: 20px 22px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    .modal-head h3 { margin: 4px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; }
+    .modal-body { padding: 22px; display: grid; gap: 16px; }
+    .tabs { display: flex; gap: 8px; }
+    .tab { background: transparent; }
+    .tab.active { background: rgba(231,201,130,.18); }
+    label { display: grid; gap: 8px; color: var(--gold-soft); letter-spacing: .09em; text-transform: uppercase; font-size: 11px; font-weight: 850; }
     input, textarea {
       width: 100%;
-      border: 1px solid rgba(231, 201, 130, .22);
+      border: 1px solid rgba(231,201,130,.28);
       border-radius: 16px;
-      background: rgba(2, 7, 14, .42);
-      color: var(--text);
-      padding: 12px 13px;
-      font: inherit;
+      background: rgba(0,0,0,.24);
+      color: var(--ink);
+      padding: 13px 14px;
       outline: none;
     }
-    textarea { min-height: 180px; resize: vertical; line-height: 1.55; }
-    input:focus, textarea:focus { border-color: rgba(244, 223, 170, .68); box-shadow: 0 0 0 3px rgba(231, 201, 130, .1); }
-    .messages { display: grid; gap: 16px; margin-top: 18px; }
-    .message {
-      border: 1px solid rgba(231, 201, 130, .18);
-      background: rgba(255, 255, 255, .045);
-      border-radius: 22px;
-      padding: 18px;
-    }
-    .message-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-    .message h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 500; }
-    .timing { color: var(--green); border: 1px solid rgba(133, 213, 175, .25); background: rgba(133, 213, 175, .08); border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 800; }
-    .message-actions, .sequence-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-    .empty { border: 1px dashed rgba(231, 201, 130, .32); color: var(--muted); border-radius: 22px; padding: 26px; text-align: center; }
-    .save-state { color: var(--muted); }
-    .save-state.saving { color: var(--gold-soft); }
-    .save-state.saved { color: var(--green); }
-    .save-state.error { color: var(--red); }
-    .hint { color: var(--muted); font-size: 13px; line-height: 1.45; text-transform: none; letter-spacing: 0; font-weight: 500; }
-    @media (max-width: 800px) {
-      .topbar, .sequence-head { grid-template-columns: 1fr; display: grid; }
-      .actions, .sequence-actions { justify-content: flex-start; }
-      .grid.two, .grid.three { grid-template-columns: 1fr; }
-      header { position: static; }
+    textarea { min-height: 220px; resize: vertical; line-height: 1.58; }
+    textarea.reference { min-height: 160px; }
+    input:focus, textarea:focus { border-color: rgba(246,223,170,.75); box-shadow: 0 0 0 3px rgba(231,201,130,.12); }
+    .field-help { color: var(--muted); font-size: 12px; line-height: 1.45; text-transform: none; letter-spacing: 0; font-weight: 500; }
+    .modal-actions { padding: 0 22px 22px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .hidden { display: none !important; }
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      .workspace-top { display: grid; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div>
-        <div class="kicker">Email Review</div>
-        <h1>Automation drafts before sending.</h1>
-        <p class="intro">Edit the exact subject lines, timing, and body copy for Paul’s email automations. Changes save directly to Supabase for agent review and future sending.</p>
-      </div>
-      <div class="actions">
-        <button class="ghost" id="expandAll">Expand all</button>
-        <button class="ghost" id="collapseAll">Collapse all</button>
-        <button class="primary" id="addSequence">Add new sequence</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="statusbar">
-      <div class="save-state" id="saveState">Loading drafts…</div>
-      <div class="pill" id="sourcePill">Supabase</div>
-    </div>
-    <section id="sequences"></section>
-  </main>
-
-  <template id="sequenceTemplate">
-    <article class="sequence">
-      <div class="sequence-head" data-role="toggle">
+  <div class="app">
+    <aside>
+      <div class="brand-row">
+        <img src="/assets/branding/white-MH-heart-arrow-transparent.png" alt="" />
         <div>
-          <div class="sequence-title-row"><span class="chev">▾</span><h2 data-bind="titleText"></h2><span class="pill" data-bind="categoryText"></span></div>
-          <div class="sequence-meta" data-bind="descriptionText"></div>
-        </div>
-        <div class="sequence-actions">
-          <span class="pill" data-bind="countText"></span>
-          <button class="small" data-action="add-message" type="button">Add message</button>
-          <button class="small danger" data-action="delete-sequence" type="button">Delete</button>
+          <div class="kicker">Email Review</div>
+          <h1>Visual drafts</h1>
         </div>
       </div>
-      <div class="sequence-body">
-        <div class="grid three">
-          <label>Sequence name<input data-field="title" /></label>
-          <label>Category<input data-field="category" /></label>
-          <label>Sort order<input data-field="sort_order" type="number" /></label>
-        </div>
-        <div class="grid" style="margin-top:14px;">
-          <label>Description<input data-field="description" /></label>
-        </div>
-        <div class="messages" data-role="messages"></div>
+      <div class="status" id="saveState">Loading drafts…</div>
+      <div class="source-pill" id="sourcePill">Supabase</div>
+      <div class="side-actions">
+        <button class="ghost mini" id="expandAll" type="button">Expand</button>
+        <button class="ghost mini" id="collapseAll" type="button">Collapse</button>
+        <button class="primary wide" id="addSequence" type="button">Add new sequence</button>
       </div>
-    </article>
-  </template>
+      <nav class="sequence-nav" id="sequenceNav" aria-label="Email sequences"></nav>
+    </aside>
 
-  <template id="messageTemplate">
-    <article class="message">
-      <div class="message-head">
-        <div><h3 data-bind="messageTitle"></h3><div class="timing" data-bind="timingText"></div></div>
-        <div class="message-actions"><button class="small danger" data-action="delete-message" type="button">Delete message</button></div>
+    <main>
+      <section class="workspace-top" id="workspaceTop"></section>
+      <section class="preview-shell" id="previewShell"></section>
+    </main>
+  </div>
+
+  <dialog id="editDialog">
+    <form method="dialog">
+      <div class="modal-head">
+        <div>
+          <div class="kicker" id="modalKicker">Edit</div>
+          <h3 id="modalTitle">Edit field</h3>
+        </div>
+        <button class="ghost mini" value="cancel" type="submit">Close</button>
       </div>
-      <div class="grid two">
-        <label>Internal title<input data-field="title" /></label>
-        <label>Delivery timing<input data-field="timing" /></label>
+      <div class="modal-body">
+        <div class="tabs">
+          <button class="tab active" id="textTab" type="button">Text</button>
+          <button class="tab" id="referenceTab" type="button">Reference</button>
+        </div>
+        <div id="textPanel">
+          <label id="modalLabel">Text
+            <textarea id="modalValue"></textarea>
+          </label>
+          <div class="field-help" id="modalHelp">Edits save automatically to Supabase after you apply them.</div>
+        </div>
+        <div id="referencePanel" class="hidden">
+          <label>Reference note for this item
+            <textarea id="modalReference" class="reference" placeholder="Add guidance, tone notes, examples, or source references for this exact text/image element."></textarea>
+          </label>
+          <div class="field-help">Reference notes are stored with the draft so the agent can use them before sending or generating final assets.</div>
+        </div>
       </div>
-      <div class="grid two" style="margin-top:14px;">
-        <label>Subject line<input data-field="subject" /></label>
-        <label>Preheader<input data-field="preheader" /></label>
+      <div class="modal-actions">
+        <button class="danger" id="deleteCurrent" type="button">Delete email</button>
+        <div>
+          <button class="ghost" value="cancel" type="submit">Cancel</button>
+          <button class="primary" id="applyEdit" value="default" type="button">Apply + save</button>
+        </div>
       </div>
-      <div class="grid" style="margin-top:14px;">
-        <label>Email body <span class="hint">Use placeholders like {{first_name}}, {{scheduling_link}}, {{course_link}}.</span><textarea data-field="body"></textarea></label>
-      </div>
-      <div class="grid two" style="margin-top:14px;">
-        <label>CTA label<input data-field="cta_label" /></label>
-        <label>CTA URL<input data-field="cta_url" /></label>
-      </div>
-    </article>
-  </template>
+    </form>
+  </dialog>
 
   <script>
     const apiUrl = '/api/email-review-sequences';
-    const state = { sequences: [], saveTimer: null, source: 'loading' };
+    const state = {
+      sequences: [],
+      open: new Set(),
+      activeSequence: 0,
+      activeMessage: 0,
+      saveTimer: null,
+      editTarget: null,
+      source: 'loading',
+    };
     const $ = (sel, root = document) => root.querySelector(sel);
-    const sequencesEl = $('#sequences');
+    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+    const sequenceNav = $('#sequenceNav');
+    const workspaceTop = $('#workspaceTop');
+    const previewShell = $('#previewShell');
     const saveState = $('#saveState');
     const sourcePill = $('#sourcePill');
+    const editDialog = $('#editDialog');
+    const modalValue = $('#modalValue');
+    const modalReference = $('#modalReference');
+    const textTab = $('#textTab');
+    const referenceTab = $('#referenceTab');
+    const textPanel = $('#textPanel');
+    const referencePanel = $('#referencePanel');
 
-    function slugify(value) {
-      return String(value || 'new-sequence').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || `sequence-${Date.now()}`;
-    }
+    const fieldLabels = {
+      title: 'Email title', timing: 'Delivery timing', subject: 'Subject line', preheader: 'Preheader', body: 'Email body', cta_label: 'CTA label', cta_url: 'CTA URL',
+      sequence_title: 'Sequence title', description: 'Sequence description', category: 'Sequence category', hero_title: 'Email hero headline', footer: 'Footer note'
+    };
+
     function setStatus(text, cls = '') {
-      saveState.className = `save-state ${cls}`.trim();
+      saveState.className = `status ${cls}`.trim();
       saveState.textContent = text;
     }
     function uid(prefix) { return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 7)}`; }
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>'"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[ch]));
+    }
+    function nl2p(value) {
+      return String(value || '').split(/\n{2,}/).map(part => `<p>${escapeHtml(part).replace(/\n/g, '<br>')}</p>`).join('');
+    }
+    function slugify(value) {
+      return String(value || 'new-sequence').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || `sequence-${Date.now()}`;
+    }
+    function currentSequence() { return state.sequences[state.activeSequence]; }
+    function currentMessage() { return currentSequence()?.messages?.[state.activeMessage]; }
+    function ensureReferences(target) {
+      if (!target.references || typeof target.references !== 'object') target.references = {};
+      return target.references;
+    }
 
     async function load() {
       try {
@@ -240,21 +375,27 @@
         const data = await res.json();
         if (!res.ok || !data.ok) throw new Error(data.error || 'Load failed');
         state.sequences = data.sequences || [];
+        state.sequences.forEach((_, i) => state.open.add(i));
         state.source = data.source || 'supabase';
         sourcePill.textContent = state.source.includes('default') ? 'Seed drafts' : 'Supabase';
-        if (data.warning) setStatus(data.warning, 'error'); else setStatus('Drafts loaded.', 'saved');
+        setStatus(data.warning || 'Drafts loaded.', data.warning ? 'error' : 'saved');
+        chooseFirstAvailable();
         render();
       } catch (error) {
         setStatus(error.message || 'Could not load drafts.', 'error');
       }
     }
-
+    function chooseFirstAvailable() {
+      if (!state.sequences.length) { state.activeSequence = 0; state.activeMessage = 0; return; }
+      state.activeSequence = Math.min(state.activeSequence, state.sequences.length - 1);
+      const messages = state.sequences[state.activeSequence].messages || [];
+      state.activeMessage = Math.min(state.activeMessage, Math.max(messages.length - 1, 0));
+    }
     function scheduleSave() {
       setStatus('Saving…', 'saving');
       clearTimeout(state.saveTimer);
-      state.saveTimer = setTimeout(saveNow, 550);
+      state.saveTimer = setTimeout(saveNow, 450);
     }
-
     async function saveNow() {
       try {
         const res = await fetch(apiUrl, {
@@ -266,24 +407,12 @@
         if (!res.ok || !data.ok) throw new Error(data.error || 'Save failed');
         if (Array.isArray(data.sequences)) state.sequences = data.sequences;
         sourcePill.textContent = 'Supabase';
-        setStatus(`Saved to Supabase at ${new Date().toLocaleTimeString()}.`, 'saved');
-        render(false);
+        setStatus(`Saved ${new Date().toLocaleTimeString()}`, 'saved');
+        chooseFirstAvailable();
+        render();
       } catch (error) {
         setStatus(`Not saved: ${error.message || 'Save failed'}`, 'error');
       }
-    }
-
-    function updateSequence(index, field, value) {
-      const sequence = state.sequences[index];
-      sequence[field] = field === 'sort_order' ? Number(value || 0) : value;
-      if (field === 'title' && !sequence.sequence_key) sequence.sequence_key = slugify(value);
-      render(false);
-      scheduleSave();
-    }
-    function updateMessage(sequenceIndex, messageIndex, field, value) {
-      state.sequences[sequenceIndex].messages[messageIndex][field] = value;
-      render(false);
-      scheduleSave();
     }
 
     function addSequence() {
@@ -291,92 +420,212 @@
       state.sequences.push({
         sequence_key: `new-sequence-${Date.now()}`,
         title: `New Sequence ${n}`,
-        description: 'Describe who receives this sequence and why.',
+        description: 'Who receives this sequence and why.',
         category: 'General',
         is_active: true,
         sort_order: n * 10,
-        messages: [{ id: uid('message'), title: 'First message', timing: 'Immediately', subject: '', preheader: '', body: '', cta_label: '', cta_url: '' }],
+        references: {},
+        messages: [{ id: uid('message'), title: 'First email', timing: 'Immediately', subject: 'Subject line', preheader: 'Short preview text for inboxes.', body: 'Hi {{first_name}},\n\nWrite the email here.\n\nWarmly,\nPaul', cta_label: 'Call to action', cta_url: 'https://coaching.paulcropper.com/', references: {} }],
       });
+      state.activeSequence = state.sequences.length - 1;
+      state.activeMessage = 0;
+      state.open.add(state.activeSequence);
       render();
       scheduleSave();
     }
     function addMessage(sequenceIndex) {
-      state.sequences[sequenceIndex].messages.push({ id: uid('message'), title: 'New message', timing: 'Timing not set', subject: '', preheader: '', body: '', cta_label: '', cta_url: '' });
+      const seq = state.sequences[sequenceIndex];
+      if (!Array.isArray(seq.messages)) seq.messages = [];
+      seq.messages.push({ id: uid('message'), title: 'New email', timing: 'Timing not set', subject: 'Subject line', preheader: 'Short preview text for inboxes.', body: 'Hi {{first_name}},\n\nWrite the email here.\n\nWarmly,\nPaul', cta_label: 'Call to action', cta_url: 'https://coaching.paulcropper.com/', references: {} });
+      state.activeSequence = sequenceIndex;
+      state.activeMessage = seq.messages.length - 1;
+      state.open.add(sequenceIndex);
       render();
       scheduleSave();
     }
     function deleteSequence(sequenceIndex) {
       if (!confirm('Delete this entire sequence?')) return;
       state.sequences.splice(sequenceIndex, 1);
+      state.open = new Set(Array.from(state.open).filter(i => i !== sequenceIndex).map(i => i > sequenceIndex ? i - 1 : i));
+      chooseFirstAvailable();
       render();
       scheduleSave();
     }
     function deleteMessage(sequenceIndex, messageIndex) {
-      if (!confirm('Delete this message?')) return;
-      state.sequences[sequenceIndex].messages.splice(messageIndex, 1);
+      const seq = state.sequences[sequenceIndex];
+      if (!seq?.messages?.length) return;
+      if (!confirm('Delete this email?')) return;
+      seq.messages.splice(messageIndex, 1);
+      chooseFirstAvailable();
       render();
       scheduleSave();
     }
 
-    function render(full = true) {
-      const active = document.activeElement;
-      const activePath = active?.dataset?.path;
-      const selection = active && 'selectionStart' in active ? [active.selectionStart, active.selectionEnd] : null;
-      sequencesEl.innerHTML = '';
+    function renderNav() {
+      sequenceNav.innerHTML = '';
       if (!state.sequences.length) {
-        sequencesEl.innerHTML = '<div class="empty">No sequences yet. Use “Add new sequence” to begin.</div>';
+        sequenceNav.innerHTML = '<div class="empty-state">No sequences yet.</div>';
         return;
       }
-      state.sequences.forEach((sequence, sequenceIndex) => {
-        const frag = $('#sequenceTemplate').content.cloneNode(true);
-        const node = $('.sequence', frag);
-        $('[data-bind="titleText"]', frag).textContent = sequence.title || 'Untitled sequence';
-        $('[data-bind="categoryText"]', frag).textContent = sequence.category || 'General';
-        $('[data-bind="descriptionText"]', frag).textContent = sequence.description || 'No description yet.';
-        $('[data-bind="countText"]', frag).textContent = `${(sequence.messages || []).length} messages`;
-        $('[data-field="title"]', frag).value = sequence.title || '';
-        $('[data-field="category"]', frag).value = sequence.category || '';
-        $('[data-field="description"]', frag).value = sequence.description || '';
-        $('[data-field="sort_order"]', frag).value = sequence.sort_order || 0;
-        $$('[data-field]', frag).forEach(input => {
-          input.dataset.path = `s-${sequenceIndex}-${input.dataset.field}`;
-          input.addEventListener('input', () => updateSequence(sequenceIndex, input.dataset.field, input.value));
+      state.sequences.forEach((seq, sIndex) => {
+        const card = document.createElement('section');
+        card.className = `seq-card ${state.open.has(sIndex) ? 'open' : ''}`;
+        const messages = seq.messages || [];
+        card.innerHTML = `
+          <button class="seq-head ${sIndex === state.activeSequence ? 'active' : ''}" type="button" data-seq="${sIndex}">
+            <span class="chev">▾</span>
+            <span><span class="seq-title">${escapeHtml(seq.title || 'Untitled')}</span><span class="seq-mini">${escapeHtml(seq.category || 'General')}</span></span>
+            <span class="seq-count">${messages.length}</span>
+          </button>
+          <div class="mail-list"></div>
+          <div class="left-tools"><button class="mini ghost" type="button" data-edit-seq="${sIndex}">Edit seq</button><button class="mini" type="button" data-add-mail="${sIndex}">+ email</button><button class="mini danger" type="button" data-delete-seq="${sIndex}">Delete</button></div>
+        `;
+        const list = $('.mail-list', card);
+        messages.forEach((message, mIndex) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `mail-item ${sIndex === state.activeSequence && mIndex === state.activeMessage ? 'active' : ''}`;
+          btn.dataset.seq = sIndex;
+          btn.dataset.msg = mIndex;
+          btn.innerHTML = `<span class="mail-title">${escapeHtml(message.title || message.subject || `Email ${mIndex + 1}`)}</span><span class="mail-time">${escapeHtml(message.timing || 'Timing not set')}</span>`;
+          list.appendChild(btn);
         });
-        $('[data-role="toggle"]', frag).addEventListener('click', (event) => {
-          if (event.target.closest('button')) return;
-          node.classList.toggle('collapsed');
-        });
-        $('[data-action="add-message"]', frag).addEventListener('click', () => addMessage(sequenceIndex));
-        $('[data-action="delete-sequence"]', frag).addEventListener('click', () => deleteSequence(sequenceIndex));
-
-        const messagesEl = $('[data-role="messages"]', frag);
-        (sequence.messages || []).forEach((message, messageIndex) => {
-          const mfrag = $('#messageTemplate').content.cloneNode(true);
-          $('[data-bind="messageTitle"]', mfrag).textContent = message.title || `Message ${messageIndex + 1}`;
-          $('[data-bind="timingText"]', mfrag).textContent = message.timing || 'Timing not set';
-          $$('[data-field]', mfrag).forEach(input => {
-            input.value = message[input.dataset.field] || '';
-            input.dataset.path = `m-${sequenceIndex}-${messageIndex}-${input.dataset.field}`;
-            input.addEventListener('input', () => updateMessage(sequenceIndex, messageIndex, input.dataset.field, input.value));
-          });
-          $('[data-action="delete-message"]', mfrag).addEventListener('click', () => deleteMessage(sequenceIndex, messageIndex));
-          messagesEl.appendChild(mfrag);
-        });
-        sequencesEl.appendChild(frag);
+        sequenceNav.appendChild(card);
       });
-      if (activePath) {
-        const replacement = document.querySelector(`[data-path="${CSS.escape(activePath)}"]`);
-        if (replacement) {
-          replacement.focus();
-          if (selection && 'setSelectionRange' in replacement) replacement.setSelectionRange(selection[0], selection[1]);
-        }
-      }
     }
-    function $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 
+    function renderPreview() {
+      const seq = currentSequence();
+      const msg = currentMessage();
+      if (!seq || !msg) {
+        workspaceTop.innerHTML = '';
+        previewShell.innerHTML = '<div class="empty-state">Choose a sequence or add a new email to begin.</div>';
+        return;
+      }
+      workspaceTop.innerHTML = `
+        <div class="selected-meta">
+          <div class="label editable" data-edit="sequence_title">${escapeHtml(seq.category || 'Sequence')}</div>
+          <h2 class="editable" data-edit="title">${escapeHtml(msg.title || 'Untitled email')}</h2>
+          <p><span class="editable" data-edit="timing">${escapeHtml(msg.timing || 'Timing not set')}</span> · ${escapeHtml(seq.title || 'Untitled sequence')}</p>
+        </div>
+        <div class="actions"><button class="ghost" type="button" data-edit="description">Sequence notes</button><button class="danger" type="button" id="deleteEmailTop">Delete email</button></div>
+      `;
+      const heroTitle = msg.hero_title || msg.subject || msg.title || 'A note from Paul';
+      previewShell.innerHTML = `
+        <div class="reader-note"><span>Reader preview — click text/image areas to edit text or reference notes.</span><span>${escapeHtml(msg.timing || '')}</span></div>
+        <article class="email-frame" aria-label="Email preview">
+          <div class="email-preheader editable" data-edit="preheader">${escapeHtml(msg.preheader || 'Preheader preview text.')}</div>
+          <header class="email-hero editable" data-edit="hero_title">
+            <div class="email-hero-inner">
+              <img class="email-logo editable" data-edit="hero_image" src="/assets/branding/white-MH-heart-arrow-transparent.png" alt="Integrated Lifestyle Coaching logo" />
+              <div class="email-brand">Integrated Lifestyle Coaching</div>
+              <h3>${escapeHtml(heroTitle)}</h3>
+            </div>
+          </header>
+          <section class="email-content">
+            <div class="subject-row">
+              <div class="subject-label">Subject</div>
+              <div class="subject-line editable" data-edit="subject">${escapeHtml(msg.subject || 'Subject line')}</div>
+            </div>
+            <div class="body-copy editable" data-edit="body">${nl2p(msg.body || '')}</div>
+            <div class="cta-wrap">
+              <a class="email-cta editable" data-edit="cta_label" href="${escapeHtml(msg.cta_url || '#')}" onclick="return false;">${escapeHtml(msg.cta_label || 'Call to action')}</a>
+            </div>
+            <div class="field-help editable" data-edit="cta_url">CTA URL: ${escapeHtml(msg.cta_url || 'No URL yet')}</div>
+          </section>
+          <footer class="email-footer editable" data-edit="footer"><strong>Paul Cropper</strong>${escapeHtml(msg.footer || 'Integrated heart, vitality, and embodied practice. You are receiving this because you signed up through Paul’s website.')}</footer>
+        </article>
+      `;
+    }
+    function render() { renderNav(); renderPreview(); }
+
+    function openTextTab(which) {
+      const textActive = which === 'text';
+      textTab.classList.toggle('active', textActive);
+      referenceTab.classList.toggle('active', !textActive);
+      textPanel.classList.toggle('hidden', !textActive);
+      referencePanel.classList.toggle('hidden', textActive);
+    }
+    function targetForField(field) {
+      const seq = currentSequence();
+      const msg = currentMessage();
+      if (!seq || !msg) return null;
+      if (field === 'sequence_title' || field === 'description' || field === 'category') return { object: seq, field: field === 'sequence_title' ? 'title' : field, scope: 'Sequence' };
+      if (field === 'hero_image') return { object: msg, field, scope: 'Image / visual reference', referenceOnly: true };
+      return { object: msg, field, scope: 'Email' };
+    }
+    function openEditor(field) {
+      const target = targetForField(field);
+      if (!target) return;
+      state.editTarget = target;
+      $('#modalKicker').textContent = target.scope;
+      $('#modalTitle').textContent = fieldLabels[field] || fieldLabels[target.field] || 'Edit';
+      $('#modalLabel').firstChild.nodeValue = `${fieldLabels[field] || fieldLabels[target.field] || 'Text'} `;
+      modalValue.value = target.referenceOnly ? '' : (target.object[target.field] || '');
+      modalValue.disabled = !!target.referenceOnly;
+      $('#modalHelp').textContent = target.referenceOnly ? 'Use the Reference tab for visual/image generation guidance.' : 'Edits apply to the rendered email and save to Supabase.';
+      const refs = ensureReferences(target.object);
+      modalReference.value = refs[field] || refs[target.field] || '';
+      $('#deleteCurrent').classList.toggle('hidden', target.scope !== 'Email');
+      openTextTab(target.referenceOnly ? 'reference' : 'text');
+      editDialog.showModal();
+      setTimeout(() => (target.referenceOnly ? modalReference : modalValue).focus(), 30);
+    }
+    function applyEdit() {
+      const target = state.editTarget;
+      if (!target) return;
+      if (!target.referenceOnly) target.object[target.field] = modalValue.value;
+      const refs = ensureReferences(target.object);
+      refs[target.field] = modalReference.value;
+      if (target.field === 'title' && target.scope === 'Sequence' && !target.object.sequence_key) target.object.sequence_key = slugify(modalValue.value);
+      editDialog.close();
+      render();
+      scheduleSave();
+    }
+
+    sequenceNav.addEventListener('click', (event) => {
+      const seqHead = event.target.closest('.seq-head');
+      const mailItem = event.target.closest('.mail-item');
+      const addMail = event.target.closest('[data-add-mail]');
+      const editSeq = event.target.closest('[data-edit-seq]');
+      const deleteSeq = event.target.closest('[data-delete-seq]');
+      if (mailItem) {
+        state.activeSequence = Number(mailItem.dataset.seq);
+        state.activeMessage = Number(mailItem.dataset.msg);
+        state.open.add(state.activeSequence);
+        render();
+      } else if (seqHead) {
+        const s = Number(seqHead.dataset.seq);
+        state.activeSequence = s;
+        state.activeMessage = Math.min(state.activeMessage, Math.max((state.sequences[s].messages || []).length - 1, 0));
+        if (state.open.has(s)) state.open.delete(s); else state.open.add(s);
+        render();
+      } else if (addMail) {
+        addMessage(Number(addMail.dataset.addMail));
+      } else if (editSeq) {
+        state.activeSequence = Number(editSeq.dataset.editSeq);
+        state.activeMessage = 0;
+        openEditor('sequence_title');
+      } else if (deleteSeq) {
+        deleteSequence(Number(deleteSeq.dataset.deleteSeq));
+      }
+    });
+    document.addEventListener('click', (event) => {
+      const edit = event.target.closest('[data-edit]');
+      if (edit) {
+        event.preventDefault();
+        event.stopPropagation();
+        openEditor(edit.dataset.edit);
+      }
+      if (event.target.id === 'deleteEmailTop') deleteMessage(state.activeSequence, state.activeMessage);
+    });
+    textTab.addEventListener('click', () => openTextTab('text'));
+    referenceTab.addEventListener('click', () => openTextTab('reference'));
+    $('#applyEdit').addEventListener('click', applyEdit);
+    $('#deleteCurrent').addEventListener('click', () => { editDialog.close(); deleteMessage(state.activeSequence, state.activeMessage); });
     $('#addSequence').addEventListener('click', addSequence);
-    $('#expandAll').addEventListener('click', () => $$('.sequence').forEach(el => el.classList.remove('collapsed')));
-    $('#collapseAll').addEventListener('click', () => $$('.sequence').forEach(el => el.classList.add('collapsed')));
+    $('#expandAll').addEventListener('click', () => { state.sequences.forEach((_, i) => state.open.add(i)); render(); });
+    $('#collapseAll').addEventListener('click', () => { state.open.clear(); render(); });
     load();
   </script>
 </body>
