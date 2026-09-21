@@ -85,7 +85,7 @@ function normalizeSequence(input, index = 0) {
 
 async function loadSequences() {
   try {
-    const rows = await supabaseRequest(`${TABLE}?select=sequence_key,title,description,category,is_active,sort_order,messages,updated_at&order=sort_order.asc,title.asc`, {
+    const rows = await supabaseRequest(`${TABLE}?select=sequence_key,title,description,category,is_active,sort_order,messages,references,updated_at&order=sort_order.asc,title.asc`, {
       method: 'GET',
     });
     if (Array.isArray(rows) && rows.length) {
