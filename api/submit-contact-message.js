@@ -1,3 +1,5 @@
+const { adminEmail, sendEmail, upsertContact } = require('./_brevo');
+
 function setCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -43,16 +45,31 @@ module.exports = async function handler(req, res) {
     const email = String(body.email || '').trim();
     const message = String(body.message || '').trim();
     if (!email || !message) return send(res, 400, { error: 'Email and message are required.' });
+    const name = String(body.name || '').trim();
+    const sourceUrl = String(body.source_url || '');
     const row = await insertRow('coaching_contact_messages', {
-      name: String(body.name || '').trim() || null,
+      name: name || null,
       email,
       message,
-      source_url: String(body.source_url || ''),
+      source_url: sourceUrl,
       status: 'new',
       metadata: { submitted_via: 'coaching.paulcropper.com/api/submit-contact-message', received_at: new Date().toISOString() },
+    });
+    await upsertContact({ email, name, listKeys: ['coachingLeads'] });
+    await sendEmail({
+      to: adminEmail(),
+      subject: 'New coaching website message',
+      htmlContent: `<p><strong>Name:</strong> ${escapeHtml(name || 'Not provided')}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Source:</strong> ${escapeHtml(sourceUrl)}</p><p><strong>Message:</strong></p><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`,
+      textContent: `New coaching website message\n\nName: ${name || 'Not provided'}\nEmail: ${email}\nSource: ${sourceUrl}\n\n${message}`,
+      replyTo: { email, name: name || undefined },
+      tags: ['coaching-admin-notification'],
     });
     return send(res, 200, { ok: true, id: row?.id || null });
   } catch (error) {
     return send(res, error.status || 500, { error: error.message || 'Submit failed' });
   }
 };
+
+function escapeHtml(value) {
+  return String(value || '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}

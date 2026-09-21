@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const { coachingWelcomeEmail, sendEmail, upsertContact } = require('./_brevo');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -32,6 +33,25 @@ module.exports = async function handler(req, res) {
   try {
     if (event.type === 'checkout.session.completed') {
       const session = event.data && event.data.object;
+      if (session) {
+        const email = session.customer_details?.email || session.customer_email || session.client_reference_id;
+        const name = session.customer_details?.name || session.metadata?.name || '';
+        const plan = session.metadata?.plan || (session.mode === 'subscription' ? 'three_pay' : 'one_pay');
+        if (email) {
+          await upsertContact({
+            email,
+            name,
+            listKeys: ['coachingClients'],
+          });
+          const emailBody = coachingWelcomeEmail({ name, plan });
+          await sendEmail({
+            to: { email, name: name || undefined },
+            ...emailBody,
+            tags: ['coaching-client-welcome'],
+          });
+        }
+      }
+
       if (session && session.mode === 'subscription' && session.subscription && session.metadata && session.metadata.plan === 'three_pay') {
         const cancelAt = Math.floor(Date.now() / 1000) + 75 * 24 * 60 * 60;
         const params = new URLSearchParams();

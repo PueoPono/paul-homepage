@@ -1,3 +1,5 @@
+const { meditationDeliveryEmail, sendEmail, upsertContact } = require('./_brevo');
+
 function setCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -42,11 +44,18 @@ module.exports = async function handler(req, res) {
     const body = req.body || {};
     const email = String(body.email || '').trim();
     if (!email) return send(res, 400, { error: 'Email is required.' });
+    const firstName = String(body.first_name || '').trim();
     const row = await insertRow('coaching_meditation_optins', {
-      first_name: String(body.first_name || '').trim() || null,
+      first_name: firstName || null,
       email,
       status: 'new',
       metadata: { submitted_via: 'coaching.paulcropper.com/api/meditation-optin', received_at: new Date().toISOString() },
+    });
+    await upsertContact({ email, name: firstName, listKeys: ['meditationOptins'] });
+    await sendEmail({
+      to: { email, name: firstName || undefined },
+      ...meditationDeliveryEmail({ name: firstName }),
+      tags: ['meditation-delivery'],
     });
     return send(res, 200, { ok: true, id: row?.id || null, redirect: '/meditation-thank-you.html' });
   } catch (error) {
