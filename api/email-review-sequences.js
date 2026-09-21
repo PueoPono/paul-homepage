@@ -66,8 +66,12 @@ function normalizeSequence(input, index = 0) {
     cta_label: String(message.cta_label || ''),
     cta_url: String(message.cta_url || ''),
     hero_title: String(message.hero_title || ''),
+    hero_eyebrow: String(message.hero_eyebrow || ''),
     hero_image: String(message.hero_image || ''),
     footer: String(message.footer || ''),
+    template_style: String(message.template_style || ''),
+    card_title: String(message.card_title || ''),
+    card_body: String(message.card_body || ''),
     references: message.references && typeof message.references === 'object' && !Array.isArray(message.references) ? message.references : {},
   })) : [];
 

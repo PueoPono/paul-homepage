@@ -91,28 +91,22 @@ Paul`,
         id: 'coaching-payment-welcome',
         title: 'Payment confirmation + welcome',
         timing: 'Immediately after successful coaching payment',
-        subject: 'Welcome to our 1-1 coaching collaboration',
-        preheader: 'I’m honored to begin this work with you.',
+        subject: 'Welcome to your 1-1 coaching collaboration',
+        preheader: 'Welcome. I’m honored to begin this work with you.',
+        hero_eyebrow: 'Integrated Lifestyle Coaching',
+        hero_title: 'Welcome to the 1-1 Coaching Collaboration',
+        template_style: 'brevo-coaching-welcome',
         body: `Hi {{first_name}},
 
 Welcome. I’m honored to begin this work with you.
 
-Your coaching package is confirmed, and I’ll personally follow up with next steps. This is a focused, personal container for becoming more honest, grounded, vital, and connected — in the body, the heart, and the life you are actually living.
+Your 1-1 coaching collaboration has begun. This is a focused, personal container for becoming more honest, grounded, vital, and connected — in the body, the heart, and the life you are actually living.`,
+        card_title: 'What happens next:',
+        card_body: `I’ll follow up personally with the next step for scheduling and orientation. For now, simply notice that the commitment has been made. That matters.
 
-A few things will happen next:
-
-1. Please schedule your first session here:
-{{scheduling_link}}
-
-2. Before we meet, take a little time to reflect on what you most want support with now — not just the polished version, but the real place underneath it.
-
-3. I’ll bring structure, presence, and care. You do not need to arrive with everything figured out.
-
-This work is collaborative. We will listen carefully, move honestly, and keep returning to what is true.
-
-Warmly,
-Paul`,
-        cta_label: 'Schedule your first session',
+Come as you are. We’ll begin from the truth of where you are, and we’ll move with care, strength, and precision from there.`,
+        footer: 'Paul Cropper · Integrated Heart & Vitality Coaching\nhello@paulcropper.com',
+        cta_label: 'Schedule or confirm a call',
         cta_url: 'https://calendly.com/paulcropper/coachingcall',
       },
       {

@@ -161,30 +161,37 @@
     .email-hero {
       position: relative;
       min-height: 210px;
-      background:
-        linear-gradient(rgba(6,15,28,.2), rgba(6,15,28,.7)),
-        url('/assets/branding/canvas-sunset-background.svg') center/cover no-repeat;
+      background: linear-gradient(145deg,#07101f,#10233c);
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding: 34px 28px;
-      color: #fff7df;
+      padding: 44px 36px;
+      color: #f7e7bf;
       text-align: center;
     }
-    .email-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 20%, rgba(231,201,130,.22), transparent 22rem); pointer-events: none; }
+    .email-hero.email-hero--image {
+      background:
+        linear-gradient(rgba(6,15,28,.2), rgba(6,15,28,.7)),
+        url('/assets/branding/canvas-sunset-background.svg') center/cover no-repeat;
+      padding: 34px 28px;
+      color: #fff7df;
+    }
+    .email-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 20%, rgba(231,201,130,.16), transparent 22rem); pointer-events: none; }
     .email-hero-inner { position: relative; z-index: 1; }
     .email-logo { width: 86px; height: 86px; object-fit: contain; margin: 0 auto 10px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
-    .email-brand { color: #f3d58c; letter-spacing: .15em; font-weight: 850; text-transform: uppercase; font-size: 11px; }
-    .email-hero h3 { margin: 8px auto 0; max-width: 520px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-weight: 500; }
-    .email-content { padding: clamp(28px, 5vw, 48px); background: linear-gradient(180deg, #fffaf0, #f7efe0); }
+    .email-brand { color: #d8b66a; letter-spacing: .18em; font: 700 12px Arial, sans-serif; text-transform: uppercase; }
+    .email-hero h3 { margin: 14px auto 0; max-width: 520px; font-family: Georgia, "Times New Roman", serif; font-size: 34px; line-height: 1.1; font-weight: 500; }
+    .email-content { padding: 36px; background: #fbf7ef; }
+    .email-card { border: 1px solid #d7bf83; background: #fffaf0; border-radius: 18px; padding: 22px; margin: 28px 0; }
+    .email-card p:last-child { margin-bottom: 0; }
     .subject-row { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(145,111,51,.18); }
     .subject-label { color: #9d793a; letter-spacing: .12em; text-transform: uppercase; font-size: 11px; font-weight: 850; }
     .subject-line { margin: 6px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 28px; line-height: 1.15; color: #172938; }
     .body-copy { font-size: 17px; line-height: 1.78; color: #243441; }
     .body-copy p { margin: 0 0 18px; }
     .cta-wrap { text-align: center; padding: 16px 0 8px; }
-    .email-cta { display: inline-block; padding: 14px 22px; border-radius: 999px; background: linear-gradient(135deg, #172d4a, #31567e); color: #fff6df; text-decoration: none; font-weight: 850; box-shadow: 0 12px 28px rgba(23,45,74,.22); }
-    .email-footer { padding: 22px 32px; background: #10213a; color: rgba(255,250,240,.72); text-align: center; font-size: 12px; line-height: 1.55; }
+    .email-cta { display: inline-block; padding: 14px 22px; border-radius: 999px; background: #c99b33; color: #07101f!important; text-decoration: none; font: 700 13px Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; box-shadow: none; }
+    .email-footer { padding: 26px 36px; background: #091425; color: #c9d3df; text-align: center; font: 13px Arial, sans-serif; line-height: 1.6; }
     .email-footer strong { display: block; color: #f2d78f; letter-spacing: .12em; text-transform: uppercase; font-size: 11px; margin-bottom: 6px; }
     .editable {
       position: relative;
@@ -194,7 +201,7 @@
       cursor: pointer;
       transition: outline-color .15s ease, background .15s ease;
     }
-    .editable:hover { outline-color: rgba(231,201,130,.85); background: rgba(231,201,130,.09); }
+    .editable:hover { outline-color: rgba(231,201,130,.85); }
     .editable::after {
       content: 'edit';
       position: absolute;
@@ -345,7 +352,7 @@
 
     const fieldLabels = {
       title: 'Email title', timing: 'Delivery timing', subject: 'Subject line', preheader: 'Preheader', body: 'Email body', cta_label: 'CTA label', cta_url: 'CTA URL',
-      sequence_title: 'Sequence title', description: 'Sequence description', category: 'Sequence category', hero_title: 'Email hero headline', footer: 'Footer note'
+      sequence_title: 'Sequence title', description: 'Sequence description', category: 'Sequence category', hero_title: 'Email hero headline', hero_eyebrow: 'Hero eyebrow', hero_image: 'Hero image reference', footer: 'Footer note', card_title: 'Card heading', card_body: 'Card copy', template_style: 'Template style'
     };
 
     function setStatus(text, cls = '') {
@@ -358,6 +365,9 @@
     }
     function nl2p(value) {
       return String(value || '').split(/\n{2,}/).map(part => `<p>${escapeHtml(part).replace(/\n/g, '<br>')}</p>`).join('');
+    }
+    function nl2br(value) {
+      return escapeHtml(value || '').replace(/\n/g, '<br>');
     }
     function slugify(value) {
       return String(value || 'new-sequence').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || `sequence-${Date.now()}`;
@@ -510,30 +520,40 @@
         </div>
         <div class="actions"><button class="ghost" type="button" data-edit="description">Sequence notes</button><button class="danger" type="button" id="deleteEmailTop">Delete email</button></div>
       `;
+      const isCoachingWelcome = msg.template_style === 'brevo-coaching-welcome' || msg.id === 'coaching-payment-welcome';
       const heroTitle = msg.hero_title || msg.subject || msg.title || 'A note from Paul';
+      const heroEyebrow = msg.hero_eyebrow || (isCoachingWelcome ? 'Integrated Lifestyle Coaching' : 'Integrated Lifestyle Coaching');
+      const footerText = msg.footer || (isCoachingWelcome ? 'Paul Cropper · Integrated Heart & Vitality Coaching\nhello@paulcropper.com' : 'Integrated heart, vitality, and embodied practice. You are receiving this because you signed up through Paul’s website.');
+      const cardHtml = (msg.card_title || msg.card_body) ? `
+              <div class="email-card">
+                ${msg.card_title ? `<p><strong class="editable" data-edit="card_title">${escapeHtml(msg.card_title)}</strong></p>` : ''}
+                <div class="editable" data-edit="card_body">${nl2p(msg.card_body || '')}</div>
+              </div>` : '';
       previewShell.innerHTML = `
-        <div class="reader-note"><span>Reader preview — click text/image areas to edit text or reference notes.</span><span>${escapeHtml(msg.timing || '')}</span></div>
+        <div class="reader-note"><span>Reader preview — hover only outlines editable regions; it does not change the sent email.</span><span>${escapeHtml(msg.timing || '')}</span></div>
+        <div class="reader-note"><span class="editable" data-edit="subject">Subject: ${escapeHtml(msg.subject || 'Subject line')}</span><span class="editable" data-edit="preheader">Preheader: ${escapeHtml(msg.preheader || 'None set')}</span></div>
         <article class="email-frame" aria-label="Email preview">
-          <div class="email-preheader editable" data-edit="preheader">${escapeHtml(msg.preheader || 'Preheader preview text.')}</div>
-          <header class="email-hero editable" data-edit="hero_title">
+          ${isCoachingWelcome ? '' : `<div class="email-preheader editable" data-edit="preheader">${escapeHtml(msg.preheader || 'Preheader preview text.')}</div>`}
+          <header class="email-hero ${isCoachingWelcome ? '' : 'email-hero--image'} editable" data-edit="hero_title" title="Edit hero headline">
             <div class="email-hero-inner">
-              <img class="email-logo editable" data-edit="hero_image" src="/assets/branding/white-MH-heart-arrow-transparent.png" alt="Integrated Lifestyle Coaching logo" />
-              <div class="email-brand">Integrated Lifestyle Coaching</div>
+              ${isCoachingWelcome ? '' : `<img class="email-logo" src="/assets/branding/white-MH-heart-arrow-transparent.png" alt="Integrated Lifestyle Coaching logo" />`}
+              <div class="email-brand editable" data-edit="hero_eyebrow">${escapeHtml(heroEyebrow)}</div>
               <h3>${escapeHtml(heroTitle)}</h3>
             </div>
           </header>
           <section class="email-content">
-            <div class="subject-row">
+            ${isCoachingWelcome ? '' : `<div class="subject-row">
               <div class="subject-label">Subject</div>
               <div class="subject-line editable" data-edit="subject">${escapeHtml(msg.subject || 'Subject line')}</div>
-            </div>
+            </div>`}
             <div class="body-copy editable" data-edit="body">${nl2p(msg.body || '')}</div>
+            ${cardHtml}
             <div class="cta-wrap">
               <a class="email-cta editable" data-edit="cta_label" href="${escapeHtml(msg.cta_url || '#')}" onclick="return false;">${escapeHtml(msg.cta_label || 'Call to action')}</a>
             </div>
             <div class="field-help editable" data-edit="cta_url">CTA URL: ${escapeHtml(msg.cta_url || 'No URL yet')}</div>
           </section>
-          <footer class="email-footer editable" data-edit="footer"><strong>Paul Cropper</strong>${escapeHtml(msg.footer || 'Integrated heart, vitality, and embodied practice. You are receiving this because you signed up through Paul’s website.')}</footer>
+          <footer class="email-footer editable" data-edit="footer"><strong>Paul Cropper</strong>${nl2br(footerText)}</footer>
         </article>
       `;
     }
@@ -561,7 +581,8 @@
       $('#modalKicker').textContent = target.scope;
       $('#modalTitle').textContent = fieldLabels[field] || fieldLabels[target.field] || 'Edit';
       $('#modalLabel').firstChild.nodeValue = `${fieldLabels[field] || fieldLabels[target.field] || 'Text'} `;
-      modalValue.value = target.referenceOnly ? '' : (target.object[target.field] || '');
+      const displayValue = target.referenceOnly ? '' : (target.object[target.field] || (target.field === 'hero_title' ? (target.object.subject || target.object.title || '') : ''));
+      modalValue.value = displayValue;
       modalValue.disabled = !!target.referenceOnly;
       $('#modalHelp').textContent = target.referenceOnly ? 'Use the Reference tab for visual/image generation guidance.' : 'Edits apply to the rendered email and save to Supabase.';
       const refs = ensureReferences(target.object);
