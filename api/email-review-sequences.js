@@ -65,6 +65,10 @@ function normalizeSequence(input, index = 0) {
     body: String(message.body || ''),
     cta_label: String(message.cta_label || ''),
     cta_url: String(message.cta_url || ''),
+    hero_title: String(message.hero_title || ''),
+    hero_image: String(message.hero_image || ''),
+    footer: String(message.footer || ''),
+    references: message.references && typeof message.references === 'object' && !Array.isArray(message.references) ? message.references : {},
   })) : [];
 
   return {
@@ -75,6 +79,7 @@ function normalizeSequence(input, index = 0) {
     is_active: input.is_active !== false,
     sort_order: Number.isFinite(Number(input.sort_order)) ? Number(input.sort_order) : index * 10,
     messages,
+    references: input.references && typeof input.references === 'object' && !Array.isArray(input.references) ? input.references : {},
   };
 }
 
