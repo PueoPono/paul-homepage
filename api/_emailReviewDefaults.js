@@ -92,22 +92,28 @@ Paul`,
         title: 'Payment confirmation + welcome',
         timing: 'Immediately after successful coaching payment',
         subject: 'Welcome to your 1-1 coaching collaboration',
-        preheader: 'Welcome. I’m honored to begin this work with you.',
+        preheader: 'Welcome. I’m honored to begin this 1-1 coaching collaboration with you.',
         hero_eyebrow: 'Integrated Lifestyle Coaching',
-        hero_title: 'Welcome to the 1-1 Coaching Collaboration',
-        template_style: 'brevo-coaching-welcome',
+        hero_title: 'Welcome to your 1-1 coaching collaboration.',
+        template_style: 'brevo-coaching-full-dark',
         body: `Hi {{first_name}},
 
-Welcome. I’m honored to begin this work with you.
+Welcome. I’m honored to begin this 1-1 coaching collaboration with you.
 
-Your 1-1 coaching collaboration has begun. This is a focused, personal container for becoming more honest, grounded, vital, and connected — in the body, the heart, and the life you are actually living.`,
-        card_title: 'What happens next:',
-        card_body: `I’ll follow up personally with the next step for scheduling and orientation. For now, simply notice that the commitment has been made. That matters.
+This work is designed as a focused, high-integrity container for building a life with more vitality, clarity, emotional steadiness, and honest power. We’ll move with precision: what matters, what’s in the way, what needs to be practiced, and what becomes possible when your inner life and outer choices are aligned.`,
+        card_title: 'Here’s what happens next:',
+        card_body: `1. I’ll review your signup details and any notes you shared.
+2. You’ll receive next-step guidance for scheduling and preparing for our first session.
+3. We’ll begin by clarifying your present reality, the pattern you’re ready to shift, and the deeper life you’re choosing to build.`,
+        footer: `Come as you are. Bring the real material. The work is intimate, practical, and designed to become embodied.
 
-Come as you are. We’ll begin from the truth of where you are, and we’ll move with care, strength, and precision from there.`,
-        footer: 'Paul Cropper · Integrated Heart & Vitality Coaching\nhello@paulcropper.com',
-        cta_label: 'Schedule or confirm a call',
-        cta_url: 'https://calendly.com/paulcropper/coachingcall',
+I’m looking forward to walking this with you.
+
+Warmly,
+Paul Cropper
+Integrated Lifestyle Coaching`,
+        cta_label: '',
+        cta_url: '',
       },
       {
         id: 'coaching-prep',
