@@ -141,8 +141,8 @@ img { max-width: 100%; display: block; }
 }
 .brand-overlay-stack {
   position: absolute;
-  left: calc(50% + var(--brand-overlay-nudge-x, 0px));
-  top: calc(18px + var(--brand-overlay-nudge-y, 0px));
+  left: calc(50% + var(--brand-overlay-nudge-x, 14px));
+  top: calc(18px + var(--brand-overlay-nudge-y, 14px));
   transform: translateX(-50%);
   width: 192px;
   display: flex;
