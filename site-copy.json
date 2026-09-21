@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updatedAt": "2026-09-21T01:46:23Z",
+  "version": 3,
+  "updatedAt": "2026-09-21T02:03:18Z",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -4734,5 +4734,5 @@
       ]
     }
   },
-  "adminBaselineVersion": "coaching-queue-reset-2026-09-21-02"
+  "adminBaselineVersion": "coaching-logo-nudge-save-2026-09-21-03"
 }
