@@ -139,6 +139,35 @@ img { max-width: 100%; display: block; }
 .brand-overlay-sub--tight {
   top: 43px;
 }
+.brand-overlay-stack {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.02rem;
+  color: var(--color-cream);
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 0.86rem;
+  line-height: 0.98;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: right;
+  white-space: nowrap;
+}
+.brand-overlay-stack--black-outline {
+  text-shadow:
+    1px 0 0 rgba(0, 0, 0, 0.96),
+    -1px 0 0 rgba(0, 0, 0, 0.96),
+    0 1px 0 rgba(0, 0, 0, 0.96),
+    0 -1px 0 rgba(0, 0, 0, 0.96),
+    1px 1px 0 rgba(0, 0, 0, 0.82),
+    -1px 1px 0 rgba(0, 0, 0, 0.82),
+    1px -1px 0 rgba(0, 0, 0, 0.82),
+    -1px -1px 0 rgba(0, 0, 0, 0.82);
+}
 .brand-name {
   font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
   font-size: 1.9rem;
@@ -869,6 +898,7 @@ p { margin: 0 0 1rem; }
   z-index: 0;
 }
 .section-home-2::before,
+.section-work-2::before,
 .section-home-4::before,
 .section-work-3::before,
 .section-about-3::before,
@@ -882,6 +912,9 @@ p { margin: 0 0 1rem; }
 .section-home-2::before,
 .section-story-3::before {
   background-image: linear-gradient(180deg, rgba(13, 17, 14, 0.18), rgba(13, 17, 14, 0.28)), url("assets/backgrounds/forest-light-1.jpg");
+}
+.section-work-2::before {
+  background-image: linear-gradient(180deg, rgba(96, 58, 23, 0.12), rgba(55, 31, 17, 0.18)), url("assets/backgrounds/forest-light-1.jpg");
 }
 .section-home-4::before,
 .section-about-3::before,
@@ -899,8 +932,9 @@ p { margin: 0 0 1rem; }
   background-image: linear-gradient(180deg, rgba(10, 12, 11, 0.18), rgba(10, 12, 11, 0.2)), url("assets/backgrounds/forest-light-3.jpg");
 }
 .section-home-2::after,
+.section-work-2::after,
 .section-story-3::after {
-  background: linear-gradient(180deg, rgba(10, 9, 8, 0.78) 0%, rgba(10, 9, 8, 0.66) 45%, rgba(10, 9, 8, 0.84) 100%);
+  background: linear-gradient(180deg, rgba(28, 16, 9, 0.82) 0%, rgba(55, 32, 14, 0.62) 45%, rgba(23, 13, 8, 0.86) 100%);
 }
 .section-home-4::after,
 .section-about-3::after,
