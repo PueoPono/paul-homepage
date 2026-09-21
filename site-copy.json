@@ -534,35 +534,35 @@
           "id": "work-with-paul.html:text:19",
           "label": "H1 text",
           "kind": "text",
-          "original": "Support for people ready to live with more wholeness, vitality, and honesty.",
+          "original": "1-1 Support. Tailored to your life. A discovery of what you want and need.",
           "value": "1-1 Support. Tailored to your life. A discovery of what you want and need."
         },
         {
           "id": "work-with-paul.html:text:20",
           "label": "P text",
           "kind": "text",
-          "original": "Placeholder invitation copy. Calm, grounded, and clear. This page should feel like a safe doorway into working together, not a pressure page.",
+          "original": "Level up. Enjoy more. Grow from the roots.",
           "value": "Level up. Enjoy more. Grow from the roots."
         },
         {
           "id": "work-with-paul.html:text:21",
           "label": "H2 text",
           "kind": "text",
-          "original": "If you’re here, some part of you is ready for a more whole way of living.",
+          "original": "If you’re reading this, some part of you is probably ready for some new perspective or support...",
           "value": "If you’re reading this, some part of you is probably ready for some new perspective or support..."
         },
         {
           "id": "work-with-paul.html:text:22",
           "label": "LI text",
           "kind": "text",
-          "original": "You want support for the body, heart, and mind.",
+          "original": "You want support for the body, heart, or mind.",
           "value": "You want support for the body, heart, or mind."
         },
         {
           "id": "work-with-paul.html:text:23",
           "label": "LI text",
           "kind": "text",
-          "original": "You are tired of fragmented growth.",
+          "original": "You are tired of fragmented growth, or would like more cohesion to your life.",
           "value": "You are tired of fragmented growth, or would like more cohesion to your life."
         },
         {
@@ -576,14 +576,14 @@
           "id": "work-with-paul.html:text:25",
           "label": "LI text",
           "kind": "text",
-          "original": "You want guidance that includes both inner and outer life.",
+          "original": "You want perspective that includes both inner and outer life.",
           "value": "You want perspective that includes both inner and outer life."
         },
         {
           "id": "work-with-paul.html:text:26",
           "label": "BLOCKQUOTE text",
           "kind": "text",
-          "original": "Wherever you are on your path, I am here to support you. – Dr. Paul",
+          "original": "Whatever your reason for coaching — I’m here to support you the best I can. We’re all in this together.",
           "value": "Whatever your reason for coaching — I’m here to support you the best I can. We’re all in this together."
         },
         {
@@ -604,7 +604,7 @@
           "id": "work-with-paul.html:text:29",
           "label": "A text",
           "kind": "text",
-          "original": "Begin the conversation",
+          "original": "Schedule A Call",
           "value": "Schedule A Call"
         },
         {
@@ -711,13 +711,6 @@
           "kind": "text",
           "original": "The moment you can accept everything exactly as it is, is the moment you know your wholeness. And from there... we grow :)",
           "value": "The moment you can accept everything exactly as it is, is the moment you know your wholeness. And from there... we grow :)"
-        },
-        {
-          "id": "work-with-paul.html:text:45",
-          "label": "H2 text",
-          "kind": "text",
-          "original": "What support can make possible.",
-          "value": "What support can make possible."
         },
         {
           "id": "work-with-paul.html:text:46",
@@ -2004,8 +1997,8 @@
           "id": "resources.html:text:18",
           "label": "P text",
           "kind": "text",
-          "original": "Resources to support wholeness, vitality, and health in the body, heart, and mind.",
-          "value": "Resources to support wholeness, vitality, and health in the body, heart, and mind."
+          "original": "For now, the live resource link is the Masculine Heart Quest course.",
+          "value": "For now, the live resource link is the Masculine Heart Quest course."
         },
         {
           "id": "resources.html:text:19",
@@ -2053,8 +2046,8 @@
           "id": "resources.html:text:25",
           "label": "P text",
           "kind": "text",
-          "original": "A calming guided meditation to help settle the body, reconnect with the heart, and return to a steadier inner state.",
-          "value": "A calming guided meditation to help settle the body, reconnect with the heart, and return to a steadier inner state."
+          "original": "Placeholder/future-development resource. Hidden from live visitors; retained for editor planning.",
+          "value": "Placeholder/future-development resource. Hidden from live visitors; retained for editor planning."
         },
         {
           "id": "resources.html:text:26",
@@ -2144,30 +2137,30 @@
           "id": "resources.html:text:38",
           "label": "H3 text",
           "kind": "text",
-          "original": "Vector Pilot",
-          "value": "Vector Pilot"
+          "original": "Starter guide",
+          "value": "Starter guide"
         },
         {
           "id": "resources.html:text:39",
           "label": "P text",
           "kind": "text",
-          "original": "A creative planning and reflection tool for clarifying direction, tracking momentum, and staying connected to the next right step.",
-          "value": "A creative planning and reflection tool for clarifying direction, tracking momentum, and staying connected to the next right step."
+          "original": "Future-development resource placeholder. Hidden from live visitors.",
+          "value": "Future-development resource placeholder. Hidden from live visitors."
         },
         {
           "id": "resources.html:attribute:40",
           "label": "href attribute",
           "kind": "attribute",
-          "original": "https://vector-pilot.vercel.app/",
-          "value": "https://vector-pilot.vercel.app/",
+          "original": "https://masculineheartquest.com/",
+          "value": "https://masculineheartquest.com/",
           "attribute": "href"
         },
         {
           "id": "resources.html:text:41",
           "label": "A text",
           "kind": "text",
-          "original": "Open Vector Pilot",
-          "value": "Open Vector Pilot"
+          "original": "Open course",
+          "value": "Open course"
         }
       ]
     },
@@ -2385,7 +2378,7 @@
           "id": "contact.html:text:29",
           "label": "A text",
           "kind": "text",
-          "original": "Booking Link Placeholder",
+          "original": "Book a coaching call",
           "value": "Book a coaching call"
         },
         {
@@ -2603,8 +2596,8 @@
           "id": "meditation.html:text:21",
           "label": "P text",
           "kind": "text",
-          "original": "Enter your email and I’ll send you this free meditation, along with a short follow-up sequence to help you get more from it.",
-          "value": "Enter your email and I’ll send you this free meditation, along with a short follow-up sequence to help you get more from it."
+          "original": "Enter your email and I’ll send you this free meditation, and I’ll have your email saved for future meditation follow-up when that sequence is connected.",
+          "value": "Enter your email and I’ll send you this free meditation, and I’ll have your email saved for future meditation follow-up when that sequence is connected."
         },
         {
           "id": "meditation.html:text:22",
@@ -2869,8 +2862,8 @@
           "id": "meditation-thank-you.html:text:20",
           "label": "P text",
           "kind": "text",
-          "original": "I’ve also set aside a short email sequence to help you use this practice more deeply and consistently.",
-          "value": "I’ve also set aside a short email sequence to help you use this practice more deeply and consistently."
+          "original": "Your email has been saved, and the meditation is available below immediately.",
+          "value": "Your email has been saved, and the meditation is available below immediately."
         },
         {
           "id": "meditation-thank-you.html:text:21",
@@ -2904,8 +2897,8 @@
           "id": "meditation-thank-you.html:text:25",
           "label": "P text",
           "kind": "text",
-          "original": "You should also receive a follow-up email series with reflections, best-use suggestions, and a gentle next step.",
-          "value": "You should also receive a follow-up email series with reflections, best-use suggestions, and a gentle next step."
+          "original": "Your email was saved for meditation follow-up; for now, use the practice directly here whenever you need it.",
+          "value": "Your email was saved for meditation follow-up; for now, use the practice directly here whenever you need it."
         },
         {
           "id": "meditation-thank-you.html:text:26",

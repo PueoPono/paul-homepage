@@ -3,6 +3,14 @@
   const DRAFT_KEY = 'paul-coaching-site-copy-admin-draft';
   const params = new URLSearchParams(window.location.search);
   const pageFile = (location.pathname.split('/').pop() || 'index.html').replace(/^$/, 'index.html');
+  const applyAdminFlags = () => {
+    if (params.has('adminPreview')) document.body?.classList.add('admin-preview');
+    try {
+      const nudge = JSON.parse(localStorage.getItem('paul-coaching-logo-nudge') || '{}');
+      if (Number.isFinite(nudge.x)) document.documentElement.style.setProperty('--brand-overlay-nudge-x', `${nudge.x}px`);
+      if (Number.isFinite(nudge.y)) document.documentElement.style.setProperty('--brand-overlay-nudge-y', `${nudge.y}px`);
+    } catch {}
+  };
   const normalize = (s) => (s || '').replace(/\s+/g, ' ').trim();
   const shouldSkip = (node) => {
     const parent = node.parentElement;
@@ -38,6 +46,7 @@
     document.documentElement.dataset.copyRuntime = 'loaded';
   }
   async function loadCopy() {
+    applyAdminFlags();
     try {
       let data = null;
       if (params.get('site-copy-draft') === 'local') {

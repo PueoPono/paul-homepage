@@ -141,12 +141,13 @@ img { max-width: 100%; display: block; }
 }
 .brand-overlay-stack {
   position: absolute;
-  right: 0;
-  top: 18px;
+  left: calc(50% + var(--brand-overlay-nudge-x, 0px));
+  top: calc(18px + var(--brand-overlay-nudge-y, 0px));
+  transform: translateX(-50%);
   width: 192px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.02rem;
   color: var(--color-cream);
   font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -154,7 +155,7 @@ img { max-width: 100%; display: block; }
   line-height: 0.98;
   font-weight: 600;
   letter-spacing: 0.01em;
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
 }
 .brand-overlay-stack--black-outline {
@@ -1230,3 +1231,7 @@ p,
   font-style: italic;
   letter-spacing: 0.03em;
 }
+
+.admin-only-resource { display: none; }
+body.admin-preview .admin-only-resource { display: block; opacity: 0.58; outline: 1px dashed rgba(242, 215, 160, 0.34); }
+.legal-section { background: linear-gradient(180deg, #141110 0%, #100d0c 100%); }
