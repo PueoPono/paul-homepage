@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "updatedAt": "2026-09-21T02:14:48Z",
+  "version": 5,
+  "updatedAt": "2026-09-21T02:27:37Z",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -66,8 +66,8 @@
           "id": "index.html:attribute:8",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -114,8 +114,8 @@
           "id": "index.html:text:14",
           "label": "A text",
           "kind": "text",
-          "original": "Holistic Lifestyle Coaching w/ Paul",
-          "value": "Holistic Lifestyle Coaching w/ Paul"
+          "original": "Integrated Lifestyle Coaching w/ Paul",
+          "value": "Integrated Lifestyle Coaching w/ Paul"
         },
         {
           "id": "index.html:text:15",
@@ -423,8 +423,8 @@
           "id": "work-with-paul.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -759,8 +759,8 @@
           "id": "mission.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -1153,8 +1153,8 @@
           "id": "my-story.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -1519,8 +1519,8 @@
           "id": "faq.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -1894,8 +1894,8 @@
           "id": "resources.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -2195,8 +2195,8 @@
           "id": "contact.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -2470,8 +2470,8 @@
           "id": "meditation.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -2744,8 +2744,8 @@
           "id": "meditation-thank-you.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -2962,8 +2962,8 @@
           "id": "coaching-terms-and-conditions.html:attribute:5",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -3321,8 +3321,8 @@
           "id": "coachingpkg-signup-thank-you.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -3457,8 +3457,8 @@
           "id": "coachingpkg-signup.html:attribute:4",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -3853,8 +3853,8 @@
           "id": "next-live-prototype.html:attribute:8",
           "label": "aria-label attribute",
           "kind": "attribute",
-          "original": "Vital Life with Paul home",
-          "value": "Vital Life with Paul home",
+          "original": "Integrated Lifestyle Coaching with Paul home",
+          "value": "Integrated Lifestyle Coaching with Paul home",
           "attribute": "aria-label"
         },
         {
@@ -4734,5 +4734,5 @@
       ]
     }
   },
-  "adminBaselineVersion": "coaching-logo-position-mode-2026-09-21-04"
+  "adminBaselineVersion": "integrated-lifestyle-logo-sitewide-2026-09-21-05"
 }
