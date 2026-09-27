@@ -1,21 +1,15 @@
-# Homepage Starter
+# Archived homepage prototype 2
 
-Simple static homepage for coaching brand.
+Status: archived/prototype context only.
 
-## Preview locally
+Do not use this folder as the production source for the Paul coaching homepage.
 
-Open `index.html` directly in your browser, or run a local server:
+Current production source of truth:
 
-```powershell
-cd C:\Users\turtlefree\.openclaw\workspace\homepage
-python -m http.server 8080
-```
+- Obsidian: `/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/projects/active/paul-coaching-homepage-source-of-truth.md`
+- Repo: `https://github.com/PueoPono/paul-homepage`
+- Branch: `origin/main`
+- Production: `https://coaching.paulcropper.com`
+- Hosting: Vercel project `pueoponos-projects/paul-homepage`
 
-Then open <http://localhost:8080>
-
-## Next steps
-
-- Replace email CTA in `index.html`
-- Add real testimonials
-- Connect Book Call button to calendar link
-- Deploy to GitHub + Netlify/Vercel
+The old Windows/OpenClaw preview instructions previously in this file are obsolete and should not be used for deployment decisions.

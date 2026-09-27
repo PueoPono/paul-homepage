@@ -1,90 +1,130 @@
-# DEPLOY.md — Website Update & Deploy Playbook
+# DEPLOY.md — Paul Coaching Homepage Deploy Playbook
 
-Use this file as the single source of truth for shipping site changes from chat.
+Use this file as the repo-local deployment source of truth. The Obsidian canonical note is:
+
+`/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/projects/active/paul-coaching-homepage-source-of-truth.md`
 
 ## 1) Project Identity
 
-- **Project name:**
-- **Primary domain:**
-- **Hosting platform:** (Vercel / Netlify / Cloudflare Pages / GitHub Pages / VPS / Other)
+- **Project name:** Paul Coaching Homepage / Paul Cropper coaching site
+- **Primary domain:** `https://coaching.paulcropper.com`
+- **Hosting platform:** Vercel
+- **Vercel project:** `pueoponos-projects/paul-homepage`
+- **GitHub repo:** `https://github.com/PueoPono/paul-homepage`
+- **Canonical branch:** `origin/main`
 
-## 2) Source of Truth
+## 2) Current known-good production baseline
 
-- **Repo URL:**
-- **Local path on this machine:**
-- **Default branch:** (main / master / etc.)
-- **Protected branch rules:**
+Restored by Kukui on 2026-09-26 from clean `origin/main`.
 
-## 3) Deployment Path (Canonical)
+- Commit: `dc15d28259f34659d5aace4de0cf1443892d4176`
+- Label: `dc15d28 Document shared email dispatcher for review`
+- Production/custom domain: `https://coaching.paulcropper.com`
 
-> This is the one command path the assistant should use by default.
+Verified live after restore:
 
-- **Install command:**
-- **Build command:**
-- **Deploy command (production):**
-- **Deploy command (preview/staging):**
+- `/`
+- `/emailreview/`
+- `/emailreview/index.html`
+- `/coachingpkg-signup.html`
+- `/coachingpkg-signup-thank-you.html`
 
-## 4) Auth & Access
+Expected not live after restore:
 
-- **Git auth available on machine:** (yes/no + method)
-- **Hosting CLI logged in:** (yes/no)
-- **Required env vars/secrets location:**
-- **Any manual approval required before prod deploy?**
+- `/reveal-stroke-ui/` returns 404 because it is not in current `origin/main`; republish separately/safely.
 
-## 5) Safe Delivery Workflow (Default)
+## 3) Source of Truth
 
-Assistant should follow this unless you ask otherwise:
+- **Repo URL:** `https://github.com/PueoPono/paul-homepage`
+- **Preferred local path:** `/Users/ponomini/paul-homepage`
+- **Default branch:** `main`
+- **Obsidian source of truth:** `/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/projects/active/paul-coaching-homepage-source-of-truth.md`
+- **Do not deploy from:** `/Users/ponomini/.openclaw/workspace/paul-homepage`
 
-1. Pull latest default branch
-2. Create/update branch for the change
-3. Make requested edits
-4. Run lint/build checks
-5. Show concise diff summary
-6. Commit with clear message
-7. Deploy preview (if configured)
-8. Deploy production after your explicit "ship it"
+## 4) Deployment Path — Canonical Restore of Latest Main
 
-## 6) Commit & PR Conventions
-
-- **Commit style:** (e.g., feat/fix/chore)
-- **PR required before production?**
-- **Who approves PRs?**
-
-## 7) Rollback Plan
-
-- **Fast rollback command:**
-- **Previous stable release reference:**
-- **Who gets notified on rollback:**
-
-## 8) Quick Commands (fill these)
+When the user asks to restore/publish the latest known-good main, deploy from a clean temporary clone:
 
 ```bash
-# Verify local state
-
-# Pull latest
-
-# Install deps
-
-# Run tests/lint
-
-# Build
-
-# Deploy preview
-
-# Deploy production
+rm -rf /tmp/paul-homepage-origin-main-deploy
+git clone --depth=1 --branch main https://github.com/PueoPono/paul-homepage.git /tmp/paul-homepage-origin-main-deploy
+cd /tmp/paul-homepage-origin-main-deploy
+vercel link --yes --scope pueoponos-projects --project paul-homepage
+vercel deploy --prod --scope pueoponos-projects --yes
 ```
 
-## 9) Chat Shortcuts You Can Use
+## 5) Preview / Change Workflow
 
-- “Update [section] to [text], commit, preview deploy.”
-- “Make [change], show diff only, do not deploy.”
-- “Deploy latest main to production.”
-- “Rollback production to previous stable.”
+For new work:
 
----
+1. `git fetch origin main`
+2. create a clean branch/worktree from current `origin/main`
+3. make requested changes only
+4. verify `git diff --name-only`
+5. run syntax/static checks that apply
+6. deploy preview first when practical:
 
-## Current Status
+```bash
+vercel link --yes --scope pueoponos-projects --project paul-homepage
+vercel deploy --scope pueoponos-projects --yes
+```
 
-- [ ] Filled out and verified
-- [ ] First dry run completed
-- [ ] First real production deploy completed
+7. deploy production only after explicit approval or clear restore instruction:
+
+```bash
+vercel deploy --prod --scope pueoponos-projects --yes
+```
+
+## 6) Auth & Access
+
+- Vercel CLI is installed and was logged in as of the 2026-09-26 restore.
+- Vercel scope: `pueoponos-projects`.
+- Do not print env vars or secrets.
+- If a deploy requires env secrets, verify presence by status/name only, never by value.
+
+## 7) Required pre-deploy safety checks
+
+From the checkout you intend to deploy:
+
+```bash
+git remote -v
+git fetch origin main
+git status -sb
+git rev-parse HEAD
+git rev-parse origin/main
+git worktree list --porcelain
+git diff --name-only
+```
+
+Stop if:
+
+- the checkout is stale/diverged and not intentionally being used for a preview;
+- unrelated dirty files are present;
+- `git diff --name-only` includes unrelated pages/APIs/migrations;
+- the path is `/Users/ponomini/.openclaw/workspace/paul-homepage`;
+- you are about to overwrite production just to publish a small experimental tool.
+
+## 8) Required post-deploy verification
+
+Check these URLs after production deploy:
+
+```text
+https://coaching.paulcropper.com/
+https://coaching.paulcropper.com/emailreview/
+https://coaching.paulcropper.com/coachingpkg-signup.html
+https://coaching.paulcropper.com/coachingpkg-signup-thank-you.html
+```
+
+For `/emailreview/`, browser-load the page and check console errors.
+
+For route-specific changes, verify both the changed route and the important existing routes above.
+
+## 9) Small tools / experiments
+
+Small tools like Reveal Stroke UI should preferably be deployed to a separate tools project/subdomain:
+
+- Vercel project: `paul-creative-tools` or `paul-labs`
+- Domain: `tools.paulcropper.com` or `labs.paulcropper.com`
+- Routes: `/reveal-stroke/`, `/shorts-review/`, `/audio-sync/`
+
+Do not deploy the main coaching homepage from an old tree just to make a tool page live.

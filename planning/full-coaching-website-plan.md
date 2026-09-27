@@ -154,9 +154,12 @@ Model the flow after Jeff Siegel Wellness, adapted to Paul Cropper branding.
 - Whether “Dr. Paul, PhD” should appear globally or selectively
 
 ### Technical / publishing
-- Which repo is the final production repo
-- Whether we keep the current static/GitHub Pages setup or migrate to a more maintainable app structure
-- Final domain / deployment target
+- Resolved production repo: `https://github.com/PueoPono/paul-homepage`.
+- Resolved production branch: `origin/main`.
+- Resolved production hosting: Vercel project `pueoponos-projects/paul-homepage`.
+- Resolved production domain: `https://coaching.paulcropper.com`.
+- Operational source of truth: `/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/projects/active/paul-coaching-homepage-source-of-truth.md`.
+- Historical GitHub Pages/OpenClaw workflow is obsolete and must not be used for production deployment.
 - Form handling preference for contact/apply flow
 
 ## Proposed Initial To-Dos

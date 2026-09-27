@@ -1,30 +1,85 @@
-# WORKFLOW.md — Paul Homepage Operating Guide
+# WORKFLOW.md — Paul Coaching Homepage Operating Guide
 
-This file exists so future sessions do **not** need to reconstruct the website workflow from chat history.
+This file exists so future sessions do **not** reconstruct the website workflow from chat history or accidentally deploy from an old checkout.
+
+## Read first
+
+Canonical Obsidian source of truth:
+
+`/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/projects/active/paul-coaching-homepage-source-of-truth.md`
+
+Related handoff for the 2026-09-26 regression/restore and Reveal Stroke UI:
+
+`/Users/ponomini/Documents/Na-au-Obsidian/Agent-Shared/handoffs/2026-09-26-paul-homepage-reveal-ui-safe-coordination.md`
 
 ## Project Identity
 
 - Repo: `https://github.com/PueoPono/paul-homepage`
-- Local path commonly used: `/Users/ponomini/.openclaw/workspace/paul-homepage`
-- Live site base: `https://pueopono.github.io/paul-homepage/`
-- Deploy model: push to `main` → GitHub Pages serves the site
+- Canonical branch: `origin/main`
+- Production/custom domain: `https://coaching.paulcropper.com`
+- Hosting: Vercel
+- Vercel project: `pueoponos-projects/paul-homepage`
+- Preferred local repo path: `/Users/ponomini/paul-homepage`
 
-## Core Rule
+## Critical anti-regression rule
 
-Do not rely on memory or prior chat alone.
-Before making website edits, inspect:
-1. `WORKFLOW.md`
-2. `planning/decisions.md`
-3. `planning/text-map-template.md`
-4. `editor-v1/` if copy/editor work is involved
-5. current `index.html` + `styles.css`
+Do **not** deploy from old/diverged local checkouts.
 
-## Source of Truth Areas
+Known dangerous stale checkout:
 
-### 1. Visual / layout behavior
-- Shared CSS: `styles.css`
-- Homepage HTML: `index.html`
-- Other public pages:
+`/Users/ponomini/.openclaw/workspace/paul-homepage`
+
+That checkout previously contained the Reveal Stroke UI route but was behind current main and caused production to regress when it was deployed. It must not be pushed or deployed as-is.
+
+If you need to deploy latest production, use a fresh temporary clone or a clean worktree from current `origin/main`.
+
+## Current production baseline
+
+Production was restored on 2026-09-26 from current GitHub `origin/main`:
+
+- Commit: `dc15d28259f34659d5aace4de0cf1443892d4176`
+- Label: `dc15d28 Document shared email dispatcher for review`
+- Production: `https://coaching.paulcropper.com`
+
+After restore, these pages were verified live:
+
+- `/`
+- `/emailreview/`
+- `/emailreview/index.html`
+- `/coachingpkg-signup.html`
+- `/coachingpkg-signup-thank-you.html`
+
+`/reveal-stroke-ui/` is expected to be 404 until it is safely republished from current main or moved to a separate tools project.
+
+## Before any edit or deployment
+
+Run these checks from the candidate checkout:
+
+```bash
+git remote -v
+git fetch origin main
+git status -sb
+git rev-parse HEAD
+git rev-parse origin/main
+git worktree list --porcelain
+```
+
+Stop if:
+
+- the checkout is behind/diverged and you do not understand why;
+- unrelated dirty files are present;
+- the path is `/Users/ponomini/.openclaw/workspace/paul-homepage`;
+- `git diff --name-only` includes files unrelated to the requested work.
+
+## Source of truth areas
+
+### Homepage / public pages
+
+- Homepage: `index.html`
+- Shared stylesheet: `styles.css`
+- Runtime site copy: `site-copy-runtime.js`
+- Structured content: `site-content.json`
+- Public pages:
   - `contact.html`
   - `faq.html`
   - `mission.html`
@@ -33,128 +88,84 @@ Before making website edits, inspect:
   - `testimonials.html`
   - `work-with-paul.html`
 
-### 2. Copy / planning
-- Website structure + plan: `planning/full-coaching-website-plan.md`
-- Editable text map: `planning/text-map-template.md`
-- Additional source material: `planning/paul-source-content.md`
+### Admin/editor
 
-### 3. Editor prototype
-- Editor v1 lives in: `editor-v1/`
-- Structured homepage content file: `editor-v1/homepage-content.json`
-- Current editor entry point: `editor-v1/index.html`
-- Preview page for editor: `editor-v1/preview-homepage.html`
+- Site editor: `admin/index.html`
+- Legacy text editor prototype: `editor-v1/`
+- Legacy visual editor prototype: `editor-visual-1/`
+- Email review UI: `emailreview/index.html`
 
-## Deployment Workflow
+### Coaching signup/payment
 
-Typical flow:
-1. Edit files in local repo
-2. Review changed files
-3. Commit in `paul-homepage`
-4. Push to `main`
-5. Share cache-busted URL when needed:
-   - `https://pueopono.github.io/paul-homepage/?v=<commit>`
+- Signup page: `coachingpkg-signup.html`
+- Signup behavior: `coachingpkg-signup.js`
+- Thank-you page: `coachingpkg-signup-thank-you.html`
+- Terms: `coaching-terms-and-conditions.html`
 
-## Safe Change Workflow
+### Planning/context
 
-### For copy changes
-Prefer:
-- update structured content in `editor-v1/homepage-content.json` if the relevant section is covered
-- otherwise update HTML directly, but note the need to move it into structured content later
+- `planning/full-coaching-website-plan.md`
+- `planning/text-map-template.md`
+- `planning/paul-source-content.md`
+- Obsidian source-of-truth note listed above.
 
-### For visual changes
-Prefer:
-- update shared rules in `styles.css`
-- avoid page-specific inline style patches unless the change is intentionally isolated/test-only
+## Deployment workflow
 
-### For experiments
-Use isolated pages first.
-Examples used previously:
-- `test1.html`, `test2.html`, etc.
-- `page10.html`, `page11.html`, etc.
+### Clean production restore from current main
 
-Important:
-- experiment pages are disposable
-- do **not** assume they persist forever
-- once a decision is approved, propagate cleanly into shared files and then remove test pages if requested
+Use this when the user asks to restore/publish latest known-good main:
 
-## Propagation Rules
+```bash
+rm -rf /tmp/paul-homepage-origin-main-deploy
+git clone --depth=1 --branch main https://github.com/PueoPono/paul-homepage.git /tmp/paul-homepage-origin-main-deploy
+cd /tmp/paul-homepage-origin-main-deploy
+vercel link --yes --scope pueoponos-projects --project paul-homepage
+vercel deploy --prod --scope pueoponos-projects --yes
+```
 
-When a visual/header/logo change is approved:
-1. Determine whether it should live in:
-   - shared `styles.css`
-   - page HTML content
-   - structured content JSON
-2. Apply to homepage first
-3. If meant to be sitewide, propagate to all public pages using the shared header
-4. Verify no leftover page-specific inline overrides are conflicting with shared styles
+### Normal feature/change workflow
 
-## Known Fragile Areas
+1. Start from current `origin/main`.
+2. Create a clean branch/worktree.
+3. Make only the requested change.
+4. Verify `git diff --name-only` is limited to relevant files.
+5. Run available syntax/static checks.
+6. Deploy preview first when practical.
+7. Production deploy only after explicit approval or clear restore instruction.
+8. Verify important existing pages after production deploy.
 
-### Header logo
-This area has been fragile because of:
-- conflicting inline styles vs shared CSS
-- desktop/mobile diverging unintentionally
-- temporary test-page values being partially propagated
+## Verification checklist after production deploy
 
-When editing header logo styling:
-- inspect `index.html` for inline `<style>` blocks first
-- inspect `styles.css` desktop rules and mobile media-query rules together
-- avoid mixing multiple font families across breakpoints unless explicitly intended
+At minimum:
 
-### Mobile vs desktop divergence
-Do not assume a mobile tuning value maps directly to desktop.
-Treat desktop and mobile as separate layout contexts unless the user explicitly wants parity.
+```text
+https://coaching.paulcropper.com/
+https://coaching.paulcropper.com/emailreview/
+https://coaching.paulcropper.com/coachingpkg-signup.html
+https://coaching.paulcropper.com/coachingpkg-signup-thank-you.html
+```
 
-## Editor V1 Notes
+For email/editor work, browser-load `/emailreview/` and check for console errors.
 
-Editor v1 is a **copy system prototype**, not a full site builder.
-Current purpose:
-- edit homepage copy in a structured format
-- preview it in a rendered homepage-like page
+For sitewide style/header/nav work, verify homepage plus public pages affected by the shared header/styles.
 
-Current limitations:
-- local save only
-- no write-back to repo from browser
-- only partial homepage content coverage
+## Small UI/tool rule
 
-If continuing editor work, the next best improvements are:
-1. cover more homepage sections
-2. improve mobile usability
-3. add export/apply workflow
-4. eventually unify copy + visual editing
+Small experimental tools should not be deployed by replacing the main coaching homepage production project.
 
-## When User Says “Apply to Homepage”
+Preferred future setup:
 
-Checklist:
-- confirm whether the change is:
-  - homepage only
-  - mobile only
-  - desktop only
-  - sitewide
-- check for existing test page or approved reference
-- port only the approved changes
-- avoid dragging in experimental overrides accidentally
+- Separate Vercel project: `paul-creative-tools` or `paul-labs`.
+- Separate subdomain: `tools.paulcropper.com` or `labs.paulcropper.com`.
+- Example routes:
+  - `/reveal-stroke/`
+  - `/shorts-review/`
+  - `/audio-sync/`
 
-## Cleanup Behavior
+Only promote a tool into `coaching.paulcropper.com` after it is stable and explicitly approved.
 
-User has requested test pages/prototypes be deleted from GitHub after use in some cases.
-So:
-- treat test artifacts as temporary unless user says keep
-- if deleting, remove related screenshot assets/editor test pages too
-- commit cleanup clearly
+If a tool must live under the coaching site, add only its isolated folder from a clean current-main branch. Never deploy an old checkout just to make the tool route live.
 
-## Current Live Link Pattern
+## Legacy note
 
-Use cache-busted links after pushes:
-- Homepage: `https://pueopono.github.io/paul-homepage/?v=<commit>`
-- Editor v1: `https://pueopono.github.io/paul-homepage/editor-v1/?v=<commit>`
-
-## Practical Continuity Rule
-
-Before asking Pauko where things are or how deployment works, check this file first.
-
-## Current Next Homepage Step
-
-If Pauko asks what the next website step is, answer with this:
-
-Create a test page. In homepage block 2, use a dark forest background image with many trees and a dark overlay for readability. Across all sections, increase vertical breathing room and visual spaciousness: more top/bottom padding, more spacing between headings, body text, and CTAs, and less dense layout overall. The feeling should be calm, grounded, premium, and easy on the nervous system.
+Older guidance in this repo referred to GitHub Pages and OpenClaw paths. That guidance is superseded. Production is Vercel at `coaching.paulcropper.com`; current main on GitHub is the canonical source for production deploys.
