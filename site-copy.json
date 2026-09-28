@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "updatedAt": "2026-09-21T02:27:37Z",
+  "updatedAt": "2026-09-28T18:03:44Z",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -185,7 +185,7 @@
           "label": "H2 text",
           "kind": "text",
           "original": "The future is brilliant, beautiful and full of life... if we make it so.",
-          "value": "The future is brilliant, beautiful and full of life... if we make it so."
+          "value": "Our future can be brilliant, beautiful and full of life... and your HEART is key."
         },
         {
           "id": "index.html:text:25",
@@ -193,6 +193,13 @@
           "kind": "text",
           "original": "Explore the Path",
           "value": "Explore the Path"
+        },
+        {
+          "id": "index.html:text:we-can-intro",
+          "label": "P text",
+          "kind": "text",
+          "original": "We can:",
+          "value": "We can:"
         },
         {
           "id": "index.html:text:26",
@@ -234,14 +241,14 @@
           "label": "H2 text",
           "kind": "text",
           "original": "Integrated heart and vitality, an intention and path for wholeness and healing.",
-          "value": "Integrated heart and vitality, an intention and path for wholeness and healing."
+          "value": "We've got to deepen our relationship with our body... and our Heart."
         },
         {
           "id": "index.html:text:32",
           "label": "P text",
           "kind": "text",
           "original": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart. It supports the body, mind, and your relationship with all around you.",
-          "value": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart. It supports the body, mind, and your relationship with all around you."
+          "value": "Have you ever felt your whole body come alive? And not just in orgasm, but in daily life.... VITALITY at its fullness.\n\nTHAT'S what life should be full of, and THAT'S what we can create more of."
         },
         {
           "id": "index.html:text:33",
