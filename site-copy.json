@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "updatedAt": "2026-09-28T18:03:44Z",
+  "updatedAt": "2026-11-13",
   "notes": "Runtime-editable copy manifest for coaching.paulcropper.com. Edit through /admin/.",
   "pages": {
     "index.html": {
@@ -184,7 +184,7 @@
           "id": "index.html:text:24",
           "label": "H2 text",
           "kind": "text",
-          "original": "The future is brilliant, beautiful and full of life... if we make it so.",
+          "original": "Our future can be brilliant, beautiful and full of life... and your HEART is key.",
           "value": "Our future can be brilliant, beautiful and full of life... and your HEART is key."
         },
         {
@@ -205,29 +205,41 @@
           "id": "index.html:text:26",
           "label": "LI text",
           "kind": "text",
-          "original": "Vitalize our bodies, hearts and minds to a whole new level.",
-          "value": "Vitalize our bodies, hearts and minds to a whole new level."
+          "original": "Vitalize your body, heart and mind.",
+          "value": "Vitalize your body, heart and mind.",
+          "previousPublishedValues": [
+            "Vitalize our bodies, hearts and minds to a whole new level."
+          ]
         },
         {
           "id": "index.html:text:27",
           "label": "LI text",
           "kind": "text",
-          "original": "Strengthen our resilience, and even our ability to enjoy.",
-          "value": "Strengthen our resilience, and even our ability to enjoy."
+          "original": "Deepen your ability to enjoy life.",
+          "value": "Deepen your ability to enjoy life.",
+          "previousPublishedValues": [
+            "Strengthen our resilience, and even our ability to enjoy."
+          ]
         },
         {
           "id": "index.html:text:28",
           "label": "LI text",
           "kind": "text",
-          "original": "Cultivate our inner world, so its outer reflection is more truly what serves us and others.",
-          "value": "Cultivate our inner world, so its outer reflection is more truly what serves us and others."
+          "original": "Cultivate your inner world, to more truly serve you and what you value.",
+          "value": "Cultivate your inner world, to more truly serve you and what you value.",
+          "previousPublishedValues": [
+            "Cultivate our inner world, so its outer reflection is more truly what serves us and others."
+          ]
         },
         {
           "id": "index.html:text:29",
           "label": "LI text",
           "kind": "text",
-          "original": "Support your best life, healthiest self, and happiest heart.",
-          "value": "Support your best life, healthiest self, and happiest heart."
+          "original": "Cultivate your best life, your healthiest self, and your happy heart.",
+          "value": "Cultivate your best life, your healthiest self, and your happy heart.",
+          "previousPublishedValues": [
+            "Support your best life, healthiest self, and happiest heart."
+          ]
         },
         {
           "id": "index.html:text:30",
@@ -240,14 +252,14 @@
           "id": "index.html:text:31",
           "label": "H2 text",
           "kind": "text",
-          "original": "Integrated heart and vitality, an intention and path for wholeness and healing.",
+          "original": "We've got to deepen our relationship with our body... and our Heart.",
           "value": "We've got to deepen our relationship with our body... and our Heart."
         },
         {
           "id": "index.html:text:32",
           "label": "P text",
           "kind": "text",
-          "original": "Within your heart and subconscious, you have stories that must evolve. This work starts and ends with the heart. It supports the body, mind, and your relationship with all around you.",
+          "original": "Have you ever felt your whole body come alive? And not just in orgasm, but in daily life.... VITALITY at its fullness.\n\nTHAT'S what life should be full of, and THAT'S what we can create more of.",
           "value": "Have you ever felt your whole body come alive? And not just in orgasm, but in daily life.... VITALITY at its fullness.\n\nTHAT'S what life should be full of, and THAT'S what we can create more of."
         },
         {
@@ -275,8 +287,11 @@
           "id": "index.html:text:36",
           "label": "P text",
           "kind": "text",
-          "original": "Learn to honestly shift the stories in your heart, and access the intuition & wisdom locked deep in your heart and subconscious.",
-          "value": "Learn to honestly shift the stories in your heart, and access the intuition & wisdom locked deep in your heart and subconscious."
+          "original": "Learn to access your heart- there is intuition & wisdom within in your heart and subconscious, but we have to clear the blockages.",
+          "value": "Learn to access your heart- there is intuition & wisdom within in your heart and subconscious, but we have to clear the blockages.",
+          "previousPublishedValues": [
+            "Learn to honestly shift the stories in your heart, and access the intuition & wisdom locked deep in your heart and subconscious."
+          ]
         },
         {
           "id": "index.html:text:37",
@@ -296,8 +311,11 @@
           "id": "index.html:text:39",
           "label": "P text",
           "kind": "text",
-          "original": "As a Phd researcher, I bring you nutrition and movement coaching - and we fine tune it for you. We must learn to revitalize the whole system inside and out.",
-          "value": "As a Phd researcher, I bring you nutrition and movement coaching - and we fine tune it for you. We must learn to revitalize the whole system inside and out."
+          "original": "My methods are simple, but effective.  \"Let food be thy medicine\" is the time-old adage, and you need to understand how to use it.  In this day and age- go to a doctor if you are sick, but if you want greater health and vitality- go to someone who lives and experiences it.  And this is my aim- to walk the walk and share what I learn.",
+          "value": "My methods are simple, but effective.  \"Let food be thy medicine\" is the time-old adage, and you need to understand how to use it.  In this day and age- go to a doctor if you are sick, but if you want greater health and vitality- go to someone who lives and experiences it.  And this is my aim- to walk the walk and share what I learn.",
+          "previousPublishedValues": [
+            "As a Phd researcher, I bring you nutrition and movement coaching - and we fine tune it for you. We must learn to revitalize the whole system inside and out."
+          ]
         },
         {
           "id": "index.html:text:40",
@@ -317,8 +335,11 @@
           "id": "index.html:text:42",
           "label": "P text",
           "kind": "text",
-          "original": "The mind can be a powerful ally, but is a cruel master. Learn to calm the mind- this is a key to internal peace and vitality.",
-          "value": "The mind can be a powerful ally, but is a cruel master. Learn to calm the mind- this is a key to internal peace and vitality."
+          "original": "The mind, and states of mind, must be cultivated.  We cultivate and practice so that we can show up the way we want- present, aware, clear, to name a few.",
+          "value": "The mind, and states of mind, must be cultivated.  We cultivate and practice so that we can show up the way we want- present, aware, clear, to name a few.",
+          "previousPublishedValues": [
+            "The mind can be a powerful ally, but is a cruel master. Learn to calm the mind- this is a key to internal peace and vitality."
+          ]
         },
         {
           "id": "index.html:text:43",
@@ -338,8 +359,11 @@
           "id": "index.html:text:45",
           "label": "P text",
           "kind": "text",
-          "original": "An important part of this work is emotional alchemy, as you learn to truly shift mental-emotional states and not just suppress them.",
-          "value": "An important part of this work is emotional alchemy, as you learn to truly shift mental-emotional states and not just suppress them."
+          "original": "Emotional alchemy is the deep shifting of emotion- rather than suppression or avoidance- you can learn to alchemize the energy of your emotions.  We cannot always choose what we feel, but we can strengthen the ability to move through.",
+          "value": "Emotional alchemy is the deep shifting of emotion- rather than suppression or avoidance- you can learn to alchemize the energy of your emotions.  We cannot always choose what we feel, but we can strengthen the ability to move through.",
+          "previousPublishedValues": [
+            "An important part of this work is emotional alchemy, as you learn to truly shift mental-emotional states and not just suppress them."
+          ]
         },
         {
           "id": "index.html:text:46",
@@ -359,15 +383,21 @@
           "id": "index.html:text:48",
           "label": "P text",
           "kind": "text",
-          "original": "The journey to right relationship with self and other is ongoing! And it's core to your evolution and wholeness.",
-          "value": "The journey to right relationship with self and other is ongoing! And it's core to your evolution and wholeness."
+          "original": "\"Wholeness\", to me, is encountered and found in right relationship with self and other. Your whole ecosystem can become healthy... not just you.",
+          "value": "\"Wholeness\", to me, is encountered and found in right relationship with self and other. Your whole ecosystem can become healthy... not just you.",
+          "previousPublishedValues": [
+            "The journey to right relationship with self and other is ongoing! And it's core to your evolution and wholeness."
+          ]
         },
         {
           "id": "index.html:text:49",
           "label": "H2 text",
           "kind": "text",
-          "original": "What this path can begin to restore.",
-          "value": "What this path can begin to restore."
+          "original": "What this path can begin to cultivate.",
+          "value": "What this path can begin to cultivate.",
+          "previousPublishedValues": [
+            "What this path can begin to restore."
+          ]
         },
         {
           "id": "index.html:text:50",
@@ -396,6 +426,48 @@
           "kind": "text",
           "original": "© 2026 Paul Cropper",
           "value": "© 2026 Paul Cropper"
+        },
+        {
+          "id": "index.html:text:benefit-1",
+          "label": "Benefit 1",
+          "kind": "text",
+          "original": "A healthier relationship with your body",
+          "value": "A healthier relationship with your body"
+        },
+        {
+          "id": "index.html:text:benefit-2",
+          "label": "Benefit 2",
+          "kind": "text",
+          "original": "Greater steadiness in heart and mind",
+          "value": "Greater steadiness in heart and mind"
+        },
+        {
+          "id": "index.html:text:benefit-3",
+          "label": "Benefit 3",
+          "kind": "text",
+          "original": "More honesty in how you live",
+          "value": "More honesty in how you live"
+        },
+        {
+          "id": "index.html:text:benefit-4",
+          "label": "Benefit 4",
+          "kind": "text",
+          "original": "More vitality and presence",
+          "value": "More vitality and presence"
+        },
+        {
+          "id": "index.html:text:benefit-5",
+          "label": "Benefit 5",
+          "kind": "text",
+          "original": "A deeper sense of wholeness",
+          "value": "A deeper sense of wholeness"
+        },
+        {
+          "id": "index.html:text:benefit-6",
+          "label": "Benefit 6",
+          "kind": "text",
+          "original": "Change that can be lived, not just understood",
+          "value": "Change that can be lived, not just understood"
         }
       ]
     },
@@ -2004,8 +2076,11 @@
           "id": "resources.html:text:18",
           "label": "P text",
           "kind": "text",
-          "original": "For now, the live resource link is the Masculine Heart Quest course.",
-          "value": "For now, the live resource link is the Masculine Heart Quest course."
+          "original": "Explore the course, guided meditation, and Vector Pilot.",
+          "value": "Explore the course, guided meditation, and Vector Pilot.",
+          "previousPublishedValues": [
+            "For now, the live resource link is the Masculine Heart Quest course."
+          ]
         },
         {
           "id": "resources.html:text:19",
@@ -2053,8 +2128,11 @@
           "id": "resources.html:text:25",
           "label": "P text",
           "kind": "text",
-          "original": "Placeholder/future-development resource. Hidden from live visitors; retained for editor planning.",
-          "value": "Placeholder/future-development resource. Hidden from live visitors; retained for editor planning."
+          "original": "A guided practice for steadiness, heart, and inner return.",
+          "value": "A guided practice for steadiness, heart, and inner return.",
+          "previousPublishedValues": [
+            "Placeholder/future-development resource. Hidden from live visitors; retained for editor planning."
+          ]
         },
         {
           "id": "resources.html:text:26",
@@ -2144,15 +2222,21 @@
           "id": "resources.html:text:38",
           "label": "H3 text",
           "kind": "text",
-          "original": "Starter guide",
-          "value": "Starter guide"
+          "original": "Vector Pilot",
+          "value": "Vector Pilot",
+          "previousPublishedValues": [
+            "Starter guide"
+          ]
         },
         {
           "id": "resources.html:text:39",
           "label": "P text",
           "kind": "text",
-          "original": "Future-development resource placeholder. Hidden from live visitors.",
-          "value": "Future-development resource placeholder. Hidden from live visitors."
+          "original": "Explore Vector Pilot.",
+          "value": "Explore Vector Pilot.",
+          "previousPublishedValues": [
+            "Future-development resource placeholder. Hidden from live visitors."
+          ]
         },
         {
           "id": "resources.html:attribute:40",
@@ -3587,29 +3671,41 @@
           "id": "coachingpkg-signup.html:text:21",
           "label": "We will start with 12 coaching c…",
           "kind": "text",
-          "original": "We will start with 12 coaching calls, spread over 3–4 months, where we look at your life Holistically — the Whole picture.",
-          "value": "We will start with 12 coaching calls, spread over 3–4 months, where we look at your life Holistically — the Whole picture."
+          "original": "We start with 12 coaching calls, spread over 3–4 months, where we seek to understand at your life Holistically — the whole picture, what you want, and why you are here.",
+          "value": "We start with 12 coaching calls, spread over 3–4 months, where we seek to understand at your life Holistically — the whole picture, what you want, and why you are here.",
+          "previousPublishedValues": [
+            "We will start with 12 coaching calls, spread over 3–4 months, where we look at your life Holistically — the Whole picture."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:22",
           "label": "You will have assignments along…",
           "kind": "text",
-          "original": "You will have assignments along the way, and we will adjust them to your life and what works for you.",
-          "value": "You will have assignments along the way, and we will adjust them to your life and what works for you."
+          "original": "We'll bring in tools to help you grow in the areas you may be weak, and grow in the areas you enjoy as well.  I will give you things to work on along the way, and we will adjust them to your life and what works for you.",
+          "value": "We'll bring in tools to help you grow in the areas you may be weak, and grow in the areas you enjoy as well.  I will give you things to work on along the way, and we will adjust them to your life and what works for you.",
+          "previousPublishedValues": [
+            "You will have assignments along the way, and we will adjust them to your life and what works for you."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:23",
           "label": "Coaching is largely to support y…",
           "kind": "text",
-          "original": "Coaching is largely to support your process of individuation, your healthy connection to your Self and other, helping you get through blockages both conscious and sub-conscious.",
-          "value": "Coaching is largely to support your process of individuation, your healthy connection to your Self and other, helping you get through blockages both conscious and sub-conscious."
+          "original": "Coaching is largely to support your healthy relationship to Self and Other, helping you get through blockages both conscious and sub-conscious.",
+          "value": "Coaching is largely to support your healthy relationship to Self and Other, helping you get through blockages both conscious and sub-conscious.",
+          "previousPublishedValues": [
+            "Coaching is largely to support your process of individuation, your healthy connection to your Self and other, helping you get through blockages both conscious and sub-conscious."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:24",
           "label": "We will explore tools and resour…",
           "kind": "text",
-          "original": "We will explore tools and resources you need for complete Health in your life.",
-          "value": "We will explore tools and resources you need for complete Health in your life."
+          "original": "We will explore a variety tools and resources of Heart, Body and Mind, for complete Health in your life.",
+          "value": "We will explore a variety tools and resources of Heart, Body and Mind, for complete Health in your life.",
+          "previousPublishedValues": [
+            "We will explore tools and resources you need for complete Health in your life."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:25",
@@ -3622,8 +3718,11 @@
           "id": "coachingpkg-signup.html:text:26",
           "label": "The holistic journey teaches vit…",
           "kind": "text",
-          "original": "The holistic journey teaches vitality, strength. Libido for LIFE!",
-          "value": "The holistic journey teaches vitality, strength. Libido for LIFE!"
+          "original": "The holistic journey teaches vitality, strength, peace, and libido for LIFE!",
+          "value": "The holistic journey teaches vitality, strength, peace, and libido for LIFE!",
+          "previousPublishedValues": [
+            "The holistic journey teaches vitality, strength. Libido for LIFE!"
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:27",
@@ -3636,8 +3735,11 @@
           "id": "coachingpkg-signup.html:text:28",
           "label": "Perhaps the best time to take ac…",
           "kind": "text",
-          "original": "Perhaps the best time to take action was months or years ago. The second best time is now.",
-          "value": "Perhaps the best time to take action was months or years ago. The second best time is now."
+          "original": "Sometimes we think best time to take action (or plant a tree) was months or years ago. \n\nBut I think the best time is always now.  :)",
+          "value": "Sometimes we think best time to take action (or plant a tree) was months or years ago. \n\nBut I think the best time is always now.  :)",
+          "previousPublishedValues": [
+            "Perhaps the best time to take action was months or years ago. The second best time is now."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:29",
@@ -3664,8 +3766,11 @@
           "id": "coachingpkg-signup.html:text:32",
           "label": "Pay securely by credit card thro…",
           "kind": "text",
-          "original": "Pay securely by credit card through Stripe. Venmo is available only for the full-payment option.",
-          "value": "Pay securely by credit card through Stripe. Venmo is available only for the full-payment option."
+          "original": "Pay securely by credit card through Stripe. You may ask for other options as needed.",
+          "value": "Pay securely by credit card through Stripe. You may ask for other options as needed.",
+          "previousPublishedValues": [
+            "Pay securely by credit card through Stripe. Venmo is available only for the full-payment option."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:33",
@@ -3757,8 +3862,11 @@
           "id": "coachingpkg-signup.html:text:45",
           "label": "Pay by credit card",
           "kind": "text",
-          "original": "Pay by credit card",
-          "value": "Pay by credit card"
+          "original": "Pay with credit card or Apple Pay",
+          "value": "Pay with credit card or Apple Pay",
+          "previousPublishedValues": [
+            "Pay by credit card"
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:46",
@@ -3771,15 +3879,21 @@
           "id": "coachingpkg-signup.html:text:47",
           "label": "Check the terms box to activate…",
           "kind": "text",
-          "original": "Check the terms box to activate payment links.",
-          "value": "Check the terms box to activate payment links."
+          "original": "Need another payment option?  Just ask.",
+          "value": "Need another payment option?  Just ask.",
+          "previousPublishedValues": [
+            "Check the terms box to activate payment links."
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:48",
           "label": "Vital Life w/ Paul",
           "kind": "text",
-          "original": "Vital Life w/ Paul",
-          "value": "Vital Life w/ Paul"
+          "original": "Integrated Heart & Vitality Coaching w/ Paul",
+          "value": "Integrated Heart & Vitality Coaching w/ Paul",
+          "previousPublishedValues": [
+            "Vital Life w/ Paul"
+          ]
         },
         {
           "id": "coachingpkg-signup.html:text:49",
@@ -4741,5 +4855,5 @@
       ]
     }
   },
-  "adminBaselineVersion": "integrated-lifestyle-logo-sitewide-2026-09-21-05"
+  "adminBaselineVersion": "2026-11-13-reviewed-copy"
 }

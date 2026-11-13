@@ -1247,3 +1247,33 @@ p,
 .admin-only-resource { display: none; }
 body.admin-preview .admin-only-resource { display: block; opacity: 0.58; outline: 1px dashed rgba(242, 215, 160, 0.34); }
 .legal-section { background: linear-gradient(180deg, #141110 0%, #100d0c 100%); }
+
+/* Reviewed Work With Me: one continuous sky, scrolling content/separators. */
+.copy-preserve-lines { white-space: pre-line; }
+.work-parallax {
+  background: #15232c url('assets/branding/work-with-me-sky-image.jpg') center / cover fixed no-repeat;
+  color: #fff;
+}
+.work-parallax main { background: rgba(7, 16, 25, .48); }
+.work-parallax .site-header { background: rgba(5, 14, 23, .94); }
+.work-parallax main > section { scroll-margin-top: 110px; }
+.work-parallax main > section,
+.work-parallax .site-footer { background: transparent; }
+.work-parallax main > section::before,
+.work-parallax main > section::after { display: none; }
+.work-parallax .reference-band { border-top: 1px solid rgba(255, 231, 185, .55); }
+.work-parallax .hero-copy-block { padding: clamp(1.1rem, 3vw, 2rem); background: rgba(5, 14, 23, .68); border-radius: 8px; }
+.work-parallax .hero-brand-line { color: #ffdf9e; text-shadow: 0 2px 8px #000; }
+.work-parallax main h1, .work-parallax main h2, .work-parallax main h3,
+.work-parallax main p, .work-parallax main li, .work-parallax main blockquote,
+.work-parallax main cite { color: #fff; }
+.work-parallax .card, .work-parallax .mini-feature { background: rgba(5, 14, 23, .78); }
+.work-parallax .section-header h2, .work-parallax .feature-copy { text-shadow: 0 2px 5px #000; }
+.work-parallax .site-footer { background: rgba(5, 14, 23, .86); }
+/* No scroll listener, transforms or fixed-cover painting on mobile/iOS. */
+@media (max-width: 800px), (hover: none), (prefers-reduced-motion: reduce) {
+  .work-parallax { background-attachment: scroll; background-size: auto 100%; }
+}
+.admin-preview [data-copy-id] { cursor: text; }
+.admin-preview .hero-brand-line { cursor: pointer; position: relative; }
+.admin-preview section::before, .admin-preview section::after { pointer-events: none; }

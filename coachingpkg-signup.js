@@ -33,7 +33,7 @@
       venmo.classList.add('payment-button--disabled');
       status.textContent = accepted
         ? 'Ready for Stripe checkout. Your card will be charged monthly for 3 payments.'
-        : 'Check the terms box to activate Stripe checkout.';
+        : 'Need another payment option?  Just ask.';
       return;
     }
 
@@ -41,7 +41,7 @@
     venmo.style.display = '';
     venmo.href = accepted ? venmoUrl() : '#terms';
     venmo.classList.toggle('payment-button--disabled', !accepted);
-    status.textContent = accepted ? 'Ready for payment.' : 'Check the terms box to activate payment links.';
+    status.textContent = accepted ? 'Ready for payment.' : 'Need another payment option?  Just ask.';
   }
 
   form.addEventListener('change', updatePaymentState);

@@ -19,7 +19,12 @@
   };
   const preserveReplace = (raw, next) => `${raw.match(/^\s*/)?.[0] || ''}${next}${raw.match(/\s*$/)?.[0] || ''}`;
   function applyEntries(entries) {
-    const textEntries = entries.filter((entry) => entry.kind === 'text' && entry.value !== entry.original);
+    // Stable IDs survive copy/markup changes and old local drafts.
+    for (const entry of entries.filter(e => e.kind === 'text' && e.value !== e.original)) {
+      const target = document.querySelector(`[data-copy-id="${CSS.escape(entry.id)}"]`);
+      if (target) target.textContent = entry.value;
+    }
+    const textEntries = entries.filter((entry) => entry.kind === 'text' && entry.value !== entry.original && !document.querySelector(`[data-copy-id="${CSS.escape(entry.id)}"]`));
     if (textEntries.length) {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {

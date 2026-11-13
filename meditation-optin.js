@@ -14,6 +14,10 @@
       return;
     }
 
+    if (!form.reportValidity()) return;
+    const button = form.querySelector('button[type=submit]');
+    if (button.disabled) return;
+    button.disabled = true;
     status.textContent = 'Saving your request…';
 
     try {
@@ -25,6 +29,8 @@
         body: JSON.stringify({
           email,
           first_name: firstName || null,
+          consent: document.getElementById('meditationConsent').checked,
+          website: document.getElementById('website').value,
         }),
       });
 
@@ -37,6 +43,7 @@
     } catch (error) {
       console.error(error);
       status.textContent = 'Something went wrong saving your request. Please try again or email Paul directly.';
+      button.disabled = false;
     }
   });
 })();
